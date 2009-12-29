@@ -7,6 +7,8 @@
 
 #include "Game.h"
 #include "IsometricGrid.h"
+#include "PlayerCharacter.h"
+#include "GameObject.h"
 #include "Overlay.h"
 
 Game::Game()
@@ -16,13 +18,18 @@ Game::Game()
 Game::~Game()
 {
   overlays.clear();
-  delete gc;
-  delete rm;
+  gc = NULL;
+  rm = NULL;
 }
 
 void Game::addOverlay(Overlay* overlay)
 {
   overlays.push_back(overlay);
+}
+
+void Game::addGameObject(GameObject* game_object)
+{
+  game_objects.push_back(game_object);
 }
 
 // The start of the Application
@@ -32,6 +39,8 @@ int Game::start(const std::vector<CL_String> &args)
 
         try
         {
+                CL_Pointd pc_start(0,0);
+
                 // TODO: Allow the user to set the size of the window.
                 CL_DisplayWindow window("Isometric Engine", 1024, 768);
 
@@ -51,16 +60,25 @@ int Game::start(const std::vector<CL_String> &args)
                 IsometricGrid grid(this);
                 addOverlay(&grid);
 
+                // Add player character
+                PlayerCharacter pc(this,pc_start);
+                addGameObject(&pc);
+
                 // Run until someone presses escape
                 while (!quit)
                 {
                         // Clear the display to black.
                         gc->clear(CL_Colorf(0.0f,0.0f,0.0f));
 
+                        // Draw all game objects
+                        std::list<GameObject *>::iterator it_go;
+                        for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
+                          (*it_go)->draw();
+
                         // Draw all overlays
-                        std::list<Overlay *>::iterator it;
-                        for(it = overlays.begin(); it != overlays.end(); ++it)
-                          (*it)->draw();
+                        std::list<Overlay *>::iterator it_ov;
+                        for(it_ov = overlays.begin(); it_ov != overlays.end(); ++it_ov)
+                          (*it_ov)->draw();
 
                         // Flip the display, showing on the screen what we have drawed
                         // since last call to flip()

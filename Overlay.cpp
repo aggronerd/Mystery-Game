@@ -14,5 +14,5 @@ Overlay::Overlay(Game* game)
 
 Overlay::~Overlay()
 {
-  g = 0;
+  g = NULL;
 }

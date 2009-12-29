@@ -14,6 +14,7 @@
 
 class IsometricGrid;
 class Overlay;
+class GameObject;
 
 class Game
 {
@@ -22,11 +23,13 @@ class Game
           virtual ~Game();
           int start(const std::vector<CL_String> &args);
           void addOverlay(Overlay *);
+          void addGameObject(GameObject *);
           CL_GraphicContext* getGC(void);
           CL_ResourceManager* getRM(void);
 
   private:
           std::list<Overlay*> overlays;
+          std::list<GameObject*> game_objects;
           CL_GraphicContext* gc;
           CL_ResourceManager* rm;
           void on_input_up(const CL_InputEvent &key, const CL_InputState &state);
