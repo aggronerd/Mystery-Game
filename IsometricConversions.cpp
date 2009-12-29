@@ -24,3 +24,15 @@ CL_Pointf IsometricConversions::worldToIsometric(CL_Pointf point)
         transformed += CL_Pointf(512,382);
         return(transformed);
 }
+
+CL_Pointd IsometricConversions::worldToIsometric(CL_Pointd point)
+{
+        CL_Pointd transformed;
+        //Rotate 45 degrees.
+        transformed = point.rotate(CL_Pointd(0,0),CL_Angle(45,cl_degrees));
+        //Scale units
+        transformed *= CL_Pointd(32,16);
+        //Move across
+        transformed += CL_Pointd(512,382);
+        return(transformed);
+}

@@ -7,12 +7,12 @@
 
 #include "Overlay.h"
 
-Overlay::Overlay(Game* game)
+Overlay::Overlay(World* w)
 {
-  g = game;
+  world = w;
 }
 
 Overlay::~Overlay()
 {
-  g = NULL;
+  world = 0;
 }

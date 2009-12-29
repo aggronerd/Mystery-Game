@@ -6,10 +6,12 @@
  */
 
 #include "PlayerCharacter.h"
+#include <ClanLib/core.h>
+#include "World.h"
 
-PlayerCharacter::PlayerCharacter(Game* game,CL_Pointd& starting_pos) : MoveableGameObject(game, starting_pos)
+PlayerCharacter::PlayerCharacter(World* w,CL_Pointd& starting_pos) : MoveableGameObject(w, starting_pos)
 {
-  still = new CL_Sprite(*(g->getGC()), "characters/detective_standing", g->getRM());
+  still = new CL_Sprite(*(world->getGC()), "characters/detective_standing", world->getRM());
 }
 
 PlayerCharacter::~PlayerCharacter()

@@ -16,6 +16,7 @@ class IsometricConversions
     IsometricConversions();
     virtual ~IsometricConversions();
     static CL_Pointf worldToIsometric(CL_Pointf point);
+    static CL_Pointd worldToIsometric(CL_Pointd point);
 };
 
 #endif /* ISOMETRICCONVERSIONS_H_ */

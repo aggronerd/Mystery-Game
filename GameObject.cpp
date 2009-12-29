@@ -6,16 +6,16 @@
  */
 
 #include "GameObject.h"
+#include "World.h"
 #include <ClanLib/core.h>
 
-GameObject::GameObject(Game* game, CL_Pointd pos)
+GameObject::GameObject(World* w, CL_Pointd& pos)
 {
-  g = game;
-  position = &pos;
+  world = w;
+  position = pos;
 }
 
 GameObject::~GameObject()
 {
-  g = NULL;
-  delete position;
+  world = NULL;
 }

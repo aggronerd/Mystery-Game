@@ -8,16 +8,16 @@
 #ifndef OVERLAY_H_
 #define OVERLAY_H_
 
-class Game;
+class World;
 
 class Overlay
 {
   public:
-    Overlay(Game*);
+    Overlay(World*);
     virtual ~Overlay();
-    virtual void draw()=0;
+    virtual void draw() = 0;
   protected:
-    Game* g;
+    World* world;
 };
 
 #endif /* OVERLAY_H_ */

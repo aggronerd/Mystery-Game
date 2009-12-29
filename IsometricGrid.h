@@ -11,7 +11,7 @@
 #include "Overlay.h"
 
 class IsometricConversions;
-class Game;
+class World;
 
 /**
  * Constructs a very basic 60x60 isometric grid
@@ -20,7 +20,7 @@ class Game;
 class IsometricGrid : public Overlay
 {
 public:
-  IsometricGrid(Game*);
+  IsometricGrid(World*);
   virtual ~IsometricGrid();
   void draw(void);
 };

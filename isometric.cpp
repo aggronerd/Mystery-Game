@@ -3,7 +3,7 @@
 #include <ClanLib/display.h>
 
 #include <cmath>
-#include "Game.h"
+#include "App.h"
 
 // Choose the target renderer
 #define USE_OPENGL_2
@@ -56,8 +56,8 @@ public:
 #endif
 
                 // Start the Application
-                Game app;
-                int retval = app.start(args);
+                Application game;
+                int retval = game.main(args);
                 return retval;
         }
 };

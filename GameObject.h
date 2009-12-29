@@ -8,18 +8,20 @@
 #ifndef GAMEOBJECT_H_
 #define GAMEOBJECT_H_
 
-class Game;
-class CL_Pointd;
+#include <ClanLib/core.h>
+
+class World;
 
 class GameObject
 {
 public:
-  GameObject(Game*, CL_Pointd);
+  GameObject(World*, CL_Pointd&);
   virtual ~GameObject();
-  virtual void draw()=0;
+  virtual void draw() {};
+  virtual bool update(unsigned int) = 0;
 protected:
-  Game* g;
-  CL_Pointd* position;
+  World* world;
+  CL_Pointd position;
 };
 
 #endif /* GAMEOBJECT_H_ */

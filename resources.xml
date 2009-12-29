@@ -10,7 +10,7 @@
 			<image file="artwork/people/character/standing_004.png" />
 			<translation origin="bottom"/>
 			<rotation origin="bottom"/>
-			<animation pingpong="no" speed="100"/>
+			<animation loop="yes" pingpong="no" speed="120"/>
 		</sprite>
 	</section>
 	<section name="misc">

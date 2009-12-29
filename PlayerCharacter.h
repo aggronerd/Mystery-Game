@@ -13,7 +13,7 @@
 class PlayerCharacter : public MoveableGameObject
 {
 public:
-  PlayerCharacter(Game*,CL_Pointd&);
+  PlayerCharacter(World*,CL_Pointd&);
   virtual ~PlayerCharacter();
 };
 

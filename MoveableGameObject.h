@@ -10,15 +10,16 @@
 
 #include "GameObject.h"
 
-class Game;
-class CL_Sprite;
+class World;
 class CL_Pointd;
+class CL_Sprite;
 
 class MoveableGameObject : public GameObject
 {
 public:
   void draw(void);
-  MoveableGameObject(Game*,CL_Pointd&);
+  bool update(unsigned int);
+  MoveableGameObject(World*,CL_Pointd&);
   virtual ~MoveableGameObject();
 protected:
   CL_Sprite* still;
