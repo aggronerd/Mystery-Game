@@ -1,60 +1,60 @@
-<question name="case">
-	<english>What is the type of case?</english>
-	<answers>
-		<answer id="1" name="murder">
-			<english>Murder</english>
-			<questions>				
-				<question name="victim">
-					<english>Who is the victim?</english>
-					<answers external_collection="characters" select="one"/>
-				</question>
-				<question name="bloody">
-					<english>How bloody was the murder?</english>
-					<answers discreet_range="1..6" />
-				</question>
-				<question name="motive">
-					<english>What is the motive of the murder?</english>
-					<answers>
-						<answer id="2" name="revenge">
-							<english>Revenge</english>
-						</answer>
-						<answer id="3" name="random">
-							<english>Random act</english>
-						</answer>
-						<answer id="4" name="crime_of_passion">
-							<english>Crime of Passion</english>
-						</answer>
-						<answer id="5" name="greed">
-							<english>Greed</english>
-						</answer>
-						<answer id="6" name="conspiracy">
-							<english>Conspiracy</english>
-						</answer>
-						<answer id="7" name="professional">
-							<english>Professional Assasination</english>
-						</answer>
-					</answers>
-				</question>
-				<question name="method">
-					<answers>
-						<answer id="8" name="bloody_stabbing">
-							<english>Bloody Stabing</english>
-							<weight answer_id="4" value="2" />
-							<weight answer_id="2" value="1" />
-							<weight answer_id="7" value="-1" />
-						</answer>
-
-						<answer id="9" name=
-					</answers>
-				</question>					
-				<question name="suspects">
-					<english>Who are the suspects?</english>
-					<answers extenal_collection="characters" select="many">
-						<exclude answer="case.murder.victim" />
-					</answers>				
-				</question>
-			</questions>
-		</answer>
-	</answers>
-</question>
-
+<?xml version"1.0"?>
+<plot>
+	<descision name="case">
+		<english>What is the type of case?</english>
+		<options>
+			<option id="1" name="murder">
+				<english>Murder</english>
+				<descisions>				
+					<descision name="victim">
+						<english>Who is the victim?</english>
+						<options external_collection="characters" select="one"/>
+					</descision>
+					<descision name="bloody">
+						<english>How bloody was the murder?</english>
+						<options discreet_range="1..6" />
+					</descision>
+					<descision name="motive">
+						<english>What is the motive of the murder?</english>
+						<options>
+							<option id="2" name="revenge">
+								<english>Revenge</english>
+							</option>
+							<option id="3" name="random">
+								<english>Random act</english>
+							</option>
+							<option id="4" name="crime_of_passion">
+								<english>Crime of Passion</english>
+							</option>
+							<option id="5" name="greed">
+								<english>Greed</english>
+							</option>
+							<option id="6" name="conspiracy">
+								<english>Conspiracy</english>
+							</option>
+							<option id="7" name="professional">
+								<english>Professional Assasination</english>
+							</option>
+						</options>
+					</descision>
+					<descision name="method">
+						<options>
+							<option id="8" name="bloody_stabbing">
+								<english>Bloody Stabing</english>
+								<weight answer_id="4" value="2" />
+								<weight answer_id="2" value="1" />
+								<weight answer_id="7" value="-1" />
+							</option>
+						</options>
+					</descision>					
+					<descision name="suspects">
+						<english>Who are the suspects?</english>
+						<options extenal_collection="characters" select="many">
+							<exclude answer="case.murder.victim" />
+						</options>				
+					</descision>
+				</descisions>
+			</option>
+		</options>
+	</descision>
+</plot>
