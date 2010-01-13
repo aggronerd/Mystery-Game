@@ -1,19 +1,19 @@
 /*
- * Option.cpp
+ * Story.cpp
  *
- *  Created on: 31 Dec 2009
+ *  Created on: 12 Jan 2010
  *      Author: greg
  */
 
-#include "Option.h"
+#include "Story.h"
 
-Option::Option()
+Story::Story()
 {
   // TODO Auto-generated constructor stub
 
 }
 
-Option::~Option()
+Story::~Story()
 {
   // TODO Auto-generated destructor stub
 }

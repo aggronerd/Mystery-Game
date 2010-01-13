@@ -17,6 +17,8 @@
  */
 World::World(CL_DisplayWindow &display_window) : window(display_window), quit(false)
 {
+  cl_log_event("debug","Instance of World created.");
+
   // Get the graphic context
   gc = window.get_gc();
 

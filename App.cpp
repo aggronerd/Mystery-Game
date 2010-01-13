@@ -14,18 +14,28 @@ int Application::main(const std::vector<CL_String> &args)
 {
   try
   {
+
+    //Create the log file
+   CL_FileLogger file_logger("game.log");
+   file_logger.enable();
+   cl_log_event("system", "Application object instantiated.");
+   cl_log_event("debug", "Creating window description.");
+
     // Create the window
     CL_DisplayWindowDescription desc;
     desc.set_title("Mystery Generator");
-    desc.set_size(CL_Size(1024, 768), true);
+    desc.set_size(CL_Size(800, 600), true);
 
+    cl_log_event("debug", "Creating game window...");
     CL_DisplayWindow window(desc);
     //CL_SoundOutput output(44100);
 
     // Create world
+    cl_log_event("debug","Creating world...");
     World world(window);
 
     // Run the main loop
+    cl_log_event("debug","Executing game loop.");
     world.run();
   }
   catch(CL_Exception &exception)
