@@ -11,19 +11,22 @@
 #define LEVEL_DEBUG 0 // Lowest level messages
 #define LEVEL_INFO  5 // High level messages
 
+#include <ClanLib/core.h>
+
 /**
  * Basic class for logging messages in the game.
  */
 class Logger
 {
 private:
-  int level;
+  static int level;
+  static CL_FileLogger file_logger("game.log");
 public:
-  Logger() { level = 5; };
-  virtual ~Logger() {};
+  Logger();
+  virtual ~Logger();
   static void setLevel(int);
   static int getLevel(void);
-  static void log(int,const char[]);
+  static void log(const int, const CL_StringRef&);
 };
 
 #endif /* LOGGER_H_ */

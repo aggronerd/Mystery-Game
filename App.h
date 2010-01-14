@@ -9,6 +9,7 @@
 #define APP_H_
 
 #include <ClanLib/core.h>
+#include "Logger.h"
 
 class Application
 {
