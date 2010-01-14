@@ -12,8 +12,7 @@ class Story
 {
 public:
   Story();
-  virtual
-  ~Story();
+  virtual ~Story();
 };
 
 #endif /* STORY_H_ */

@@ -13,16 +13,17 @@
 class World;
 class CL_Pointd;
 class CL_Sprite;
+class CL_Angle;
 
 class MoveableGameObject : public GameObject
 {
 public:
   void draw(void);
   bool update(unsigned int);
-  MoveableGameObject(World*,CL_Pointd&);
+  MoveableGameObject(World*,CL_Pointd&,CL_Angle&);
   virtual ~MoveableGameObject();
 protected:
-  CL_Sprite* still;
+  /*CL_Sprite* still;
   CL_Sprite* move_n;
   CL_Sprite* move_ne;
   CL_Sprite* move_e;
@@ -30,7 +31,7 @@ protected:
   CL_Sprite* move_s;
   CL_Sprite* move_sw;
   CL_Sprite* move_w;
-  CL_Sprite* move_nw;
+  CL_Sprite* move_nw;*/
 private:
   int status;
   CL_Pointd destination;

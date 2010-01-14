@@ -10,16 +10,16 @@
 #include "World.h"
 #include <ClanLib/core.h>
 
-MoveableGameObject::MoveableGameObject(World* w, CL_Pointd& starting_pos) : GameObject(w, starting_pos)
+MoveableGameObject::MoveableGameObject(World* w, CL_Pointd& initial_position, CL_Angle& initial_direction) : GameObject(w, initial_position, initial_direction)
 {
   //Object always starts static
-  destination = starting_pos;
+  destination = initial_position;
 }
 
 MoveableGameObject::~MoveableGameObject()
 {
-  delete still;
-  /*delete move_n;
+  /*delete still;
+  delete move_n;
   delete move_ne;
   delete move_e;
   delete move_se;
@@ -34,12 +34,10 @@ void MoveableGameObject::draw()
   //Have to translate world position to isometric position.
   CL_Pointd isometricPoint = IsometricConversions::worldToIsometric(position);
   //TODO: add animation state.
-  still->draw(*(world->getGC()),(float)(isometricPoint.x),(float)(isometricPoint.y));
+  //still->draw(*(world->getGC()),(float)(isometricPoint.x),(float)(isometricPoint.y));
 }
 
-bool MoveableGameObject::update(unsigned int time_elapsed_ms)
+bool MoveableGameObject::update(unsigned int time_elapsed)
 {
-  //TODO: use pointer to refer to the current sprite.
-  still->update(time_elapsed_ms);
-  return true;
+  return(true);
 }

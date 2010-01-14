@@ -46,12 +46,13 @@ void World::initLevel()
 {
   //Where the player's character starts
   CL_Pointd pc_start(0,0);
+  CL_Angle pc_direction(270,cl_degrees);
 
   // Isometric grid overlay
   addOverlay(new IsometricGrid(this));
 
   // Add player character
-  addGameObject(new PlayerCharacter(this,pc_start));
+  addGameObject(new PlayerCharacter(this,pc_start,pc_direction));
 }
 
 /**
