@@ -11,8 +11,14 @@
 #include <ClanLib/core.h>
 #include <ClanLib/display.h>
 
-#define SPRITE_SW = 0;
-#define
+#define SPRITE_N  0
+#define SPRITE_NE 1
+#define SPRITE_E  2
+#define SPRITE_SE 3
+#define SPRITE_S  4
+#define SPRITE_SW 5
+#define SPRITE_W  6
+#define SPRITE_NW 7
 
 class World;
 
@@ -31,7 +37,7 @@ protected:
   World* world;
   CL_Pointd position; //Isometric position, not world
   CL_Angle direction; //angle in degrees from north
-  CL_Sprite* static_sprites[7];
+  CL_Sprite* static_sprites[8];
   CL_Sprite* static_current;
 };
 

@@ -46,7 +46,7 @@ void World::initLevel()
 {
   //Where the player's character starts
   CL_Pointd pc_start(0,0);
-  CL_Angle pc_direction(270,cl_degrees);
+  CL_Angle pc_direction(225,cl_degrees);
 
   // Isometric grid overlay
   addOverlay(new IsometricGrid(this));
@@ -102,6 +102,7 @@ int World::run()
     // This call processes user input and other events
     CL_KeepAlive::process(0);
   }
+  return(0);
 }
 
 /**

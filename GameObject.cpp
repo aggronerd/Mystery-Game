@@ -26,15 +26,9 @@ GameObject::GameObject(World* w, CL_Pointd& initial_position, CL_Angle& initial_
   world = w;
 
   //Reset pointers to NULL
-  static_n =0x0;
-  static_ne =0x0;
-  static_e =0x0;
-  static_se =0x0;
-  static_s =0x0;
-  static_sw =0x0;
-  static_w =0x0;
-  static_nw =0x0;
-  static_current =0x0;
+  for(int i = 0; i < 8; i++)
+    static_sprites[i] = 0x0;
+  static_current = 0x0;
 
   this->setPosition(initial_position);
   this->setDirection(initial_direction);
@@ -44,22 +38,8 @@ GameObject::~GameObject()
 {
   world = 0;
   //Destroy sprites which have been declared.
-  if(static_n != 0x0)
-    delete static_n;
-  if(static_ne != 0x0)
-    delete static_ne;
-  if(static_e != 0x0)
-      delete static_e;
-  if(static_se != 0x0)
-      delete static_se;
-  if(static_s != 0x0)
-      delete static_s;
-  if(static_sw != 0x0)
-      delete static_sw;
-  if(static_w != 0x0)
-      delete static_w;
-  if(static_nw != 0x0)
-      delete static_nw;
+  for(int i = 0; i < 8; i++)
+    delete static_sprites[i];
 }
 
 /**
@@ -94,21 +74,21 @@ void GameObject::setDirection(CL_Angle& new_direction)
 
   //Update the pointer to the current static sprite.
   if(angle > 337.5 || angle <= 22.5)
-    static_current = static_n;
+    static_current = static_sprites[SPRITE_N];
   if(angle > 22.5  && angle <= 65.7)
-    static_current = static_ne;
+    static_current = static_sprites[SPRITE_NE];
   if(angle > 65.7  && angle <= 112.5)
-    static_current = static_e;
+    static_current = static_sprites[SPRITE_E];
   if(angle > 112.5 && angle <= 157.5)
-    static_current = static_se;
+    static_current = static_sprites[SPRITE_SE];
   if(angle > 157.5 && angle <= 202.5)
-    static_current = static_s;
+    static_current = static_sprites[SPRITE_S];
   if(angle > 202.5 && angle <= 247.5)
-    static_current = static_sw;
+    static_current = static_sprites[SPRITE_SW];
   if(angle > 247.5 && angle <= 292.5)
-    static_current = static_w;
+    static_current = static_sprites[SPRITE_W];
   if(angle > 292.5 && angle <= 337.5)
-    static_current = static_nw;
+    static_current = static_sprites[SPRITE_NW];
 }
 
 /**
