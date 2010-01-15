@@ -59,7 +59,6 @@ class World
           void draw(void);
           void update(void);
 
-
           unsigned int calculateTimeElapsed(void);
 
           bool quit;

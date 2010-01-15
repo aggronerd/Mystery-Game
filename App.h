@@ -9,13 +9,20 @@
 #define APP_H_
 
 #include <ClanLib/core.h>
-#include "Logger.h"
+
+#define LOG_LEVEL_DEBUG 5
+#define LOG_LEVEL_INFO 0
+#define ENABLE_LOGGING
 
 class Application
 {
 public:
-  Application() {};
+  Application();
+  virtual ~Application();
   virtual int main(const std::vector<CL_String> &args);
+  static void log(const int, const char*);
+private:
+  const static int logging_level = 5; //Highest level.
 };
 
 #endif /* APP_H_ */

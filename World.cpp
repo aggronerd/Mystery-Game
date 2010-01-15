@@ -18,7 +18,7 @@
  */
 World::World(CL_DisplayWindow &display_window) : window(display_window), quit(false)
 {
-  Application::logger.log(0,"Instance of World created.");
+  Application::log(LOG_LEVEL_DEBUG, "World constructor called.");
 
   // Get the graphic context
   gc = window.get_gc();
@@ -54,6 +54,7 @@ void World::initLevel()
 
   // Add player character
   addGameObject(new PlayerCharacter(this,pc_start,pc_direction));
+
 }
 
 /**

@@ -10,28 +10,38 @@
 #include <ClanLib/core.h>
 #include <ClanLib/sound.h>
 
+Application::Application()
+{
+  Application::log(LOG_LEVEL_DEBUG, "Application constructor called.");
+}
+
+Application::~Application()
+{
+  Application::log(LOG_LEVEL_DEBUG, "Application destructor called.");
+}
+
 int Application::main(const std::vector<CL_String> &args)
 {
   try
   {
-    Application::logger.log(5, "Application object instantiated.");
-    Application::logger.log(0, "Creating window description.");
+    Application::log(LOG_LEVEL_INFO, "Starting game...");
+    Application::log(LOG_LEVEL_DEBUG, "Creating window description.");
 
     // Create the window
     CL_DisplayWindowDescription desc;
     desc.set_title("Mystery Generator");
     desc.set_size(CL_Size(800, 600), true);
 
-    Application::logger.log(0, "Creating game window...");
+    Application::log(LOG_LEVEL_DEBUG, "Creating game window...");
     CL_DisplayWindow window(desc);
     //CL_SoundOutput output(44100);
 
     // Create world
-    Application::logger.log(0,"Creating world...");
+    Application::log(LOG_LEVEL_DEBUG, "Creating world...");
     World world(window);
 
     // Run the main loop
-    Application::logger.log(0,"Executing game loop.");
+    Application::log(LOG_LEVEL_DEBUG, "Executing game loop.");
     world.run();
   }
   catch(CL_Exception &exception)
@@ -42,5 +52,31 @@ int Application::main(const std::vector<CL_String> &args)
     console.display_close_message();
     return -1;
   }
+
   return 0;
+}
+
+/**
+ * Outputs the message to the console and the active log file.
+ */
+void Application::log(const int level,const char* message)
+{
+#ifdef ENABLE_LOGGING
+  if(level <= logging_level)
+  {
+    //Output to Clan lib console and log file
+    CL_Console::write_line(message);
+    switch(level)
+    {
+      case LOG_LEVEL_INFO:
+        cl_log_event("information",message);
+        break;
+      case LOG_LEVEL_DEBUG:
+        cl_log_event("debug",message);
+        break;
+      default:
+        cl_log_event("[unknown_logging_level]", message);
+    };
+  }
+#endif /* ENABLE_LOGGING */
 }
