@@ -1,19 +1,19 @@
 /*
- * Story.cpp
+ * Desision.cpp
  *
- *  Created on: 12 Jan 2010
+ *  Created on: 15 Jan 2010
  *      Author: greg
  */
 
-#include "Story.h"
+#include "Desision.h"
 
-Story::Story()
+Desision::Desision()
 {
   // TODO Auto-generated constructor stub
 
 }
 
-Story::~Story()
+Desision::~Desision()
 {
   // TODO Auto-generated destructor stub
 }

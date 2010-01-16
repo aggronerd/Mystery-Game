@@ -20,7 +20,7 @@ public:
   Application();
   virtual ~Application();
   virtual int main(const std::vector<CL_String> &args);
-  static void log(const int, const char*);
+  static void log(const int, const CL_String&);
 private:
   const static int logging_level = 5; //Highest level.
 };

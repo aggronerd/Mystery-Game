@@ -12,6 +12,7 @@
 #include "Overlay.h"
 #include "App.h"
 #include <ClanLib/core.h>
+#include "mystery_xml/Plot.h"
 
 /**
  * Creates the game world and sets up initial contents.
@@ -45,6 +46,10 @@ World::World(CL_DisplayWindow &display_window) : window(display_window), quit(fa
  */
 void World::initLevel()
 {
+
+  //Create the plot object to initiate generation.
+  Plot plot("mystery_xml/mystery.xml");
+
   //Where the player's character starts
   CL_Pointd pc_start(0,0);
   CL_Angle pc_direction(225,cl_degrees);

@@ -25,9 +25,13 @@ int Application::main(const std::vector<CL_String> &args)
   try
   {
     Application::log(LOG_LEVEL_INFO, "Starting game...");
-    Application::log(LOG_LEVEL_DEBUG, "Creating window description.");
+
+    // Open the log file
+    CL_FileLogger file_logger("game.log");
+    file_logger.enable();
 
     // Create the window
+    Application::log(LOG_LEVEL_DEBUG, "Creating window description...");
     CL_DisplayWindowDescription desc;
     desc.set_title("Mystery Generator");
     desc.set_size(CL_Size(800, 600), true);
@@ -59,7 +63,7 @@ int Application::main(const std::vector<CL_String> &args)
 /**
  * Outputs the message to the console and the active log file.
  */
-void Application::log(const int level,const char* message)
+void Application::log(const int level,const CL_String& message)
 {
 #ifdef ENABLE_LOGGING
   if(level <= logging_level)

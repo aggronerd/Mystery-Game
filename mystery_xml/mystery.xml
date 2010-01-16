@@ -1,5 +1,4 @@
-<?xml version"1.0"?>
-<plot>
+<plot xmlns="http://www.gregorydoran.co.uk/plot" name="Wellsquire Manor Murders">
 	<descision name="case">
 		<english>What is the type of case?</english>
 		<options>
