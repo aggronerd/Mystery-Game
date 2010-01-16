@@ -11,8 +11,6 @@
 #ifndef CORE_H_
 #define CORE_H_
 
-  #include "App.h"
-
   #define LOG_LEVEL_DEBUG 5
   #define LOG_LEVEL_INFO 0
 
@@ -20,7 +18,9 @@
   #define LOG_DEBUG_MESSAGES
 
   #ifdef LOG_DEBUG_MESSAGES
-    #define DEBUG_MSG(message) Application::log(LOG_LEVEL_DEBUG,message);
+    #include "App.h"
+    #include <ClanLib/core.h>
+#define DEBUG_MSG(message) Application::log(LOG_LEVEL_DEBUG,CL_String(__FILE__) + CL_String(":") + CL_StringHelp::int_to_text(__LINE__) + CL_String(" - ") + CL_String(message));
   #else
     #define DEBUG_MSG(message)
   #endif /* LOG_DEBUG_MESSAGES */
