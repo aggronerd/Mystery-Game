@@ -10,10 +10,6 @@
 
 #include <ClanLib/core.h>
 
-#define LOG_LEVEL_DEBUG 5
-#define LOG_LEVEL_INFO 0
-#define ENABLE_LOGGING
-
 class Application
 {
 public:

@@ -9,6 +9,9 @@
 #define PLOT_H_
 
 #include <ClanLib/core.h>
+#include "list"
+
+class Decision;
 
 class Plot
 {
@@ -17,8 +20,8 @@ public:
   virtual ~Plot();
 private:
   void parseXML();
-  CL_File* xmlFile;
   CL_String name;
+  std::list<Decision> decisions;
 };
 
 #endif /* PLOT_H_ */

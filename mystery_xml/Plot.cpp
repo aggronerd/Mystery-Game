@@ -6,56 +6,53 @@
  */
 
 #include "Plot.h"
-#include "../App.h"
+#include "Decision.h"
+#include "../logging.h"
 #include <ClanLib/core.h>
 
+/**
+ * Constructs a tree from the specified XML file.
+ */
 Plot::Plot(const char* filename)
 {
-  Application::log(LOG_LEVEL_DEBUG, "Plot constructor called.");
+  DEBUG_MSG("Plot::Plot(const char*) - Called.")
 
   //Create a file object.
   CL_String cl_filename = filename;
-  xmlFile = new CL_File(cl_filename); //TODO: Catch if cannot open
+  CL_File xmlFile(cl_filename); //TODO: Catch if cannot open
 
-  parseXML();
+  CL_String ns_plot = "http://www.gregorydoran.co.uk/plot";
+
+  DEBUG_MSG("Plot::Plot(const char*) - Creating CL_DomDocument.")
+  CL_DomDocument document(xmlFile);
+
+  DEBUG_MSG("Plot::Plot(const char*) - Getting plot element.")
+  CL_DomElement root = document.get_document_element();
+
+  DEBUG_MSG("Plot::Plot(const char*) - Found plot '" + root.get_attribute("name") + "'")
+
+  //Iterate through decisions.
+  DEBUG_MSG("Plot::Plot(const char*) - Constructing decisions.");
+  CL_DomNode cur = root.get_first_child();
+  while (!cur.is_null())
+  {
+    if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "decision")
+    {
+      //Delegate parsing of decision elements to the Decision class:
+      CL_DomElement element = cur.to_element();
+      decisions.push_back(Decision(element));
+    }
+    cur = cur.get_next_sibling();
+  }
 }
 
 Plot::~Plot()
 {
-  Application::log(LOG_LEVEL_DEBUG, "Plot destructor called.");
-
-  xmlFile->close();
+  DEBUG_MSG("Plot::~Plot() - Called.")
 
 }
 
 void Plot::parseXML()
 {
-  CL_String ns_plot = "http://www.gregorydoran.co.uk/plot";
-  CL_String plotname;
 
-  Application::log(LOG_LEVEL_DEBUG, "Plot::parseXML() - Creating CL_DomDocument.");
-  CL_DomDocument document(*(xmlFile));
-
-  Application::log(LOG_LEVEL_DEBUG, "Plot::parseXML() - Getting root element.");
-  CL_DomElement root = document.get_document_element();
-
-  Application::log(LOG_LEVEL_DEBUG, root.get_attribute("name"));
-
-  Application::log(LOG_LEVEL_DEBUG, "Plot::parseXML() - Getting plot element.");
-  CL_DomElement body = root.named_item_ns(ns_plot, "plot").to_element();
-
-  Application::log(LOG_LEVEL_DEBUG, body.get_attribute("name"));
-
-  /*CL_DomNode cur = body.get_first_child();
-  while (cur.is_node())
-  {
-          if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "desision")
-          {
-                  CL_DomElement element = cur.to_element();
-                  CL_String name = element.get_attribute_ns(ns_example, "name");
-                  CL_String value = element.get_text();
-                  CL_Console::write_line("Message %1: %2", name, value);
-          }
-          cur = cur.get_next_sibling();
-  }*/
 }

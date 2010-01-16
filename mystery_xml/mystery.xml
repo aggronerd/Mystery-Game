@@ -1,19 +1,19 @@
 <plot xmlns="http://www.gregorydoran.co.uk/plot" name="Wellsquire Manor Murders">
-	<descision name="case">
+	<decision name="case">
 		<english>What is the type of case?</english>
 		<options>
 			<option id="1" name="murder">
 				<english>Murder</english>
-				<descisions>				
-					<descision name="victim">
+				<decisions>				
+					<decision name="victim">
 						<english>Who is the victim?</english>
 						<options external_collection="characters" select="one"/>
-					</descision>
-					<descision name="bloody">
+					</decision>
+					<decision name="bloody">
 						<english>How bloody was the murder?</english>
 						<options discreet_range="1..6" />
-					</descision>
-					<descision name="motive">
+					</decision>
+					<decision name="motive">
 						<english>What is the motive of the murder?</english>
 						<options>
 							<option id="2" name="revenge">
@@ -35,8 +35,8 @@
 								<english>Professional Assasination</english>
 							</option>
 						</options>
-					</descision>
-					<descision name="method">
+					</decision>
+					<decision name="method">
 						<options>
 							<option id="8" name="bloody_stabbing">
 								<english>Bloody Stabing</english>
@@ -45,15 +45,15 @@
 								<weight answer_id="7" value="-1" />
 							</option>
 						</options>
-					</descision>					
+					</decision>					
 					<descision name="suspects">
 						<english>Who are the suspects?</english>
 						<options extenal_collection="characters" select="many">
 							<exclude answer="case.murder.victim" />
 						</options>				
-					</descision>
-				</descisions>
+					</decision>
+				</decisions>
 			</option>
 		</options>
-	</descision>
+	</decision>
 </plot>

@@ -1,19 +1,19 @@
 /*
- * Desision.cpp
+ * Decisions.cpp
  *
- *  Created on: 15 Jan 2010
+ *  Created on: 16 Jan 2010
  *      Author: greg
  */
 
-#include "Desision.h"
+#include "Decisions.h"
 
-Desision::Desision()
+Decisions::Decisions()
 {
   // TODO Auto-generated constructor stub
 
 }
 
-Desision::~Desision()
+Decisions::~Decisions()
 {
   // TODO Auto-generated destructor stub
 }

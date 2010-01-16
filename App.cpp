@@ -7,6 +7,7 @@
 
 #include "App.h"
 #include "World.h"
+#include "logging.h"
 #include <ClanLib/core.h>
 #include <ClanLib/sound.h>
 
@@ -65,7 +66,6 @@ int Application::main(const std::vector<CL_String> &args)
  */
 void Application::log(const int level,const CL_String& message)
 {
-#ifdef ENABLE_LOGGING
   if(level <= logging_level)
   {
     //Output to Clan lib console and log file
@@ -82,5 +82,4 @@ void Application::log(const int level,const CL_String& message)
         cl_log_event("[unknown_logging_level]", message);
     };
   }
-#endif /* ENABLE_LOGGING */
 }

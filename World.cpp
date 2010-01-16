@@ -11,6 +11,7 @@
 #include "GameObject.h"
 #include "Overlay.h"
 #include "App.h"
+#include "logging.h"
 #include <ClanLib/core.h>
 #include "mystery_xml/Plot.h"
 
@@ -19,7 +20,7 @@
  */
 World::World(CL_DisplayWindow &display_window) : window(display_window), quit(false)
 {
-  Application::log(LOG_LEVEL_DEBUG, "World constructor called.");
+  DEBUG_MSG("World::World(CL_DisplayWindow &) - Called.")
 
   // Get the graphic context
   gc = window.get_gc();
