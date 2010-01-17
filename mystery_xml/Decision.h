@@ -9,6 +9,7 @@
 #define DECISION_H_
 
 #include <ClanLib/core.h>
+#include "Options.h"
 
 class Decision
 {
@@ -17,6 +18,7 @@ public:
   virtual ~Decision();
 private:
   CL_String name;
+  Options* options;
 };
 
 #endif /* DECISION_H_ */

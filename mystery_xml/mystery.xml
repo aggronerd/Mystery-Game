@@ -46,7 +46,7 @@
 							</option>
 						</options>
 					</decision>					
-					<descision name="suspects">
+					<decision name="suspects">
 						<english>Who are the suspects?</english>
 						<options extenal_collection="characters" select="many">
 							<exclude answer="case.murder.victim" />

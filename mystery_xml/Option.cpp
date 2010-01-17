@@ -6,14 +6,15 @@
  */
 
 #include "Option.h"
+#include "../logging.h"
 
-Option::Option()
+Option::Option(const CL_DomElement& element)
 {
-  // TODO Auto-generated constructor stub
+  DEBUG_MSG("Option::Option(const CL_DomElement&) - Called.")
 
 }
 
 Option::~Option()
 {
-  // TODO Auto-generated destructor stub
+  DEBUG_MSG("Option::~Option() - Called.")
 }

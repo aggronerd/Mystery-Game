@@ -6,8 +6,8 @@
  */
 
 #include "Plot.h"
-#include "Decision.h"
 #include "../logging.h"
+#include "Decision.h"
 #include <ClanLib/core.h>
 
 /**
@@ -29,10 +29,11 @@ Plot::Plot(const char* filename)
   DEBUG_MSG("Plot::Plot(const char*) - Getting plot element.")
   CL_DomElement root = document.get_document_element();
 
-  DEBUG_MSG("Plot::Plot(const char*) - Found plot '" + root.get_attribute("name") + "'")
+  //Retrieve attributes
+  name = root.get_attribute("name");
 
-  //Iterate through decisions.
-  DEBUG_MSG("Plot::Plot(const char*) - Constructing decisions.");
+  //Parse children:
+  DEBUG_MSG(CL_String("Plot::Plot(const char*) - Processing children for '") + name + "'.")
   CL_DomNode cur = root.get_first_child();
   while (!cur.is_null())
   {
@@ -40,7 +41,7 @@ Plot::Plot(const char* filename)
     {
       //Delegate parsing of decision elements to the Decision class:
       CL_DomElement element = cur.to_element();
-      decisions.push_back(Decision(element));
+      decisions.push_back(new Decision(element));
     }
     cur = cur.get_next_sibling();
   }
@@ -50,9 +51,9 @@ Plot::~Plot()
 {
   DEBUG_MSG("Plot::~Plot() - Called.")
 
-}
-
-void Plot::parseXML()
-{
-
+  //Deleting decision objects.
+  std::list<Decision *>::iterator it_des;
+  for(it_des = decisions.begin(); it_des != decisions.end(); ++it_des)
+    delete (*it_des);
+  decisions.clear();
 }

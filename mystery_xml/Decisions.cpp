@@ -6,14 +6,22 @@
  */
 
 #include "Decisions.h"
+#include "Decision.h"
+#include "../logging.h"
 
-Decisions::Decisions()
+Decisions::Decisions(const CL_DomElement& element)
 {
-  // TODO Auto-generated constructor stub
+  DEBUG_MSG("Decisions::Decisions(const CL_DomElement&) - Called.")
 
 }
 
 Decisions::~Decisions()
 {
-  // TODO Auto-generated destructor stub
+  DEBUG_MSG("Decisions::~Decisions() - Called.")
+
+  //Deleting decision objects.
+  std::list<Decision *>::iterator it_des;
+  for(it_des = decisions.begin(); it_des != decisions.end(); ++it_des)
+    delete (*it_des);
+  decisions.clear();
 }

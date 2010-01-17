@@ -48,8 +48,14 @@ World::World(CL_DisplayWindow &display_window) : window(display_window), quit(fa
 void World::initLevel()
 {
 
-  //Create the plot object to initiate generation.
-  Plot plot("mystery_xml/mystery.xml");
+  try
+  {
+    //Create the plot object to initiate generation.
+    Plot plot("mystery_xml/mystery.xml");
+  }
+  catch (CL_DomException e) {
+    Application::log(LOG_LEVEL_INFO,"Error occurred while parsing level: '" + e.message + "'.");
+  }
 
   //Where the player's character starts
   CL_Pointd pc_start(0,0);

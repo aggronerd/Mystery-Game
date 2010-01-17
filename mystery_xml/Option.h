@@ -8,12 +8,13 @@
 #ifndef OPTION_H_
 #define OPTION_H_
 
+#include <ClanLib/core.h>
+
 class Option
 {
 public:
-  Option();
-  virtual
-  ~Option();
+  Option(const CL_DomElement&);
+  virtual ~Option();
 };
 
 #endif /* OPTION_H_ */

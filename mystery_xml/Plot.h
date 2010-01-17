@@ -19,9 +19,8 @@ public:
   Plot(const char*);
   virtual ~Plot();
 private:
-  void parseXML();
   CL_String name;
-  std::list<Decision> decisions;
+  std::list<Decision*> decisions;
 };
 
 #endif /* PLOT_H_ */
