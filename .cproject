@@ -39,6 +39,9 @@
 <tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1101369750" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 <option id="gnu.cpp.link.option.libs.1156099465" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 <listOptionValue builtIn="false" value="clan21GL"/>
+<listOptionValue builtIn="false" value="clan21Vorbis"/>
+<listOptionValue builtIn="false" value="clan21MikMod"/>
+<listOptionValue builtIn="false" value="clan21Sound"/>
 <listOptionValue builtIn="false" value="clan21Display"/>
 <listOptionValue builtIn="false" value="png"/>
 <listOptionValue builtIn="false" value="jpeg"/>

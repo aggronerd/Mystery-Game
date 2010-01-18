@@ -9,8 +9,11 @@
 #define WORLD_H_
 
 #include <ClanLib/display.h>
-#include <list>
 #include <ClanLib/core.h>
+#include <ClanLib/sound.h>
+#include <ClanLib/mikmod.h>
+#include <ClanLib/vorbis.h>
+#include <list>
 
 class IsometricGrid;
 class Overlay;
@@ -44,6 +47,9 @@ class World
           CL_Slot slot_mouse_down;
           CL_Slot slot_mouse_up;
           CL_Slot slot_mouse_move;
+
+          CL_SoundBuffer* music;
+          CL_SoundOutput sound_output;
 
           bool mouse_dragging;
           bool mouse_down;

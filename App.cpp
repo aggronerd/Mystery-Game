@@ -39,7 +39,15 @@ int Application::main(const std::vector<CL_String> &args)
 
     Application::log(LOG_LEVEL_DEBUG, "Creating game window...");
     CL_DisplayWindow window(desc);
-    //CL_SoundOutput output(44100);
+
+    // Initialize the sound system
+    CL_SetupSound setup_sound;
+
+    // Initialize mikmod
+    CL_SetupMikMod setup_mikmod;
+
+    // Initialize vorbis
+    CL_SetupVorbis setup_vorbis;
 
     // Create world
     Application::log(LOG_LEVEL_DEBUG, "Creating world...");

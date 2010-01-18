@@ -12,7 +12,6 @@
 #include "Overlay.h"
 #include "App.h"
 #include "logging.h"
-#include <ClanLib/core.h>
 #include "mystery_xml/Plot.h"
 
 /**
@@ -21,6 +20,9 @@
 World::World(CL_DisplayWindow &display_window) : window(display_window), quit(false)
 {
   DEBUG_MSG("World::World(CL_DisplayWindow &) - Called.")
+
+  //Set object pointers to null
+  music = 0x0;
 
   // Get the graphic context
   gc = window.get_gc();
@@ -39,6 +41,9 @@ World::World(CL_DisplayWindow &display_window) : window(display_window), quit(fa
   mouse_dragging = false;
   mouse_down = false;
 
+  //Setup sound output
+  sound_output = CL_SoundOutput(44100);
+
   initLevel();
 }
 
@@ -47,6 +52,8 @@ World::World(CL_DisplayWindow &display_window) : window(display_window), quit(fa
  */
 void World::initLevel()
 {
+
+  DEBUG_MSG("World::initLevel() - Loading plot data from XML file.")
 
   try
   {
@@ -61,11 +68,19 @@ void World::initLevel()
   CL_Pointd pc_start(0,0);
   CL_Angle pc_direction(225,cl_degrees);
 
+  DEBUG_MSG("World::initLevel() - Adding level contents.")
+
   // Isometric grid overlay
   addOverlay(new IsometricGrid(this));
 
   // Add player character
   addGameObject(new PlayerCharacter(this,pc_start,pc_direction));
+
+  DEBUG_MSG("World::initLevel() - Creating and playing music.")
+
+  //Create & play the sound buffer.
+  music = new CL_SoundBuffer("audio/music/lone.ogg");
+  music->play(true, &sound_output);
 
 }
 
@@ -74,6 +89,9 @@ void World::initLevel()
  */
 World::~World()
 {
+
+  DEBUG_MSG("World::~World() - Called.")
+
   // Delete all game objects
   std::list<GameObject *>::iterator it_go;
   for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
@@ -85,6 +103,11 @@ World::~World()
   for(it_ov = overlays.begin(); it_ov != overlays.end(); ++it_ov)
       delete (*it_ov);
   overlays.clear();
+
+  // Stop and delete music.
+  if(music != 0x0)
+    delete music;
+
 }
 
 /**
