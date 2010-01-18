@@ -6,30 +6,37 @@
  */
 
 #include "Option.h"
+#include "Plot.h"
 #include "../logging.h"
 
-Option::Option(const CL_DomElement& element)
+Option::Option(Plot* p, const CL_DomElement& element) : plot(p)
 {
   DEBUG_MSG("Option::Option(const CL_DomElement&) - Called.")
 
-  CL_String ns_plot = "http://www.gregorydoran.co.uk/plot";
-
   //Reset Decisions object pointer to NULL.
   decisions = 0x0;
+
+  //Store attributes.
+  name = element.get_attribute("name");
+  id = CL_StringHelp::text_to_int(element.get_attribute("id"),10); //TODO: test existance
+  DEBUG_MSG(CL_String("Option::Option(const CL_DomElement&) - Found id=") + CL_StringHelp::int_to_text(id) + CL_String(" name='") + name + CL_String("'."))
 
   //Parse children:
   DEBUG_MSG(CL_String("Option::Option(const CL_DomElement&) - Processing children."));
   CL_DomNode cur = element.get_first_child();
   while (!cur.is_null())
   {
-    if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "decisions")
+    if (cur.get_namespace_uri() == PLOT_NS && cur.get_node_name() == "decisions")
     {
       //Delegate parsing of decision element to the Decision class:
       CL_DomElement element = cur.to_element();
-      decisions = new Decisions(element);
+      decisions = new Decisions(plot, element);
     }
     cur = cur.get_next_sibling();
   }
+
+  //Add option to plot's main index.
+  plot->addOption(this);
 
 }
 

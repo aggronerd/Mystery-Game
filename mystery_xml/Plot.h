@@ -9,16 +9,24 @@
 #define PLOT_H_
 
 #include <ClanLib/core.h>
+#include <map>
 #include "Decisions.h"
+
+//XML namespace used here for extra verification:
+#define PLOT_NS "http://www.gregorydoran.co.uk/plot"
+
+class Option;
 
 class Plot
 {
 public:
   Plot(const char*);
   virtual ~Plot();
+  void addOption(Option*);
 private:
   CL_String name;
   Decisions* decisions;
+  std::map<int, Option*> options; //The master list of options accessed using their id.
 };
 
 #endif /* PLOT_H_ */

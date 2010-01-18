@@ -8,18 +8,20 @@
 #ifndef DECISIONS_H_
 #define DECISIONS_H_
 
-#include <list>
 #include <ClanLib/core.h>
+#include <list>
+#include "Decision.h"
 
-class Decision;
+class Plot;
 
 class Decisions
 {
 public:
-  Decisions(const CL_DomElement&);
+  Decisions(Plot*, const CL_DomElement&);
   virtual ~Decisions();
 private:
   std::list<Decision*> decisions;
+  Plot* plot;
 };
 
 #endif /* DECISIONS_H_ */

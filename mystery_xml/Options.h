@@ -8,17 +8,20 @@
 #ifndef OPTIONS_H_
 #define OPTIONS_H_
 
-#include "Option.h"
-#include <list>
 #include <ClanLib/core.h>
+#include <list>
+#include "Option.h"
+
+class Plot;
 
 class Options
 {
 public:
-  Options(const CL_DomElement&);
+  Options(Plot*, const CL_DomElement&);
   virtual ~Options();
 private:
   std::list<Option*> options;
+  Plot* plot;
 };
 
 #endif /* OPTIONS_H_ */

@@ -9,15 +9,21 @@
 #define OPTION_H_
 
 #include <ClanLib/core.h>
-#include "Decisions.h"
+
+class Decisions;
+class Plot;
 
 class Option
 {
 public:
-  Option(const CL_DomElement&);
+  Option(Plot*, const CL_DomElement&);
   virtual ~Option();
+  int getId(void);
 private:
   Decisions* decisions;
+  CL_String name;
+  int id;
+  Plot* plot;
 };
 
 #endif /* OPTION_H_ */

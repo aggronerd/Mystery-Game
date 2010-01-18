@@ -6,19 +6,21 @@
  */
 
 #include "Decision.h"
+#include "Plot.h"
 #include "../logging.h"
 
-Decision::Decision(const CL_DomElement& element)
+Decision::Decision(Plot* p, const CL_DomElement& element) : plot(p)
 {
 
   DEBUG_MSG("Decision::Decision(const CL_DomElement&) - Called.");
 
-  options = 0x0;
   int options_count = 0;
-  CL_String ns_plot = "http://www.gregorydoran.co.uk/plot";
+
+  //Set object pointers to NULL
+  options = 0x0;
 
   //Retrieve attributes.
-  name = element.get_attribute_ns(ns_plot, "name");
+  name = element.get_attribute_ns(PLOT_NS, "name");
 
   //Parse children:
   DEBUG_MSG(CL_String("Decision::Decision(const CL_DomElement&) - Processing children for '") + name + CL_String("'."));
@@ -28,20 +30,20 @@ Decision::Decision(const CL_DomElement& element)
     //
     // <options>
     //
-    if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "options")
+    if (cur.get_namespace_uri() == PLOT_NS && cur.get_node_name() == "options")
     {
       if(options_count == 0)
       {
         //Delegate parsing of options element to the Options class:
         CL_DomElement e = cur.to_element();
-        options = new Options(e);
+        options = new Options(plot, e);
       }
       options_count++;
     }
     //
     // <english>
     //
-    else if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "english")
+    else if (cur.get_namespace_uri() == PLOT_NS && cur.get_node_name() == "english")
     {
       //TODO: Process <english> tag.
     }
