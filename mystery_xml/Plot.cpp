@@ -7,7 +7,6 @@
 
 #include "Plot.h"
 #include "../logging.h"
-#include "Decisions.h"
 #include <ClanLib/core.h>
 
 /**

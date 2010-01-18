@@ -9,8 +9,7 @@
 #define PLOT_H_
 
 #include <ClanLib/core.h>
-
-class Decisions;
+#include "Decisions.h"
 
 class Plot
 {

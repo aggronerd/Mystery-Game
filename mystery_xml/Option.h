@@ -9,12 +9,15 @@
 #define OPTION_H_
 
 #include <ClanLib/core.h>
+#include "Decisions.h"
 
 class Option
 {
 public:
   Option(const CL_DomElement&);
   virtual ~Option();
+private:
+  Decisions* decisions;
 };
 
 #endif /* OPTION_H_ */
