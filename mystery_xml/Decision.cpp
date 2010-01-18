@@ -25,6 +25,9 @@ Decision::Decision(const CL_DomElement& element)
   CL_DomNode cur = element.get_first_child();
   while (!cur.is_null())
   {
+    //
+    // <options>
+    //
     if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "options")
     {
       if(options_count == 0)
@@ -35,6 +38,9 @@ Decision::Decision(const CL_DomElement& element)
       }
       options_count++;
     }
+    //
+    // <english>
+    //
     else if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "english")
     {
       //TODO: Process <english> tag.
@@ -58,5 +64,5 @@ Decision::~Decision()
 {
   DEBUG_MSG("Decision::~Decision() - Called.");
   if(options != 0x0)
-    delete options;
+      delete options;
 }

@@ -6,6 +6,7 @@
  */
 
 #include "Options.h"
+#include "Option.h"
 #include "../logging.h"
 
 Options::Options(const CL_DomElement& element)
@@ -24,7 +25,7 @@ Options::Options(const CL_DomElement& element)
     {
       //Delegate parsing of options element to the Options class:
       CL_DomElement element = cur.to_element();
-      options.push_back(Option(element));
+      options.push_back(new Option(element));
     }
     cur = cur.get_next_sibling();
   }
@@ -37,5 +38,9 @@ Options::~Options()
   DEBUG_MSG("Options::~Options() - Called.")
 
   // Delete all options
-  //options.clear(); //TODO: Ensure clears the memory.
+  std::list<Option *>::iterator it_opt;
+  for(it_opt = options.begin(); it_opt != options.end(); ++it_opt)
+    delete (*it_opt);
+  options.clear();
+
 }

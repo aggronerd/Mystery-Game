@@ -9,9 +9,8 @@
 #define PLOT_H_
 
 #include <ClanLib/core.h>
-#include "list"
 
-class Decision;
+class Decisions;
 
 class Plot
 {
@@ -20,7 +19,7 @@ public:
   virtual ~Plot();
 private:
   CL_String name;
-  std::list<Decision*> decisions;
+  Decisions* decisions;
 };
 
 #endif /* PLOT_H_ */

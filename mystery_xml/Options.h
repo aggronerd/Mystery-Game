@@ -18,7 +18,7 @@ public:
   Options(const CL_DomElement&);
   virtual ~Options();
 private:
-  std::list<Option> options;
+  std::list<Option*> options;
 };
 
 #endif /* OPTIONS_H_ */

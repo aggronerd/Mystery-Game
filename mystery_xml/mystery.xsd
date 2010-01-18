@@ -9,7 +9,7 @@
 
   <xs:complexType name="PlotType">
    	<xs:sequence>
-      <xs:element name="decision" minOccurs="1" maxOccurs="unbounded" type="DecisionType" />
+      <xs:element name="decisions" minOccurs="1" maxOccurs="unbounded" type="DecisionsType" />
     </xs:sequence> 
     <xs:attribute name="name" type="xs:string"/>
   </xs:complexType>

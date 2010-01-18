@@ -7,7 +7,7 @@
 
 #include "Plot.h"
 #include "../logging.h"
-#include "Decision.h"
+#include "Decisions.h"
 #include <ClanLib/core.h>
 
 /**
@@ -16,6 +16,9 @@
 Plot::Plot(const char* filename)
 {
   DEBUG_MSG("Plot::Plot(const char*) - Called.")
+
+  //Reset Decisions object pointer to null
+  decisions = 0x0;
 
   //Create a file object.
   CL_String cl_filename = filename;
@@ -37,11 +40,11 @@ Plot::Plot(const char* filename)
   CL_DomNode cur = root.get_first_child();
   while (!cur.is_null())
   {
-    if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "decision")
+    if (cur.get_namespace_uri() == ns_plot && cur.get_node_name() == "decisions")
     {
-      //Delegate parsing of decision elements to the Decision class:
+      //Delegate parsing of decisions element to the Decisions class:
       CL_DomElement element = cur.to_element();
-      decisions.push_back(new Decision(element));
+      decisions = new Decisions(element);
     }
     cur = cur.get_next_sibling();
   }
@@ -50,10 +53,6 @@ Plot::Plot(const char* filename)
 Plot::~Plot()
 {
   DEBUG_MSG("Plot::~Plot() - Called.")
-
-  //Deleting decision objects.
-  std::list<Decision *>::iterator it_des;
-  for(it_des = decisions.begin(); it_des != decisions.end(); ++it_des)
-    delete (*it_des);
-  decisions.clear();
+  if(decisions != 0x0)
+      delete decisions;
 }
