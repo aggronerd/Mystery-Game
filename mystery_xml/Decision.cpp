@@ -68,3 +68,9 @@ Decision::~Decision()
   if(options != 0x0)
       delete options;
 }
+
+CL_String Decision::getAnswer(void)
+{
+  //TODO: do the work
+  return("");
+}

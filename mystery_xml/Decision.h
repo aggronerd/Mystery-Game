@@ -18,6 +18,7 @@ class Decision
 public:
   Decision(Plot*, const CL_DomElement&);
   virtual ~Decision();
+  CL_String getAnswer(void);
 private:
   CL_String name;
   Options* options;
