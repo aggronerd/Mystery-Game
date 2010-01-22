@@ -17,6 +17,10 @@
 
 class Option;
 
+/**
+ * The plot class is use to parse the plot element in the
+ * mystery_xml library.
+ */
 class Plot
 {
 public:

@@ -18,12 +18,14 @@ Decision::Decision(Plot* p, const CL_DomElement& element) : plot(p)
 
   //Set object pointers to NULL
   options = 0x0;
+  value = 0x0;
 
   //Retrieve attributes.
   name = element.get_attribute_ns(PLOT_NS, "name");
+  type = element.get_attribute_ns(PLOT_NS, "type");
 
   //Parse children:
-  DEBUG_MSG(CL_String("Decision::Decision(const CL_DomElement&) - Processing children for '") + name + CL_String("'."));
+  DEBUG_MSG(CL_String("Decision::Decision(const CL_DomElement&) - Processing children for '") + name + CL_String("' type='") + type + CL_String("'."));
   CL_DomNode cur = element.get_first_child();
   while (!cur.is_null())
   {
@@ -69,8 +71,21 @@ Decision::~Decision()
       delete options;
 }
 
-CL_String Decision::getAnswer(void)
+/**
+ * Returns the type of the value as a string.
+ */
+CL_String Decision::getResultType()
 {
-  //TODO: do the work
-  return("");
+  return(type);
+}
+
+/**
+ * Assigns a result to this decision.
+ */
+bool Decision::resolve()
+{
+
+
+
+  return(true);
 }

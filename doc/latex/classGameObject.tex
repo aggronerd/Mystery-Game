@@ -1,0 +1,108 @@
+\hypertarget{classGameObject}{
+\section{GameObject Class Reference}
+\label{classGameObject}\index{GameObject@{GameObject}}
+}
+Inheritance diagram for GameObject::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classGameObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGameObject_ad8d1bdb3864097a3723ddac03b947f95}{GameObject} (\hyperlink{classWorld}{World} $\ast$, CL\_\-Pointd \&, CL\_\-Angle \&)
+\item 
+void \hyperlink{classGameObject_a0eabb72240499a1878b420b5c3f0ecf3}{setDirection} (CL\_\-Angle \&)
+\item 
+CL\_\-Angle \hyperlink{classGameObject_a456901f9f0b261b206db248960633e50}{getDirection} (void)
+\item 
+void \hyperlink{classGameObject_a4fd1eeb91d5a220dde7b8574be19b651}{setPosition} (CL\_\-Pointd \&)
+\item 
+CL\_\-Pointd \hyperlink{classGameObject_adfc89f23ef6d0819c183f1c26bb27e58}{getPosition} (void)
+\item 
+virtual void \hyperlink{classGameObject_abb64143e72358beb808db22182517802}{draw} ()
+\item 
+virtual bool \hyperlink{classGameObject_ad2f3cd5d1f5a11b237507cd3ee98b95d}{update} (unsigned int)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGameObject_adce5bc0f31d7ce307f6bf8fe57030a24}{
+\hyperlink{classWorld}{World} $\ast$ {\bfseries world}}
+\label{classGameObject_adce5bc0f31d7ce307f6bf8fe57030a24}
+
+\item 
+\hypertarget{classGameObject_a9e3a44174a06dd260412d7a13d639d99}{
+CL\_\-Pointd {\bfseries position}}
+\label{classGameObject_a9e3a44174a06dd260412d7a13d639d99}
+
+\item 
+\hypertarget{classGameObject_a8df0dc007367b180dfcd9d2f193f6bdf}{
+CL\_\-Angle {\bfseries direction}}
+\label{classGameObject_a8df0dc007367b180dfcd9d2f193f6bdf}
+
+\item 
+\hypertarget{classGameObject_a5b841978ecf469bc3a69c0d05ad81013}{
+CL\_\-Sprite $\ast$ {\bfseries static\_\-sprites} \mbox{[}8\mbox{]}}
+\label{classGameObject_a5b841978ecf469bc3a69c0d05ad81013}
+
+\item 
+\hypertarget{classGameObject_a22464434abaabf3fb9aab0664dd22eb5}{
+CL\_\-Sprite $\ast$ {\bfseries static\_\-current}}
+\label{classGameObject_a22464434abaabf3fb9aab0664dd22eb5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGameObject_ad8d1bdb3864097a3723ddac03b947f95}{
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\subsubsection[{GameObject}]{\setlength{\rightskip}{0pt plus 5cm}GameObject::GameObject ({\bf World} $\ast$ {\em w}, \/  CL\_\-Pointd \& {\em initial\_\-position}, \/  CL\_\-Angle \& {\em initial\_\-direction})}}
+\label{classGameObject_ad8d1bdb3864097a3723ddac03b947f95}
+param w World$\ast$ param initial\_\-position CL\_\-Pointd The starting position in world coordinates. param initial\_\-direction CL\_\-Angle 
+
+\subsection{Member Function Documentation}
+\hypertarget{classGameObject_abb64143e72358beb808db22182517802}{
+\index{GameObject@{GameObject}!draw@{draw}}
+\index{draw@{draw}!GameObject@{GameObject}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void GameObject::draw (void)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classGameObject_abb64143e72358beb808db22182517802}
+Draws the current static sprite for the object. 
+
+Reimplemented in \hyperlink{classMoveableGameObject_a6110e3bcfb088cfaa53bc81ce220bab1}{MoveableGameObject}.\hypertarget{classGameObject_a456901f9f0b261b206db248960633e50}{
+\index{GameObject@{GameObject}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!GameObject@{GameObject}}
+\subsubsection[{getDirection}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Angle GameObject::getDirection (void)}}
+\label{classGameObject_a456901f9f0b261b206db248960633e50}
+Returns the angle. \hypertarget{classGameObject_adfc89f23ef6d0819c183f1c26bb27e58}{
+\index{GameObject@{GameObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!GameObject@{GameObject}}
+\subsubsection[{getPosition}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Pointd GameObject::getPosition (void)}}
+\label{classGameObject_adfc89f23ef6d0819c183f1c26bb27e58}
+Returns the position in world co-\/ordinates in CL\_\-Pointd. \hypertarget{classGameObject_a0eabb72240499a1878b420b5c3f0ecf3}{
+\index{GameObject@{GameObject}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!GameObject@{GameObject}}
+\subsubsection[{setDirection}]{\setlength{\rightskip}{0pt plus 5cm}void GameObject::setDirection (CL\_\-Angle \& {\em new\_\-direction})}}
+\label{classGameObject_a0eabb72240499a1878b420b5c3f0ecf3}
+Sets the direction the game object is facing. This effects the sprite which is used when drawing it. \hypertarget{classGameObject_a4fd1eeb91d5a220dde7b8574be19b651}{
+\index{GameObject@{GameObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!GameObject@{GameObject}}
+\subsubsection[{setPosition}]{\setlength{\rightskip}{0pt plus 5cm}void GameObject::setPosition (CL\_\-Pointd \& {\em new\_\-position})}}
+\label{classGameObject_a4fd1eeb91d5a220dde7b8574be19b651}
+Sets the position of the object.
+
+param new\_\-position The position as CL\_\-Pointd in terms of world co-\/ordinates. \hypertarget{classGameObject_ad2f3cd5d1f5a11b237507cd3ee98b95d}{
+\index{GameObject@{GameObject}!update@{update}}
+\index{update@{update}!GameObject@{GameObject}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool GameObject::update (unsigned int {\em time\_\-elapsed\_\-ms})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classGameObject_ad2f3cd5d1f5a11b237507cd3ee98b95d}
+Updates any animation in the current sprite. 
+
+Reimplemented in \hyperlink{classMoveableGameObject_af2a5d981743e85b4bd35a90f874b361b}{MoveableGameObject}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+GameObject.h\item 
+GameObject.cpp\end{DoxyCompactItemize}

@@ -46,3 +46,8 @@ Option::~Option()
   if(decisions != 0x0)
     delete decisions;
 }
+
+int Option::getId()
+{
+  return(id);
+}

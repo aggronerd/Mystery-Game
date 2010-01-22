@@ -7,6 +7,7 @@
 
 #include "Options.h"
 #include "Plot.h"
+#include "Result.h"
 #include "../logging.h"
 
 Options::Options(Plot* p, const CL_DomElement& element) : plot(p)
@@ -43,7 +44,10 @@ Options::~Options()
 
 }
 
-int Option::getId()
+/**
+ * Picks a value based on weights and parameters.
+ */
+Result Options::select()
 {
-  return(id);
+
 }
