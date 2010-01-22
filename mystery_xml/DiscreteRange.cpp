@@ -8,17 +8,22 @@
 #include "DiscreteRange.h"
 #include "../logging.h"
 
-DiscreteRange::DiscreteRange(int range_start, int range_end)
+DiscreteRange::DiscreteRange(int range_start, int range_end) : Range(range_start, range_end)
 {
+
   DEBUG_MSG("DiscreteRange::DiscreteRange(int, int) - Called.")
-  start = range_start;
-  end   = range_end;
+
 }
 
 DiscreteRange::~DiscreteRange()
-{}
+{
+
+  DEBUG_MSG("DiscreteRange::~DiscreteRange() - Called.")
+
+}
 
 int DiscreteRange::selectValue()
 {
-
+  //TODO: Code this.
+  return(0);
 }

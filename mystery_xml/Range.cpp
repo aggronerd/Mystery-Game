@@ -6,14 +6,19 @@
  */
 
 #include "Range.h"
+#include "../logging.h"
 
-Range::Range()
+Range::Range(double range_start, double range_end)
 {
-  // TODO Auto-generated constructor stub
+
+  DEBUG_MSG("Range::Range(double, double) - Called.")
+
+  start = range_start;
+  end   = range_end;
 
 }
 
 Range::~Range()
 {
-  // TODO Auto-generated destructor stub
+  DEBUG_MSG("Range::~Range() - Called.")
 }
