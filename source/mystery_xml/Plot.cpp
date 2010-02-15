@@ -6,7 +6,7 @@
  */
 
 #include "Plot.h"
-#include "../logging.h"
+#include "../misc/logging.h"
 #include "Option.h"
 
 /**

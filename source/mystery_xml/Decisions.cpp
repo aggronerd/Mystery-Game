@@ -8,7 +8,7 @@
 #include "Decisions.h"
 #include "Decision.h"
 #include "Plot.h"
-#include "../logging.h"
+#include "../misc/logging.h"
 
 Decisions::Decisions(Plot* p, const CL_DomElement& element) : plot(p)
 {

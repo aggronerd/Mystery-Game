@@ -10,9 +10,9 @@
 #include "PlayerCharacter.h"
 #include "GameObject.h"
 #include "Overlay.h"
-#include "App.h"
-#include "logging.h"
-#include "mystery_xml/Plot.h"
+#include "../App.h"
+#include "../misc/logging.h"
+#include "../mystery_xml/Plot.h"
 
 /**
  * Creates the game world and sets up initial contents.
@@ -28,7 +28,7 @@ World::World(CL_DisplayWindow &display_window) : window(display_window), quit(fa
   gc = window.get_gc();
 
   //Get the resource manager
-  rm = CL_ResourceManager("resources.xml");
+  rm = CL_ResourceManager("data/game-resources.xml");
 
   slot_quit       = window.sig_window_close().connect(this, &World::onWindowClose);
   slot_key_down   = window.get_ic().get_keyboard().sig_key_down().connect(this, &World::onKeyDown);
@@ -58,7 +58,7 @@ void World::initLevel()
   try
   {
     //Create the plot object to initiate generation.
-    Plot plot("mystery_xml/mystery.xml");
+    Plot plot("data/mystery.xml");
   }
   catch (CL_DomException e) {
     Application::log(LOG_LEVEL_INFO,"Error occurred while parsing level: '" + e.message + "'.");
@@ -79,7 +79,7 @@ void World::initLevel()
   DEBUG_MSG("World::initLevel() - Creating and playing music.")
 
   //Create & play the sound buffer.
-  music = new CL_SoundBuffer("audio/music/lone.ogg");
+  music = new CL_SoundBuffer("data/audio/music/lone.ogg");
   music->play(true, &sound_output);
 
 }

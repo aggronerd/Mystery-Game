@@ -1,0 +1,21 @@
+<resources>
+	<section name="characters">
+		<sprite name="detective_static_sw" base_angle="0" id="1500">
+			<image file="artwork/people/character/standing_001.png" />
+			<image file="artwork/people/character/standing_002.png" />
+			<image file="artwork/people/character/standing_003.png" />
+			<image file="artwork/people/character/standing_004.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+			<animation loop="yes" pingpong="no" speed="120" />
+		</sprite>
+	</section>
+	<section name="misc">
+		<sprite name="missing" base_angle="0" id="1000">
+			<image file="artwork/people/character/standing_001.png" />
+			<translation origin="center" />
+			<rotation origin="center" />
+		</sprite>
+	</section>
+</resources>
+
