@@ -10,6 +10,7 @@
 
 #include <ClanLib/display.h>
 #include <ClanLib/core.h>
+#include "ApplicationModuleExitCode.h"
 
 /**
  * An application is a generalised class for a part
@@ -27,7 +28,7 @@ public:
 protected:
   virtual void draw(void) {};
   virtual void update(void) {};
-  int exit_code;
+  ApplicationModuleExitCode exit_code;
   CL_DisplayWindow window;
   CL_GraphicContext gc;
   CL_Slot slot_quit;

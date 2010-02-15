@@ -6,10 +6,12 @@
  */
 
 #include "Application.h"
-#include "game/World.h"
+#include "main_menu/MainMenu.h"
 #include "misc/logging.h"
 #include <ClanLib/core.h>
 #include <ClanLib/sound.h>
+#include <ClanLib/mikmod.h>
+#include <ClanLib/vorbis.h>
 
 Application::Application()
 {
@@ -35,7 +37,7 @@ int Application::main(const std::vector<CL_String> &args)
     Application::log(LOG_LEVEL_DEBUG, "Creating window description...");
     CL_DisplayWindowDescription desc;
     desc.set_title("Mystery Generator");
-    desc.set_size(CL_Size(800, 600), true);
+    desc.set_size(CL_Size(1024, 640), true);
 
     Application::log(LOG_LEVEL_DEBUG, "Creating game window...");
     CL_DisplayWindow window(desc);
@@ -51,11 +53,11 @@ int Application::main(const std::vector<CL_String> &args)
 
     // Create world
     Application::log(LOG_LEVEL_DEBUG, "Creating world...");
-    World world(window);
+    MainMenu menu(window);
 
     // Run the main loop
     Application::log(LOG_LEVEL_DEBUG, "Executing game loop.");
-    world.run();
+    menu.run();
   }
   catch(CL_Exception &exception)
   {

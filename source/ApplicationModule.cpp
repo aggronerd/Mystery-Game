@@ -27,7 +27,7 @@ ApplicationModule::ApplicationModule(CL_DisplayWindow &display_window) : window(
   mouse_dragging = false;
   mouse_down = false;
 
-  exit_code = 0;
+  exit_code = no_exit;
 
 }
 
@@ -73,13 +73,13 @@ void ApplicationModule::onKeyUp(const CL_InputEvent &key, const CL_InputState &s
 {
   if(key.id == CL_KEY_ESCAPE)
   {
-    exit_code = 2;
+    exit_code = exit_module;
   }
 }
 
 void ApplicationModule::onWindowClose()
 {
-  exit_code = 1;
+  exit_code = exit_application;
 }
 
 void ApplicationModule::onKeyDown(const CL_InputEvent &key, const CL_InputState &state)

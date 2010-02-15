@@ -10,28 +10,19 @@
 
 #include <ClanLib/display.h>
 #include <ClanLib/core.h>
+#include "../ApplicationModule.h"
 
 /**
  * The editor class is used to edit the plot Baysian Networks.
  */
-class Editor
+class Editor : public ApplicationModule
 {
   public:
     Editor(CL_DisplayWindow &);
     virtual ~Editor();
-
-    int run();
-
-    CL_GraphicContext* getGC(void);
-
   private:
-    //The main graphics context:
-    CL_GraphicContext gc;
-    //The window object:
-    CL_DisplayWindow window;
-    //If is false the main loop exits.
-    bool quit;
-
+    void draw(void);
+    void update(void);
 };
 
 #endif /* EDITOR_H_ */
