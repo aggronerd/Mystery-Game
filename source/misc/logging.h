@@ -19,7 +19,7 @@
 
   #ifdef LOG_DEBUG_MESSAGES
     #include <ClanLib/core.h>
-    #include "../App.h"
+    #include "../Application.h"
 #define DEBUG_MSG(message) Application::log(LOG_LEVEL_DEBUG,CL_String(__FILE__) + CL_String(":") + CL_StringHelp::int_to_text(__LINE__) + CL_String(" - ") + CL_String(message));
   #else
     #define DEBUG_MSG(message)

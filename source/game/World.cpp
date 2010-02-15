@@ -10,40 +10,27 @@
 #include "PlayerCharacter.h"
 #include "GameObject.h"
 #include "Overlay.h"
-#include "../App.h"
+#include "../Application.h"
 #include "../misc/logging.h"
 #include "../mystery_xml/Plot.h"
 
 /**
  * Creates the game world and sets up initial contents.
  */
-World::World(CL_DisplayWindow &display_window) : window(display_window), quit(false)
+World::World(CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
   DEBUG_MSG("World::World(CL_DisplayWindow &) - Called.")
 
   //Set object pointers to null
   music = 0x0;
 
-  // Get the graphic context
-  gc = window.get_gc();
-
   //Get the resource manager
   rm = CL_ResourceManager("data/game-resources.xml");
-
-  slot_quit       = window.sig_window_close().connect(this, &World::onWindowClose);
-  slot_key_down   = window.get_ic().get_keyboard().sig_key_down().connect(this, &World::onKeyDown);
-  slot_key_up     = window.get_ic().get_keyboard().sig_key_up().connect(this, &World::onKeyUp);
-  slot_mouse_down = window.get_ic().get_mouse().sig_key_down().connect(this, &World::onMouseDown);
-  slot_mouse_up   = window.get_ic().get_mouse().sig_key_up().connect(this, &World::onMouseUp);
-  slot_mouse_move = window.get_ic().get_mouse().sig_pointer_move().connect(this, &World::onMouseMove);
-
-  quit = false;
-  mouse_dragging = false;
-  mouse_down = false;
 
   //Setup sound output
   sound_output = CL_SoundOutput(44100);
 
+  //Load objects into the world.
   initLevel();
 }
 
@@ -127,22 +114,6 @@ void World::addGameObject(GameObject* game_object)
 }
 
 /**
- * Initiates the game loop.
- */
-int World::run()
-{
-  // Run until someone presses escape.
-  while (!quit)
-  {
-    draw();
-    update();
-    // This call processes user input and other events
-    CL_KeepAlive::process(0);
-  }
-  return(0);
-}
-
-/**
  * Draws all objects and overlays.
  */
 void World::draw()
@@ -179,51 +150,6 @@ void World::update()
     else
       ++it_go;
   }
-}
-
-// Calculate amount of time since last frame
-unsigned int World::calculateTimeElapsed()
-{
-  static unsigned int last_time = 0;
-  unsigned int new_time = CL_System::get_time();
-
-  if(last_time == 0)
-    last_time = new_time;
-
-  int delta_time = (new_time - last_time);
-  last_time = new_time;
-
-  return(delta_time);
-}
-
-void World::onKeyUp(const CL_InputEvent &key, const CL_InputState &state)
-{
-  if(key.id == CL_KEY_ESCAPE)
-  {
-    quit = true;
-  }
-}
-
-void World::onKeyDown(const CL_InputEvent &key, const CL_InputState &state)
-{}
-
-void World::onMouseDown(const CL_InputEvent &key, const CL_InputState &state)
-{}
-
-void World::onMouseUp(const CL_InputEvent &key, const CL_InputState &state)
-{}
-
-void World::onMouseMove(const CL_InputEvent &key, const CL_InputState &state)
-{}
-
-void World::onWindowClose()
-{
-  quit = true;
-}
-
-CL_GraphicContext* World::getGC()
-{
-  return(&gc);
 }
 
 CL_ResourceManager* World::getRM()

@@ -5,7 +5,7 @@
  *      Author: greg
  */
 
-#include "App.h"
+#include "Application.h"
 #include "game/World.h"
 #include "misc/logging.h"
 #include <ClanLib/core.h>

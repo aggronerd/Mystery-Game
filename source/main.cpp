@@ -3,7 +3,7 @@
 #include <ClanLib/display.h>
 
 #include <cmath>
-#include "App.h"
+#include "Application.h"
 
 // Choose the target renderer
 #define USE_OPENGL_2

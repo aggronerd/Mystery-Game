@@ -5,11 +5,17 @@
  *      Author: greg
  */
 
-#ifndef APP_H_
-#define APP_H_
+#ifndef APPLICATION_H_
+#define APPLICATION_H_
 
 #include <ClanLib/core.h>
 
+/**
+ * The Application object provides transition between the
+ * modules of the overall application. It instantiates a
+ * clanLib window and instantiates the other shared parts
+ * of the engine.
+ */
 class Application
 {
 public:
@@ -21,4 +27,4 @@ private:
   const static int logging_level = 5; //Highest level.
 };
 
-#endif /* APP_H_ */
+#endif /* APPLICATION_H_ */
