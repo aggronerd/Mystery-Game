@@ -23,7 +23,7 @@ class ApplicationModule
 public:
   ApplicationModule(CL_DisplayWindow &);
   virtual ~ApplicationModule();
-  int run(void); //Returns exit code
+  ApplicationModuleExitCode run(void); //Returns exit code
   CL_GraphicContext* getGC(void);
 protected:
   virtual void draw(void) {};

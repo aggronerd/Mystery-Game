@@ -7,7 +7,10 @@
 
 #include "Application.h"
 #include "main_menu/MainMenu.h"
+#include "game/World.h"
+#include "editor/Editor.h"
 #include "misc/logging.h"
+#include "ApplicationModuleExitCode.h"
 #include <ClanLib/core.h>
 #include <ClanLib/sound.h>
 #include <ClanLib/mikmod.h>
@@ -34,30 +37,41 @@ int Application::main(const std::vector<CL_String> &args)
     file_logger.enable();
 
     // Create the window
-    Application::log(LOG_LEVEL_DEBUG, "Creating window description...");
     CL_DisplayWindowDescription desc;
     desc.set_title("Mystery Generator");
     desc.set_size(CL_Size(1024, 640), true);
+    desc.set_fullscreen(true);
 
-    Application::log(LOG_LEVEL_DEBUG, "Creating game window...");
     CL_DisplayWindow window(desc);
 
     // Initialize the sound system
     CL_SetupSound setup_sound;
-
-    // Initialize mikmod
     CL_SetupMikMod setup_mikmod;
-
-    // Initialize vorbis
     CL_SetupVorbis setup_vorbis;
 
-    // Create world
-    Application::log(LOG_LEVEL_DEBUG, "Creating world...");
-    MainMenu menu(window);
+    //Run the loop for the modules of the game.
+    ApplicationModuleExitCode response = exit_module_and_load_main_menu;
+    ApplicationModule* mod = 0x0;
+    do {
+      switch(response)
+      {
+        case exit_module_and_load_game:
+          mod = (ApplicationModule*)new World(window);
+          break;
+        case exit_module_and_load_editor:
+          mod = (ApplicationModule*)new Editor(window);
+          break;
+        case exit_module_and_load_main_menu:
+          mod = (ApplicationModule*)new MainMenu(window);
+          break;
+        default:
+          throw CL_Exception("Not supposed to happen");//TODO: Raise an error here
+      }
+      response = mod->run();
+      //TODO: Ensure does not cause leak because call is to destroy general class not decenants.
+      delete mod;
+    } while (response != exit_application);
 
-    // Run the main loop
-    Application::log(LOG_LEVEL_DEBUG, "Executing game loop.");
-    menu.run();
   }
   catch(CL_Exception &exception)
   {

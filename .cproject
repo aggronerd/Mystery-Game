@@ -39,6 +39,7 @@
 <tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.335664886" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base">
 <option id="gnu.cpp.link.option.libs.1861136078" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 <listOptionValue builtIn="false" value="clan21GL"/>
+<listOptionValue builtIn="false" value="clan21GUI"/>
 <listOptionValue builtIn="false" value="clan21Vorbis"/>
 <listOptionValue builtIn="false" value="clan21MikMod"/>
 <listOptionValue builtIn="false" value="clan21Sound"/>

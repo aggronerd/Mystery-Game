@@ -39,17 +39,17 @@ ApplicationModule::~ApplicationModule()
 /**
  * Initiates the main loop.
  */
-int ApplicationModule::run()
+ApplicationModuleExitCode ApplicationModule::run()
 {
   // Run until someone presses escape.
-  while (exit_code==0)
+  while (exit_code==no_exit)
   {
-    draw();
     update();
+    draw();
     // This call processes user input and other events
     CL_KeepAlive::process(0);
   }
-  return(0);
+  return(exit_code);
 }
 
 /**
@@ -57,6 +57,7 @@ int ApplicationModule::run()
  */
 unsigned int ApplicationModule::calculateTimeElapsed()
 {
+  //TODO: Don't think this will work as it is inherited.
   static unsigned int last_time = 0;
   unsigned int new_time = CL_System::get_time();
 
@@ -70,12 +71,7 @@ unsigned int ApplicationModule::calculateTimeElapsed()
 }
 
 void ApplicationModule::onKeyUp(const CL_InputEvent &key, const CL_InputState &state)
-{
-  if(key.id == CL_KEY_ESCAPE)
-  {
-    exit_code = exit_module;
-  }
-}
+{}
 
 void ApplicationModule::onWindowClose()
 {
