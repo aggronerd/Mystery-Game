@@ -17,8 +17,8 @@ MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(d
 
   //Set the background image
   background_image = CL_Image(gc,"background",&menu_rm);
-  float bg_scale_x = gc.get_width() / background_image.get_width();
-  float bg_scale_y = gc.get_height() / background_image.get_height();
+  float bg_scale_x = static_cast<float>(gc.get_width()) / background_image.get_width();
+  float bg_scale_y = static_cast<float>(gc.get_height()) / background_image.get_height();
   background_image.set_scale(bg_scale_x,bg_scale_y);
 
   //Create window
