@@ -28,16 +28,16 @@ class World : public ApplicationModule
   public:
           World(const CL_DisplayWindow &);
           virtual ~World();
-          void addOverlay(Overlay *);
-          void addGameObject(GameObject *);
-          CL_ResourceManager* getRM(void);
+          void add_overlay(Overlay *);
+          void add_game_object(GameObject *);
+          CL_ResourceManager* get_rm(void);
   private:
           std::list<Overlay*> overlays;
           std::list<GameObject*> game_objects;
           CL_ResourceManager rm;
           CL_SoundBuffer* music;
           CL_SoundOutput sound_output;
-          void initLevel(void);
+          void init_level(void);
           void draw(void);
           void update(void);
   };

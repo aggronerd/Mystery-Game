@@ -58,9 +58,9 @@ Plot::~Plot()
  * Adds the Option object to the map
  * accessible by index.
  */
-void Plot::addOption(Option* option)
+void Plot::add_option(Option* option)
 {
   DEBUG_MSG("Plot::addOption(Option*) - Called.")
   //TODO: Check ID isn't already in use.
-  options[option->getId()] = option;
+  options[option->get_id()] = option;
 }

@@ -31,13 +31,13 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
   sound_output = CL_SoundOutput(44100);
 
   //Load objects into the world.
-  initLevel();
+  init_level();
 }
 
 /**
  * Adds content to the world.
  */
-void World::initLevel()
+void World::init_level()
 {
 
   DEBUG_MSG("World::initLevel() - Loading plot data from XML file.")
@@ -58,10 +58,10 @@ void World::initLevel()
   DEBUG_MSG("World::initLevel() - Adding level contents.")
 
   // Isometric grid overlay
-  addOverlay(new IsometricGrid(this));
+  add_overlay(new IsometricGrid(this));
 
   // Add player character
-  addGameObject(new PlayerCharacter(this,pc_start,pc_direction));
+  add_game_object(new PlayerCharacter(this,pc_start,pc_direction));
 
   DEBUG_MSG("World::initLevel() - Creating and playing music.")
 
@@ -100,7 +100,7 @@ World::~World()
 /**
  * Adds an overlay object to the world.
  */
-void World::addOverlay(Overlay* overlay)
+void World::add_overlay(Overlay* overlay)
 {
   overlays.push_back(overlay);
 }
@@ -108,7 +108,7 @@ void World::addOverlay(Overlay* overlay)
 /**
  * Adds a game object to the world.
  */
-void World::addGameObject(GameObject* game_object)
+void World::add_game_object(GameObject* game_object)
 {
   game_objects.push_back(game_object);
 }
@@ -152,7 +152,7 @@ void World::update()
   }
 }
 
-CL_ResourceManager* World::getRM()
+CL_ResourceManager* World::get_rm()
 {
   return(&rm);
 }

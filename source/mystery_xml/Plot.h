@@ -26,7 +26,7 @@ class Plot
 public:
   Plot(const char*);
   virtual ~Plot();
-  void addOption(Option*);
+  void add_option(Option*);
 private:
   CL_String name;
   Decisions* decisions;

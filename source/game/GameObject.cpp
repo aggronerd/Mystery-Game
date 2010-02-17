@@ -30,8 +30,8 @@ GameObject::GameObject(World* w, CL_Pointd& initial_position, CL_Angle& initial_
     static_sprites[i] = 0x0;
   static_current = 0x0;
 
-  this->setPosition(initial_position);
-  this->setDirection(initial_direction);
+  this->set_position(initial_position);
+  this->set_direction(initial_direction);
 }
 
 GameObject::~GameObject()
@@ -65,7 +65,7 @@ bool GameObject::update(unsigned int time_elapsed_ms)
  * Sets the direction the game object is facing. This effects
  * the sprite which is used when drawing it.
  */
-void GameObject::setDirection(CL_Angle& new_direction)
+void GameObject::set_direction(CL_Angle& new_direction)
 {
   float angle;
 
@@ -94,7 +94,7 @@ void GameObject::setDirection(CL_Angle& new_direction)
 /**
  * Returns the angle.
  */
-CL_Angle GameObject::getDirection(void)
+CL_Angle GameObject::get_direction(void)
 {
   return(direction);
 }
@@ -104,15 +104,15 @@ CL_Angle GameObject::getDirection(void)
  *
  * param new_position The position as CL_Pointd in terms of world co-ordinates.
  */
-void GameObject::setPosition(CL_Pointd& new_position)
+void GameObject::set_position(CL_Pointd& new_position)
 {
-  position = IsometricConversions::worldToIsometric(new_position);
+  position = IsometricConversions::world_to_isometric(new_position);
 }
 
 /**
  * Returns the position in world co-ordinates in CL_Pointd.
  */
-CL_Pointd GameObject::getPosition()
+CL_Pointd GameObject::get_position()
 {
-  return(IsometricConversions::isometricToWorld(position));
+  return(IsometricConversions::isometric_to_world(position));
 }

@@ -18,10 +18,10 @@ class Decision
 public:
   Decision(Plot*, const CL_DomElement&);
   virtual ~Decision();
-  CL_String getResultAsString(void);
-  int getResultAsInteger(void);
-  double getResultAsDouble(void);
-  CL_String getResultType(void);
+  CL_String get_result_as_string(void);
+  int get_result_as_integer(void);
+  double get_result_as_double(void);
+  CL_String get_result_type(void);
 private:
   CL_String name;
   CL_String type;

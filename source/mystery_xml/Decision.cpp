@@ -74,7 +74,7 @@ Decision::~Decision()
 /**
  * Returns the type of the value as a string.
  */
-CL_String Decision::getResultType()
+CL_String Decision::get_result_type()
 {
   return(type);
 }

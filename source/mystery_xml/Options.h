@@ -24,7 +24,7 @@ public:
 private:
   std::list<Option*> options;
   Plot* plot;
-  void interpretRange(CL_String);
+  void interpret_range(CL_String);
 };
 
 #endif /* OPTIONS_H_ */

@@ -18,7 +18,7 @@ class Option
 public:
   Option(Plot*, const CL_DomElement&);
   virtual ~Option();
-  int getId(void);
+  int get_id(void);
 private:
   Decisions* decisions;
   CL_String name;

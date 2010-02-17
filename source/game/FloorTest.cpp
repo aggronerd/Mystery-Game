@@ -24,10 +24,10 @@ FloorTest::draw()
     for(signed int y=-30;y<=30;y++)
     {
       //Draw square
-      CL_Draw::line(*gc, IsometricConversions::worldToIsometric(CL_Pointf(x,y)),   IsometricConversions::worldToIsometric(CL_Pointf(x  ,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
-      CL_Draw::line(*gc, IsometricConversions::worldToIsometric(CL_Pointf(x,y)),   IsometricConversions::worldToIsometric(CL_Pointf(x+1,y  )), CL_Colorf(0.2f, 0.2f, 0.2f));
-      CL_Draw::line(*gc, IsometricConversions::worldToIsometric(CL_Pointf(x+1,y)), IsometricConversions::worldToIsometric(CL_Pointf(x+1,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
-      CL_Draw::line(*gc, IsometricConversions::worldToIsometric(CL_Pointf(x,y+1)), IsometricConversions::worldToIsometric(CL_Pointf(x+1,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x,y)),   IsometricConversions::world_to_isometric(CL_Pointf(x  ,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x,y)),   IsometricConversions::world_to_isometric(CL_Pointf(x+1,y  )), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x+1,y)), IsometricConversions::world_to_isometric(CL_Pointf(x+1,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x,y+1)), IsometricConversions::world_to_isometric(CL_Pointf(x+1,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
     }
   }
 }

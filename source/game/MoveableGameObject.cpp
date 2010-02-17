@@ -32,7 +32,7 @@ MoveableGameObject::~MoveableGameObject()
 void MoveableGameObject::draw()
 {
   //Have to translate world position to isometric position.
-  CL_Pointd isometricPoint = IsometricConversions::worldToIsometric(position);
+  CL_Pointd isometricPoint = IsometricConversions::world_to_isometric(position);
   //TODO: add animation state.
   //still->draw(*(world->getGC()),(float)(isometricPoint.x),(float)(isometricPoint.y));
 }

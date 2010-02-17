@@ -17,7 +17,7 @@ class RandomGenerator
 public:
 
   RandomGenerator(unsigned int);
-  double generateFloat(void);
+  double get_float(void);
 
   virtual ~RandomGenerator();
 

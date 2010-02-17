@@ -13,7 +13,7 @@ IsometricConversions::IsometricConversions()
 IsometricConversions::~IsometricConversions()
 {}
 
-CL_Pointf IsometricConversions::worldToIsometric(CL_Pointf point)
+CL_Pointf IsometricConversions::world_to_isometric(CL_Pointf point)
 {
   CL_Pointf transformed;
   //Rotate 45 degrees clockwise.
@@ -25,7 +25,7 @@ CL_Pointf IsometricConversions::worldToIsometric(CL_Pointf point)
   return(transformed);
 }
 
-CL_Pointd IsometricConversions::worldToIsometric(CL_Pointd point)
+CL_Pointd IsometricConversions::world_to_isometric(CL_Pointd point)
 {
   CL_Pointd transformed;
   //Rotate 45 degrees clockwise.
@@ -37,7 +37,7 @@ CL_Pointd IsometricConversions::worldToIsometric(CL_Pointd point)
   return(transformed);
 }
 
-CL_Pointd IsometricConversions::isometricToWorld(CL_Pointd point)
+CL_Pointd IsometricConversions::isometric_to_world(CL_Pointd point)
 {
   CL_Pointd transformed;
   //Move across

@@ -36,7 +36,7 @@ Option::Option(Plot* p, const CL_DomElement& element) : plot(p)
   }
 
   //Add option to plot's main index.
-  plot->addOption(this);
+  plot->add_option(this);
 
 }
 
@@ -47,7 +47,7 @@ Option::~Option()
     delete decisions;
 }
 
-int Option::getId()
+int Option::get_id()
 {
   return(id);
 }
