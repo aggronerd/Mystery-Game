@@ -76,16 +76,16 @@ void MainMenu::draw()
 
 bool MainMenu::on_quit()
 {
-  exit_code = exit_application;
+  exit_code = EXIT_APPLICATION;
   return(true);
 }
 
 void MainMenu::on_clicked_button_editor()
 {
-  exit_code = exit_module_and_load_editor;
+  exit_code = EXIT_MODULE_AND_LOAD_EDITOR;
 }
 
 void MainMenu::on_clicked_button_new_game()
 {
-  exit_code = exit_module_and_load_game;
+  exit_code = EXIT_MODULE_AND_LOAD_GAME;
 }

@@ -36,7 +36,7 @@ ApplicationModule::ApplicationModule(const CL_DisplayWindow &display_window) : w
   gui.set_css_document("data/gui/theme.css");
   wm.func_repaint().set(this, &ApplicationModule::wm_repaint);
 
-  exit_code = no_exit;
+  exit_code = NO_EXIT;
 
 }
 
@@ -52,7 +52,7 @@ ApplicationModule::~ApplicationModule()
 ApplicationModuleExitCode ApplicationModule::run()
 {
   // Run until someone presses escape.
-  while (exit_code==no_exit)
+  while (exit_code==NO_EXIT)
   {
     update();
     draw();
@@ -90,7 +90,7 @@ void ApplicationModule::on_key_up(const CL_InputEvent &key, const CL_InputState 
  */
 void ApplicationModule::on_window_close()
 {
-  exit_code = exit_application;
+  exit_code = EXIT_APPLICATION;
 }
 
 /**

@@ -50,18 +50,18 @@ int Application::main(const std::vector<CL_String> &args)
     CL_SetupVorbis setup_vorbis;
 
     //Run the loop for the modules of the game.
-    ApplicationModuleExitCode response = exit_module_and_load_main_menu;
+    ApplicationModuleExitCode response = EXIT_MODULE_AND_LOAD_MAIN_MENU;
     ApplicationModule* mod = 0x0;
     do {
       switch(response)
       {
-        case exit_module_and_load_game:
+        case EXIT_MODULE_AND_LOAD_GAME:
           mod = (ApplicationModule*)new World(window);
           break;
-        case exit_module_and_load_editor:
+        case EXIT_MODULE_AND_LOAD_EDITOR:
           mod = (ApplicationModule*)new Editor(window);
           break;
-        case exit_module_and_load_main_menu:
+        case EXIT_MODULE_AND_LOAD_MAIN_MENU:
           mod = (ApplicationModule*)new MainMenu(window);
           break;
         default:
@@ -70,7 +70,7 @@ int Application::main(const std::vector<CL_String> &args)
       response = mod->run();
       //TODO: Ensure does not cause leak because call is to destroy general class not decenants.
       delete mod;
-    } while (response != exit_application);
+    } while (response != EXIT_APPLICATION);
 
   }
   catch(CL_Exception &exception)

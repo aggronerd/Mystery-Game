@@ -9,10 +9,10 @@
 #define APPLICATION_MODULE_EXIT_CODE_H_
 
 enum ApplicationModuleExitCode {
-    no_exit = 0,
-    exit_application = 1,
-    exit_module_and_load_game = 2,
-    exit_module_and_load_editor = 3,
-    exit_module_and_load_main_menu = 4};
+    NO_EXIT = 0,
+    EXIT_APPLICATION = 1,
+    EXIT_MODULE_AND_LOAD_GAME = 2,
+    EXIT_MODULE_AND_LOAD_EDITOR = 3,
+    EXIT_MODULE_AND_LOAD_MAIN_MENU = 4};
 
 #endif /* APPLICATION_MODULE_EXIT_CODE_H_ */
