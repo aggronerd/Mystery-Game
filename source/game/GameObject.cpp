@@ -1,8 +1,8 @@
-/*
- * GameObject.cpp
+/**
+ * @file GameObject.cpp
  *
  *  Created on: 25 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "GameObject.h"

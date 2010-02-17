@@ -1,0 +1,107 @@
+\hypertarget{structdlib_1_1rgb__pixel}{
+\section{dlib::rgb\_\-pixel Struct Reference}
+\label{structdlib_1_1rgb__pixel}\index{dlib::rgb\_\-pixel@{dlib::rgb\_\-pixel}}
+}
+
+
+{\ttfamily \#include $<$pixel.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdlib_1_1rgb__pixel_afa497c6467591efaeef930a7a629e704}{rgb\_\-pixel} ()
+\item 
+\hypertarget{structdlib_1_1rgb__pixel_a1987deac187c56f077ecb56b0b8a3f78}{
+{\bfseries rgb\_\-pixel} (unsigned char red\_\-, unsigned char green\_\-, unsigned char blue\_\-)}
+\label{structdlib_1_1rgb__pixel_a1987deac187c56f077ecb56b0b8a3f78}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structdlib_1_1rgb__pixel_a96e38b486b457e139bfd32324e2720e1}{
+unsigned char {\bfseries red}}
+\label{structdlib_1_1rgb__pixel_a96e38b486b457e139bfd32324e2720e1}
+
+\item 
+\hypertarget{structdlib_1_1rgb__pixel_a6323dc8b311672d5e54834be5cc2bb3a}{
+unsigned char {\bfseries green}}
+\label{structdlib_1_1rgb__pixel_a6323dc8b311672d5e54834be5cc2bb3a}
+
+\item 
+\hypertarget{structdlib_1_1rgb__pixel_aad17a4b79e9509bab1688a9078d6d5fb}{
+unsigned char {\bfseries blue}}
+\label{structdlib_1_1rgb__pixel_aad17a4b79e9509bab1688a9078d6d5fb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+WHAT THIS OBJECT REPRESENTS As the name implies, this is a traits class for pixel types. It defines the properties of a pixel (duah).
+
+This traits class will define the following public static members:
+\begin{DoxyItemize}
+\item bool grayscale
+\item bool rgb
+\item bool rgb\_\-alpha
+\item bool hsi
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item bool has\_\-alpha
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item long num
+\item unsigned long max()
+\end{DoxyItemize}
+
+The above public constants are subject to the following constraints:
+\begin{DoxyItemize}
+\item only one of grayscale, rgb, rgb\_\-alpha, or hsi is true
+\item if (rgb == true) then
+\begin{DoxyItemize}
+\item The type T will be a struct with 3 public members of type unsigned char named \char`\"{}red\char`\"{} \char`\"{}green\char`\"{} and \char`\"{}blue\char`\"{}.
+\item This type of pixel represents the RGB color space.
+\item num == 3
+\item has\_\-alpha == false
+\item max() == 255
+\end{DoxyItemize}
+\item if (rgb\_\-alpha == true) then
+\begin{DoxyItemize}
+\item The type T will be a struct with 4 public members of type unsigned char named \char`\"{}red\char`\"{} \char`\"{}green\char`\"{} \char`\"{}blue\char`\"{} and \char`\"{}alpha\char`\"{}.
+\item This type of pixel represents the RGB color space with an alpha channel where an alpha of 0 represents a pixel that is totally transparent and 255 represents a pixel with maximum opacity.
+\item num == 4
+\item has\_\-alpha == true
+\item max() == 255
+\end{DoxyItemize}
+\item else if (hsi == true) then
+\begin{DoxyItemize}
+\item The type T will be a struct with 3 public members of type unsigned char named \char`\"{}h\char`\"{} \char`\"{}s\char`\"{} and \char`\"{}i\char`\"{}.
+\item This type of pixel represents the HSI color space.
+\item num == 3
+\item has\_\-alpha == false
+\item max() == 255
+\end{DoxyItemize}
+\item else
+\begin{DoxyItemize}
+\item grayscale == true
+\item The type T will be an unsigned integral type.
+\item This type of pixel represents a grayscale color space
+\item num == 1
+\item has\_\-alpha == false
+\item max() == std::numeric\_\-limits$<$T$>$::max() ! 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structdlib_1_1rgb__pixel_afa497c6467591efaeef930a7a629e704}{
+\index{dlib::rgb\_\-pixel@{dlib::rgb\_\-pixel}!rgb\_\-pixel@{rgb\_\-pixel}}
+\index{rgb\_\-pixel@{rgb\_\-pixel}!dlib::rgb_pixel@{dlib::rgb\_\-pixel}}
+\subsubsection[{rgb\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}dlib::rgb\_\-pixel::rgb\_\-pixel ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structdlib_1_1rgb__pixel_afa497c6467591efaeef930a7a629e704}
+WHAT THIS OBJECT REPRESENTS This is a simple struct that represents an RGB colored graphical pixel. ! 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/dlib/pixel.h\end{DoxyCompactItemize}

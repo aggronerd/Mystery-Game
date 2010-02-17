@@ -1,0 +1,53 @@
+\hypertarget{structdlib_1_1is__convertible}{
+\section{dlib::is\_\-convertible$<$ from, to $>$ Struct Template Reference}
+\label{structdlib_1_1is__convertible}\index{dlib::is\_\-convertible@{dlib::is\_\-convertible}}
+}
+
+
+{\ttfamily \#include $<$algs.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdlib_1_1is__convertible_1_1no__type}{no\_\-type}
+\item 
+struct \hyperlink{structdlib_1_1is__convertible_1_1yes__type}{yes\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structdlib_1_1is__convertible_ae98a3fadf511adb91867eda63298ed7c}{
+static const from \& {\bfseries from\_\-helper} ()}
+\label{structdlib_1_1is__convertible_ae98a3fadf511adb91867eda63298ed7c}
+
+\item 
+\hypertarget{structdlib_1_1is__convertible_a08ea5c4166c14337f7ce85b3ef332a6f}{
+static \hyperlink{structdlib_1_1is__convertible_1_1yes__type}{yes\_\-type} {\bfseries test} (to)}
+\label{structdlib_1_1is__convertible_a08ea5c4166c14337f7ce85b3ef332a6f}
+
+\item 
+\hypertarget{structdlib_1_1is__convertible_a260258f50e6d68da85ec88febe148aa8}{
+static \hyperlink{structdlib_1_1is__convertible_1_1no__type}{no\_\-type} {\bfseries test} (...)}
+\label{structdlib_1_1is__convertible_a260258f50e6d68da85ec88febe148aa8}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structdlib_1_1is__convertible_aa64b0f0d97f023a8cfafda29e7360b89}{
+static const bool {\bfseries value} = sizeof(test(from\_\-helper())) == sizeof(\hyperlink{structdlib_1_1is__convertible_1_1yes__type}{yes\_\-type})}
+\label{structdlib_1_1is__convertible_aa64b0f0d97f023a8cfafda29e7360b89}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename from, typename to$>$ struct dlib::is\_\-convertible$<$ from, to $>$}
+
+A \hyperlink{structdlib_1_1is__convertible}{is\_\-convertible}
+
+This is a template that can be used to determine if one type is convertible into another type.
+
+For example: is\_\-convertible$<$int,float$>$::value == true // because ints are convertible to floats is\_\-convertible$<$int$\ast$,float$>$::value == false // because int pointers are NOT convertible to floats ! 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/dlib/algs.h\end{DoxyCompactItemize}

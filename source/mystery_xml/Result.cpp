@@ -1,8 +1,8 @@
-/*
- * Result.cpp
+/**
+ * @file Result.cpp
  *
  *  Created on: 22 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Result.h"

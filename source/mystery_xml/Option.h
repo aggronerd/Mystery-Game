@@ -1,8 +1,8 @@
-/*
- * Option.h
+/**
+ * @file Option.h
  *
  *  Created on: 16 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef OPTION_H_

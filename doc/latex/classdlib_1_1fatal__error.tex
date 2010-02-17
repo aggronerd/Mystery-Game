@@ -1,0 +1,65 @@
+\hypertarget{classdlib_1_1fatal__error}{
+\section{dlib::fatal\_\-error Class Reference}
+\label{classdlib_1_1fatal__error}\index{dlib::fatal\_\-error@{dlib::fatal\_\-error}}
+}
+Inheritance diagram for dlib::fatal\_\-error::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classdlib_1_1fatal__error}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdlib_1_1fatal__error_ae1ade5e6456e25e8b60ff532ed5e2e23}{fatal\_\-error} (error\_\-type t, const std::string \&a)
+\item 
+\hyperlink{classdlib_1_1fatal__error_ac947f78667e0aeba05ab738c3ab527d6}{fatal\_\-error} (error\_\-type t)
+\item 
+\hyperlink{classdlib_1_1fatal__error_a449542aaaf1cb427faa542bf369ca607}{fatal\_\-error} (const std::string \&a)
+\item 
+\hyperlink{classdlib_1_1fatal__error_ad824e88fda1a7e4e0fad7b147730dcfc}{fatal\_\-error} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdlib_1_1fatal__error_ae1ade5e6456e25e8b60ff532ed5e2e23}{
+\index{dlib::fatal\_\-error@{dlib::fatal\_\-error}!fatal\_\-error@{fatal\_\-error}}
+\index{fatal\_\-error@{fatal\_\-error}!dlib::fatal_error@{dlib::fatal\_\-error}}
+\subsubsection[{fatal\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}dlib::fatal\_\-error::fatal\_\-error (error\_\-type {\em t}, \/  const std::string \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdlib_1_1fatal__error_ae1ade5e6456e25e8b60ff532ed5e2e23}
+WHAT THIS OBJECT REPRESENTS As the name says, this object represents some kind of fatal \hyperlink{classdlib_1_1error}{error}. That is, it represents an unrecoverable \hyperlink{classdlib_1_1error}{error} and any program that throws this exception is, by definition, buggy and needs to be fixed.
+
+Note that a \hyperlink{classdlib_1_1fatal__error}{fatal\_\-error} exception can only be thrown once. The second time an application attempts to construct a \hyperlink{classdlib_1_1fatal__error}{fatal\_\-error} it will be immediately aborted and an \hyperlink{classdlib_1_1error}{error} message will be printed to std::cerr. The reason for this is because the first \hyperlink{classdlib_1_1fatal__error}{fatal\_\-error} was apparently ignored so the second \hyperlink{classdlib_1_1fatal__error}{fatal\_\-error} is going to make itself impossible to ignore by calling abort. The lesson here is that you should not try to ignore fatal errors.
+
+This is also the exception thrown by the DLIB\_\-ASSERT and DLIB\_\-CASSERT macros. ! \hypertarget{classdlib_1_1fatal__error_ac947f78667e0aeba05ab738c3ab527d6}{
+\index{dlib::fatal\_\-error@{dlib::fatal\_\-error}!fatal\_\-error@{fatal\_\-error}}
+\index{fatal\_\-error@{fatal\_\-error}!dlib::fatal_error@{dlib::fatal\_\-error}}
+\subsubsection[{fatal\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}dlib::fatal\_\-error::fatal\_\-error (error\_\-type {\em t})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdlib_1_1fatal__error_ac947f78667e0aeba05ab738c3ab527d6}
+ensures
+\begin{DoxyItemize}
+\item type == t
+\item info == a ! 
+\end{DoxyItemize}\hypertarget{classdlib_1_1fatal__error_a449542aaaf1cb427faa542bf369ca607}{
+\index{dlib::fatal\_\-error@{dlib::fatal\_\-error}!fatal\_\-error@{fatal\_\-error}}
+\index{fatal\_\-error@{fatal\_\-error}!dlib::fatal_error@{dlib::fatal\_\-error}}
+\subsubsection[{fatal\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}dlib::fatal\_\-error::fatal\_\-error (const std::string \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdlib_1_1fatal__error_a449542aaaf1cb427faa542bf369ca607}
+ensures
+\begin{DoxyItemize}
+\item type == t
+\item info == \char`\"{}\char`\"{} ! 
+\end{DoxyItemize}\hypertarget{classdlib_1_1fatal__error_ad824e88fda1a7e4e0fad7b147730dcfc}{
+\index{dlib::fatal\_\-error@{dlib::fatal\_\-error}!fatal\_\-error@{fatal\_\-error}}
+\index{fatal\_\-error@{fatal\_\-error}!dlib::fatal_error@{dlib::fatal\_\-error}}
+\subsubsection[{fatal\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}dlib::fatal\_\-error::fatal\_\-error ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdlib_1_1fatal__error_ad824e88fda1a7e4e0fad7b147730dcfc}
+ensures
+\begin{DoxyItemize}
+\item type == EFATAL
+\item info == a ! 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/dlib/error.h\end{DoxyCompactItemize}

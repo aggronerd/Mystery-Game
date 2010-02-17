@@ -1,8 +1,8 @@
-/*
- * FloorTest.cpp
+/**
+ * @file FloorTest.cpp
  *
  *  Created on: 18 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 /*
 #include "FloorTest.h"

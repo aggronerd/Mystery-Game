@@ -1,8 +1,8 @@
-/*
- * Decisions.cpp
+/**
+ * @file Decisions.cpp
  *
  *  Created on: 16 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Decisions.h"

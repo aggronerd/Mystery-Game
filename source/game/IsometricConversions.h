@@ -1,8 +1,8 @@
-/*
- * IsometricConversions.h
+/**
+ * @file IsometricConversions.h
  *
  *  Created on: 12 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef ISOMETRICCONVERSIONS_H_

@@ -1,0 +1,118 @@
+\hypertarget{classdlib_1_1std__allocator}{
+\section{dlib::std\_\-allocator$<$ T, M $>$ Class Template Reference}
+\label{classdlib_1_1std__allocator}\index{dlib::std\_\-allocator@{dlib::std\_\-allocator}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdlib_1_1std__allocator_1_1rebind}{rebind}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::size\_\-t \hyperlink{classdlib_1_1std__allocator_afbdfb9dc5c127fd82f2b1c9f3b1989bf}{size\_\-type}
+\item 
+\hypertarget{classdlib_1_1std__allocator_aedfcf400c07fda90dd1902c6aba1a25a}{
+typedef std::ptrdiff\_\-t {\bfseries difference\_\-type}}
+\label{classdlib_1_1std__allocator_aedfcf400c07fda90dd1902c6aba1a25a}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_aa7c4dca5117b25c5f6983cf9ac871b47}{
+typedef T $\ast$ {\bfseries pointer}}
+\label{classdlib_1_1std__allocator_aa7c4dca5117b25c5f6983cf9ac871b47}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_acfe99966877caf2e39e1164eb6610c1e}{
+typedef const T $\ast$ {\bfseries const\_\-pointer}}
+\label{classdlib_1_1std__allocator_acfe99966877caf2e39e1164eb6610c1e}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_a85421f2355159d8ed9267899edc14a2a}{
+typedef T \& {\bfseries reference}}
+\label{classdlib_1_1std__allocator_a85421f2355159d8ed9267899edc14a2a}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_a29a1ef2015acbcf5023e7f7faf5c135c}{
+typedef const T \& {\bfseries const\_\-reference}}
+\label{classdlib_1_1std__allocator_a29a1ef2015acbcf5023e7f7faf5c135c}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_a0f9b9e955a601d8d55b59f64da6ca551}{
+typedef T {\bfseries value\_\-type}}
+\label{classdlib_1_1std__allocator_a0f9b9e955a601d8d55b59f64da6ca551}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdlib_1_1std__allocator_a4e17c6c2caae5fc0178d2a42733f63cf}{
+pointer {\bfseries address} (reference value) const }
+\label{classdlib_1_1std__allocator_a4e17c6c2caae5fc0178d2a42733f63cf}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_adcdfc59fa674f9bce14d90eba3a8d351}{
+const\_\-pointer {\bfseries address} (const\_\-reference value) const }
+\label{classdlib_1_1std__allocator_adcdfc59fa674f9bce14d90eba3a8d351}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_a1e2e802bcf418673b568e11473f71782}{
+{\bfseries std\_\-allocator} (const \hyperlink{classdlib_1_1std__allocator}{std\_\-allocator} \&)  throw ()}
+\label{classdlib_1_1std__allocator_a1e2e802bcf418673b568e11473f71782}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_acd493e4b05f8589fa5214159a1625e58}{
+{\footnotesize template$<$typename U $>$ }\\{\bfseries std\_\-allocator} (const \hyperlink{classdlib_1_1std__allocator}{std\_\-allocator}$<$ U, M $>$ \&)  throw ()}
+\label{classdlib_1_1std__allocator_acd493e4b05f8589fa5214159a1625e58}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_ad8334724133fd86157d3bcbc54b12af9}{
+\hyperlink{classdlib_1_1std__allocator_afbdfb9dc5c127fd82f2b1c9f3b1989bf}{size\_\-type} {\bfseries max\_\-size} () const   throw ()}
+\label{classdlib_1_1std__allocator_ad8334724133fd86157d3bcbc54b12af9}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_aa8bd55902d29ed0c6bd399af7e6af18b}{
+pointer {\bfseries allocate} (\hyperlink{classdlib_1_1std__allocator_afbdfb9dc5c127fd82f2b1c9f3b1989bf}{size\_\-type} num, typename \hyperlink{classdlib_1_1std__allocator}{std\_\-allocator}$<$ void, M $>$::const\_\-pointer=0)}
+\label{classdlib_1_1std__allocator_aa8bd55902d29ed0c6bd399af7e6af18b}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_a0ccbc8f582451d0d76756f56b97ab3a8}{
+void {\bfseries construct} (pointer p, const T \&value)}
+\label{classdlib_1_1std__allocator_a0ccbc8f582451d0d76756f56b97ab3a8}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_a38cecddd14abc89f022a699c28cbdc76}{
+void {\bfseries destroy} (pointer p)}
+\label{classdlib_1_1std__allocator_a38cecddd14abc89f022a699c28cbdc76}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_aa114ee9e92f5018dd1114104b3e289c0}{
+void {\bfseries deallocate} (pointer p, \hyperlink{classdlib_1_1std__allocator_afbdfb9dc5c127fd82f2b1c9f3b1989bf}{size\_\-type})}
+\label{classdlib_1_1std__allocator_aa114ee9e92f5018dd1114104b3e289c0}
+
+\item 
+\hypertarget{classdlib_1_1std__allocator_acd0b44fea8298332dd625ad0543b9847}{
+void {\bfseries swap} (\hyperlink{classdlib_1_1std__allocator}{std\_\-allocator} \&item)}
+\label{classdlib_1_1std__allocator_acd0b44fea8298332dd625ad0543b9847}
+
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$typename T, typename M$>$ class dlib::std\_\-allocator$<$ T, M $>$}
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classdlib_1_1std__allocator_afbdfb9dc5c127fd82f2b1c9f3b1989bf}{
+\index{dlib::std\_\-allocator@{dlib::std\_\-allocator}!size\_\-type@{size\_\-type}}
+\index{size\_\-type@{size\_\-type}!dlib::std_allocator@{dlib::std\_\-allocator}}
+\subsubsection[{size\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename M$>$ typedef std::size\_\-t {\bf dlib::std\_\-allocator}$<$ T, M $>$::{\bf size\_\-type}}}
+\label{classdlib_1_1std__allocator_afbdfb9dc5c127fd82f2b1c9f3b1989bf}
+REQUIREMENTS ON M must be an implementation of memory\_\-manager/memory\_\-manager\_\-kernel\_\-abstract.h or must be an implementation of memory\_\-manager\_\-global/memory\_\-manager\_\-global\_\-kernel\_\-abstract.h or must be an implementation of memory\_\-manager\_\-stateless/memory\_\-manager\_\-stateless\_\-kernel\_\-abstract.h M::type can be \hyperlink{classdlib_1_1set}{set} to anything.
+
+WHAT THIS OBJECT REPRESENTS This object is an implementation of an allocator that conforms to the C++ standard requirements for allocator objects. The M template argument is one of the \hyperlink{namespacedlib}{dlib} memory manager objects and this allocator implementation will do all of its memory allocations using whatever \hyperlink{namespacedlib}{dlib} memory manager you supply.
+
+Thus, using this allocator object you can use any of the \hyperlink{namespacedlib}{dlib} memory manager objects with the contains in the STL or with any other object that requires a C++ allocator object.
+
+It is important to note that many STL implementations make the assumption that the memory allocated by one allocator can be freed by another. This effectively means that you should only use a global or stateless memory manager with the \hyperlink{classdlib_1_1std__allocator}{std\_\-allocator}. Either that or you have to verify that your version of the STL isn't going to try and allocate and deallocate memory with different allocators. ! 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/dlib/std\_\-allocator.h\end{DoxyCompactItemize}

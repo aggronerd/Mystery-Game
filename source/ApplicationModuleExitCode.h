@@ -1,8 +1,8 @@
-/*
- * ApplicationModuleExitCode.h
+/**
+ * @file ApplicationModuleExitCode.h
  *
  *  Created on: 15 Feb 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef APPLICATION_MODULE_EXIT_CODE_H_

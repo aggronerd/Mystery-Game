@@ -1,8 +1,8 @@
-/*
- * GameObject.h
+/**
+ * @file GameObject.h
  *
  *  Created on: 25 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef GAMEOBJECT_H_

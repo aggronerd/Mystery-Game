@@ -1,8 +1,8 @@
-/*
- * World.cpp
+/**
+ * @file World.cpp
  *
  *  Created on: 6 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "World.h"

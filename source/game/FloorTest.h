@@ -1,8 +1,8 @@
-/*
- * FloorTest.h
+/**
+ * @file FloorTest.h
  *
  *  Created on: 18 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef FLOORTEST_H_

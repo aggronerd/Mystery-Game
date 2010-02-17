@@ -1,8 +1,8 @@
-/*
- * Editor.cpp
+/**
+ * @file Editor.cpp
  *
  *  Created on: 15 Feb 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Editor.h"

@@ -1,8 +1,8 @@
-/*
- * Plot.h
+/**
+ * @file Plot.h
  *
  *  Created on: 15 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef PLOT_H_

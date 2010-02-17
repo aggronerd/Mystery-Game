@@ -1,11 +1,11 @@
-/*
- * logging.h
+/**
+ * @file logging.h
  *
  *  Contains pre-processor macros for logging. If LOG_DEBUG_MESSAGES
  *  is not defined then the code isn't compiled into the application.
  *
  *  Created on: 16 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef CORE_H_

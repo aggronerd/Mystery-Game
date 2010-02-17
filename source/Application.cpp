@@ -1,8 +1,8 @@
-/*
- * App.cpp
+/**
+ * @file App.cpp
  *
  *  Created on: 29 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Application.h"

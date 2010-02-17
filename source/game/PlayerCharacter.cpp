@@ -1,8 +1,8 @@
-/*
- * PlayerCharacter.cpp
+/**
+ * @file PlayerCharacter.cpp
  *
  *  Created on: 26 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "PlayerCharacter.h"

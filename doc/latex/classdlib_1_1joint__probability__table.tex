@@ -1,0 +1,129 @@
+\hypertarget{classdlib_1_1joint__probability__table}{
+\section{dlib::joint\_\-probability\_\-table Class Reference}
+\label{classdlib_1_1joint__probability__table}\index{dlib::joint\_\-probability\_\-table@{dlib::joint\_\-probability\_\-table}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdlib_1_1joint__probability__table_a68ba392924a2080a56d0246b7b01b7a2}{joint\_\-probability\_\-table} (const \hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&t)
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_aee768f051adb65237a6312e6b6ba721d}{
+\hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \& {\bfseries operator=} (const \hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&rhs)}
+\label{classdlib_1_1joint__probability__table_aee768f051adb65237a6312e6b6ba721d}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a678d75a7ad42da9aae974547278abc4f}{
+void {\bfseries set\_\-probability} (const \hyperlink{classdlib_1_1assignment}{assignment} \&a, double p)}
+\label{classdlib_1_1joint__probability__table_a678d75a7ad42da9aae974547278abc4f}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_acfd6d1ce03bf921ec68b517ed3274c77}{
+bool {\bfseries has\_\-entry\_\-for} (const \hyperlink{classdlib_1_1assignment}{assignment} \&a) const }
+\label{classdlib_1_1joint__probability__table_acfd6d1ce03bf921ec68b517ed3274c77}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_af9edf3c0a627e056c568d9bab7b0aeaa}{
+void {\bfseries add\_\-probability} (const \hyperlink{classdlib_1_1assignment}{assignment} \&a, double p)}
+\label{classdlib_1_1joint__probability__table_af9edf3c0a627e056c568d9bab7b0aeaa}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a799394abc1dcfe9e840a56dc53271408}{
+double {\bfseries probability} (const \hyperlink{classdlib_1_1assignment}{assignment} \&a) const }
+\label{classdlib_1_1joint__probability__table_a799394abc1dcfe9e840a56dc53271408}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a0fdadc3b0d50dfb1750004c5e8eb45a5}{
+void {\bfseries clear} ()}
+\label{classdlib_1_1joint__probability__table_a0fdadc3b0d50dfb1750004c5e8eb45a5}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a6f89f7c5b1047930740e988a30e70deb}{
+unsigned long {\bfseries size} () const }
+\label{classdlib_1_1joint__probability__table_a6f89f7c5b1047930740e988a30e70deb}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_ae5a43662465634b1eae8c976ffc12684}{
+bool {\bfseries move\_\-next} () const }
+\label{classdlib_1_1joint__probability__table_ae5a43662465634b1eae8c976ffc12684}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a9767a770bb7e4baf697d7cbf430afa87}{
+void {\bfseries reset} () const }
+\label{classdlib_1_1joint__probability__table_a9767a770bb7e4baf697d7cbf430afa87}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a0ab414af6311c50e73930d8482dafc87}{
+map\_\-pair$<$ \hyperlink{classdlib_1_1assignment}{assignment}, double $>$ \& {\bfseries element} ()}
+\label{classdlib_1_1joint__probability__table_a0ab414af6311c50e73930d8482dafc87}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a4fb635d9c175ce8ebc7a4ee7715799dc}{
+const map\_\-pair$<$ \hyperlink{classdlib_1_1assignment}{assignment}, double $>$ \& {\bfseries element} () const }
+\label{classdlib_1_1joint__probability__table_a4fb635d9c175ce8ebc7a4ee7715799dc}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a431f184917878ad1778e57c9c0ca5ea2}{
+bool {\bfseries at\_\-start} () const }
+\label{classdlib_1_1joint__probability__table_a431f184917878ad1778e57c9c0ca5ea2}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a7842bab03b20b08947700ac4766544fc}{
+bool {\bfseries current\_\-element\_\-valid} () const }
+\label{classdlib_1_1joint__probability__table_a7842bab03b20b08947700ac4766544fc}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a1b9d9b5ca2c15171969b7e4fc758f6e6}{
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries marginalize} (const T \&vars, \hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&out) const }
+\label{classdlib_1_1joint__probability__table_a1b9d9b5ca2c15171969b7e4fc758f6e6}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a1cfe903f47b2bbc69e75b4fa6bfc3b79}{
+void {\bfseries marginalize} (const unsigned long var, \hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&out) const }
+\label{classdlib_1_1joint__probability__table_a1cfe903f47b2bbc69e75b4fa6bfc3b79}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a2886ef7c11d08c6b294dd34348ae81ca}{
+void {\bfseries normalize} ()}
+\label{classdlib_1_1joint__probability__table_a2886ef7c11d08c6b294dd34348ae81ca}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a971c4513f167bf91df70836e579ebed6}{
+void {\bfseries swap} (\hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&item)}
+\label{classdlib_1_1joint__probability__table_a971c4513f167bf91df70836e579ebed6}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_ac8164cee0a2afc188db58cf8b9f956ce}{
+void {\bfseries serialize} (const \hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&item, std::ostream \&out)}
+\label{classdlib_1_1joint__probability__table_ac8164cee0a2afc188db58cf8b9f956ce}
+
+\item 
+\hypertarget{classdlib_1_1joint__probability__table_a8a45c8c2ae3fe15192383713af6ed400}{
+void {\bfseries deserialize} (\hyperlink{classdlib_1_1joint__probability__table}{joint\_\-probability\_\-table} \&item, std::istream \&in)}
+\label{classdlib_1_1joint__probability__table_a8a45c8c2ae3fe15192383713af6ed400}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdlib_1_1joint__probability__table_a68ba392924a2080a56d0246b7b01b7a2}{
+\index{dlib::joint\_\-probability\_\-table@{dlib::joint\_\-probability\_\-table}!joint\_\-probability\_\-table@{joint\_\-probability\_\-table}}
+\index{joint\_\-probability\_\-table@{joint\_\-probability\_\-table}!dlib::joint_probability_table@{dlib::joint\_\-probability\_\-table}}
+\subsubsection[{joint\_\-probability\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}dlib::joint\_\-probability\_\-table::joint\_\-probability\_\-table (const {\bf joint\_\-probability\_\-table} \& {\em t})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdlib_1_1joint__probability__table_a68ba392924a2080a56d0246b7b01b7a2}
+INITIAL VALUE
+\begin{DoxyItemize}
+\item table.size() == 0
+\end{DoxyItemize}
+
+CONVENTION
+\begin{DoxyItemize}
+\item size() == table.size()
+\item probability(a) == table\mbox{[}a\mbox{]} ! 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/dlib/bayes\_\-utils/bayes\_\-utils.h\end{DoxyCompactItemize}

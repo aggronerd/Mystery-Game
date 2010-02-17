@@ -1,8 +1,8 @@
-/*
- * IsometricGrid.cpp
+/**
+ * @file IsometricGrid.cpp
  *
  *  Created on: 12 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "IsometricGrid.h"

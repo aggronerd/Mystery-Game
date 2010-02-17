@@ -1,8 +1,9 @@
-/*
- * ApplicationModule.cpp
+/**
+ * @file ApplicationModule.cpp
  *
- *  Created on: 15 Feb 2010
- *      Author: greg
+ * Created on: 15 Feb 2010
+ *
+ * @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "ApplicationModule.h"

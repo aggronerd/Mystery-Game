@@ -1,8 +1,10 @@
-/*
- * ApplicationModule.h
+/**
+ * @file ApplicationModule.h
  *
- *  Created on: 15 Feb 2010
- *      Author: greg
+ * Created on: 15 Feb 2010
+ *
+ * @author Gregory Doran <www.gregorydoran.co.uk>
+ *
  */
 
 #ifndef APPLICATIONMODULE_H_
@@ -13,10 +15,15 @@
 #include "ApplicationModuleExitCode.h"
 
 /**
- * An application is a generalised class for a part
- * of the application which requires it's own graphics
- * context and design. This could be a game in itself
- * or the player for a cutscene.
+ * An ApplicationModule represents part of the overall application
+ * where all inherent classes would not expect to be instantiated
+ * at the same time but share common components, such as a window
+ * manager, gui object, graphics context, input slots, a "run"
+ * function to initiate the loop and a class variable for breaking
+ * the loop.
+ *
+ * This ensures that the editor and the game do not have to repeat
+ * this common code and instead inherit this object.
  */
 class ApplicationModule
 {

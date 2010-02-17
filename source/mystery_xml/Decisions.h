@@ -1,8 +1,8 @@
-/*
- * Decisions.h
+/**
+ * @file Decisions.h
  *
  *  Created on: 16 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef DECISIONS_H_

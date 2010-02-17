@@ -1,8 +1,8 @@
-/*
- * Result.h
+/**
+ * @file Result.h
  *
  *  Created on: 22 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef RESULT_H_

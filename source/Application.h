@@ -1,8 +1,8 @@
-/*
- * App.h
+/**
+ * @file App.h
  *
  *  Created on: 29 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef APPLICATION_H_

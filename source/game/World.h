@@ -1,8 +1,8 @@
-/*
- * World.h
+/**
+ * @file World.h
  *
  *  Created on: 6 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef WORLD_H_

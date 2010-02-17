@@ -1,8 +1,8 @@
-/*
- * Editor.h
+/**
+ * @file Editor.h
  *
  *  Created on: 15 Feb 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef EDITOR_H_

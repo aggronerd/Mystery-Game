@@ -1,8 +1,8 @@
-/*
- * Overlay.cpp
+/**
+ * @file Overlay.cpp
  *
  *  Created on: 12 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Overlay.h"

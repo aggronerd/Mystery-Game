@@ -1,8 +1,8 @@
-/*
- * RandomGenerator.cpp
+/**
+ * @file RandomGenerator.cpp
  *
  *  Created on: 2 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "RandomGenerator.h"

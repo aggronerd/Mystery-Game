@@ -1,8 +1,8 @@
-/*
- * Option.cpp
+/**
+ * @file Option.cpp
  *
  *  Created on: 16 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Option.h"

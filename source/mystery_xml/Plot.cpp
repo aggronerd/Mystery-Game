@@ -1,8 +1,8 @@
-/*
- * Plot.cpp
+/**
+ * @file Plot.cpp
  *
  *  Created on: 15 Jan 2010
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "Plot.h"

@@ -1,8 +1,8 @@
-/*
- * MoveableGameObject.cpp
+/**
+ * @file MoveableGameObject.cpp
  *
  *  Created on: 25 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #include "MoveableGameObject.h"

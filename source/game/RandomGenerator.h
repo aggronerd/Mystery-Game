@@ -1,8 +1,8 @@
-/*
- * RandomGenerator.h
+/**
+ * @file RandomGenerator.h
  *
  *  Created on: 2 Dec 2009
- *      Author: greg
+ *      @author Gregory Doran <www.gregorydoran.co.uk>
  */
 
 #ifndef RANDOMGENERATOR_H_
