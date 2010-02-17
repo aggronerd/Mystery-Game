@@ -19,7 +19,7 @@ IsometricGrid::~IsometricGrid()
 void IsometricGrid::draw()
 {
   //Get the graphic context
-  CL_GraphicContext* gc = world->getGC();
+  CL_GraphicContext* gc = world->get_gc();
   //Create isometric grid
   for(signed int x=-30;x<=30;x++)
   {

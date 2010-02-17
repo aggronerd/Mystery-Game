@@ -26,7 +26,7 @@ class GameObject;
 class World : public ApplicationModule
 {
   public:
-          World(CL_DisplayWindow &);
+          World(const CL_DisplayWindow &);
           virtual ~World();
           void addOverlay(Overlay *);
           void addGameObject(GameObject *);

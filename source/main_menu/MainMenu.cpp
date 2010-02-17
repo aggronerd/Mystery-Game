@@ -8,20 +8,12 @@
 #include "MainMenu.h"
 #include "../misc/logging.h"
 
-MainMenu::MainMenu(CL_DisplayWindow &display_window) : ApplicationModule(display_window), window(display_window), wm(window)
+MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
   DEBUG_MSG("MainMenu::MainMenu(CL_DisplayWindow &) - Called.")
 
   //Get the resource managers
-  gui_rm = CL_ResourceManager("data/gui/resources.xml");
   menu_rm = CL_ResourceManager("data/menu-resources.xml");
-
-  //Prepare the gui
-  gui.set_window_manager(wm);
-  gui_theme.set_resources(gui_rm);
-  gui.set_theme(gui_theme);
-  gui.set_css_document("data/gui/theme.css");
-  wm.func_repaint().set(this, &MainMenu::wm_repaint);
 
   //Set the background image
   background_image = CL_Image(gc,"background",&menu_rm);
@@ -54,6 +46,7 @@ MainMenu::MainMenu(CL_DisplayWindow &display_window) : ApplicationModule(display
   button_options->set_text("Options");
 
   menu_window->func_close().set(this, &MainMenu::on_quit);
+  menu_window->set_draggable(true);
 
 }
 
@@ -67,26 +60,19 @@ MainMenu::~MainMenu()
   delete menu_window;
 }
 
+/**
+ * Draws the main menu images and gui to the window.
+ */
 void MainMenu::draw()
 {
   gc.clear(CL_Colorf(0.0f,0.0f,0.0f));
-
   background_image.draw(gc,0,0);
-
   gui.exec(false);
   wm.draw_windows(gc);
-
   window.flip(1);
 }
 
-void MainMenu::update()
-{
-  //wm.update();
-}
 
-void MainMenu::wm_repaint()
-{
-}
 
 bool MainMenu::on_quit()
 {

@@ -8,7 +8,7 @@
 #include "Editor.h"
 #include "../misc/logging.h"
 
-Editor::Editor(CL_DisplayWindow &display_window) : ApplicationModule(display_window)
+Editor::Editor(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
   DEBUG_MSG("Editor::Editor(CL_DisplayWindow &) - Called.")
 

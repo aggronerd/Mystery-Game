@@ -11,7 +11,7 @@
 
 PlayerCharacter::PlayerCharacter(World* w, CL_Pointd& initial_position, CL_Angle& initial_direction) : GameObject(w, initial_position, initial_direction)
 {
-  static_sprites[SPRITE_SW] = new CL_Sprite(*(world->getGC()), "characters/detective_static_sw", world->getRM());
+  static_sprites[SPRITE_SW] = new CL_Sprite(*(world->get_gc()), "characters/detective_static_sw", world->getRM());
   setDirection(initial_direction);
 }
 

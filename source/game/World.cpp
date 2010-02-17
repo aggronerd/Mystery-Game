@@ -17,7 +17,7 @@
 /**
  * Creates the game world and sets up initial contents.
  */
-World::World(CL_DisplayWindow &display_window) : ApplicationModule(display_window)
+World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
   DEBUG_MSG("World::World(CL_DisplayWindow &) - Called.")
 
@@ -135,7 +135,7 @@ void World::draw()
 
 void World::update()
 {
-  unsigned int time_elapsed_ms = calculateTimeElapsed();
+  unsigned int time_elapsed_ms = get_time_elapsed();
 
   // Update all game objects
   std::list<GameObject *>::iterator it_go;

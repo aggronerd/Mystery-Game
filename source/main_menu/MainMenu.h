@@ -16,24 +16,17 @@
 class MainMenu : public ApplicationModule
 {
   public:
-    MainMenu(CL_DisplayWindow &);
+    MainMenu(const CL_DisplayWindow &);
     virtual ~MainMenu();
   private:
-    void draw(void);
-    void update(void);
-    void wm_repaint(void);
+    virtual void draw(void);
+    //virtual void update(void);
+    //virtual void wm_repaint(void);
     bool on_quit(void);
     void on_clicked_button_new_game(void);
     void on_clicked_button_editor(void);
     CL_Image background_image;
-    //The order of the following is important
     CL_ResourceManager menu_rm;
-    CL_DisplayWindow window;
-    CL_GUIThemeDefault gui_theme;
-    CL_ResourceManager gui_rm;
-    CL_GUIWindowManagerTexture wm;
-    CL_GUIManager gui;
-
     CL_PushButton* button_new_game;
     CL_PushButton* button_editor;
     CL_PushButton* button_options;

@@ -48,7 +48,7 @@ GameObject::~GameObject()
 void GameObject::draw()
 {
   if(static_current != 0x0)
-    static_current->draw(*(world->getGC()),(float)position.x,(float)position.y);
+    static_current->draw(*(world->get_gc()),(float)position.x,(float)position.y);
 }
 
 /**

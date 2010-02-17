@@ -10,9 +10,10 @@
 #ifndef APPLICATIONMODULE_H_
 #define APPLICATIONMODULE_H_
 
-#include <ClanLib/display.h>
-#include <ClanLib/core.h>
 #include "ApplicationModuleExitCode.h"
+#include <ClanLib/core.h>
+#include <ClanLib/gui.h>
+
 
 /**
  * An ApplicationModule represents part of the overall application
@@ -28,15 +29,21 @@
 class ApplicationModule
 {
 public:
-  ApplicationModule(CL_DisplayWindow &);
+  ApplicationModule(const CL_DisplayWindow &);
   virtual ~ApplicationModule();
   ApplicationModuleExitCode run(void); //Returns exit code
-  CL_GraphicContext* getGC(void);
+  CL_GraphicContext* get_gc(void);
 protected:
   virtual void draw(void) {};
   virtual void update(void) {};
+  virtual void wm_repaint(void) {};
   ApplicationModuleExitCode exit_code;
+  //The order of the following is important
   CL_DisplayWindow window;
+  CL_GUIThemeDefault gui_theme;
+  CL_ResourceManager gui_rm;
+  CL_GUIWindowManagerTexture wm;
+  CL_GUIManager gui;
   CL_GraphicContext gc;
   CL_Slot slot_quit;
   CL_Slot slot_key_down;
@@ -46,13 +53,13 @@ protected:
   CL_Slot slot_mouse_move;
   bool mouse_dragging;
   bool mouse_down;
-  virtual void onWindowClose(void);
-  virtual void onKeyDown(const CL_InputEvent &key, const CL_InputState &state);
-  virtual void onKeyUp(const CL_InputEvent &key, const CL_InputState &state);
-  virtual void onMouseDown(const CL_InputEvent &key, const CL_InputState &state);
-  virtual void onMouseUp(const CL_InputEvent &key, const CL_InputState &state);
-  virtual void onMouseMove(const CL_InputEvent &key, const CL_InputState &state);
-  unsigned int calculateTimeElapsed(void);
+  virtual void on_window_close(void);
+  virtual void on_key_down(const CL_InputEvent &key, const CL_InputState &state);
+  virtual void on_key_up(const CL_InputEvent &key, const CL_InputState &state);
+  virtual void on_mouse_down(const CL_InputEvent &key, const CL_InputState &state);
+  virtual void on_mouse_up(const CL_InputEvent &key, const CL_InputState &state);
+  virtual void on_mouse_move(const CL_InputEvent &key, const CL_InputState &state);
+  unsigned int get_time_elapsed(void);
 };
 
 #endif /* APPLICATIONMODULE_H_ */

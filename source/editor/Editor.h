@@ -18,7 +18,7 @@
 class Editor : public ApplicationModule
 {
   public:
-    Editor(CL_DisplayWindow &);
+    Editor(const CL_DisplayWindow &);
     virtual ~Editor();
   private:
     void draw(void);

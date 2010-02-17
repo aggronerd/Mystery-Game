@@ -9,7 +9,7 @@
 #include "ApplicationModule.h"
 #include "misc/logging.h"
 
-ApplicationModule::ApplicationModule(CL_DisplayWindow &display_window) : window(display_window)
+ApplicationModule::ApplicationModule(const CL_DisplayWindow &display_window) : window(display_window), wm(window)
 {
   DEBUG_MSG("ApplicationModule::ApplicationModule(CL_DisplayWindow) - Called.")
 
@@ -17,16 +17,24 @@ ApplicationModule::ApplicationModule(CL_DisplayWindow &display_window) : window(
   gc = window.get_gc();
 
   //Prepare input slots
-  slot_quit       = window.sig_window_close().connect(this, &ApplicationModule::onWindowClose);
-  slot_key_down   = window.get_ic().get_keyboard().sig_key_down().connect(this, &ApplicationModule::onKeyDown);
-  slot_key_up     = window.get_ic().get_keyboard().sig_key_up().connect(this, &ApplicationModule::onKeyUp);
-  slot_mouse_down = window.get_ic().get_mouse().sig_key_down().connect(this, &ApplicationModule::onMouseDown);
-  slot_mouse_up   = window.get_ic().get_mouse().sig_key_up().connect(this, &ApplicationModule::onMouseUp);
-  slot_mouse_move = window.get_ic().get_mouse().sig_pointer_move().connect(this, &ApplicationModule::onMouseMove);
+  slot_quit       = window.sig_window_close().connect(this, &ApplicationModule::on_window_close);
+  slot_key_down   = window.get_ic().get_keyboard().sig_key_down().connect(this, &ApplicationModule::on_key_down);
+  slot_key_up     = window.get_ic().get_keyboard().sig_key_up().connect(this, &ApplicationModule::on_key_up);
+  slot_mouse_down = window.get_ic().get_mouse().sig_key_down().connect(this, &ApplicationModule::on_mouse_down);
+  slot_mouse_up   = window.get_ic().get_mouse().sig_key_up().connect(this, &ApplicationModule::on_mouse_up);
+  slot_mouse_move = window.get_ic().get_mouse().sig_pointer_move().connect(this, &ApplicationModule::on_mouse_move);
 
   //TODO: Implement this:
   mouse_dragging = false;
   mouse_down = false;
+
+  //Prepare the gui
+  gui_rm = CL_ResourceManager("data/gui/resources.xml");
+  gui.set_window_manager(wm);
+  gui_theme.set_resources(gui_rm);
+  gui.set_theme(gui_theme);
+  gui.set_css_document("data/gui/theme.css");
+  wm.func_repaint().set(this, &ApplicationModule::wm_repaint);
 
   exit_code = no_exit;
 
@@ -38,7 +46,8 @@ ApplicationModule::~ApplicationModule()
 }
 
 /**
- * Initiates the main loop.
+ * Initiates the main loop. Does not render the GUI
+ * it is down the the inherent classes to do so.
  */
 ApplicationModuleExitCode ApplicationModule::run()
 {
@@ -47,7 +56,6 @@ ApplicationModuleExitCode ApplicationModule::run()
   {
     update();
     draw();
-    // This call processes user input and other events
     CL_KeepAlive::process(0);
   }
   return(exit_code);
@@ -56,7 +64,7 @@ ApplicationModuleExitCode ApplicationModule::run()
 /**
  * Calculate amount of time since the last call.
  */
-unsigned int ApplicationModule::calculateTimeElapsed()
+unsigned int ApplicationModule::get_time_elapsed()
 {
   //TODO: Don't think this will work as it is inherited.
   static unsigned int last_time = 0;
@@ -71,27 +79,48 @@ unsigned int ApplicationModule::calculateTimeElapsed()
   return(delta_time);
 }
 
-void ApplicationModule::onKeyUp(const CL_InputEvent &key, const CL_InputState &state)
+/**
+ *
+ */
+void ApplicationModule::on_key_up(const CL_InputEvent &key, const CL_InputState &state)
 {}
 
-void ApplicationModule::onWindowClose()
+/**
+ *
+ */
+void ApplicationModule::on_window_close()
 {
   exit_code = exit_application;
 }
 
-void ApplicationModule::onKeyDown(const CL_InputEvent &key, const CL_InputState &state)
+/**
+ *
+ */
+void ApplicationModule::on_key_down(const CL_InputEvent &key, const CL_InputState &state)
 {}
 
-void ApplicationModule::onMouseDown(const CL_InputEvent &key, const CL_InputState &state)
+/**
+ *
+ */
+void ApplicationModule::on_mouse_down(const CL_InputEvent &key, const CL_InputState &state)
 {}
 
-void ApplicationModule::onMouseUp(const CL_InputEvent &key, const CL_InputState &state)
+/**
+ *
+ */
+void ApplicationModule::on_mouse_up(const CL_InputEvent &key, const CL_InputState &state)
 {}
 
-void ApplicationModule::onMouseMove(const CL_InputEvent &key, const CL_InputState &state)
+/**
+ *
+ */
+void ApplicationModule::on_mouse_move(const CL_InputEvent &key, const CL_InputState &state)
 {}
 
-CL_GraphicContext* ApplicationModule::getGC()
+/**
+ *
+ */
+CL_GraphicContext* ApplicationModule::get_gc()
 {
   return(&gc);
 }
