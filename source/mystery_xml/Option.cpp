@@ -7,6 +7,7 @@
 
 #include "Option.h"
 #include "Plot.h"
+#include "Decisions.h"
 #include "../misc/logging.h"
 
 Option::Option(Plot* p, const CL_DomElement& element) : plot(p)

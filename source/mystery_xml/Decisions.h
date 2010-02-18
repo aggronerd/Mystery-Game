@@ -18,7 +18,10 @@ class Decisions
 {
 public:
   Decisions(Plot*, const CL_DomElement&);
+  Decisions(Plot*);
   virtual ~Decisions();
+  void add_decision(Decision*);
+  void add_decision(void);
 private:
   std::list<Decision*> decisions;
   Plot* plot;

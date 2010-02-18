@@ -27,6 +27,7 @@ EditorMenuBar::EditorMenuBar(CL_GUIComponent* parent, Editor* editor) : CL_MenuB
   this->add_menu("File", menu_file);
 
   //Create the edit menu.
+  menu_edit.insert_item("Add Decision").func_clicked().set(editor, &Editor::on_menu_add_decision);
   menu_edit.insert_item("Cut").func_clicked().set(editor, &Editor::on_menu_cut_clicked);
   menu_edit.insert_item("Copy").func_clicked().set(editor, &Editor::on_menu_copy_clicked);
   menu_edit.insert_item("Paste").func_clicked().set(editor, &Editor::on_menu_paste_clicked);

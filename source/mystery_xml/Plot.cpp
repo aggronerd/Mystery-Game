@@ -8,9 +8,21 @@
 #include "Plot.h"
 #include "../misc/logging.h"
 #include "Option.h"
+#include "Decisions.h"
 
 /**
- * Constructs a tree from the specified XML file.
+ * Creates a new structure.
+ */
+Plot::Plot()
+{
+  DEBUG_MSG("Plot::Plot(const char*) - Called.")
+
+
+  decisions = new Decisions(this);
+}
+
+/**
+ * Loads the structure from the specified XML file.
  */
 Plot::Plot(const char* filename)
 {
@@ -63,4 +75,12 @@ void Plot::add_option(Option* option)
   DEBUG_MSG("Plot::addOption(Option*) - Called.")
   //TODO: Check ID isn't already in use.
   options[option->get_id()] = option;
+}
+
+/**
+ * Returns a pointer to the root decisions container.
+ */
+Decisions* Plot::get_root_decisions(void)
+{
+  return(decisions);
 }

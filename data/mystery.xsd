@@ -29,10 +29,13 @@
   	</xs:sequence>
   	<xs:attribute name="name" type="xs:string" use="required" />
   	<xs:attribute name="type" use="required">
-            <xs:annotation>
-            	<xs:documentation>Indicates to the interpreter the type of the chosen result.</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
+  		<xs:annotation>
+  			<xs:documentation>
+  				Indicates to the interpreter the type of the chosen
+  				result.
+  			</xs:documentation>
+  		</xs:annotation>
+  		<xs:simpleType>
   			<xs:restriction base="xs:string">
   				<xs:enumeration value="int"></xs:enumeration>
   				<xs:enumeration value="string"></xs:enumeration>
@@ -40,6 +43,8 @@
   			</xs:restriction>
   		</xs:simpleType>
   	</xs:attribute>
+  	<xs:attribute name="pos_x" type="xs:double"></xs:attribute>
+  	<xs:attribute name="pos_y" type="xs:double"></xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="OptionsType">
@@ -85,6 +90,7 @@
   		</xs:simpleType>
   	</xs:attribute>
   </xs:complexType>
+  
   <xs:simpleType name="probabilitySimpleType">
   	<xs:restriction base="xs:float">
   		<xs:whiteSpace value="collapse"></xs:whiteSpace>
@@ -92,5 +98,6 @@
   		<xs:maxInclusive value="1"></xs:maxInclusive>
   	</xs:restriction>
   </xs:simpleType>
+  
 </xs:schema>
 

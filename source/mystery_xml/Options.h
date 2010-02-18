@@ -18,6 +18,7 @@ class Plot;
 class Options
 {
 public:
+  Options(Plot*);
   Options(Plot*, const CL_DomElement&);
   virtual ~Options();
   Result select(void);

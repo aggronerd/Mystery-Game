@@ -10,10 +10,21 @@
 #include "Plot.h"
 #include "../misc/logging.h"
 
-Decisions::Decisions(Plot* p, const CL_DomElement& element) : plot(p)
-{
 
-  DEBUG_MSG("Decisions::Decisions(const CL_DomElement&) - Called.")
+/**
+ * Creates a new descisions container.
+ */
+Decisions::Decisions(Plot* parent) : plot(parent)
+{
+  DEBUG_MSG("Decisions::Decisions(Plot*) - Called.")
+}
+
+/**
+ * Loads data into object from a valid XML element.
+ */
+Decisions::Decisions(Plot* parent, const CL_DomElement& element) : plot(parent)
+{
+  DEBUG_MSG("Decisions::Decisions(Plot*, const CL_DomElement&) - Called.")
 
   //Fetch attributes
   //TODO: Add itteration & duplication.
@@ -45,4 +56,16 @@ Decisions::~Decisions()
     delete (*it_des);
   decisions.clear();
 
+}
+
+void Decisions::add_decision(Decision* decision)
+{
+  DEBUG_MSG("Decisions::add_decision(Decision*) - Called.")
+  decisions.push_back(decision);
+}
+
+void Decisions::add_decision()
+{
+  DEBUG_MSG("Decisions::add_decision() - Called.")
+  decisions.push_back(new Decision(plot));
 }

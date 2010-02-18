@@ -11,8 +11,11 @@
 #include <ClanLib/display.h>
 #include <ClanLib/core.h>
 #include "../ApplicationModule.h"
+#include <list>
 
 class EditorMenuBar;
+class Plot;
+class DecisionComponent;
 
 /**
  * The editor class is used to edit the plot Baysian Networks.
@@ -29,11 +32,14 @@ class Editor : public ApplicationModule
     void on_menu_cut_clicked(void);
     void on_menu_copy_clicked(void);
     void on_menu_paste_clicked(void);
+    void on_menu_add_decision(void);
   private:
     void draw(void);
     void update(void);
     EditorMenuBar* menu_bar;
     CL_Window* main_window;
+    Plot* active_plot;
+    std::list<DecisionComponent*> decision_components;
 };
 
 #endif /* EDITOR_H_ */

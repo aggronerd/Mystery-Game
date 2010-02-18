@@ -10,12 +10,12 @@
 
 #include <ClanLib/core.h>
 #include <map>
-#include "Decisions.h"
 
 //XML namespace used here for extra verification:
 #define PLOT_NS "http://www.gregorydoran.co.uk/plot"
 
 class Option;
+class Decisions;
 
 /**
  * The plot class is use to parse the plot element in the
@@ -25,8 +25,10 @@ class Plot
 {
 public:
   Plot(const char*);
+  Plot(void);
   virtual ~Plot();
   void add_option(Option*);
+  Decisions* get_root_decisions(void);
 private:
   CL_String name;
   Decisions* decisions;

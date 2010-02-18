@@ -17,6 +17,7 @@ class Decision
 {
 public:
   Decision(Plot*, const CL_DomElement&);
+  Decision(Plot*);
   virtual ~Decision();
   CL_String get_result_as_string(void);
   int get_result_as_integer(void);

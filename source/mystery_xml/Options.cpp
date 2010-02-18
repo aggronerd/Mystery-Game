@@ -10,10 +10,20 @@
 #include "Result.h"
 #include "../misc/logging.h"
 
+/**
+ * Constructs a new Options object.
+ */
+Options::Options(Plot* p)
+{
+  DEBUG_MSG("Options::Options(Plot*) - Called.")
+}
+
+/**
+ * Constructs Options object from a valid XML element.
+ */
 Options::Options(Plot* p, const CL_DomElement& element) : plot(p)
 {
-
-  DEBUG_MSG("Options::Options(const CL_DomElement&) - Called.")
+  DEBUG_MSG("Options::Options(Plot* , const CL_DomElement&) - Called.")
 
   //Parse children:
   DEBUG_MSG(CL_String("Options::Options(const CL_DomElement&) - Processing children."));
@@ -37,10 +47,13 @@ Options::~Options()
   DEBUG_MSG("Options::~Options() - Called.")
 
   // Delete all options
-  std::list<Option *>::iterator it_opt;
-  for(it_opt = options.begin(); it_opt != options.end(); ++it_opt)
-    delete (*it_opt);
-  options.clear();
+  if (options.size() > 0)
+  {
+    std::list<Option *>::iterator it_opt;
+    for(it_opt = options.begin(); it_opt != options.end(); ++it_opt)
+      delete (*it_opt);
+    options.clear();
+  }
 
 }
 

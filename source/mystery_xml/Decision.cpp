@@ -9,10 +9,26 @@
 #include "Plot.h"
 #include "../misc/logging.h"
 
+/**
+ * Creates a new decision with a new name.
+ */
+Decision::Decision(Plot* p) : plot(p)
+{
+  DEBUG_MSG("Decision::Decision(Plot*) - Called.");
+
+  //Set fields.
+  name = CL_String("new");
+  type = CL_String("string");
+  options = new Options(plot);
+}
+
+/**
+ * Constructs decision from a valid XML element.
+ */
 Decision::Decision(Plot* p, const CL_DomElement& element) : plot(p)
 {
 
-  DEBUG_MSG("Decision::Decision(const CL_DomElement&) - Called.");
+  DEBUG_MSG("Decision::Decision(Plot*, const CL_DomElement&) - Called.");
 
   int options_count = 0;
 
