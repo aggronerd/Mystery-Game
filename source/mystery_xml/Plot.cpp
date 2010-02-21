@@ -15,8 +15,7 @@
  */
 Plot::Plot()
 {
-  DEBUG_MSG("Plot::Plot(const char*) - Called.")
-
+  DEBUG_MSG("Plot::Plot() - Called.")
 
   decisions = new Decisions(this);
 }

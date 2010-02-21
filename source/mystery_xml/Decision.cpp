@@ -105,3 +105,11 @@ bool Decision::resolve()
 
   return(true);
 }
+
+/**
+ * Returns a pointer to an associated Options object.
+ */
+Options* Decision::get_options()
+{
+  return(options);
+}

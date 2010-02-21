@@ -17,11 +17,13 @@ class Option
 {
 public:
   Option(Plot*, const CL_DomElement&);
+  Option(Plot*);
   virtual ~Option();
   int get_id(void);
 private:
   Decisions* decisions;
   CL_String name;
+  float probability;
   int id;
   Plot* plot;
 };

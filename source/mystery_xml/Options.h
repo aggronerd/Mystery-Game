@@ -22,6 +22,7 @@ public:
   Options(Plot*, const CL_DomElement&);
   virtual ~Options();
   Result select(void);
+  void add_option(Option* option);
 private:
   std::list<Option*> options;
   Plot* plot;

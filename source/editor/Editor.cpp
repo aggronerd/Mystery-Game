@@ -8,9 +8,9 @@
 #include "Editor.h"
 #include "EditorMenuBar.h"
 #include "DecisionComponent.h"
-#include "../misc/logging.h"
+#include "PlotComponent.h"
 #include "../mystery_xml/Plot.h"
-#include "../mystery_xml/Decisions.h"
+#include "../misc/logging.h"
 
 Editor::Editor(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
@@ -29,6 +29,10 @@ Editor::Editor(const CL_DisplayWindow &display_window) : ApplicationModule(displ
 
   //Loads a new plot into memory.
   active_plot = new Plot();
+
+  //Loads a component to display it.
+  active_plot_component = new PlotComponent(active_plot, main_window);
+  active_plot_component->set_geometry(CL_Rect(0,25,display_window.get_geometry().get_width(),display_window.get_geometry().get_height()));
 
 }
 
@@ -76,7 +80,10 @@ void Editor::on_menu_new_clicked()
   //Got to delete the open one from memory first!
   if(active_plot!=0x0)
     delete active_plot;
+  if(active_plot_component!=0x0)
+    delete active_plot_component;
   active_plot = new Plot();
+  active_plot_component = new PlotComponent(active_plot, main_window);
 }
 
 void Editor::on_menu_open_clicked()
@@ -110,17 +117,4 @@ void Editor::on_menu_copy_clicked()
 void Editor::on_menu_paste_clicked()
 {
 
-}
-
-/**
- * Adds a new decision object to the structure.
- */
-void Editor::on_menu_add_decision()
-{
-  //Create the object.
-  Decision* new_decision = new Decision(active_plot);
-  //Attach to the structure.
-  active_plot->get_root_decisions()->add_decision(new_decision);
-  //Attach to a new GUI component.
-  decision_components.push_back(new DecisionComponent(main_window,new_decision));
 }

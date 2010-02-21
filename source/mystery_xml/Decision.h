@@ -23,6 +23,7 @@ public:
   int get_result_as_integer(void);
   double get_result_as_double(void);
   CL_String get_result_type(void);
+  Options* get_options(void);
 private:
   CL_String name;
   CL_String type;

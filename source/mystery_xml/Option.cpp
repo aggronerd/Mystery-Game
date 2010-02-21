@@ -10,9 +10,22 @@
 #include "Decisions.h"
 #include "../misc/logging.h"
 
+/**
+ * Standard contructor.
+ */
+Option::Option(Plot* p) : plot(p)
+{
+  DEBUG_MSG("Option::Option(Plot*) - Called.")
+  decisions = 0x0;
+  name = CL_String("New option");
+}
+
+/**
+ * Creates a new Option object from a valid XML element.
+ */
 Option::Option(Plot* p, const CL_DomElement& element) : plot(p)
 {
-  DEBUG_MSG("Option::Option(const CL_DomElement&) - Called.")
+  DEBUG_MSG("Option::Option(Plot*, const CL_DomElement&) - Called.")
 
   //Reset Decisions object pointer to NULL.
   decisions = 0x0;
