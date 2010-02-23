@@ -10,9 +10,31 @@
 							<english>Who is the victim?</english>
 							<options external_collection="characters" select="one" />
 						</decision>
-						<decision name="bloody">
-							<english>How bloody was the murder?</english>
-							<options discrete_range="1..6" />
+						<decision name="bloody" type="integer">
+							<english>How much blood was found at the crime scene?</english>
+							<options>
+								<option name="0" prob="0.1">
+									<english>No blood</english>
+								</option>
+								<option name="1" prob="0.2">
+									<english>Trace amounts</english>
+								</option>
+								<option name="2" prob="0.4">
+									<english>No blood</english>
+								</option>
+								<option name="3" prob="0.2">
+									<english>No blood</english>
+								</option>
+								<option name="4" prob="0.1">
+									<english>No blood</english>
+								</option>
+							</options>
+							<dependency decision="case.murder.motive">
+								<probModifications given_equal="crime_of_passion">
+									<optionAdjust name="1" prob="0.001" />
+									<optionAdjust name="2" prob="0.20" />
+								</probModifications>
+							</dependency>
 						</decision>
 						<decision name="motive">
 							<english>What is the motive of the murder?</english>
