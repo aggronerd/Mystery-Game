@@ -30,10 +30,10 @@
 								</option>
 							</options>
 							<dependency decision="case.murder.motive">
-								<probModifications given_equal="crime_of_passion">
-									<optionAdjust name="1" prob="0.001" />
-									<optionAdjust name="2" prob="0.20" />
-								</probModifications>
+								<givenResult equal="crime_of_passion">
+									<probabilityOf option="1" value="0.001" />
+									<probabilityOf option="2" value="0.20" />
+								</givenResult>
 							</dependency>
 						</decision>
 						<decision name="motive">
