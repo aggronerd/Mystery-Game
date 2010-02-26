@@ -16,7 +16,7 @@ DecisionsComponent::DecisionsComponent(const Decisions* decisions, CL_GUICompone
 
   m_decisions = decisions;
 
-  set_geometry(CL_Rect(CL_Point(0,0),CL_Size(60,60)));
+  set_geometry(parent->get_geometry().shrink(DC_BORDER_SIZE));
 
   //Create the add button which appears in the top right
   add_decision_button = new CL_PushButton(this);
@@ -42,9 +42,5 @@ void DecisionsComponent::on_add_decision_button_clicked(void)
 void DecisionsComponent::on_render(CL_GraphicContext &gc, const CL_Rect &clip_rect)
 {
   //Draw the basic box border.
-  CL_Draw::box(gc,  DC_BORDER_SIZE,
-                    DC_BORDER_SIZE,
-                    static_cast<float>(get_width()-DC_BORDER_SIZE),
-                    static_cast<float>(get_height()-DC_BORDER_SIZE),
-                    CL_Colorf(1.0f, 0.0f, 0.0f));
+  CL_Draw::box(gc,  get_geometry(), CL_Colorf(1.0f, 0.0f, 0.0f));
 }

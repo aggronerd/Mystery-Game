@@ -32,7 +32,6 @@ Editor::Editor(const CL_DisplayWindow &display_window) : ApplicationModule(displ
 
   //Loads a component to display it.
   active_plot_component = new PlotComponent(active_plot, main_window);
-  active_plot_component->set_geometry(CL_Rect(0,25,display_window.get_geometry().get_width(),display_window.get_geometry().get_height()));
 
 }
 
