@@ -22,10 +22,12 @@
 
   <xs:complexType name="DecisionType">
   	<xs:sequence>
-  		<xs:element name="english" type="xs:string" minOccurs="1"
-  			maxOccurs="1" />
-  		<xs:element name="options" type="OptionsType" minOccurs="1"
-  			maxOccurs="1" />
+            <xs:element name="english" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="dependencies" type="DependenciesType"
+  			minOccurs="0" maxOccurs="1">
+  		</xs:element>
+            <xs:element name="options" type="OptionsType" minOccurs="1" maxOccurs="1" />
+            <xs:element name="probabilities" type="ProbabilitiesType" minOccurs="1" maxOccurs="1"></xs:element>
   	</xs:sequence>
   	<xs:attribute name="name" type="xs:string" use="required" />
   	<xs:attribute name="type" use="required">
@@ -43,8 +45,6 @@
   			</xs:restriction>
   		</xs:simpleType>
   	</xs:attribute>
-  	<xs:attribute name="pos_x" type="xs:double"></xs:attribute>
-  	<xs:attribute name="pos_y" type="xs:double"></xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="OptionsType">
@@ -52,52 +52,55 @@
   		<xs:element name="option" minOccurs="1" maxOccurs="unbounded"
   			type="OptionType" />
   	</xs:sequence>
-  	<xs:attribute name="discrete_range" use="optional">
-  		<xs:simpleType>
-  			<xs:restriction base="xs:string">
-  				<xs:pattern value="\d+\.\.\d+"></xs:pattern>
-  			</xs:restriction>
-  		</xs:simpleType>
-  	</xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="OptionType">
   	<xs:sequence>
-  		<xs:element name="englishDescription" type="xs:string" minOccurs="1"
+  		<xs:element name="english" type="xs:string" minOccurs="1"
   			maxOccurs="1" />
-  		<xs:element name="conditionalProbability" type="conditionalProbabilityType" minOccurs="0" maxOccurs="unbounded"></xs:element>
   		<xs:element name="decisions" type="DecisionsType"
   			minOccurs="0" maxOccurs="1" />
   	</xs:sequence>
   	<xs:attribute name="name" type="xs:string" use="required" />
-  	<xs:attribute name="probability" use="required" type="probabilitySimpleType">
-  	</xs:attribute>
   </xs:complexType>
-
 
   <xs:element name="plot" type="PlotType" />
 
-
-
-
-  <xs:complexType name="conditionalProbabilityType">
-  	<xs:attribute name="probability" type="probabilitySimpleType"></xs:attribute>
-  	<xs:attribute name="given">
-  		<xs:simpleType>
-  			<xs:restriction base="xs:string">
-  				<xs:pattern value="[A-Za-z\_]+(\.[A-Za-z\_]+)*"></xs:pattern>
-  			</xs:restriction>
-  		</xs:simpleType>
-  	</xs:attribute>
+  <xs:complexType name="DependenciesType">
+  	<xs:sequence>
+  		<xs:element name="decision" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
+  	</xs:sequence>
   </xs:complexType>
-  
-  <xs:simpleType name="probabilitySimpleType">
+
+  <xs:complexType name="ProbabilitiesType">
+  	<xs:sequence>
+  		<xs:element name="given" type="GivenType" minOccurs="0"
+  			maxOccurs="unbounded">
+  		</xs:element>
+  		<xs:element name="prob" type="ProbType" minOccurs="0" maxOccurs="1"></xs:element>
+  	</xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GivenType">
+  	<xs:sequence>
+  		<xs:element name="given" type="GivenType" minOccurs="0"
+  			maxOccurs="unbounded">
+  		</xs:element>
+  		<xs:element name="prob" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+  	</xs:sequence>
+  	<xs:attribute name="option_name" type="xs:string" use="required"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="ProbType">
+  	<xs:attribute name="option_name" type="xs:string" use="required"></xs:attribute>
+  	<xs:attribute name="value" type="ProbabilitySimpleType"></xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="ProbabilitySimpleType">
   	<xs:restriction base="xs:float">
-  		<xs:whiteSpace value="collapse"></xs:whiteSpace>
   		<xs:minInclusive value="0"></xs:minInclusive>
   		<xs:maxInclusive value="1"></xs:maxInclusive>
   	</xs:restriction>
   </xs:simpleType>
-  
 </xs:schema>
 
