@@ -17,11 +17,12 @@
   <Colour red="220" blue="229" name="Very Light Grey" green="220" />
   <Colour red="192" blue="192" name="Light Grey" green="192" />
   <Colour red="160" blue="164" name="Grey" green="160" />
-  <Colour red="128" blue="128" name="Dark Grey" green="128" />
+  <Colour red="98" blue="96" name="Dark Grey" green="96" />
   <Colour red="255" blue="187" name="Light Skin" green="227" />
   <Colour red="221" blue="161" name="Light Skin - shade" green="196" />
   <Colour red="255" blue="156" name="Skin" green="214" />
   <Colour red="207" blue="127" name="Skin - shade" green="174" />
   <Colour red="255" blue="116" name="Dark Skin" green="198" />
   <Colour red="227" blue="105" name="Dark Skin - shade" green="177" />
+  <Colour red="0" blue="0" name="Colour 24" green="0" />
 </palette>

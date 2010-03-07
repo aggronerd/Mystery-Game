@@ -2,30 +2,29 @@
 <document>
   <editor>
     <currentLayer value="0" />
-    <currentFrame value="7" />
-    <currentView dx="-208.2153971540429" dy="-601.55023640794" m21="0" m11="7.538324933661923" m22="7.538324933661923" m12="0" />
+    <currentFrame value="3" />
+    <currentView dx="-182.6971049774438" dy="-476.6628462425414" m21="0" m11="6.296538261026654" m22="6.296538261026654" m12="0" />
   </editor>
   <object>
     <layer visibility="1" type="1" id="1" name="Walking layer" >
-      <image topLeftX="11" topLeftY="61" frame="1" src="001.001.png" />
-      <image topLeftX="11" topLeftY="61" frame="3" src="001.003.png" />
-      <image topLeftX="10" topLeftY="61" frame="5" src="001.005.png" />
-      <image topLeftX="9" topLeftY="61" frame="7" src="001.007.png" />
-      <image topLeftX="12" topLeftY="61" frame="9" src="001.009.png" />
-      <image topLeftX="14" topLeftY="61" frame="11" src="001.011.png" />
-      <image topLeftX="15" topLeftY="61" frame="13" src="001.013.png" />
-      <image topLeftX="16" topLeftY="64" frame="15" src="001.015.png" />
-      <image topLeftX="16" topLeftY="64" frame="17" src="001.017.png" />
-      <image topLeftX="15" topLeftY="62" frame="19" src="001.019.png" />
-      <image topLeftX="15" topLeftY="60" frame="21" src="001.021.png" />
-      <image topLeftX="15" topLeftY="64" frame="23" src="001.023.png" />
-      <image topLeftX="15" topLeftY="63" frame="25" src="001.025.png" />
-      <image topLeftX="14" topLeftY="65" frame="27" src="001.027.png" />
+      <image topLeftX="9" topLeftY="57" frame="1" src="001.001.png" />
+      <image topLeftX="-2" topLeftY="57" frame="3" src="001.003.png" />
+      <image topLeftX="8" topLeftY="57" frame="5" src="001.005.png" />
+      <image topLeftX="5" topLeftY="59" frame="7" src="001.007.png" />
+      <image topLeftX="13" topLeftY="58" frame="9" src="001.009.png" />
+      <image topLeftX="14" topLeftY="59" frame="11" src="001.011.png" />
+      <image topLeftX="16" topLeftY="61" frame="13" src="001.013.png" />
+      <image topLeftX="16" topLeftY="59" frame="15" src="001.015.png" />
+      <image topLeftX="15" topLeftY="58" frame="17" src="001.017.png" />
+      <image topLeftX="15" topLeftY="58" frame="19" src="001.019.png" />
+      <image topLeftX="15" topLeftY="59" frame="21" src="001.021.png" />
+      <image topLeftX="15" topLeftY="60" frame="23" src="001.023.png" />
+      <image topLeftX="12" topLeftY="60" frame="25" src="001.025.png" />
     </layer>
     <layer visibility="1" type="1" id="3" name="Body layer" >
       <image topLeftX="-3" topLeftY="0" frame="1" src="003.001.png" />
     </layer>
-    <layer visibility="1" type="1" id="4" name="Standing layer" >
+    <layer visibility="0" type="1" id="4" name="Standing layer" >
       <image topLeftX="-2" topLeftY="0" frame="1" src="004.001.png" />
     </layer>
   </object>

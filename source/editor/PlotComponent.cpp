@@ -18,10 +18,10 @@ PlotComponent::PlotComponent(Plot* plot, CL_GUIComponent* parent) : CL_GUICompon
 
   m_plot = plot;
 
-  set_c
+ // set_c
 
   //Create the decisions_component
-  decisions_component = new DecisionsComponent(plot->get_root_decisions(), this);
+  //decisions_component = new DecisionsComponent(plot->get_root_decisions(), this);
 
 }
 

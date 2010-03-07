@@ -1,41 +1,90 @@
 <plot xmlns="http://www.gregorydoran.co.uk/plot" name="Wellsquire Manor Murders">
 	<decisions>
+	
+		<decision name="character1_gender" type="string">
+			<english>What is the first character's gender?</english>			
+			<options>
+				<option name="male" prob="0.53">
+					<english>Male</english>
+				</option>
+				<option name="female" prob="0.47">
+					<english>Female</english>
+				</option>
+			</options>
+		</decision>
+		
+		<decision name="character1_first_name" type="string">
+			<english>What is the first character's first name?</english>
+			<options>
+				<option name="john" prob="0.01">
+					<english>John</english>
+				</option>
+				<option name="fred" prob="0.001">
+					<english></english>
+				</option>
+			</options>
+		</decision>
+		
 		<decision name="case" type="string">
 			<english>What is the type of case?</english>
 			<options>
 				<option id="1" name="murder">
 					<english>Murder</english>
 					<decisions>
+					
 						<decision name="victim">
 							<english>Who is the victim?</english>
 							<options external_collection="characters" select="one" />
 						</decision>
-						<decision name="bloody" type="integer">
+						
+						<decision name="blood" type="integer">
 							<english>How much blood was found at the crime scene?</english>
+							<dependencies>
+								<decision>case.murder.motive</decision>
+								<decision>character1_gender</decision>
+							</dependencies>
 							<options>
-								<option name="0" prob="0.1">
-									<english>No blood</english>
+								<option name="0">
+									<english>None</english>
 								</option>
-								<option name="1" prob="0.2">
-									<english>Trace amounts</english>
+								<option name="1">
+									<english>Very little</english>
 								</option>
-								<option name="2" prob="0.4">
-									<english>No blood</english>
+								<option name="2">
+									<english>Moderate</english>
 								</option>
-								<option name="3" prob="0.2">
-									<english>No blood</english>
-								</option>
-								<option name="4" prob="0.1">
-									<english>No blood</english>
+								<option name="3">
+									<english>Lots</english>
 								</option>
 							</options>
-							<dependency decision="case.murder.motive">
-								<givenResult option_name_equals="crime_of_passion">
-									<probabilityOf option_name="1" value="0.001" />
-									<probabilityOf option_name="2" value="0.20" />
-								</givenResult>
-							</dependency>
+							<probTable>
+								<given value="revenge">
+									<given value="male">
+										<mostLikely value="3" />
+									</given>
+									<given value="female">
+										<mostLikely value="2" />
+									</given>
+								</given>
+								<given value="random">
+									<given value="male">
+										<mostLikely value="2" />
+									</given>
+									<given value="female">
+										<mostLikely value="1" />
+									</given>
+								</given>
+								<given value="crime_of_passion">
+									<given value="male">
+										<mostLikely value="3" />
+									</given>
+									<given value="female">
+										<mostLikely value="3" />
+									</given>
+								</given>
+							</probTable>
 						</decision>
+						
 						<decision name="motive">
 							<english>What is the motive of the murder?</english>
 							<options>
