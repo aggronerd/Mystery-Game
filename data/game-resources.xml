@@ -1,10 +1,10 @@
 <resources>
 	<section name="characters">
 		<sprite name="detective_static_sw" base_angle="0" id="1500">
-			<image file="artwork/people/character/standing_001.png" />
-			<image file="artwork/people/character/standing_002.png" />
-			<image file="artwork/people/character/standing_003.png" />
-			<image file="artwork/people/character/standing_004.png" />
+			<image file="artwork/people/character/standing_sw_001.png" />
+			<image file="artwork/people/character/standing_sw_002.png" />
+			<image file="artwork/people/character/standing_sw_003.png" />
+			<image file="artwork/people/character/standing_sw_004.png" />
 			<translation origin="bottom" />
 			<rotation origin="bottom" />
 			<animation loop="yes" pingpong="no" speed="120" />
