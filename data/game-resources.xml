@@ -1,18 +1,64 @@
 <resources>
 	<section name="characters">
-		<sprite name="detective_static_sw" base_angle="0" id="1500">
+		<sprite name="detective_static_n" base_angle="0" id="1500">
+			<image file="artwork/people/character/standing_n_001.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+		</sprite>
+		<sprite name="detective_static_ne" base_angle="0" id="1501">
+			<image file="artwork/people/character/standing_ne_001.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+		</sprite>
+		<sprite name="detective_static_e" base_angle="0" id="1502">
+			<image file="artwork/misc/missing.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+		</sprite>
+		<sprite name="detective_static_se" base_angle="0" id="1503">
+			<image file="artwork/people/character/standing_se_001.png" />
+			<image file="artwork/people/character/standing_se_002.png" />
+			<image file="artwork/people/character/standing_se_003.png" />
+			<image file="artwork/people/character/standing_se_004.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+			<animation loop="yes" pingpong="no" speed="240" />
+		</sprite>
+		<sprite name="detective_static_s" base_angle="0" id="1504">
+			<image file="artwork/people/character/standing_s_001.png" />
+			<image file="artwork/people/character/standing_s_002.png" />
+			<image file="artwork/people/character/standing_s_003.png" />
+			<image file="artwork/people/character/standing_s_004.png" />
+			<image file="artwork/people/character/standing_s_005.png" />
+			<image file="artwork/people/character/standing_s_006.png" />
+			<image file="artwork/people/character/standing_s_007.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+			<animation loop="yes" pingpong="no" speed="240" />
+		</sprite>
+		<sprite name="detective_static_sw" base_angle="0" id="1505">
 			<image file="artwork/people/character/standing_sw_001.png" />
 			<image file="artwork/people/character/standing_sw_002.png" />
 			<image file="artwork/people/character/standing_sw_003.png" />
 			<image file="artwork/people/character/standing_sw_004.png" />
 			<translation origin="bottom" />
 			<rotation origin="bottom" />
-			<animation loop="yes" pingpong="no" speed="120" />
+			<animation loop="yes" pingpong="no" speed="240" />
+		</sprite>
+		<sprite name="detective_static_w" base_angle="0" id="1506">
+			<image file="artwork/misc/missing.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
+		</sprite>
+		<sprite name="detective_static_nw" base_angle="0" id="1507">
+			<image file="artwork/people/character/standing_nw_001.png" />
+			<translation origin="bottom" />
+			<rotation origin="bottom" />
 		</sprite>
 	</section>
 	<section name="misc">
 		<sprite name="missing" base_angle="0" id="1000">
-			<image file="artwork/people/character/standing_001.png" />
+			<image file="artwork/misc/missing.png" />
 			<translation origin="center" />
 			<rotation origin="center" />
 		</sprite>

@@ -53,7 +53,7 @@ void World::init_level()
 
   //Where the player's character starts
   CL_Pointd pc_start(0,0);
-  CL_Angle pc_direction(225,cl_degrees);
+  CL_Angle pc_direction(180,cl_degrees);
 
   DEBUG_MSG("World::initLevel() - Adding level contents.")
 

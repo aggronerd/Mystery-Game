@@ -15,6 +15,7 @@ class PlayerCharacter : public GameObject
 public:
   PlayerCharacter(World*,CL_Pointd&,CL_Angle&);
   virtual ~PlayerCharacter();
+  virtual bool update(unsigned int);
 };
 
 #endif /* PLAYERCHARACTER_H_ */
