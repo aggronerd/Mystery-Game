@@ -27,15 +27,15 @@ class GameObject
 public:
   GameObject(World*, CL_Pointd&, CL_Angle&);
   virtual ~GameObject();
-  void set_direction(CL_Angle&);
+  void set_direction(CL_Angle);
   CL_Angle get_direction(void);
-  void set_position(CL_Pointd&);
+  void set_position(CL_Pointd);
   CL_Pointd get_position(void);
   virtual void draw();
   virtual bool update(unsigned int);
 protected:
   World* world;
-  CL_Pointd position; //Isometric position, not world
+  CL_Pointd world_position;
   CL_Angle direction; //angle in degrees from north
   CL_Sprite* static_sprites[8];
   CL_Sprite* static_current;

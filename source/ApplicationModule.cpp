@@ -24,10 +24,6 @@ ApplicationModule::ApplicationModule(const CL_DisplayWindow &display_window) : w
   slot_mouse_up   = window.get_ic().get_mouse().sig_key_up().connect(this, &ApplicationModule::on_mouse_up);
   slot_mouse_move = window.get_ic().get_mouse().sig_pointer_move().connect(this, &ApplicationModule::on_mouse_move);
 
-  //TODO: Implement this:
-  mouse_dragging = false;
-  mouse_down = false;
-
   //Prepare the gui
   gui_rm = CL_ResourceManager("data/gui/resources.xml");
   gui.set_window_manager(wm);

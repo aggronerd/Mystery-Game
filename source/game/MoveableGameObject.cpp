@@ -6,7 +6,6 @@
  */
 
 #include "MoveableGameObject.h"
-#include "IsometricConversions.h"
 #include "World.h"
 #include <ClanLib/core.h>
 
@@ -32,7 +31,7 @@ MoveableGameObject::~MoveableGameObject()
 void MoveableGameObject::draw()
 {
   //Have to translate world position to isometric position.
-  CL_Pointd isometricPoint = IsometricConversions::world_to_isometric(position);
+  CL_Point isometricPoint = world->get_active_viewport()->get_screen_position(world_position);
   //TODO: add animation state.
   //still->draw(*(world->getGC()),(float)(isometricPoint.x),(float)(isometricPoint.y));
 }

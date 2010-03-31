@@ -10,6 +10,7 @@
 #include "PlayerCharacter.h"
 #include "GameObject.h"
 #include "Overlay.h"
+#include "Viewport.h"
 #include "../Application.h"
 #include "../misc/logging.h"
 #include "../mystery_xml/Plot.h"
@@ -17,12 +18,15 @@
 /**
  * Creates the game world and sets up initial contents.
  */
-World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
+World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display_window), viewport(this)
 {
   DEBUG_MSG("World::World(CL_DisplayWindow &) - Called.")
 
   //Set object pointers to null
   music = 0x0;
+
+  mouse_dragging = false;
+  mouse_down = false;
 
   //Get the resource manager
   rm = CL_ResourceManager("data/game-resources.xml");
@@ -52,8 +56,8 @@ void World::init_level()
   }
 
   //Where the player's character starts
-  CL_Pointd pc_start(0,0);
-  CL_Angle pc_direction(180,cl_degrees);
+  CL_Pointd pc_start(30,30);
+  CL_Angle pc_direction(270,cl_degrees);
 
   DEBUG_MSG("World::initLevel() - Adding level contents.")
 
@@ -61,13 +65,16 @@ void World::init_level()
   add_overlay(new IsometricGrid(this));
 
   // Add player character
-  add_game_object(new PlayerCharacter(this,pc_start,pc_direction));
+  player_character = new PlayerCharacter(this,pc_start,pc_direction);
+  add_game_object(player_character);
 
   DEBUG_MSG("World::initLevel() - Creating and playing music.")
 
   //Create & play the sound buffer.
   music = new CL_SoundBuffer("data/audio/music/lone.ogg");
   music->play(true, &sound_output);
+
+  get_active_viewport()->center_on_world(CL_Pointd(30,30));
 
 }
 
@@ -84,6 +91,8 @@ World::~World()
   for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
     delete (*it_go);
   game_objects.clear();
+
+  player_character = 0x0;
 
   // Delete all overlays
   std::list<Overlay *>::iterator it_ov;
@@ -133,9 +142,15 @@ void World::draw()
   window.flip(1);
 }
 
+/**
+ * Updates game logic by calling all GameObject::update() calls.
+ */
 void World::update()
 {
   unsigned int time_elapsed_ms = get_time_elapsed();
+
+  // Update viewport
+  viewport.update(time_elapsed_ms);
 
   // Update all game objects
   std::list<GameObject *>::iterator it_go;
@@ -150,6 +165,58 @@ void World::update()
     else
       ++it_go;
   }
+}
+
+/**
+ *
+ */
+void World::on_mouse_down(const CL_InputEvent &key, const CL_InputState &state)
+{
+  mouse_down = true;
+
+  CL_Pointd mouse_position_world = viewport.get_world_position((static_cast<CL_Point>(key.mouse_pos)));
+
+  DEBUG_MSG(CL_String("World::on_mouse_down() - Called - Screen position: ") + CL_StringHelp::int_to_text(key.mouse_pos.x) + CL_String(",")
+      + CL_StringHelp::int_to_text(key.mouse_pos.y) + CL_String(" - World position: ") + CL_StringHelp::int_to_text(mouse_position_world.x)
+      + CL_String(",") + CL_StringHelp::int_to_text(mouse_position_world.y) + CL_String("."))
+
+  player_character->set_position(mouse_position_world);
+
+}
+
+void World::on_mouse_up(const CL_InputEvent &key, const CL_InputState &state)
+{
+  mouse_down = false;
+}
+
+void World::on_mouse_move(const CL_InputEvent &key, const CL_InputState &state)
+{
+  //Scroll east
+  if(key.mouse_pos.x >= (get_gc()->get_width() - VIEWPOINT_SCROLL_BORDER_WIDTH))
+    get_active_viewport()->set_scroll_e(true);
+  else
+    get_active_viewport()->set_scroll_e(false);
+
+  //Scroll west
+  if(key.mouse_pos.x <= VIEWPOINT_SCROLL_BORDER_WIDTH)
+    get_active_viewport()->set_scroll_w(true);
+  else
+    get_active_viewport()->set_scroll_w(false);
+
+  if(key.mouse_pos.y >= (get_gc()->get_height() - VIEWPOINT_SCROLL_BORDER_WIDTH))
+    get_active_viewport()->set_scroll_s(true);
+  else
+    get_active_viewport()->set_scroll_s(false);
+
+  if(key.mouse_pos.y <= VIEWPOINT_SCROLL_BORDER_WIDTH)
+    get_active_viewport()->set_scroll_n(true);
+  else
+    get_active_viewport()->set_scroll_n(false);
+}
+
+Viewport* World::get_active_viewport()
+{
+  return(&viewport);
 }
 
 CL_ResourceManager* World::get_rm()

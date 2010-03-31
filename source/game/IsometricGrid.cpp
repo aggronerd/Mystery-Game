@@ -6,7 +6,6 @@
  */
 
 #include "IsometricGrid.h"
-#include "IsometricConversions.h"
 #include "World.h"
 #include <ClanLib/core.h>
 
@@ -26,10 +25,14 @@ void IsometricGrid::draw()
     for(signed int y=-30;y<=30;y++)
     {
       //Draw square
-      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x,y)),   IsometricConversions::world_to_isometric(CL_Pointf(x  ,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
-      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x,y)),   IsometricConversions::world_to_isometric(CL_Pointf(x+1,y  )), CL_Colorf(0.2f, 0.2f, 0.2f));
-      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x+1,y)), IsometricConversions::world_to_isometric(CL_Pointf(x+1,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
-      CL_Draw::line(*gc, IsometricConversions::world_to_isometric(CL_Pointf(x,y+1)), IsometricConversions::world_to_isometric(CL_Pointf(x+1,y+1)), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x,y))),
+                         static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x  ,y+1))), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x,y))),
+                         static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x+1,y  ))), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x+1,y))),
+                         static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x+1,y+1))), CL_Colorf(0.2f, 0.2f, 0.2f));
+      CL_Draw::line(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x,y+1))),
+                         static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x+1,y+1))), CL_Colorf(0.2f, 0.2f, 0.2f));
     }
   }
 }

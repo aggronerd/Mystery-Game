@@ -7,7 +7,6 @@
 
 #include "GameObject.h"
 #include "World.h"
-#include "IsometricConversions.h"
 #include <ClanLib/core.h>
 
 /**
@@ -47,8 +46,13 @@ GameObject::~GameObject()
  */
 void GameObject::draw()
 {
+  CL_Point screen_position;
+
+  //Calculate where the sprite will be drawn on the screen.
+  screen_position = world->get_active_viewport()->get_screen_position(world_position);
+
   if(static_current != 0x0)
-    static_current->draw(*(world->get_gc()),(float)position.x,(float)position.y);
+    static_current->draw(*(world->get_gc()),screen_position.x,screen_position.y);
 }
 
 /**
@@ -65,7 +69,7 @@ bool GameObject::update(unsigned int time_elapsed_ms)
  * Sets the direction the game object is facing. This effects
  * the sprite which is used when drawing it.
  */
-void GameObject::set_direction(CL_Angle& new_direction)
+void GameObject::set_direction(CL_Angle new_direction)
 {
   float angle;
 
@@ -100,13 +104,13 @@ CL_Angle GameObject::get_direction(void)
 }
 
 /**
- * Sets the position of the object.
+ * Sets the world position of the object.
  *
  * param new_position The position as CL_Pointd in terms of world co-ordinates.
  */
-void GameObject::set_position(CL_Pointd& new_position)
+void GameObject::set_position(CL_Pointd position)
 {
-  position = IsometricConversions::world_to_isometric(new_position);
+  world_position = position;
 }
 
 /**
@@ -114,5 +118,5 @@ void GameObject::set_position(CL_Pointd& new_position)
  */
 CL_Pointd GameObject::get_position()
 {
-  return(IsometricConversions::isometric_to_world(position));
+  return(world_position);
 }
