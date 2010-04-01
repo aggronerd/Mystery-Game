@@ -39,8 +39,8 @@ int Application::main(const std::vector<CL_String> &args)
     // Create the window
     CL_DisplayWindowDescription desc;
     desc.set_title("Mystery Generator");
-    desc.set_size(CL_Size(1280, 800), true);
-    desc.set_fullscreen(true);
+    desc.set_size(CL_Size(1024, 600), false);
+    desc.set_fullscreen(false);
 
     CL_DisplayWindow window(desc);
 

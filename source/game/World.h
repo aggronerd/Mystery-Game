@@ -43,7 +43,7 @@ class World : public ApplicationModule
           CL_SoundOutput sound_output;
           Viewport viewport;
           bool mouse_dragging;
-          bool mouse_down;
+          bool left_mouse_button_down;
           void init_level(void);
           void draw(void);
           void update(void);

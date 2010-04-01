@@ -26,7 +26,7 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
   music = 0x0;
 
   mouse_dragging = false;
-  mouse_down = false;
+  left_mouse_button_down = false;
 
   //Get the resource manager
   rm = CL_ResourceManager("data/game-resources.xml");
@@ -56,8 +56,8 @@ void World::init_level()
   }
 
   //Where the player's character starts
-  CL_Pointd pc_start(0,0);
-  CL_Angle pc_direction(270,cl_degrees);
+  CL_Pointd pc_start(15,15);
+  CL_Angle pc_direction(0,cl_degrees);
 
   DEBUG_MSG("World::initLevel() - Adding level contents.")
 
@@ -172,32 +172,39 @@ void World::update()
  */
 void World::on_mouse_down(const CL_InputEvent &key, const CL_InputState &state)
 {
-  mouse_down = true;
+  DEBUG_MSG("World::on_mouse_down(const CL_InputEvent&, const CL_InputState&) - Called - key.id = " + CL_StringHelp::int_to_text(key.id))
+  if(key.id == 0)
+  {
+    //Left mouse button
+    left_mouse_button_down = true;
+  }
 
-  CL_Pointd mouse_position_world = viewport.get_world_position((static_cast<CL_Point>(key.mouse_pos)));
-
+/*
   DEBUG_MSG(CL_String("World::on_mouse_down() - Called - Screen position: ") + CL_StringHelp::int_to_text(key.mouse_pos.x) + CL_String(",")
       + CL_StringHelp::int_to_text(key.mouse_pos.y) + CL_String(" - World position: ") + CL_StringHelp::int_to_text(mouse_position_world.x)
       + CL_String(",") + CL_StringHelp::int_to_text(mouse_position_world.y) + CL_String("."))
-
-  player_character->set_position(mouse_position_world);
+*/
 
 }
 
 void World::on_mouse_up(const CL_InputEvent &key, const CL_InputState &state)
 {
-  mouse_down = false;
+  DEBUG_MSG("World::on_mouse_up(const CL_InputEvent&, const CL_InputState&) - Called - key.id = " + CL_StringHelp::int_to_text(key.id))
+  if(key.id == 0)
+  {
+    //Left mouse button
+    left_mouse_button_down = false;
+  }
 }
 
 void World::on_mouse_move(const CL_InputEvent &key, const CL_InputState &state)
 {
-  //Scroll east
+  //Scrolling e, w, s and n using borders.
   if(key.mouse_pos.x >= (get_gc()->get_width() - VIEWPOINT_SCROLL_BORDER_WIDTH))
     get_active_viewport()->set_scroll_e(true);
   else
     get_active_viewport()->set_scroll_e(false);
 
-  //Scroll west
   if(key.mouse_pos.x <= VIEWPOINT_SCROLL_BORDER_WIDTH)
     get_active_viewport()->set_scroll_w(true);
   else
@@ -212,6 +219,13 @@ void World::on_mouse_move(const CL_InputEvent &key, const CL_InputState &state)
     get_active_viewport()->set_scroll_n(true);
   else
     get_active_viewport()->set_scroll_n(false);
+
+  //Make the character face the pointer.
+  //Get the position of the mouse in terms of world co-ordinates.
+  CL_Pointd mouse_position_world = viewport.get_world_position((static_cast<CL_Point>(key.mouse_pos)));
+
+  //Set the character to face the mouse
+  player_character->set_facing(static_cast<CL_Vec2<double> >(mouse_position_world));
 }
 
 Viewport* World::get_active_viewport()

@@ -40,13 +40,20 @@ void IsometricGrid::draw()
                          static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(x+1,y+1))), CL_Colorf(0.2f, 0.2f, 0.2f));
     }
   }
+
+  //Draw coloured axis lines
   CL_Draw::line(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd( 30 , 0))),
                      static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(-30 , 0))), CL_Colorf(1.0f,0.0f,0.0f));
   CL_Draw::line(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd( 0,-30))),
                      static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd( 0, 30))), CL_Colorf(0.0f,1.0f,0.0f));
 
-  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd( 30 , 0))),  "(30,0)", CL_Colorf(1.0f,0.0f,0.0f));
+  //Draw axis labels
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd( 30 , 0))), "(30,0)", CL_Colorf(1.0f,0.0f,0.0f));
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd( 32.5 , 0))), "East", CL_Colorf(1.0f,0.0f,0.0f));
   system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(-30 , 0))), "(-30,0)", CL_Colorf(1.0f,0.0f,0.0f));
-  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(  0 , 30))), "(0,30)", CL_Colorf(0.0f,1.0f,0.0f));
-  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(  0 , -30))), "(0,-30)", CL_Colorf(0.0f,1.0f,0.0f));
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(-32.5 , 0))), "West", CL_Colorf(1.0f,0.0f,0.0f));
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(  0, 30))), "(0,30)", CL_Colorf(0.0f,1.0f,0.0f));
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(  0, 32.5))), "North", CL_Colorf(0.0f,1.0f,0.0f));
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(  0,-30))), "(0,-30)", CL_Colorf(0.0f,1.0f,0.0f));
+  system_font.draw_text(*gc, static_cast<CL_Pointf>(world->get_active_viewport()->get_screen_position(CL_Pointd(  0,-32.5))), "South", CL_Colorf(0.0f,1.0f,0.0f));
 }

@@ -31,6 +31,7 @@ public:
   CL_Angle get_direction(void);
   void set_position(CL_Pointd);
   CL_Pointd get_position(void);
+  void set_facing(CL_Vec2<double>);
   virtual void draw();
   virtual bool update(unsigned int);
 protected:

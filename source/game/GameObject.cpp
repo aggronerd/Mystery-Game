@@ -8,6 +8,7 @@
 #include "GameObject.h"
 #include "World.h"
 #include <ClanLib/core.h>
+#include "../misc/logging.h"
 
 /**
  *
@@ -51,8 +52,14 @@ void GameObject::draw()
   //Calculate where the sprite will be drawn on the screen.
   screen_position = world->get_active_viewport()->get_screen_position(world_position);
 
+  //Setup a rectangle so the origin of the spite centres on the bottom.
+  CL_Rectf dest(static_cast<float>(screen_position.x - (static_current->get_width()/2)),
+                static_cast<float>(screen_position.y - (static_current->get_height())), static_cast<CL_Sizef>(static_current->get_size()));
+
+  CL_Draw::box(*(world->get_gc()),dest,CL_Colorf(1.0f,0.0f,0.0f));
+
   if(static_current != 0x0)
-    static_current->draw(*(world->get_gc()),screen_position.x,screen_position.y);
+    static_current->draw(*(world->get_gc()), dest);
 }
 
 /**
@@ -77,22 +84,23 @@ void GameObject::set_direction(CL_Angle new_direction)
   angle = new_direction.to_degrees();
 
   //Update the pointer to the current static sprite.
+  //TODO: Adjust angles to enable more realistic rotation. Currently scaling of the y axis in the isometric system causes the percieved angle of the body to be different from the percieved angle of the direction.
   if(angle > 337.5 || angle <= 22.5)
-    static_current = static_sprites[SPRITE_N];
-  if(angle > 22.5  && angle <= 65.7)
-    static_current = static_sprites[SPRITE_NE];
-  if(angle > 65.7  && angle <= 112.5)
-    static_current = static_sprites[SPRITE_E];
-  if(angle > 112.5 && angle <= 157.5)
-    static_current = static_sprites[SPRITE_SE];
-  if(angle > 157.5 && angle <= 202.5)
-    static_current = static_sprites[SPRITE_S];
-  if(angle > 202.5 && angle <= 247.5)
-    static_current = static_sprites[SPRITE_SW];
-  if(angle > 247.5 && angle <= 292.5)
-    static_current = static_sprites[SPRITE_W];
-  if(angle > 292.5 && angle <= 337.5)
     static_current = static_sprites[SPRITE_NW];
+  if(angle > 22.5  && angle <= 65.7)
+    static_current = static_sprites[SPRITE_N];
+  if(angle > 65.7  && angle <= 112.5)
+    static_current = static_sprites[SPRITE_NE];
+  if(angle > 112.5 && angle <= 157.5)
+    static_current = static_sprites[SPRITE_E];
+  if(angle > 157.5 && angle <= 202.5)
+    static_current = static_sprites[SPRITE_SE];
+  if(angle > 202.5 && angle <= 247.5)
+    static_current = static_sprites[SPRITE_S];
+  if(angle > 247.5 && angle <= 292.5)
+    static_current = static_sprites[SPRITE_SW];
+  if(angle > 292.5 && angle <= 337.5)
+    static_current = static_sprites[SPRITE_W];
 }
 
 /**
@@ -119,4 +127,28 @@ void GameObject::set_position(CL_Pointd position)
 CL_Pointd GameObject::get_position()
 {
   return(world_position);
+}
+
+/**
+ * Set the game object to face the vector provided.
+ *
+ * Vector must be world co-ordinates.
+ */
+void GameObject::set_facing(CL_Vec2<double> vector)
+{
+  DEBUG_MSG("GameObject::set_facing(CL_Vec2<double>) - Called - vector = (" + CL_StringHelp::double_to_text(vector.x) + "," + CL_StringHelp::double_to_text(vector.y) + ")")
+
+  //Translate vector to use object's position as origin
+  vector = vector - static_cast<CL_Vec2<double> >(get_position());
+
+  //Calculate angle between the vector and a unit vector for the y axis.
+  CL_Angle new_direction = CL_Pointd(0,1).angle(vector);
+
+  //Determines if the direction of the angle.
+  if(vector.x < 0)
+    new_direction = CL_Angle(360,cl_degrees) - new_direction;
+
+  DEBUG_MSG("GameObject::set_facing(CL_Vec2<double>) - new_direction.to_degrees() = " + CL_StringHelp::float_to_text(new_direction.to_degrees()))
+
+  set_direction(new_direction);
 }
