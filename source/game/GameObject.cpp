@@ -84,7 +84,6 @@ void GameObject::set_direction(CL_Angle new_direction)
   angle = new_direction.to_degrees();
 
   //Update the pointer to the current static sprite.
-  //TODO: Adjust angles to enable more realistic rotation. Currently scaling of the y axis in the isometric system causes the percieved angle of the body to be different from the percieved angle of the direction.
   if(angle > 337.5 || angle <= 22.5)
     static_current = static_sprites[SPRITE_NW];
   if(angle > 22.5  && angle <= 65.7)
