@@ -56,7 +56,7 @@ void World::init_level()
   }
 
   //Where the player's character starts
-  CL_Pointd pc_start(30,30);
+  CL_Pointd pc_start(0,0);
   CL_Angle pc_direction(270,cl_degrees);
 
   DEBUG_MSG("World::initLevel() - Adding level contents.")
@@ -74,7 +74,7 @@ void World::init_level()
   music = new CL_SoundBuffer("data/audio/music/lone.ogg");
   music->play(true, &sound_output);
 
-  get_active_viewport()->center_on_world(CL_Pointd(30,30));
+  get_active_viewport()->center_on_world(CL_Pointd(0,0));
 
 }
 

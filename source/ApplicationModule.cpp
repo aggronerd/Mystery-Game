@@ -52,7 +52,7 @@ ApplicationModuleExitCode ApplicationModule::run()
   {
     update();
     draw();
-    CL_KeepAlive::process(0);
+    CL_KeepAlive::process(10);
   }
   return(exit_code);
 }
