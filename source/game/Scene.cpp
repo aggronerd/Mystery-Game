@@ -11,8 +11,11 @@
 #include "GameObject.h"
 #include "../misc/logging.h"
 
-Scene::Scene(World* owner) : viewport(this), world(owner)
+Scene::Scene(World* owner) : world(owner)
 {
+  active_viewport = new Viewport(this);
+  add_viewport(active_viewport);
+
   DEBUG_MSG("Scene::Scene(World*) - Called.")
 }
 
@@ -21,10 +24,16 @@ Scene::~Scene()
   DEBUG_MSG("Scene::~Scene() - Called.")
 
 	// Delete all game objects
-    std::list<GameObject *>::iterator it_go;
+  std::list<GameObject *>::iterator it_go;
 	for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
 	  delete (*it_go);
 	game_objects.clear();
+
+	// Delete all viewports
+  std::list<Viewport *>::iterator it_vp;
+  for(it_vp = viewports.begin(); it_vp != viewports.end(); ++it_vp)
+    delete (*it_vp);
+  viewports.clear();
 
   world = 0x0;
 }
@@ -56,7 +65,7 @@ void Scene::draw()
 void Scene::update(unsigned int time_elapsed_ms)
 {
   // Update viewport
-  viewport.update(time_elapsed_ms);
+  active_viewport->update(time_elapsed_ms);
 
   // Update all game objects
   std::list<GameObject*>::iterator it_go;
@@ -75,10 +84,15 @@ void Scene::update(unsigned int time_elapsed_ms)
 
 Viewport* Scene::get_active_viewport()
 {
-  return(&viewport);
+  return(active_viewport);
 }
 
 World* Scene::get_world()
 {
   return(world);
+}
+
+void Scene::add_viewport(Viewport* new_viewport)
+{
+  viewports.push_back(new_viewport);
 }

@@ -14,11 +14,13 @@
 
 Viewport::Viewport(Scene* owner) : scene(owner), origin(0,0)
 {
-  CL_GraphicContext* gc = owner->get_world()->get_gc();
+  DEBUG_MSG("Viewport::Viewport(Scene*) - Called.")
+
+  CL_GraphicContext gc = *(scene->get_world()->get_gc());
 
   //Get the centre of the screen.
-  //screen_center.x = gc->get_width()  / 2;
-  //screen_center.y = gc->get_height() / 2;
+  screen_center.x = gc.get_width()  / 2;
+  screen_center.y = gc.get_height() / 2;
 
   enable_scrolling = true;
   scroll_w = false;
@@ -29,6 +31,8 @@ Viewport::Viewport(Scene* owner) : scene(owner), origin(0,0)
 
 Viewport::~Viewport()
 {
+  DEBUG_MSG("Viewport::~Viewport() - Called.")
+
   scene = 0x0;
 }
 

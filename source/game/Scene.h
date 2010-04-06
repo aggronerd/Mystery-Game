@@ -9,8 +9,8 @@
 #ifndef SCENE_H_
 #define SCENE_H_
 
-#include "Viewport.h"
 #include <list>
+#include "Viewport.h"
 
 class GameObject;
 class World;
@@ -25,11 +25,13 @@ public:
   void add_game_object(GameObject*);
   void draw(void);
   void update(unsigned int);
+  void add_viewport(Viewport*);
 
 private:
-  Viewport viewport;
+  std::list<Viewport*> viewports;
   std::list<GameObject*> game_objects;
   World* world;
+  Viewport* active_viewport;
 
 };
 

@@ -20,8 +20,7 @@
 GameObject::GameObject(Scene* s, CL_Pointd& initial_position, CL_Angle& initial_direction)
 {
 
-  //TODO: add if debug mode.
-  cl_log_event("debug","Instance of GameObject created at x=",initial_position.x," y=", initial_position.y, " angle=", initial_direction.to_degrees());
+  DEBUG_MSG("GameObject::GameObject(Scene*, CL_Pointd&, CL_Angle&) - Called x=" + CL_StringHelp::double_to_text(initial_position.x) + " y=" + CL_StringHelp::double_to_text(initial_position.y) + " angle=" + CL_StringHelp::float_to_text(initial_direction.to_degrees()) + ".");
 
   //Set the world instance variable.
   scene = s;
@@ -37,6 +36,8 @@ GameObject::GameObject(Scene* s, CL_Pointd& initial_position, CL_Angle& initial_
 
 GameObject::~GameObject()
 {
+  DEBUG_MSG("GameObject::~GameObject() - Called.")
+
   scene = 0x0;
   //Destroy sprites which have been declared.
   for(int i = 0; i < 8; i++)
