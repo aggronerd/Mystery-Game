@@ -6,10 +6,9 @@
  */
 
 #include "MoveableGameObject.h"
-#include "World.h"
 #include <ClanLib/core.h>
 
-MoveableGameObject::MoveableGameObject(World* w, CL_Pointd& initial_position, CL_Angle& initial_direction) : GameObject(w, initial_position, initial_direction)
+MoveableGameObject::MoveableGameObject(Scene* s, CL_Pointd& initial_position, CL_Angle& initial_direction) : GameObject(s, initial_position, initial_direction)
 {
   //Object always starts static
   destination = initial_position;
@@ -31,7 +30,7 @@ MoveableGameObject::~MoveableGameObject()
 void MoveableGameObject::draw()
 {
   //Have to translate world position to isometric position.
-  CL_Point isometricPoint = world->get_active_viewport()->get_screen_position(world_position);
+  //CL_Point isometricPoint = world->get_active_viewport()->get_screen_position(world_position);
   //TODO: add animation state.
   //still->draw(*(world->getGC()),(float)(isometricPoint.x),(float)(isometricPoint.y));
 }

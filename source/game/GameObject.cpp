@@ -6,9 +6,10 @@
  */
 
 #include "GameObject.h"
-#include "World.h"
 #include <ClanLib/core.h>
 #include "../misc/logging.h"
+#include "Scene.h"
+#include "World.h"
 
 /**
  *
@@ -16,14 +17,14 @@
  * param initial_position CL_Pointd The starting position in world coordinates.
  * param initial_direction CL_Angle
  */
-GameObject::GameObject(World* w, CL_Pointd& initial_position, CL_Angle& initial_direction)
+GameObject::GameObject(Scene* s, CL_Pointd& initial_position, CL_Angle& initial_direction)
 {
 
   //TODO: add if debug mode.
   cl_log_event("debug","Instance of GameObject created at x=",initial_position.x," y=", initial_position.y, " angle=", initial_direction.to_degrees());
 
   //Set the world instance variable.
-  world = w;
+  scene = s;
 
   //Reset pointers to NULL
   for(int i = 0; i < 8; i++)
@@ -36,7 +37,7 @@ GameObject::GameObject(World* w, CL_Pointd& initial_position, CL_Angle& initial_
 
 GameObject::~GameObject()
 {
-  world = 0;
+  scene = 0x0;
   //Destroy sprites which have been declared.
   for(int i = 0; i < 8; i++)
     delete static_sprites[i];
@@ -47,19 +48,20 @@ GameObject::~GameObject()
  */
 void GameObject::draw()
 {
+  CL_GraphicContext gc = *(scene->get_world()->get_gc());
   CL_Point screen_position;
 
   //Calculate where the sprite will be drawn on the screen.
-  screen_position = world->get_active_viewport()->get_screen_position(world_position);
+  screen_position = scene->get_active_viewport()->get_screen_position(world_position);
 
   //Setup a rectangle so the origin of the spite centres on the bottom.
   CL_Rectf dest(static_cast<float>(screen_position.x - (static_current->get_width()/2)),
                 static_cast<float>(screen_position.y - (static_current->get_height())), static_cast<CL_Sizef>(static_current->get_size()));
 
-  CL_Draw::box(*(world->get_gc()),dest,CL_Colorf(1.0f,0.0f,0.0f));
+  CL_Draw::box(gc,dest,CL_Colorf(1.0f,0.0f,0.0f));
 
   if(static_current != 0x0)
-    static_current->draw(*(world->get_gc()), dest);
+    static_current->draw(gc, dest);
 }
 
 /**

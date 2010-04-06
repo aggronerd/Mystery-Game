@@ -16,7 +16,7 @@
 #define VIEWPOINT_SCROLL_DISTANCE_PER_SEC 10
 #define VIEWPOINT_SCROLL_BORDER_WIDTH 40
 
-class World;
+class Scene;
 
 /**
  * A Viewport is used to translate what is in the world and determine
@@ -25,7 +25,7 @@ class World;
 class Viewport
 {
 public:
-  Viewport(World*);
+  Viewport(Scene*);
   virtual ~Viewport();
   CL_Point get_screen_position(const CL_Pointd&);
   CL_Pointd get_world_position(const CL_Point&);
@@ -38,7 +38,7 @@ public:
   void set_scroll_n(bool);
   void set_enable_scrolling(bool);
 protected:
-  World* world;
+  Scene* scene;
   /**
    * The origin of the viewport in the world system.
    */

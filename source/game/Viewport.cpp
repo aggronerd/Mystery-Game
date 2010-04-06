@@ -7,17 +7,18 @@
  */
 
 #include "Viewport.h"
+#include "Scene.h"
 #include "World.h"
 #include <math.h>
 #include "../misc/logging.h"
 
-Viewport::Viewport(World* owner) : origin(0,0)
+Viewport::Viewport(Scene* owner) : scene(owner), origin(0,0)
 {
-  world = owner;
+  CL_GraphicContext* gc = owner->get_world()->get_gc();
 
-  //Get the center of the screen.
-  screen_center.x = world->get_gc()->get_width() / 2;
-  screen_center.y = world->get_gc()->get_height() / 2;
+  //Get the centre of the screen.
+  //screen_center.x = gc->get_width()  / 2;
+  //screen_center.y = gc->get_height() / 2;
 
   enable_scrolling = true;
   scroll_w = false;
@@ -28,7 +29,7 @@ Viewport::Viewport(World* owner) : origin(0,0)
 
 Viewport::~Viewport()
 {
-  world = 0x0;
+  scene = 0x0;
 }
 
 /**

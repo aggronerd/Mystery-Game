@@ -20,12 +20,12 @@
 #define SPRITE_W  6
 #define SPRITE_NW 7
 
-class World;
+class Scene;
 
 class GameObject
 {
 public:
-  GameObject(World*, CL_Pointd&, CL_Angle&);
+  GameObject(Scene*, CL_Pointd&, CL_Angle&);
   virtual ~GameObject();
   void set_direction(CL_Angle);
   CL_Angle get_direction(void);
@@ -35,7 +35,7 @@ public:
   virtual void draw();
   virtual bool update(unsigned int);
 protected:
-  World* world;
+  Scene* scene;
   CL_Pointd world_position;
   CL_Angle direction; //angle in degrees from north
   CL_Sprite* static_sprites[8];

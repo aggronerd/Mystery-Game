@@ -20,7 +20,7 @@ class MoveableGameObject : public GameObject
 public:
   void draw(void);
   bool update(unsigned int);
-  MoveableGameObject(World*,CL_Pointd&,CL_Angle&);
+  MoveableGameObject(Scene*,CL_Pointd&,CL_Angle&);
   virtual ~MoveableGameObject();
 protected:
   /*CL_Sprite* still;

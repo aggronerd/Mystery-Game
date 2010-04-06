@@ -7,9 +7,8 @@
 
 #include "World.h"
 #include "IsometricGrid.h"
-#include "PlayerCharacter.h"
+#include "game_objects/PlayerCharacter.h"
 #include "GameObject.h"
-#include "Overlay.h"
 #include "Viewport.h"
 #include "../Application.h"
 #include "../misc/logging.h"
@@ -18,12 +17,13 @@
 /**
  * Creates the game world and sets up initial contents.
  */
-World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display_window), viewport(this)
+World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
   DEBUG_MSG("World::World(CL_DisplayWindow &) - Called.")
 
   //Set object pointers to null
   music = 0x0;
+  active_scene = 0x0;
 
   mouse_dragging = false;
   left_mouse_button_down = false;
@@ -59,14 +59,17 @@ void World::init_level()
   CL_Pointd pc_start(15,15);
   CL_Angle pc_direction(0,cl_degrees);
 
-  DEBUG_MSG("World::initLevel() - Adding level contents.")
+  DEBUG_MSG("World::initLevel() - Creating test scene and adding level contents.")
 
   // Isometric grid overlay
   add_overlay(new IsometricGrid(this));
+  //add_overlay(new Room(this));
 
   // Add player character
-  player_character = new PlayerCharacter(this,pc_start,pc_direction);
-  add_game_object(player_character);
+  add_scene(new Scene(this));
+
+  player_character = new PlayerCharacter(this->get_active_scene(),pc_start,pc_direction);
+  this->get_active_scene()->add_game_object(player_character);
 
   DEBUG_MSG("World::initLevel() - Creating and playing music.")
 
@@ -74,7 +77,7 @@ void World::init_level()
   music = new CL_SoundBuffer("data/audio/music/lone.ogg");
   music->play(true, &sound_output);
 
-  get_active_viewport()->center_on_world(CL_Pointd(0,0));
+  get_active_scene()->get_active_viewport()->center_on_world(CL_Pointd(0,0));
 
 }
 
@@ -86,19 +89,20 @@ World::~World()
 
   DEBUG_MSG("World::~World() - Called.")
 
-  // Delete all game objects
-  std::list<GameObject *>::iterator it_go;
-  for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
-    delete (*it_go);
-  game_objects.clear();
-
   player_character = 0x0;
+  active_scene = 0x0;
 
   // Delete all overlays
-  std::list<Overlay *>::iterator it_ov;
+  std::list<Overlay*>::iterator it_ov;
   for(it_ov = overlays.begin(); it_ov != overlays.end(); ++it_ov)
       delete (*it_ov);
   overlays.clear();
+
+  // Delete all scenes
+  std::list<Scene*>::iterator it_sc;
+  for(it_sc = scenes.begin(); it_sc != scenes.end(); ++it_sc)
+      delete (*it_sc);
+  scenes.clear();
 
   // Stop and delete music.
   if(music != 0x0)
@@ -114,13 +118,6 @@ void World::add_overlay(Overlay* overlay)
   overlays.push_back(overlay);
 }
 
-/**
- * Adds a game object to the world.
- */
-void World::add_game_object(GameObject* game_object)
-{
-  game_objects.push_back(game_object);
-}
 
 /**
  * Draws all objects and overlays.
@@ -129,13 +126,11 @@ void World::draw()
 {
   gc.clear(CL_Colorf(0.0f,0.0f,0.0f));
 
-  // Draw all game objects
-  std::list<GameObject *>::iterator it_go;
-  for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
-    (*it_go)->draw();
+  // Draws the active scene
+  this->get_active_scene()->draw();
 
   // Draw all overlays
-  std::list<Overlay *>::iterator it_ov;
+  std::list<Overlay*>::iterator it_ov;
   for(it_ov = overlays.begin(); it_ov != overlays.end(); ++it_ov)
     (*it_ov)->draw();
 
@@ -149,22 +144,8 @@ void World::update()
 {
   unsigned int time_elapsed_ms = get_time_elapsed();
 
-  // Update viewport
-  viewport.update(time_elapsed_ms);
+  this->get_active_scene()->update(time_elapsed_ms);
 
-  // Update all game objects
-  std::list<GameObject *>::iterator it_go;
-  for(it_go = game_objects.begin(); it_go != game_objects.end(); )
-  {
-    //If update returns false the object should be deleted.
-    if((*it_go)->update(time_elapsed_ms) == false)
-    {
-      delete(*it_go);
-      it_go = game_objects.erase(it_go);
-    }
-    else
-      ++it_go;
-  }
 }
 
 /**
@@ -201,39 +182,51 @@ void World::on_mouse_move(const CL_InputEvent &key, const CL_InputState &state)
 {
   //Scrolling e, w, s and n using borders.
   if(key.mouse_pos.x >= (get_gc()->get_width() - VIEWPOINT_SCROLL_BORDER_WIDTH))
-    get_active_viewport()->set_scroll_e(true);
+    get_active_scene()->get_active_viewport()->set_scroll_e(true);
   else
-    get_active_viewport()->set_scroll_e(false);
+    get_active_scene()->get_active_viewport()->set_scroll_e(false);
 
   if(key.mouse_pos.x <= VIEWPOINT_SCROLL_BORDER_WIDTH)
-    get_active_viewport()->set_scroll_w(true);
+    get_active_scene()->get_active_viewport()->set_scroll_w(true);
   else
-    get_active_viewport()->set_scroll_w(false);
+    get_active_scene()->get_active_viewport()->set_scroll_w(false);
 
   if(key.mouse_pos.y >= (get_gc()->get_height() - VIEWPOINT_SCROLL_BORDER_WIDTH))
-    get_active_viewport()->set_scroll_s(true);
+    get_active_scene()->get_active_viewport()->set_scroll_s(true);
   else
-    get_active_viewport()->set_scroll_s(false);
+    get_active_scene()->get_active_viewport()->set_scroll_s(false);
 
   if(key.mouse_pos.y <= VIEWPOINT_SCROLL_BORDER_WIDTH)
-    get_active_viewport()->set_scroll_n(true);
+    get_active_scene()->get_active_viewport()->set_scroll_n(true);
   else
-    get_active_viewport()->set_scroll_n(false);
+    get_active_scene()->get_active_viewport()->set_scroll_n(false);
 
   //Make the character face the pointer.
   //Get the position of the mouse in terms of world co-ordinates.
-  CL_Pointd mouse_position_world = viewport.get_world_position((static_cast<CL_Point>(key.mouse_pos)));
+  CL_Pointd mouse_position_world = get_active_scene()->get_active_viewport()->get_world_position((static_cast<CL_Point>(key.mouse_pos)));
 
   //Set the character to face the mouse
   player_character->set_facing(static_cast<CL_Vec2<double> >(mouse_position_world));
 }
 
-Viewport* World::get_active_viewport()
-{
-  return(&viewport);
-}
-
 CL_ResourceManager* World::get_rm()
 {
   return(&rm);
+}
+
+void World::add_scene(Scene* new_scene)
+{
+  scenes.push_back(new_scene);
+}
+
+Scene* World::get_active_scene()
+{
+  if(active_scene == 0x0)
+    {
+    return(scenes.front());
+    }
+  else
+    {
+    return(active_scene);
+    }
 }

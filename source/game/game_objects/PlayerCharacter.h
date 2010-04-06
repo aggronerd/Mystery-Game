@@ -8,12 +8,12 @@
 #ifndef PLAYERCHARACTER_H_
 #define PLAYERCHARACTER_H_
 
-#include "GameObject.h"
+#include "../GameObject.h"
 
 class PlayerCharacter : public GameObject
 {
 public:
-  PlayerCharacter(World*,CL_Pointd&,CL_Angle&);
+  PlayerCharacter(Scene*,CL_Pointd&,CL_Angle&);
   virtual ~PlayerCharacter();
   virtual bool update(unsigned int);
 };
