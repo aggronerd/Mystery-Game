@@ -12,7 +12,7 @@
 #include "Viewport.h"
 #include "../Application.h"
 #include "../misc/logging.h"
-#include "../mystery_xml/Plot.h"
+#include "../bbn/BBN_Plot.h"
 
 /**
  * Creates the game world and sets up initial contents.
@@ -49,7 +49,7 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    Plot plot("data/mystery.xml");
+    BBN_Plot plot("data/plots/walstreet.xml");
   }
   catch (CL_DomException e) {
     Application::log(LOG_LEVEL_INFO,"Error occurred while parsing level: '" + e.message + "'.");

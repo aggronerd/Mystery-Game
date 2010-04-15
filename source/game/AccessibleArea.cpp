@@ -40,7 +40,7 @@ void AccessibleArea::draw()
   }
 
   CL_PrimitivesArray poly(gc);
-  poly.set_attribute(0, &points_array[0], n);
+  //poly.set_attribute(0, &points_array[0], n);
 
   //world->get_gc()->get_polygon_rasterizer().set_face_fill_mode_front(cl_fill_polygon);
 
