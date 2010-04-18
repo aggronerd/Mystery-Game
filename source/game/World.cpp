@@ -13,6 +13,7 @@
 #include "../Application.h"
 #include "../misc/logging.h"
 #include "../bbn/BBN_Plot.h"
+#include "../bbn/BBN_Exception.h"
 
 /**
  * Creates the game world and sets up initial contents.
@@ -50,10 +51,10 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/walstreet.xml");
+    plot = new BBN_Plot("data/plots/basic.xml");
     plot->prepare_bn();
   }
-  catch (CL_Exception e) {
+  catch (BBN_Exception e) {
     Application::log(LOG_LEVEL_INFO,"Error occurred while parsing bayes net: '" + e.message + "'.");
 
     //Do not proceed to load level - instead returned to menu.
@@ -109,6 +110,10 @@ World::~World()
   for(it_sc = scenes.begin(); it_sc != scenes.end(); ++it_sc)
       delete (*it_sc);
   scenes.clear();
+
+  // Delete the plot
+  if(plot != 0x0)
+    delete plot;
 
   // Stop and delete music.
   if(music != 0x0)

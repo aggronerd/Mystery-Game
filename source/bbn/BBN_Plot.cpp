@@ -34,6 +34,8 @@ BBN_Plot::BBN_Plot(const char* file_name)
 
   CL_DomNode cur = root.get_first_child();
 
+  //TODO: Compare with XML schema definition.
+
   /*
    * Loop through first elements.
    */

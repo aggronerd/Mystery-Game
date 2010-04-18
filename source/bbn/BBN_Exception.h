@@ -11,7 +11,7 @@
 
 #include <ClanLib/core.h>
 
-class BBN_Exception : CL_Exception
+class BBN_Exception : public CL_Exception
 {
 public:
   BBN_Exception(const CL_String & message) : CL_Exception(message) {};

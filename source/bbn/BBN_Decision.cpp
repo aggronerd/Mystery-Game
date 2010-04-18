@@ -69,14 +69,6 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
   //Parse children:
   DEBUG_MSG(CL_String("BBN_Decision::load_from_xml(CL_DomElement) - Decision name = '") + _name + "'.")
 
-  //Counters for validation
-  int options_element_count = 0;
-  int option_element_count = 0;
-  int probs_element_count = 0;
-  int prob_element_count = 0;
-  int givens_element_count = 0;
-  int given_element_count = 0;
-
   //Fetch the first child element
   CL_DomNode cur = element.get_first_child();
 
@@ -91,7 +83,6 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
       /*
        * <options></options>
        */
-      options_element_count ++;
       CL_DomNode cur2 = cur.get_first_child();
       //Look for 'option' elements.
       while (!cur2.is_null())
@@ -102,7 +93,6 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
           CL_DomElement element = cur2.to_element();
           option->load_from_xml(element);
           add_option(option);
-          option_element_count++;
         }
        cur2 = cur2.get_next_sibling();
      }
@@ -114,50 +104,64 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
        */
       _english =  static_cast<CL_String>(cur.get_node_value());
     }
-    else if (cur.get_node_name() == "givens")
+    else if (cur.get_node_name() == "probabilities")
     {
       /*
-       * <givens></givens>
+       * <probabilities></probabilities>
        */
-      givens_element_count ++;
       CL_DomNode cur2 = cur.get_first_child();
-      //Look for 'given' elements.
-      while (!cur2.is_null())
+
+      while(!cur2.is_null())
       {
-        if (cur2.get_node_name() == "given")
+        if (cur2.get_node_name() == "givens")
         {
           /*
-           * <given></given>
+           * <givens></givens>
            */
-          BBN_Given* given = new BBN_Given(this);
-          CL_DomElement element = cur2.to_element();
-          given->load_from_xml(element);
-          add_given(given);
+          CL_DomNode cur3 = cur2.get_first_child();
+
+          //Look for 'given' elements.
+          while (!cur3.is_null())
+          {
+            if (cur3.get_node_name() == "given")
+            {
+              /*
+               * <given></given>
+               */
+              BBN_Given* given = new BBN_Given(this);
+              CL_DomElement element = cur3.to_element();
+              given->load_from_xml(element);
+              add_given(given);
+            }
+            cur3 = cur3.get_next_sibling();
+          }
         }
-        cur2 = cur2.get_next_sibling();
-      }
-    }
-    else if (cur.get_node_name() == "probs")
-    {
-      /*
-       * <probs></probs>
-       */
-      probs_element_count ++;
-      CL_DomNode cur2 = cur.get_first_child();
-      //Look for 'prob' elements.
-      while (!cur2.is_null())
-      {
-        if (cur2.get_node_name() == "prob")
+        else if (cur2.get_node_name() == "probs")
         {
           /*
-           * <prob></prob>
+           * <probs></probs>
            */
-          BBN_Prob* prob = new BBN_Prob(this);
-          CL_DomElement element = cur2.to_element();
-          prob->load_from_xml(element);
-          add_prob(prob);
+          CL_DomNode cur3 = cur2.get_first_child();
+
+          //Look for 'prob' elements.
+          while (!cur3.is_null())
+          {
+            if (cur3.get_node_name() == "prob")
+            {
+              /*
+               * <prob></prob>
+               */
+              BBN_Prob* prob = new BBN_Prob(this);
+              CL_DomElement element = cur3.to_element();
+              prob->load_from_xml(element);
+              add_prob(prob);
+            }
+            cur3 = cur3.get_next_sibling();
+          }
         }
+
         cur2 = cur2.get_next_sibling();
+
       }
     }
     else if  (cur.get_node_name() == "dependencies")
@@ -165,7 +169,6 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
        /*
         * <dependencies></dependencies>
         */
-      probs_element_count ++;
       CL_DomNode cur2 = cur.get_first_child();
       //Look for 'dependency' elements.
       while (!cur2.is_null())
@@ -185,18 +188,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
     }
 
      cur = cur.get_next_sibling();
-   }
 
-   /*
-    * Validation afterwards to report errors.
-    */
-   if(options_element_count != 1)
-   {
-     throw CL_Exception("Invalid number of 'options' elements in plot XML.");
-   }
-   if(option_element_count == 0)
-   {
-     throw CL_Exception("No 'option' elements found in plot XML.");
    }
 }
 
@@ -243,6 +235,8 @@ void BBN_Decision::add_dependency(CL_String decision_path)
 void BBN_Decision::prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn)
 {
 
+  DEBUG_MSG("void BBN_Decision::prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c*) - Called for '" + _name + "'.")
+
   /*
    * Adds edges to bayes net.
    */
@@ -253,6 +247,9 @@ void BBN_Decision::prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kerne
     long predecessor_id = predecessor->get_id();
 
     //Add edge to the bayes net.
+    DEBUG_MSG("void BBN_Decision::prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c*) - Adding edge '" + predecessor->get_name() +
+        "' (" + CL_StringHelp::uint_to_text(static_cast<unsigned int>(predecessor_id)) + ") -> '" + this->get_name() + "' (" +
+        CL_StringHelp::uint_to_text(static_cast<unsigned int>(get_id())) + ").")
     get_plot()->get_bn()->add_edge(predecessor_id,get_id());
   }
 
