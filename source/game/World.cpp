@@ -13,7 +13,10 @@
 #include "../Application.h"
 #include "../misc/logging.h"
 #include "../bbn/BBN_Plot.h"
+#include "../bbn/BBN_Option.h"
+#include "../bbn/BBN_Decision.h"
 #include "../bbn/BBN_Exception.h"
+#include <vector>
 
 /**
  * Creates the game world and sets up initial contents.
@@ -61,6 +64,10 @@ void World::init_level()
     exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
     return;
   }
+
+  std::vector<BBN_Decision*>::iterator it_decision;
+  for(it_decision = plot->get_decisions()->begin(); it_decision != plot->get_decisions()->end(); ++it_decision)
+    Application::log(LOG_LEVEL_INFO,"Result for '" + (*it_decision)->get_name() + "' is '" + (*it_decision)->get_result()->get_name() + "'.");
 
   //Where the player's character starts
   CL_Pointd pc_start(15,15);

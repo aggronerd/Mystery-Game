@@ -142,6 +142,14 @@ void BBN_Plot::prepare_bn()
   for(it_de = _decisions.begin(); it_de != _decisions.end(); ++it_de)
       (*it_de) -> load_bn_probabilities(get_bn());
 
+  if(_bn_join_tree != 0x0)
+    delete _bn_join_tree;
+  _bn_join_tree = new join_tree_type();
+
+  // Populate the join_tree with data from the bayesian network.
+  dlib::create_moral_graph(*(_bn), *(_bn_join_tree));
+  create_join_tree( *(_bn_join_tree),  *(_bn_join_tree));
+
   update_bn_solution();
 
 }
@@ -183,43 +191,39 @@ dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* BBN_Plot::get_bn()
  */
 void BBN_Plot::update_bn_solution()
 {
-  if(_bn != 0x0)
+  if(_bn != 0x0 && _bn_join_tree != 0x0)
   {
-    if(_bn_join_tree != 0x0)
-      delete _bn_join_tree;
-
-    _bn_join_tree = new join_tree_type();
-
-    // Now we need to populate the join_tree with data from our bayesian network.  The next
-    // function calls do this.  Explaining exactly what they do is outside the scope of this
-    // example.  Just think of them as filling join_tree with information that is useful
-    // later on for dealing with our bayesian network.
-    dlib::create_moral_graph(*(_bn), *(_bn_join_tree));
-    create_join_tree( *(_bn_join_tree),  *(_bn_join_tree));
-
-    // Now that we have a proper join_tree we can use it to obtain a solution to our
-    // bayesian network.  Doing this is as simple as declaring an instance of
-    // the bayesian_network_join_tree object as follows:
+    // Obtain a solution to the bayesian network.
     if(_bn_current_solution != 0x0)
       delete _bn_current_solution;
-
     _bn_current_solution = new dlib::bayesian_network_join_tree(*(_bn), *(_bn_join_tree));
-
   }
   else
   {
-    throw(BBN_Exception("BBN_Plot::update_bn_solution() called when _bn is not defined."));
+    throw(BBN_Exception("BBN_Plot::update_bn_solution() called when _bn or _bn_join_tree is not defined."));
   }
 }
 
-BBN_Option* BBN_Plot::query_result(CL_String option_name)
+/**
+ * Returns the result for the decision. Returns null (0x0) if the decision isn't found.
+ */
+BBN_Option* BBN_Plot::query_result(CL_String decision_name)
 {
-	throw "Not yet implemented";
+	BBN_Decision* decision = get_decision(decision_name);
+	if(decision != 0x0)
+	{
+	  BBN_Option* result = decision->get_result();
+	  return(result);
+	}
+	else
+	{
+	  return(0x0);
+	}
 }
 
 dlib::bayesian_network_join_tree* BBN_Plot::get_bn_current_solution()
 {
-	throw "Not yet implemented";
+	return(_bn_current_solution);
 }
 
 std::vector<BBN_Decision*>* BBN_Plot::get_decisions()

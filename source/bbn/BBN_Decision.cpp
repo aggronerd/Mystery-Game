@@ -8,6 +8,7 @@
 #include "BBN_Given.h"
 #include "BBN_Prob.h"
 #include "BBN_Plot.h"
+#include "BBN_Random.h"
 #include "../misc/logging.h"
 #include "../Application.h"
 #include "BBN_Exception.h"
@@ -297,7 +298,29 @@ void BBN_Decision::load_bn_probabilities(dlib::directed_graph<dlib::bayes_node>:
 
 BBN_Option* BBN_Decision::get_result()
 {
-	throw "Not yet implemented";
+	if(_result == 0x0)
+	{
+	  float rand = BBN_Random::get_next_float();
+	  float cum_prob = 0;
+	  int n = -1;
+
+	  do
+	  {
+	    n++;
+	    cum_prob += get_plot()->get_bn_current_solution()->probability(get_id())(_options.at(n)->get_id());
+	  }
+	  while(rand > cum_prob);
+
+	  //Set result
+	  _result = _options.at(n);
+
+	  //Update bn solution
+	  dlib::bayes_node_utils::set_node_value(*(get_plot()->get_bn()),get_id(), _result->get_id());
+	  dlib::bayes_node_utils::set_node_as_evidence(*(get_plot()->get_bn()), get_id());
+	  get_plot()->update_bn_solution();
+
+	}
+	return(_result);
 }
 
 void BBN_Decision::add_option(BBN_Option* option)

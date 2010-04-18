@@ -1,29 +1,17 @@
-#include <string>
-#include <vector>
-#include <exception>
-using namespace std;
-
 #ifndef __BBN_Random_h__
 #define __BBN_Random_h__
 
-namespace BBN_Plot
+#include "../dlib/rand.h"
+
+class BBN_Random
 {
-	class BBN_Random;
-}
 
-namespace BBN_Plot
-{
-	class BBN_Random
-	{
+public:
+  static float get_next_float(void);
 
-		public: static float get_next_float() {
-			throw "Not yet implemented";
-		}
+private:
+  static dlib::rand_float_1<dlib::rand_kernel_1>* _rand;
 
-		public: static void set_seed(int seed) {
-			throw "Not yet implemented";
-		}
-	};
-}
+};
 
 #endif
