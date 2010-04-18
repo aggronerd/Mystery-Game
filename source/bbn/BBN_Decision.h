@@ -55,6 +55,7 @@ public:
 	void load_bn_probabilities(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn);
 	BBN_Option* get_result(void);
 	BBN_Option* get_option(const CL_String&);
+	bool set_result(const CL_String&);
 
 	void add_option(BBN_Option*);
 	void add_dependency(CL_String decision_path);

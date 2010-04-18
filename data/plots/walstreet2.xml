@@ -1,6 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plot name="Murder on Walstreet">
   <decisions>
+    <decision name="victim_income" x="-392.83847522735596" y="400.84803771972656" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="under_20k" path="victim_income.under_20k"/>
+        <option name="between_20_and_40k" path="victim_income.between_20_and_40k"/>
+        <option name="mega_rich" path="victim_income.mega_rich">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="victim_income.under_20k" value="0.42184"/>
+          <prob option="victim_income.between_20_and_40k" value="0.27409"/>
+          <prob option="victim_income.mega_rich" value="0.1606"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="suspect1_motivation" x="258.54905700683594" y="349.0537109375" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="suspect1_envy_for_victim"/>
+        <dependency decision="suspect1_anger_towards_victim"/>
+      </dependencies>
+      <options>
+        <option name="0" path="suspect1_motivation.0"/>
+        <option name="1" path="suspect1_motivation.1"/>
+        <option name="2" path="suspect1_motivation.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="suspect1_envy_for_victim.0">
+            <givens>
+              <given option="suspect1_anger_towards_victim.0">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.1">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.2">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.3">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="suspect1_envy_for_victim.1">
+            <givens>
+              <given option="suspect1_anger_towards_victim.0">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.1">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.2">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.3">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="suspect1_envy_for_victim.2">
+            <givens>
+              <given option="suspect1_anger_towards_victim.0">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.1">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.2">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.3">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="suspect1_envy_for_victim.3">
+            <givens>
+              <given option="suspect1_anger_towards_victim.0">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.1">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.2">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+              <given option="suspect1_anger_towards_victim.3">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_motivation.0" value="0.33333"/>
+                  <prob option="suspect1_motivation.1" value="0.33333"/>
+                  <prob option="suspect1_motivation.2" value="0.33333"/>
+                </probs>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="suspect1_envy_for_victim" x="292.1113586425781" y="526.1904907226562" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="suspect1_poorer_than_victim"/>
+        <dependency decision="suspect1_jealously_of_victims_promotion"/>
+      </dependencies>
+      <options>
+        <option name="0" path="suspect1_envy_for_victim.0"/>
+        <option name="1" path="suspect1_envy_for_victim.1"/>
+        <option name="2" path="suspect1_envy_for_victim.2">
+          <english/>
+        </option>
+        <option name="3" path="suspect1_envy_for_victim.3">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="suspect1_poorer_than_victim.true">
+            <givens>
+              <given option="suspect1_jealously_of_victims_promotion.None">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_envy_for_victim.0" value="0.5"/>
+                  <prob option="suspect1_envy_for_victim.1" value="0.32"/>
+                  <prob option="suspect1_envy_for_victim.2" value="0.18269"/>
+                  <prob option="suspect1_envy_for_victim.3" value="0.0"/>
+                </probs>
+              </given>
+              <given option="suspect1_jealously_of_victims_promotion.Some">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_envy_for_victim.0" value="0.23661"/>
+                  <prob option="suspect1_envy_for_victim.1" value="0.23214"/>
+                  <prob option="suspect1_envy_for_victim.2" value="0.24107"/>
+                  <prob option="suspect1_envy_for_victim.3" value="0.24107"/>
+                </probs>
+              </given>
+              <given option="suspect1_jealously_of_victims_promotion.Very">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_envy_for_victim.0" value="0.03571"/>
+                  <prob option="suspect1_envy_for_victim.1" value="0.17411"/>
+                  <prob option="suspect1_envy_for_victim.2" value="0.30357"/>
+                  <prob option="suspect1_envy_for_victim.3" value="0.57143"/>
+                </probs>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="suspect1_poorer_than_victim.false">
+            <givens>
+              <given option="suspect1_jealously_of_victims_promotion.None">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_envy_for_victim.0" value="0.84821"/>
+                  <prob option="suspect1_envy_for_victim.1" value="0.04911"/>
+                  <prob option="suspect1_envy_for_victim.2" value="0.0"/>
+                  <prob option="suspect1_envy_for_victim.3" value="0.0"/>
+                </probs>
+              </given>
+              <given option="suspect1_jealously_of_victims_promotion.Some">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_envy_for_victim.0" value="0.26786"/>
+                  <prob option="suspect1_envy_for_victim.1" value="0.21875"/>
+                  <prob option="suspect1_envy_for_victim.2" value="0.13393"/>
+                  <prob option="suspect1_envy_for_victim.3" value="0.07589"/>
+                </probs>
+              </given>
+              <given option="suspect1_jealously_of_victims_promotion.Very">
+                <givens/>
+                <probs>
+                  <prob option="suspect1_envy_for_victim.0" value="0.20536"/>
+                  <prob option="suspect1_envy_for_victim.1" value="0.25893"/>
+                  <prob option="suspect1_envy_for_victim.2" value="0.31696"/>
+                  <prob option="suspect1_envy_for_victim.3" value="0.42411"/>
+                </probs>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="suspect2_motivation" x="369.970458984375" y="220.36431884765625" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="suspect2_motivation.0"/>
+        <option name="1" path="suspect2_motivation.1"/>
+        <option name="2" path="suspect2_motivation.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="suspect2_motivation.0" value="0.33333"/>
+          <prob option="suspect2_motivation.1" value="0.33333"/>
+          <prob option="suspect2_motivation.2" value="0.33333"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="victim_work_performance" x="128.0" y="934.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="victim_work_performance.0"/>
+        <option name="1" path="victim_work_performance.1"/>
+        <option name="2" path="victim_work_performance.2">
+          <english/>
+        </option>
+        <option name="3" path="victim_work_performance.3">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="victim_work_performance.0" value="0.25"/>
+          <prob option="victim_work_performance.1" value="0.25"/>
+          <prob option="victim_work_performance.2" value="0.25"/>
+          <prob option="victim_work_performance.3" value="0.25"/>
+        </probs>
+      </probabilities>
+    </decision>
     <decision name="murderer" x="78.44576644897461" y="63.42382049560547" type="String">
       <english>Who is the murderer?</english>
       <dependencies>
@@ -1176,6 +1490,61 @@
         <probs/>
       </probabilities>
     </decision>
+    <decision name="suspect1_poorer_than_victim" x="96.5528564453125" y="599.72802734375" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="victim_income"/>
+      </dependencies>
+      <options>
+        <option name="true" path="suspect1_poorer_than_victim.true"/>
+        <option name="false" path="suspect1_poorer_than_victim.false"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="victim_income.under_20k">
+            <givens/>
+            <probs>
+              <prob option="suspect1_poorer_than_victim.true" value="0.5"/>
+              <prob option="suspect1_poorer_than_victim.false" value="0.5"/>
+            </probs>
+          </given>
+          <given option="victim_income.between_20_and_40k">
+            <givens/>
+            <probs>
+              <prob option="suspect1_poorer_than_victim.true" value="0.67568"/>
+              <prob option="suspect1_poorer_than_victim.false" value="0.23784"/>
+            </probs>
+          </given>
+          <given option="victim_income.mega_rich">
+            <givens/>
+            <probs>
+              <prob option="suspect1_poorer_than_victim.true" value="0.94054"/>
+              <prob option="suspect1_poorer_than_victim.false" value="0.04324"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="bosses_recognition_of_suspect1" x="521.111572265625" y="904.2057495117188" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="unaware" path="bosses_recognition_of_suspect1.unaware"/>
+        <option name="prejudice_against" path="bosses_recognition_of_suspect1.prejudice_against"/>
+        <option name="favourable" path="bosses_recognition_of_suspect1.favourable">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="bosses_recognition_of_suspect1.unaware" value="0.33333"/>
+          <prob option="bosses_recognition_of_suspect1.prejudice_against" value="0.33333"/>
+          <prob option="bosses_recognition_of_suspect1.favourable" value="0.33333"/>
+        </probs>
+      </probabilities>
+    </decision>
     <decision name="suspect1_work_performance" x="483.0771484375" y="755.1500854492188" type="String">
       <english/>
       <dependencies>
@@ -1224,47 +1593,46 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="victim_had_promotion" x="132.0" y="778.0" type="String">
+    <decision name="suspect4_motivation" x="509.14532470703125" y="-188.92092895507812" type="String">
       <english/>
-      <dependencies>
-        <dependency decision="victim_work_performance"/>
-      </dependencies>
+      <dependencies/>
       <options>
-        <option name="true" path="victim_had_promotion.true"/>
-        <option name="false" path="victim_had_promotion.false"/>
+        <option name="0" path="suspect4_motivation.0"/>
+        <option name="1" path="suspect4_motivation.1"/>
+        <option name="2" path="suspect4_motivation.2">
+          <english/>
+        </option>
       </options>
       <probabilities>
-        <givens>
-          <given option="victim_work_performance.0">
-            <givens/>
-            <probs>
-              <prob option="victim_had_promotion.true" value="0.09148"/>
-              <prob option="victim_had_promotion.false" value="0.82965"/>
-            </probs>
-          </given>
-          <given option="victim_work_performance.1">
-            <givens/>
-            <probs>
-              <prob option="victim_had_promotion.true" value="0.35016"/>
-              <prob option="victim_had_promotion.false" value="0.66877"/>
-            </probs>
-          </given>
-          <given option="victim_work_performance.2">
-            <givens/>
-            <probs>
-              <prob option="victim_had_promotion.true" value="0.73186"/>
-              <prob option="victim_had_promotion.false" value="0.33123"/>
-            </probs>
-          </given>
-          <given option="victim_work_performance.3">
-            <givens/>
-            <probs>
-              <prob option="victim_had_promotion.true" value="0.88959"/>
-              <prob option="victim_had_promotion.false" value="0.08517"/>
-            </probs>
-          </given>
-        </givens>
-        <probs/>
+        <givens/>
+        <probs>
+          <prob option="suspect4_motivation.0" value="0.33333"/>
+          <prob option="suspect4_motivation.1" value="0.33333"/>
+          <prob option="suspect4_motivation.2" value="0.33333"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="suspect1_anger_towards_victim" x="446.1816711425781" y="375.91748046875" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="suspect1_anger_towards_victim.0"/>
+        <option name="1" path="suspect1_anger_towards_victim.1"/>
+        <option name="2" path="suspect1_anger_towards_victim.2">
+          <english/>
+        </option>
+        <option name="3" path="suspect1_anger_towards_victim.3">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="suspect1_anger_towards_victim.0" value="0.36074"/>
+          <prob option="suspect1_anger_towards_victim.1" value="0.18568"/>
+          <prob option="suspect1_anger_towards_victim.2" value="0.06897"/>
+          <prob option="suspect1_anger_towards_victim.3" value="0.00265"/>
+        </probs>
       </probabilities>
     </decision>
     <decision name="murderers_general_hatred" x="232.2044219970703" y="-253.8220977783203" type="String">
@@ -4676,44 +5044,6 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="bosses_recognition_of_suspect1" x="521.111572265625" y="904.2057495117188" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="unaware" path="bosses_recognition_of_suspect1.unaware"/>
-        <option name="prejudice_against" path="bosses_recognition_of_suspect1.prejudice_against"/>
-        <option name="favourable" path="bosses_recognition_of_suspect1.favourable">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="bosses_recognition_of_suspect1.unaware" value="0.33333"/>
-          <prob option="bosses_recognition_of_suspect1.prejudice_against" value="0.33333"/>
-          <prob option="bosses_recognition_of_suspect1.favourable" value="0.33333"/>
-        </probs>
-      </probabilities>
-    </decision>
-    <decision name="suspect4_motivation" x="509.14532470703125" y="-188.92092895507812" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="0" path="suspect4_motivation.0"/>
-        <option name="1" path="suspect4_motivation.1"/>
-        <option name="2" path="suspect4_motivation.2">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="suspect4_motivation.0" value="0.33333"/>
-          <prob option="suspect4_motivation.1" value="0.33333"/>
-          <prob option="suspect4_motivation.2" value="0.33333"/>
-        </probs>
-      </probabilities>
-    </decision>
     <decision name="suspect1_worked_with_victim" x="303.86358642578125" y="917.4602661132812" type="String">
       <english/>
       <dependencies/>
@@ -4733,392 +5063,47 @@
         </probs>
       </probabilities>
     </decision>
-    <decision name="suspect1_poorer_than_victim" x="96.5528564453125" y="599.72802734375" type="String">
+    <decision name="victim_had_promotion" x="132.0" y="778.0" type="String">
       <english/>
       <dependencies>
-        <dependency decision="victim_income"/>
+        <dependency decision="victim_work_performance"/>
       </dependencies>
       <options>
-        <option name="true" path="suspect1_poorer_than_victim.true"/>
-        <option name="false" path="suspect1_poorer_than_victim.false"/>
+        <option name="true" path="victim_had_promotion.true"/>
+        <option name="false" path="victim_had_promotion.false"/>
       </options>
       <probabilities>
         <givens>
-          <given option="victim_income.under_20k">
+          <given option="victim_work_performance.0">
             <givens/>
             <probs>
-              <prob option="suspect1_poorer_than_victim.true" value="0.5"/>
-              <prob option="suspect1_poorer_than_victim.false" value="0.5"/>
+              <prob option="victim_had_promotion.true" value="0.09148"/>
+              <prob option="victim_had_promotion.false" value="0.82965"/>
             </probs>
           </given>
-          <given option="victim_income.between_20_and_40k">
+          <given option="victim_work_performance.1">
             <givens/>
             <probs>
-              <prob option="suspect1_poorer_than_victim.true" value="0.67568"/>
-              <prob option="suspect1_poorer_than_victim.false" value="0.23784"/>
+              <prob option="victim_had_promotion.true" value="0.35016"/>
+              <prob option="victim_had_promotion.false" value="0.66877"/>
             </probs>
           </given>
-          <given option="victim_income.mega_rich">
+          <given option="victim_work_performance.2">
             <givens/>
             <probs>
-              <prob option="suspect1_poorer_than_victim.true" value="0.94054"/>
-              <prob option="suspect1_poorer_than_victim.false" value="0.04324"/>
+              <prob option="victim_had_promotion.true" value="0.73186"/>
+              <prob option="victim_had_promotion.false" value="0.33123"/>
+            </probs>
+          </given>
+          <given option="victim_work_performance.3">
+            <givens/>
+            <probs>
+              <prob option="victim_had_promotion.true" value="0.88959"/>
+              <prob option="victim_had_promotion.false" value="0.08517"/>
             </probs>
           </given>
         </givens>
         <probs/>
-      </probabilities>
-    </decision>
-    <decision name="suspect1_envy_for_victim" x="292.1113586425781" y="526.1904907226562" type="String">
-      <english/>
-      <dependencies>
-        <dependency decision="suspect1_poorer_than_victim"/>
-        <dependency decision="suspect1_jealously_of_victims_promotion"/>
-      </dependencies>
-      <options>
-        <option name="0" path="suspect1_envy_for_victim.0"/>
-        <option name="1" path="suspect1_envy_for_victim.1"/>
-        <option name="2" path="suspect1_envy_for_victim.2">
-          <english/>
-        </option>
-        <option name="3" path="suspect1_envy_for_victim.3">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens>
-          <given option="suspect1_poorer_than_victim.true">
-            <givens>
-              <given option="suspect1_jealously_of_victims_promotion.None">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_envy_for_victim.0" value="0.5"/>
-                  <prob option="suspect1_envy_for_victim.1" value="0.32"/>
-                  <prob option="suspect1_envy_for_victim.2" value="0.18269"/>
-                  <prob option="suspect1_envy_for_victim.3" value="0.0"/>
-                </probs>
-              </given>
-              <given option="suspect1_jealously_of_victims_promotion.Some">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_envy_for_victim.0" value="0.23661"/>
-                  <prob option="suspect1_envy_for_victim.1" value="0.23214"/>
-                  <prob option="suspect1_envy_for_victim.2" value="0.24107"/>
-                  <prob option="suspect1_envy_for_victim.3" value="0.24107"/>
-                </probs>
-              </given>
-              <given option="suspect1_jealously_of_victims_promotion.Very">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_envy_for_victim.0" value="0.03571"/>
-                  <prob option="suspect1_envy_for_victim.1" value="0.17411"/>
-                  <prob option="suspect1_envy_for_victim.2" value="0.30357"/>
-                  <prob option="suspect1_envy_for_victim.3" value="0.57143"/>
-                </probs>
-              </given>
-            </givens>
-            <probs/>
-          </given>
-          <given option="suspect1_poorer_than_victim.false">
-            <givens>
-              <given option="suspect1_jealously_of_victims_promotion.None">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_envy_for_victim.0" value="0.84821"/>
-                  <prob option="suspect1_envy_for_victim.1" value="0.04911"/>
-                  <prob option="suspect1_envy_for_victim.2" value="0.0"/>
-                  <prob option="suspect1_envy_for_victim.3" value="0.0"/>
-                </probs>
-              </given>
-              <given option="suspect1_jealously_of_victims_promotion.Some">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_envy_for_victim.0" value="0.26786"/>
-                  <prob option="suspect1_envy_for_victim.1" value="0.21875"/>
-                  <prob option="suspect1_envy_for_victim.2" value="0.13393"/>
-                  <prob option="suspect1_envy_for_victim.3" value="0.07589"/>
-                </probs>
-              </given>
-              <given option="suspect1_jealously_of_victims_promotion.Very">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_envy_for_victim.0" value="0.20536"/>
-                  <prob option="suspect1_envy_for_victim.1" value="0.25893"/>
-                  <prob option="suspect1_envy_for_victim.2" value="0.31696"/>
-                  <prob option="suspect1_envy_for_victim.3" value="0.42411"/>
-                </probs>
-              </given>
-            </givens>
-            <probs/>
-          </given>
-        </givens>
-        <probs/>
-      </probabilities>
-    </decision>
-    <decision name="suspect1_anger_towards_victim" x="446.1816711425781" y="375.91748046875" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="0" path="suspect1_anger_towards_victim.0"/>
-        <option name="1" path="suspect1_anger_towards_victim.1"/>
-        <option name="2" path="suspect1_anger_towards_victim.2">
-          <english/>
-        </option>
-        <option name="3" path="suspect1_anger_towards_victim.3">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="suspect1_anger_towards_victim.0" value="0.36074"/>
-          <prob option="suspect1_anger_towards_victim.1" value="0.18568"/>
-          <prob option="suspect1_anger_towards_victim.2" value="0.06897"/>
-          <prob option="suspect1_anger_towards_victim.3" value="0.00265"/>
-        </probs>
-      </probabilities>
-    </decision>
-    <decision name="stand_alone_decision" x="696.0" y="213.0" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="0" path="stand_alone_decision.0"/>
-        <option name="1" path="stand_alone_decision.1"/>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="stand_alone_decision.0" value="0.5"/>
-          <prob option="stand_alone_decision.1" value="0.5"/>
-        </probs>
-      </probabilities>
-    </decision>
-    <decision name="victim_work_performance" x="128.0" y="934.0" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="0" path="victim_work_performance.0"/>
-        <option name="1" path="victim_work_performance.1"/>
-        <option name="2" path="victim_work_performance.2">
-          <english/>
-        </option>
-        <option name="3" path="victim_work_performance.3">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="victim_work_performance.0" value="0.25"/>
-          <prob option="victim_work_performance.1" value="0.25"/>
-          <prob option="victim_work_performance.2" value="0.25"/>
-          <prob option="victim_work_performance.3" value="0.25"/>
-        </probs>
-      </probabilities>
-    </decision>
-    <decision name="suspect1_motivation" x="258.54905700683594" y="349.0537109375" type="String">
-      <english/>
-      <dependencies>
-        <dependency decision="suspect1_envy_for_victim"/>
-        <dependency decision="suspect1_anger_towards_victim"/>
-      </dependencies>
-      <options>
-        <option name="0" path="suspect1_motivation.0"/>
-        <option name="1" path="suspect1_motivation.1"/>
-        <option name="2" path="suspect1_motivation.2">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens>
-          <given option="suspect1_envy_for_victim.0">
-            <givens>
-              <given option="suspect1_anger_towards_victim.0">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.1">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.2">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.3">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-            </givens>
-            <probs/>
-          </given>
-          <given option="suspect1_envy_for_victim.1">
-            <givens>
-              <given option="suspect1_anger_towards_victim.0">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.1">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.2">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.3">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-            </givens>
-            <probs/>
-          </given>
-          <given option="suspect1_envy_for_victim.2">
-            <givens>
-              <given option="suspect1_anger_towards_victim.0">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.1">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.2">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.3">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-            </givens>
-            <probs/>
-          </given>
-          <given option="suspect1_envy_for_victim.3">
-            <givens>
-              <given option="suspect1_anger_towards_victim.0">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.1">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.2">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-              <given option="suspect1_anger_towards_victim.3">
-                <givens/>
-                <probs>
-                  <prob option="suspect1_motivation.0" value="0.33333"/>
-                  <prob option="suspect1_motivation.1" value="0.33333"/>
-                  <prob option="suspect1_motivation.2" value="0.33333"/>
-                </probs>
-              </given>
-            </givens>
-            <probs/>
-          </given>
-        </givens>
-        <probs/>
-      </probabilities>
-    </decision>
-    <decision name="victim_income" x="-392.83847522735596" y="400.84803771972656" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="under_20k" path="victim_income.under_20k"/>
-        <option name="between_20_and_40k" path="victim_income.between_20_and_40k"/>
-        <option name="mega_rich" path="victim_income.mega_rich">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="victim_income.under_20k" value="0.42184"/>
-          <prob option="victim_income.between_20_and_40k" value="0.27409"/>
-          <prob option="victim_income.mega_rich" value="0.1606"/>
-        </probs>
-      </probabilities>
-    </decision>
-    <decision name="suspect2_motivation" x="369.970458984375" y="220.36431884765625" type="String">
-      <english/>
-      <dependencies/>
-      <options>
-        <option name="0" path="suspect2_motivation.0"/>
-        <option name="1" path="suspect2_motivation.1"/>
-        <option name="2" path="suspect2_motivation.2">
-          <english/>
-        </option>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="suspect2_motivation.0" value="0.33333"/>
-          <prob option="suspect2_motivation.1" value="0.33333"/>
-          <prob option="suspect2_motivation.2" value="0.33333"/>
-        </probs>
       </probabilities>
     </decision>
   </decisions>

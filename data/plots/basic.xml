@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plot name="New Network">
   <decisions>
+    <decision name="burglary" x="707.0" y="238.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="burglary.0"/>
+        <option name="1" path="burglary.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="burglary.0" value="0.89933"/>
+          <prob option="burglary.1" value="0.1443"/>
+        </probs>
+      </probabilities>
+    </decision>
     <decision name="sandra_calls_police" x="732.0" y="500.0" type="String">
       <english/>
       <dependencies>
@@ -30,19 +45,33 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="burglary" x="707.0" y="238.0" type="String">
+    <decision name="john_calls_police" x="468.0" y="506.0" type="String">
       <english/>
-      <dependencies/>
+      <dependencies>
+        <dependency decision="alarm_going_off"/>
+      </dependencies>
       <options>
-        <option name="0" path="burglary.0"/>
-        <option name="1" path="burglary.1"/>
+        <option name="0" path="john_calls_police.0"/>
+        <option name="1" path="john_calls_police.1"/>
       </options>
       <probabilities>
-        <givens/>
-        <probs>
-          <prob option="burglary.0" value="0.89933"/>
-          <prob option="burglary.1" value="0.1443"/>
-        </probs>
+        <givens>
+          <given option="alarm_going_off.0">
+            <givens/>
+            <probs>
+              <prob option="john_calls_police.0" value="0.95781"/>
+              <prob option="john_calls_police.1" value="0.05485"/>
+            </probs>
+          </given>
+          <given option="alarm_going_off.1">
+            <givens/>
+            <probs>
+              <prob option="john_calls_police.0" value="0.16034"/>
+              <prob option="john_calls_police.1" value="0.78367"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
       </probabilities>
     </decision>
     <decision name="alarm_going_off" x="595.0" y="379.0" type="String">
@@ -62,15 +91,15 @@
               <given option="earthquake.0">
                 <givens/>
                 <probs>
-                  <prob option="alarm_going_off.0" value="0.95261"/>
-                  <prob option="alarm_going_off.1" value="0.06635"/>
+                  <prob option="alarm_going_off.0" value="0.94977"/>
+                  <prob option="alarm_going_off.1" value="0.06393"/>
                 </probs>
               </given>
               <given option="earthquake.1">
                 <givens/>
                 <probs>
-                  <prob option="alarm_going_off.0" value="0.81517"/>
-                  <prob option="alarm_going_off.1" value="0.26066"/>
+                  <prob option="alarm_going_off.0" value="0.36986"/>
+                  <prob option="alarm_going_off.1" value="0.60731"/>
                 </probs>
               </given>
             </givens>
@@ -81,8 +110,8 @@
               <given option="earthquake.0">
                 <givens/>
                 <probs>
-                  <prob option="alarm_going_off.0" value="0.07583"/>
-                  <prob option="alarm_going_off.1" value="0.91469"/>
+                  <prob option="alarm_going_off.0" value="0.19178"/>
+                  <prob option="alarm_going_off.1" value="0.84475"/>
                 </probs>
               </given>
               <given option="earthquake.1">
@@ -109,38 +138,9 @@
       <probabilities>
         <givens/>
         <probs>
-          <prob option="earthquake.0" value="0.9698"/>
-          <prob option="earthquake.1" value="0.02349"/>
+          <prob option="earthquake.0" value="0.85981"/>
+          <prob option="earthquake.1" value="0.17252"/>
         </probs>
-      </probabilities>
-    </decision>
-    <decision name="john_calls_police" x="468.0" y="506.0" type="String">
-      <english/>
-      <dependencies>
-        <dependency decision="alarm_going_off"/>
-      </dependencies>
-      <options>
-        <option name="0" path="john_calls_police.0"/>
-        <option name="1" path="john_calls_police.1"/>
-      </options>
-      <probabilities>
-        <givens>
-          <given option="alarm_going_off.0">
-            <givens/>
-            <probs>
-              <prob option="john_calls_police.0" value="0.98238"/>
-              <prob option="john_calls_police.1" value="0.01762"/>
-            </probs>
-          </given>
-          <given option="alarm_going_off.1">
-            <givens/>
-            <probs>
-              <prob option="john_calls_police.0" value="0.64113"/>
-              <prob option="john_calls_police.1" value="0.3871"/>
-            </probs>
-          </given>
-        </givens>
-        <probs/>
       </probabilities>
     </decision>
   </decisions>

@@ -263,3 +263,19 @@ BBN_Option* BBN_Plot::get_option(const CL_String& path)
   }
 
 }
+
+/**
+ * Sets the value of a decision. Returns true if successful.
+ */
+bool BBN_Plot::set_result(const CL_String& decision_path, const CL_String& value)
+{
+  bool result = false;
+
+  BBN_Decision* decision = get_decision(decision_path);
+  if(decision != 0x0)
+  {
+    result = decision->set_result(value);
+  }
+
+  return(result);
+}

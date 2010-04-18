@@ -54,7 +54,7 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/basic.xml");
+    plot = new BBN_Plot("data/plots/walstreet2.xml");
     plot->prepare_bn();
   }
   catch (BBN_Exception e) {
@@ -64,6 +64,8 @@ void World::init_level()
     exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
     return;
   }
+
+  plot->set_result("suspect1_motivation","2");
 
   std::vector<BBN_Decision*>::iterator it_decision;
   for(it_decision = plot->get_decisions()->begin(); it_decision != plot->get_decisions()->end(); ++it_decision)

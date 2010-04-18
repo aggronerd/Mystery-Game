@@ -296,18 +296,26 @@ void BBN_Decision::load_bn_probabilities(dlib::directed_graph<dlib::bayes_node>:
   }
 }
 
+/**
+ * If is not defined compares random number with probabilities to pick an outcome.
+ */
 BBN_Option* BBN_Decision::get_result()
 {
+  DEBUG_MSG("BBN_Option* BBN_Decision::get_result() - Called for '" + get_name() + "'.")
+
 	if(_result == 0x0)
 	{
 	  float rand = BBN_Random::get_next_float();
 	  float cum_prob = 0;
 	  int n = -1;
 
+	  DEBUG_MSG("BBN_Option* BBN_Decision::get_result() - rand = " + CL_StringHelp::float_to_text(rand) + ".")
+
 	  do
 	  {
 	    n++;
 	    cum_prob += get_plot()->get_bn_current_solution()->probability(get_id())(_options.at(n)->get_id());
+	    DEBUG_MSG("BBN_Option* BBN_Decision::get_result() - cum_prob = " + CL_StringHelp::float_to_text(cum_prob) + ".")
 	  }
 	  while(rand > cum_prob);
 
@@ -356,4 +364,33 @@ BBN_Option* BBN_Decision::get_option(const CL_String& name)
     if((*it_option)->get_name() == name)
       return(*it_option);
   return(0x0);
+}
+
+/**
+ * Sets the result of this decision to the option defined in option_name.
+ * Returns true if successful and false if not.
+ */
+bool BBN_Decision::set_result(const CL_String& option_name)
+{
+  bool result = false;
+  std::vector<BBN_Option*>::iterator it_option;
+
+  for(it_option = _options.begin(); it_option != _options.end(); ++it_option)
+  {
+    if((*it_option)->get_name() == option_name)
+    {
+      //Set result
+      _result = (*it_option);
+
+      //Update bn solution
+      dlib::bayes_node_utils::set_node_value(*(get_plot()->get_bn()),get_id(), _result->get_id());
+      dlib::bayes_node_utils::set_node_as_evidence(*(get_plot()->get_bn()), get_id());
+      get_plot()->update_bn_solution();
+
+      result = true;
+    }
+  }
+
+  return(result);
+
 }

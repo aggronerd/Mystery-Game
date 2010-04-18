@@ -44,6 +44,7 @@ public:
 	void prepare_bn();
 	long decisions_count();
 	void update_bn_solution();
+	bool set_result(const CL_String&, const CL_String&);
 
 };
 
