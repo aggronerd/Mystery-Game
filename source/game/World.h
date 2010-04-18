@@ -21,6 +21,7 @@ class IsometricGrid;
 class PlayerCharacter;
 class Overlay;
 class Scene;
+class BBN_Plot;
 
 /**
  * The world class constructs and runs the game.
@@ -34,6 +35,7 @@ class World : public ApplicationModule
           Scene* get_active_scene(void);
           void add_scene(Scene*);
           CL_ResourceManager* get_rm(void);
+          BBN_Plot* get_plot();
 
   private:
           std::list<Overlay*> overlays;
@@ -51,5 +53,6 @@ class World : public ApplicationModule
           virtual void on_mouse_down(const CL_InputEvent &, const CL_InputState &);
           virtual void on_mouse_up(const CL_InputEvent &, const CL_InputState &);
           virtual void on_mouse_move(const CL_InputEvent &, const CL_InputState &);
+          BBN_Plot* plot;
 };
 #endif /* WORLD_H_ */

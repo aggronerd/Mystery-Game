@@ -8,7 +8,6 @@
 #include "Application.h"
 #include "main_menu/MainMenu.h"
 #include "game/World.h"
-#include "editor/Editor.h"
 #include "misc/logging.h"
 #include "ApplicationModuleExitCode.h"
 #include <ClanLib/core.h>
@@ -57,9 +56,6 @@ int Application::main(const std::vector<CL_String> &args)
       {
         case EXIT_MODULE_AND_LOAD_GAME:
           mod = (ApplicationModule*)new World(window);
-          break;
-        case EXIT_MODULE_AND_LOAD_EDITOR:
-          mod = (ApplicationModule*)new Editor(window);
           break;
         case EXIT_MODULE_AND_LOAD_MAIN_MENU:
           mod = (ApplicationModule*)new MainMenu(window);

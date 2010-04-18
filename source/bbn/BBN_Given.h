@@ -28,9 +28,10 @@ public:
   BBN_Given(BBN_Decision*);
   virtual ~BBN_Given();
   void load_from_xml(CL_DomElement element);
-  void set_bn_probabilties(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn, dlib::assignment parent_state);
+  void set_bn_probabilities(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c*, dlib::assignment);
   void add_given(BBN_Given*);
   void add_prob(BBN_Prob*);
+  BBN_Decision* get_decision();
 
 };
 

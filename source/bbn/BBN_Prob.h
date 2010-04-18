@@ -26,6 +26,7 @@ public:
   virtual ~BBN_Prob();
   void load_from_xml(CL_DomElement element);
   void set_bn_probability(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn, dlib::assignment parent_state);
+  BBN_Decision* get_decision(void);
 
 };
 

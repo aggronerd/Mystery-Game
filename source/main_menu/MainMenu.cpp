@@ -37,10 +37,6 @@ MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(d
   button_new_game->set_geometry(CL_Rect(10, 30, CL_Size(180, 40)));
   button_new_game->set_text("New Game");
   button_new_game->func_clicked().set(this,&MainMenu::on_clicked_button_new_game);
-  button_editor = new CL_PushButton(menu_window);
-  button_editor->set_geometry(CL_Rect(10, 80, CL_Size(180, 40)));
-  button_editor->set_text("Editor");
-  button_editor->func_clicked().set(this,&MainMenu::on_clicked_button_editor);
   button_options = new CL_PushButton(menu_window);
   button_options->set_geometry(CL_Rect(10, 130, CL_Size(180, 40)));
   button_options->set_text("Options");
@@ -55,7 +51,6 @@ MainMenu::~MainMenu()
   DEBUG_MSG("MainMenu::~MainMenu() - Called.")
 
   delete button_new_game;
-  delete button_editor;
   delete button_options;
   delete menu_window;
 }
@@ -78,11 +73,6 @@ bool MainMenu::on_quit()
 {
   exit_code = EXIT_APPLICATION;
   return(true);
-}
-
-void MainMenu::on_clicked_button_editor()
-{
-  exit_code = EXIT_MODULE_AND_LOAD_EDITOR;
 }
 
 void MainMenu::on_clicked_button_new_game()

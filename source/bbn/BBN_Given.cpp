@@ -2,6 +2,10 @@
 #include <exception>
 #include "BBN_Given.h"
 #include "BBN_Prob.h"
+#include "BBN_Exception.h"
+#include "BBN_Decision.h"
+#include "BBN_Plot.h"
+#include "BBN_Option.h"
 #include "../misc/logging.h"
 
 BBN_Given::BBN_Given(BBN_Decision* decision)
@@ -94,9 +98,47 @@ void BBN_Given::load_from_xml(CL_DomElement element)
   //TODO:Validate
 }
 
-void BBN_Given::set_bn_probabilties(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn, dlib::assignment parent_state)
+void BBN_Given::set_bn_probabilities(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn, dlib::assignment parent_states)
 {
-	throw "Not yet implemented";
+  //Apply parent states to probability definition for the bayes net.
+  BBN_Option* option = get_decision()->get_plot()->get_option(_option);
+
+  if(option == 0x0)
+  {
+    throw(BBN_Exception("Error finding option '" + _option + "' in given for decision " + get_decision()->get_name()));
+  }
+  else
+  {
+    //Applies given rule to any subsequent recursive calls.
+    parent_states.add(option->get_decision()->get_id(),option->get_id());
+
+    if(_givens.size() > 0)
+    {
+      std::vector<BBN_Given*>::iterator it_given;
+      for(it_given = _givens.begin(); it_given != _givens.end(); ++it_given)
+      {
+        (*(it_given))->set_bn_probabilities(get_decision()->get_plot()->get_bn(),parent_states);
+      }
+    }
+    else if(_probs.size() > 0)
+    {
+      std::vector<BBN_Prob*>::iterator it_prob;
+      for(it_prob = _probs.begin(); it_prob != _probs.end(); ++it_prob)
+      {
+        (*(it_prob))->set_bn_probability(get_decision()->get_plot()->get_bn(),parent_states);
+      }
+    }
+    else
+    {
+      throw(BBN_Exception("No given/prob objects found to extract probabilities from in given for decision '" + get_decision()->get_name() + "' where option = '" + _option + "'."));
+    }
+
+  }
+}
+
+BBN_Decision* BBN_Given::get_decision()
+{
+  return(_decision);
 }
 
 void BBN_Given::add_given(BBN_Given* given)

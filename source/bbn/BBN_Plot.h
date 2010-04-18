@@ -32,11 +32,13 @@ private:
 public:
 	BBN_Plot(const char* file_name);
 	virtual ~BBN_Plot();
-	BBN_Decision* get_decision(CL_String path);
+	BBN_Decision* get_decision(const CL_String &);
+	BBN_Option* get_option(const CL_String &);
   dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* get_bn();
   BBN_Option* query_result(CL_String option_name);
   dlib::bayesian_network_join_tree* get_bn_current_solution();
   CL_String get_name();
+  std::vector<BBN_Decision*>* get_decisions(void);
 	void set_name(CL_String new_name);
 	void add_decision(BBN_Decision* decision);
 	void prepare_bn();

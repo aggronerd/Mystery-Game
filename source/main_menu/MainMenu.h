@@ -28,7 +28,6 @@ class MainMenu : public ApplicationModule
     CL_Image background_image;
     CL_ResourceManager menu_rm;
     CL_PushButton* button_new_game;
-    CL_PushButton* button_editor;
     CL_PushButton* button_options;
     CL_Window* menu_window;
 };

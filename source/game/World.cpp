@@ -24,6 +24,7 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
   //Set object pointers to null
   music = 0x0;
   active_scene = 0x0;
+  plot = 0x0;
 
   mouse_dragging = false;
   left_mouse_button_down = false;
@@ -49,10 +50,15 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    BBN_Plot plot("data/plots/walstreet.xml");
+    plot = new BBN_Plot("data/plots/walstreet.xml");
+    plot->prepare_bn();
   }
-  catch (CL_DomException e) {
-    Application::log(LOG_LEVEL_INFO,"Error occurred while parsing level: '" + e.message + "'.");
+  catch (CL_Exception e) {
+    Application::log(LOG_LEVEL_INFO,"Error occurred while parsing bayes net: '" + e.message + "'.");
+
+    //Do not proceed to load level - instead returned to menu.
+    exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
+    return;
   }
 
   //Where the player's character starts

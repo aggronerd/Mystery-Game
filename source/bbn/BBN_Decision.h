@@ -11,16 +11,16 @@
 #include "../dlib/directed_graph.h"
 
 class BBN_Plot;
+class BBN_Prob;
 class BBN_Option;
 class BBN_Given;
-class BBN_Prob;
-class BBN_Plot;
 
 class BBN_Decision
 {
 private:
 
-  long _id;
+  static unsigned long _next_id;
+  unsigned long _id;
   CL_String _name;
   CL_String _english;
   int _type;
@@ -32,9 +32,11 @@ private:
 	std::vector<BBN_Given*> _givens;
 	std::vector<BBN_Prob*> _probs;
 
+	int _next_option_id;
+
 protected:
 
-	static long get_next_id(void);
+	static unsigned long get_next_id(void);
 
 public:
 
@@ -49,9 +51,10 @@ public:
 	CL_String get_english(void);
 	void set_english(CL_String new_english);
 	void prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn);
-	long get_id(void);
+	unsigned long get_id(void);
 	void load_bn_probabilities(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn);
 	BBN_Option* get_result(void);
+	BBN_Option* get_option(const CL_String&);
 
 	void add_option(BBN_Option*);
 	void add_dependency(CL_String decision_path);

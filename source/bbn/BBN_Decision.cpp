@@ -4,12 +4,15 @@
 #include <list>
 
 #include "BBN_Decision.h"
-#include "BBN_Plot.h"
 #include "BBN_Option.h"
 #include "BBN_Given.h"
 #include "BBN_Prob.h"
+#include "BBN_Plot.h"
 #include "../misc/logging.h"
 #include "../Application.h"
+#include "BBN_Exception.h"
+
+unsigned long BBN_Decision::_next_id = 0;
 
 BBN_Decision::BBN_Decision(BBN_Plot* plot)
 {
@@ -17,9 +20,10 @@ BBN_Decision::BBN_Decision(BBN_Plot* plot)
 
   _plot = plot;
 	_result = 0x0;
+	_next_option_id = 0;
 
 	//Set the decision's ID
-	_id = get_next_id();
+	_id = BBN_Decision::get_next_id();
 }
 
 BBN_Decision::~BBN_Decision()
@@ -48,18 +52,11 @@ BBN_Decision::~BBN_Decision()
   _result = 0x0;
 }
 
-long BBN_Decision::get_next_id()
+unsigned long BBN_Decision::get_next_id()
 {
-  static long current_id;
-  if (current_id != NAN)
-  {
-    current_id = 0;
-  }
-  else
-  {
-    current_id += 1;
-  }
-  return(current_id);
+  unsigned long id = _next_id;
+  _next_id += 1;
+  return(id);
 }
 
 void BBN_Decision::load_from_xml(const CL_DomElement& element)
@@ -205,32 +202,32 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
 
 BBN_Plot* BBN_Decision::get_plot()
 {
-	throw "Not yet implemented";
+	return(_plot);
 }
 
 CL_String BBN_Decision::get_name()
 {
-	throw "Not yet implemented";
+	return(_name);
 }
 
 void BBN_Decision::set_name(CL_String new_name)
 {
-	throw "Not yet implemented";
+	_name = new_name;
 }
 
 int BBN_Decision::get_type()
 {
-	throw "Not yet implemented";
+	return(_type);
 }
 
 void BBN_Decision::set_type(int new_type)
 {
-	throw "Not yet implemented";
+	_type = new_type;
 }
 
 CL_String BBN_Decision::get_english()
 {
-	throw "Not yet implemented";
+	return(_english);
 }
 
 void BBN_Decision::set_english(CL_String new_english)
@@ -245,17 +242,60 @@ void BBN_Decision::add_dependency(CL_String decision_path)
 
 void BBN_Decision::prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn)
 {
-	throw "Not yet implemented";
+
+  /*
+   * Adds edges to bayes net.
+   */
+  std::list<CL_String>::iterator it_de;
+  for(it_de = _dependencies.begin(); it_de != _dependencies.end(); ++it_de)
+  {
+    BBN_Decision* predecessor = get_plot()->get_decision((*it_de));
+    long predecessor_id = predecessor->get_id();
+
+    //Add edge to the bayes net.
+    get_plot()->get_bn()->add_edge(predecessor_id,get_id());
+  }
+
+  /*
+   * Sets the number of values for the node.
+   */
+  dlib::bayes_node_utils::set_node_num_values(*(get_plot()->get_bn()),get_id(),_options.size());
+
 }
 
-long BBN_Decision::get_id()
+unsigned long BBN_Decision::get_id()
 {
 	return(_id);
 }
 
+/**
+ * Takes probabilities found in given and prob objects and loads them into the bayes net.
+ */
 void BBN_Decision::load_bn_probabilities(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn)
 {
-	throw "Not yet implemented";
+  //Initial parent state for givens in BBN
+  dlib::assignment parent_states; //Given nothing for now.
+
+  if(_givens.size() > 0)
+  {
+    std::vector<BBN_Given*>::iterator it_given;
+    for(it_given = _givens.begin(); it_given != _givens.end(); ++it_given)
+    {
+      (*(it_given))->set_bn_probabilities(get_plot()->get_bn(),parent_states);
+    }
+  }
+  else if(_probs.size() > 0)
+  {
+    std::vector<BBN_Prob*>::iterator it_prob;
+    for(it_prob = _probs.begin(); it_prob != _probs.end(); ++it_prob)
+    {
+      (*(it_prob))->set_bn_probability(get_plot()->get_bn(),parent_states);
+    }
+  }
+  else
+  {
+    throw(BBN_Exception("No given/prob objects found to extract probabilities from in decision '" + _name + "'."));
+  }
 }
 
 BBN_Option* BBN_Decision::get_result()
@@ -265,6 +305,10 @@ BBN_Option* BBN_Decision::get_result()
 
 void BBN_Decision::add_option(BBN_Option* option)
 {
+  //Set the ID which is unique between all options for this decision
+  option->set_id(_next_option_id);
+  _next_option_id ++;
+
   _options.push_back(option);
 }
 
@@ -276,4 +320,20 @@ void BBN_Decision::add_given(BBN_Given* given)
 void BBN_Decision::add_prob(BBN_Prob* prob)
 {
   _probs.push_back(prob);
+}
+
+/**
+ * Returns a pointer to the option with the name given
+ * in the parameter. Returns null (0x0) if is not found
+ *
+ * No fancy method is employed in searching it simply
+ * iterates through the vector but allows changing of names.
+ */
+BBN_Option* BBN_Decision::get_option(const CL_String& name)
+{
+  std::vector<BBN_Option*>::iterator it_option;
+  for(it_option = _options.begin(); it_option != _options.end(); ++it_option)
+    if((*it_option)->get_name() == name)
+      return(*it_option);
+  return(0x0);
 }
