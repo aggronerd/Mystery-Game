@@ -13,3 +13,12 @@ float BBN_Random::get_next_float()
   return(BBN_Random::_rand->get_random_float());
 }
 
+/**
+ * Destroys current rand generator used. Should be called when finished generating random floats.
+ */
+void BBN_Random::reset()
+{
+  if(_rand != 0x0)
+    delete(_rand);
+  _rand = 0x0;
+}

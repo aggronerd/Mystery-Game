@@ -58,7 +58,7 @@ void World::init_level()
     plot->prepare_bn();
   }
   catch (BBN_Exception e) {
-    Application::log(LOG_LEVEL_INFO,"Error occurred while parsing bayes net: '" + e.message + "'.");
+    Application::log(LOG_LEVEL_INFO,"Error occurred while parsing bayesian net: '" + e.message + "'.");
 
     //Do not proceed to load level - instead returned to menu.
     exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;

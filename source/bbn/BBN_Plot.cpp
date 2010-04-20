@@ -3,6 +3,7 @@
 #include "BBN_Plot.h"
 #include "BBN_Decision.h"
 #include "BBN_Exception.h"
+#include "BBN_Random.h"
 
 BBN_Plot::BBN_Plot(const char* file_name)
 {
@@ -96,6 +97,8 @@ BBN_Plot::~BBN_Plot()
 
   if(_bn != 0x0)
     delete(_bn);
+
+  BBN_Random::reset();
 }
 
 void BBN_Plot::set_name(CL_String new_name)
