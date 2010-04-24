@@ -15,10 +15,10 @@ AccessibleArea::AccessibleArea(Scene* owner) : scene(owner)
 {
   DEBUG_MSG("AccessibleArea::AccessibleArea(Scene*) - Called.")
 
-  points.push_back(CL_Pointd(-5,-5));
-  points.push_back(CL_Pointd( 5,-5));
-  points.push_back(CL_Pointd( 5, 5));
-  points.push_back(CL_Pointd(-5, 5));
+  points.push_back(CL_Pointd(-7,-7));
+  points.push_back(CL_Pointd( 7,-7));
+  points.push_back(CL_Pointd( 7, 7));
+  points.push_back(CL_Pointd(-7, 7));
 }
 
 AccessibleArea::~AccessibleArea()
@@ -29,6 +29,7 @@ AccessibleArea::~AccessibleArea()
 void AccessibleArea::draw()
 {
   CL_GraphicContext gc = *(scene->get_world()->get_gc());
+  CL_Vec4f green_color(0.0f, 1.0f, 0.0f, 1.0f);
   CL_Vec2i points_array[4];
 
   std::list<CL_Pointd>::iterator it_point;
@@ -40,10 +41,13 @@ void AccessibleArea::draw()
   }
 
   CL_PrimitivesArray poly(gc);
-  //poly.set_attribute(0, &points_array[0], n);
+  poly.set_attributes(0, points_array);
+  poly.set_attribute(1, green_color);
 
-  //world->get_gc()->get_polygon_rasterizer().set_face_fill_mode_front(cl_fill_polygon);
+  //scene->get_world()->get_gc()->get_polygon_rasterizer().set_face_fill_mode_front(cl_fill_polygon);
 
-  gc.draw_primitives(cl_polygon,n,poly);
+  gc.set_program_object(cl_program_color_only);
+  gc.draw_primitives(cl_line_loop,n,poly);
+  gc.reset_program_object();
 
 }

@@ -54,7 +54,7 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/walstreet2.xml");
+    plot = new BBN_Plot("data/plots/basic.xml");
     plot->prepare_bn();
   }
   catch (BBN_Exception e) {
@@ -65,7 +65,7 @@ void World::init_level()
     return;
   }
 
-  plot->set_result("suspect1_motivation","2");
+  plot->set_result("earthquake","1");
 
   std::vector<BBN_Decision*>::iterator it_decision;
   for(it_decision = plot->get_decisions()->begin(); it_decision != plot->get_decisions()->end(); ++it_decision)
@@ -223,10 +223,10 @@ void World::on_mouse_move(const CL_InputEvent &key, const CL_InputState &state)
 
   //Make the character face the pointer.
   //Get the position of the mouse in terms of world co-ordinates.
-  CL_Pointd mouse_position_world = get_active_scene()->get_active_viewport()->get_world_position((static_cast<CL_Point>(key.mouse_pos)));
+  //CL_Pointd mouse_position_world = get_active_scene()->get_active_viewport()->get_world_position((static_cast<CL_Point>(key.mouse_pos)));
 
   //Set the character to face the mouse
-  player_character->set_facing(static_cast<CL_Vec2<double> >(mouse_position_world));
+  //player_character->set_facing(static_cast<CL_Vec2<double> >(mouse_position_world));
 }
 
 CL_ResourceManager* World::get_rm()

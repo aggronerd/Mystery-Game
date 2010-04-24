@@ -14,6 +14,7 @@
 
 class GameObject;
 class World;
+class AccessibleArea;
 
 class Scene
 {
@@ -32,6 +33,7 @@ private:
   std::list<GameObject*> game_objects;
   World* world;
   Viewport* active_viewport;
+  AccessibleArea* test;
 
 };
 

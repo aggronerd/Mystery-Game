@@ -10,11 +10,16 @@
 #include "World.h"
 #include "GameObject.h"
 #include "../misc/logging.h"
+#include "AccessibleArea.h"
+
 
 Scene::Scene(World* owner) : world(owner)
 {
   active_viewport = new Viewport(this);
   add_viewport(active_viewport);
+
+  //Test code
+  test = new AccessibleArea(this);
 
   DEBUG_MSG("Scene::Scene(World*) - Called.")
 }
@@ -35,6 +40,9 @@ Scene::~Scene()
     delete (*it_vp);
   viewports.clear();
 
+  delete test;
+  test = 0x0;
+
   world = 0x0;
 }
 
@@ -52,6 +60,7 @@ void Scene::add_game_object(GameObject* game_object)
 void Scene::draw()
 {
   //TODO: determine something about depth.
+  test->draw();
 
 	// Draw all game objects
 	std::list<GameObject*>::iterator it_go;
