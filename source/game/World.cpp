@@ -69,9 +69,68 @@ void World::init_level()
 
   plot->set_result("characters_dead","1");
 
-  std::vector<BBN_Decision*>::iterator it_decision;
-  for(it_decision = plot->get_decisions()->begin(); it_decision != plot->get_decisions()->end(); ++it_decision)
-    Application::log(LOG_LEVEL_INFO,"Result for '" + (*it_decision)->get_name() + "' is '" + (*it_decision)->get_result()->get_name() + "'.");
+  CL_String victim;
+
+  if(plot->query_result("a_dead")->get_name() == CL_String("1"))
+  {
+    victim = "a";
+    Application::log(LOG_LEVEL_INFO,CL_String("The general is dead!!!"));
+  }
+  if(plot->query_result("b_dead")->get_name() == CL_String("1"))
+  {
+    victim = "b";
+    Application::log(LOG_LEVEL_INFO,CL_String("The hotel owner is dead!!!"));
+  }
+  if(plot->query_result("c_dead")->get_name() == CL_String("1"))
+  {
+    victim = "c";
+    Application::log(LOG_LEVEL_INFO,CL_String("The princess is dead!!!"));
+  }
+  if(plot->query_result("d_dead")->get_name() == CL_String("1"))
+  {
+    victim = "d";
+    Application::log(LOG_LEVEL_INFO,CL_String("The chef is dead!!!"));
+  }
+  Application::log(LOG_LEVEL_INFO,CL_String("Who killed the victim?"));
+
+  CL_String query_string;
+  BBN_Option* result;
+
+  query_string = "a_murders_" + victim;
+  result = plot->query_result(query_string);
+  if(result != 0x0 && result->get_name() == CL_String("1"))
+  {
+    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
+    Application::log(LOG_LEVEL_INFO,CL_String("It was the general!!! Why though?"));
+    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
+  }
+
+  query_string = "b_murders_" + victim;
+  result = plot->query_result(query_string);
+  if(result != 0x0 && result->get_name() == CL_String("1"))
+  {
+    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
+    Application::log(LOG_LEVEL_INFO,CL_String("It was the hotel owner!!! Why though?"));
+    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
+  }
+
+  query_string = "c_murders_" + victim;
+  result = plot->query_result(query_string);
+  if(result != 0x0 && result->get_name() == CL_String("1"))
+  {
+    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
+    Application::log(LOG_LEVEL_INFO,CL_String("It was the princess!!! Why though?"));
+    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
+  }
+
+  query_string = "d_murders_" + victim;
+  result = plot->query_result(query_string);
+  if(result != 0x0 && result->get_name() == CL_String("1"))
+  {
+    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
+    Application::log(LOG_LEVEL_INFO,CL_String("It was the chef!!! Why though?"));
+    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
+  }
 
   //Where the player's character starts
   CL_Pointd pc_start(0,0);

@@ -8,6 +8,7 @@ using namespace std;
 #include "BBN_Given.h"
 #include "BBN_Prob.h"
 #include "../misc/logging.h"
+#include "../Application.h"
 
 BBN_Option::BBN_Option(BBN_Decision* decision) : _decision(decision)
 {
@@ -24,24 +25,10 @@ void BBN_Option::load_from_xml(const CL_DomElement& element)
 {
   DEBUG_MSG("BBN_Option::load_from_xml(CL_DomElement) - Called.")
 
-	_name = static_cast<CL_String>(element.get_attribute("name"));
+	_name = element.get_attribute("name");
+  _english = element.get_attribute("english");
+
   DEBUG_MSG("BBN_Option::load_from_xml(CL_DomElement) - Option name = '" + _name + "'.")
-
-
-  CL_DomNode cur = element.get_first_child();
-  while (!cur.is_null())
-  {
-    if (cur.get_node_name() == "english")
-    {
-      /*
-       * <english></english>
-       */
-      _english = static_cast<CL_String>(cur.get_node_value());
-      DEBUG_MSG("BBN_Option::load_from_xml(CL_DomElement) - Option english = '" + _english + "'.")
-    }
-    cur = cur.get_next_sibling();
-  }
-
 }
 
 CL_String BBN_Option::get_name()
@@ -56,7 +43,14 @@ void BBN_Option::set_name(const CL_String& new_name)
 
 CL_String BBN_Option::get_english()
 {
-	return(_english);
+  if(!_english.empty())
+  {
+    return(_english);
+  }
+  else
+  {
+    return(get_name());
+  }
 }
 
 void BBN_Option::set_english(const CL_String& new_english)

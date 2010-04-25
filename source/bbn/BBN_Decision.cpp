@@ -66,6 +66,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
 
   //Retrieve attributes
   _name = element.get_attribute("name");
+  _english = element.get_attribute("english");
 
   //Parse children:
   DEBUG_MSG(CL_String("BBN_Decision::load_from_xml(CL_DomElement) - Decision name = '") + _name + "'.")
@@ -97,13 +98,6 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
         }
        cur2 = cur2.get_next_sibling();
      }
-    }
-    else if (cur.get_node_name() == "english")
-    {
-      /*
-       * <english></english>
-       */
-      _english =  static_cast<CL_String>(cur.get_node_value());
     }
     else if (cur.get_node_name() == "probabilities")
     {
@@ -220,7 +214,14 @@ void BBN_Decision::set_type(int new_type)
 
 CL_String BBN_Decision::get_english()
 {
-	return(_english);
+  if(!_english.empty())
+  {
+    return(_english);
+  }
+  else
+  {
+    return(get_name());
+  }
 }
 
 void BBN_Decision::set_english(CL_String new_english)
