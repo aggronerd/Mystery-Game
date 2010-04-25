@@ -26,7 +26,7 @@ MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(d
   desc.set_allow_resize(false);
   desc.set_title("Main Menu");
   desc.set_position(CL_Rect(window.get_geometry().get_width()-210,
-                            window.get_geometry().get_height()-190,
+                            window.get_geometry().get_height()-140,
                             window.get_geometry().get_width()-10,
                             window.get_geometry().get_height()-10),false);
   desc.set_decorations(true);
@@ -38,7 +38,7 @@ MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(d
   button_new_game->set_text("New Game");
   button_new_game->func_clicked().set(this,&MainMenu::on_clicked_button_new_game);
   button_options = new CL_PushButton(menu_window);
-  button_options->set_geometry(CL_Rect(10, 130, CL_Size(180, 40)));
+  button_options->set_geometry(CL_Rect(10, 80, CL_Size(180, 40)));
   button_options->set_text("Options");
 
   menu_window->func_close().set(this, &MainMenu::on_quit);
