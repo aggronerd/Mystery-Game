@@ -30,8 +30,6 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
   active_scene = 0x0;
   plot = 0x0;
 
-
-
   mouse_dragging = false;
   left_mouse_button_down = false;
 
@@ -56,7 +54,7 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/circular.xml");
+    plot = new BBN_Plot("data/plots/hotel.xml");
     plot->prepare_bn();
   }
   catch (BBN_Exception e) {
