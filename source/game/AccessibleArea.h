@@ -14,13 +14,19 @@
 
 class Scene;
 
+/**
+ * Provides areas defined by a series of points and an area
+ * where the player's character may walk within, therefore
+ * provides rules for collisions. More specific implementations
+ * exist such as Room.
+ */
 class AccessibleArea
 {
 public:
-  AccessibleArea(Scene*);
+  AccessibleArea(Scene*, double, double, double, double);
   virtual ~AccessibleArea();
-  void draw();
-private:
+  virtual void draw(void);
+protected:
   Scene* scene;
   std::list<CL_Pointd> points;
 };

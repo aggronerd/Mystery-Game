@@ -1,0 +1,4144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plot name="New Network">
+  <decisions>
+    <decision name="b_murders_c" x="1240.924072265625" y="219.8965606689453" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="b_motivation_for_c"/>
+        <dependency decision="b_dead"/>
+        <dependency decision="a_murders_c"/>
+        <dependency decision="d_murders_c"/>
+      </dependencies>
+      <options>
+        <option name="0" path="b_murders_c.0"/>
+        <option name="1" path="b_murders_c.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="b_motivation_for_c.0">
+            <givens>
+              <given option="b_dead.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_dead.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_motivation_for_c.1">
+            <givens>
+              <given option="b_dead.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_dead.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_motivation_for_c.2">
+            <givens>
+              <given option="b_dead.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_dead.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_c.0" value="0.5"/>
+                          <prob option="b_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="b_murders_a" x="397.0" y="254.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="d_murders_a"/>
+        <dependency decision="c_murders_a"/>
+        <dependency decision="b_dead"/>
+        <dependency decision="b_motivation_for_a"/>
+      </dependencies>
+      <options>
+        <option name="0" path="b_murders_a.0"/>
+        <option name="1" path="b_murders_a.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="d_murders_a.0">
+            <givens>
+              <given option="c_murders_a.0">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="c_murders_a.1">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="d_murders_a.1">
+            <givens>
+              <given option="c_murders_a.0">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="c_murders_a.1">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="b_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_a.0" value="0.5"/>
+                          <prob option="b_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_murders_d" x="814.1599731445312" y="84.2464828491211" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_murders_d"/>
+        <dependency decision="a_motivation_for_d"/>
+        <dependency decision="a_dead"/>
+        <dependency decision="b_murders_d"/>
+      </dependencies>
+      <options>
+        <option name="0" path="a_murders_d.0"/>
+        <option name="1" path="a_murders_d.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_murders_d.0">
+            <givens>
+              <given option="a_motivation_for_d.0">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_d.1">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_d.2">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_murders_d.1">
+            <givens>
+              <given option="a_motivation_for_d.0">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_d.1">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_d.2">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_d.0" value="0.5"/>
+                          <prob option="a_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="b_motivation_for_d" x="428.5478820800781" y="-231.2542266845703" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="b_motivation_for_d.0"/>
+        <option name="1" path="b_motivation_for_d.1"/>
+        <option name="2" path="b_motivation_for_d.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_motivation_for_d.0" value="0.33333334"/>
+          <prob option="b_motivation_for_d.1" value="0.33333334"/>
+          <prob option="b_motivation_for_d.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="b_motivation_for_c" x="1487.8377685546875" y="-1.106364130973816" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="b_motivation_for_c.0"/>
+        <option name="1" path="b_motivation_for_c.1"/>
+        <option name="2" path="b_motivation_for_c.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_motivation_for_c.0" value="0.33333334"/>
+          <prob option="b_motivation_for_c.1" value="0.33333334"/>
+          <prob option="b_motivation_for_c.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="c_motivation_for_b" x="530.73291015625" y="922.5382080078125" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="c_motivation_for_b.0"/>
+        <option name="1" path="c_motivation_for_b.1"/>
+        <option name="2" path="c_motivation_for_b.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="c_motivation_for_b.0" value="0.33333334"/>
+          <prob option="c_motivation_for_b.1" value="0.33333334"/>
+          <prob option="c_motivation_for_b.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="b_dead" x="827.0" y="490.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="a_murders_b"/>
+        <dependency decision="c_murders_b"/>
+        <dependency decision="d_murders_b"/>
+      </dependencies>
+      <options>
+        <option name="0" path="b_dead.0"/>
+        <option name="1" path="b_dead.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_murders_b.0">
+            <givens>
+              <given option="c_murders_b.0">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="1.0"/>
+                      <prob option="b_dead.1" value="0.0"/>
+                    </probs>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="c_murders_b.1">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="a_murders_b.1">
+            <givens>
+              <given option="c_murders_b.0">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="c_murders_b.1">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens/>
+                    <probs>
+                      <prob option="b_dead.0" value="0.0"/>
+                      <prob option="b_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="c_movation_for_d" x="1155.1317138671875" y="-219.30745697021484" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="c_movation_for_d.0"/>
+        <option name="1" path="c_movation_for_d.1"/>
+        <option name="2" path="c_movation_for_d.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="c_movation_for_d.0" value="0.33333334"/>
+          <prob option="c_movation_for_d.1" value="0.33333334"/>
+          <prob option="c_movation_for_d.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="b_murders_d" x="681.5581665039062" y="-28.541210174560547" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="b_motivation_for_d"/>
+        <dependency decision="a_murders_d"/>
+        <dependency decision="c_murders_d"/>
+        <dependency decision="b_dead"/>
+      </dependencies>
+      <options>
+        <option name="0" path="b_murders_d.0"/>
+        <option name="1" path="b_murders_d.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="b_motivation_for_d.0">
+            <givens>
+              <given option="a_murders_d.0">
+                <givens>
+                  <given option="c_murders_d.0">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_d.1">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_d.1">
+                <givens>
+                  <given option="c_murders_d.0">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_d.1">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_motivation_for_d.1">
+            <givens>
+              <given option="a_murders_d.0">
+                <givens>
+                  <given option="c_murders_d.0">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_d.1">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_d.1">
+                <givens>
+                  <given option="c_murders_d.0">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_d.1">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_motivation_for_d.2">
+            <givens>
+              <given option="a_murders_d.0">
+                <givens>
+                  <given option="c_murders_d.0">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_d.1">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_d.1">
+                <givens>
+                  <given option="c_murders_d.0">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_d.1">
+                    <givens>
+                      <given option="b_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="b_murders_d.0" value="0.5"/>
+                          <prob option="b_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_murders_c" x="1132.708984375" y="352.498291015625" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="b_murders_c"/>
+        <dependency decision="a_motivation_for_c"/>
+        <dependency decision="a_dead"/>
+        <dependency decision="d_murders_c"/>
+      </dependencies>
+      <options>
+        <option name="0" path="a_murders_c.0"/>
+        <option name="1" path="a_murders_c.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="b_murders_c.0">
+            <givens>
+              <given option="a_motivation_for_c.0">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_c.1">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_c.2">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_murders_c.1">
+            <givens>
+              <given option="a_motivation_for_c.0">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_c.1">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_motivation_for_c.2">
+                <givens>
+                  <given option="a_dead.0">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_dead.1">
+                    <givens>
+                      <given option="d_murders_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_murders_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_c.0" value="0.5"/>
+                          <prob option="a_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="c_murders_b" x="707.0" y="750.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_dead"/>
+        <dependency decision="a_murders_b"/>
+        <dependency decision="d_murders_b"/>
+        <dependency decision="c_motivation_for_b"/>
+      </dependencies>
+      <options>
+        <option name="0" path="c_murders_b.0"/>
+        <option name="1" path="c_murders_b.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_dead.0">
+            <givens>
+              <given option="a_murders_b.0">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_b.1">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_dead.1">
+            <givens>
+              <given option="a_murders_b.0">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_b.1">
+                <givens>
+                  <given option="d_murders_b.0">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_murders_b.1">
+                    <givens>
+                      <given option="c_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_b.0" value="0.5"/>
+                          <prob option="c_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_murders_b" x="828.0" y="640.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_murders_b"/>
+        <dependency decision="d_murders_b"/>
+        <dependency decision="a_motivation_for_b"/>
+        <dependency decision="a_dead"/>
+      </dependencies>
+      <options>
+        <option name="0" path="a_murders_b.0"/>
+        <option name="1" path="a_murders_b.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_murders_b.0">
+            <givens>
+              <given option="d_murders_b.0">
+                <givens>
+                  <given option="a_motivation_for_b.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.2">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_murders_b.1">
+                <givens>
+                  <given option="a_motivation_for_b.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.2">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_murders_b.1">
+            <givens>
+              <given option="d_murders_b.0">
+                <givens>
+                  <given option="a_motivation_for_b.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.2">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_murders_b.1">
+                <givens>
+                  <given option="a_motivation_for_b.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_motivation_for_b.2">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="a_murders_b.0" value="0.5"/>
+                          <prob option="a_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="characters_dead" x="827.0" y="360.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_dead"/>
+        <dependency decision="d_dead"/>
+        <dependency decision="b_dead"/>
+        <dependency decision="a_dead"/>
+      </dependencies>
+      <options>
+        <option name="0" path="characters_dead.0"/>
+        <option name="1" path="characters_dead.1"/>
+        <option name="2" path="characters_dead.2">
+          <english/>
+        </option>
+        <option name="3" path="characters_dead.3">
+          <english/>
+        </option>
+        <option name="4" path="characters_dead.4">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_dead.0">
+            <givens>
+              <given option="d_dead.0">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="1.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="1.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="1.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="1.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_dead.1">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="1.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="1.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="1.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="1.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_dead.1">
+            <givens>
+              <given option="d_dead.0">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="1.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="1.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="1.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="1.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_dead.1">
+                <givens>
+                  <given option="b_dead.0">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="1.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="1.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_dead.1">
+                    <givens>
+                      <given option="a_dead.0">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="1.0"/>
+                          <prob option="characters_dead.4" value="0.0"/>
+                        </probs>
+                      </given>
+                      <given option="a_dead.1">
+                        <givens/>
+                        <probs>
+                          <prob option="characters_dead.0" value="0.0"/>
+                          <prob option="characters_dead.1" value="0.0"/>
+                          <prob option="characters_dead.2" value="0.0"/>
+                          <prob option="characters_dead.3" value="0.0"/>
+                          <prob option="characters_dead.4" value="1.0"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="d_murders_b" x="955.0" y="739.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_murders_b"/>
+        <dependency decision="a_murders_b"/>
+        <dependency decision="d_dead"/>
+        <dependency decision="d_motivation_for_b"/>
+      </dependencies>
+      <options>
+        <option name="0" path="d_murders_b.0"/>
+        <option name="1" path="d_murders_b.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_murders_b.0">
+            <givens>
+              <given option="a_murders_b.0">
+                <givens>
+                  <given option="d_dead.0">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_dead.1">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_b.1">
+                <givens>
+                  <given option="d_dead.0">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_dead.1">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_murders_b.1">
+            <givens>
+              <given option="a_murders_b.0">
+                <givens>
+                  <given option="d_dead.0">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_dead.1">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_b.1">
+                <givens>
+                  <given option="d_dead.0">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="d_dead.1">
+                    <givens>
+                      <given option="d_motivation_for_b.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_b.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_b.0" value="0.5"/>
+                          <prob option="d_murders_b.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="c_murders_a" x="497.0" y="356.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_dead"/>
+        <dependency decision="d_murders_a"/>
+        <dependency decision="b_murders_a"/>
+        <dependency decision="c_motivation_for_a"/>
+      </dependencies>
+      <options>
+        <option name="0" path="c_murders_a.0"/>
+        <option name="1" path="c_murders_a.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_dead.0">
+            <givens>
+              <given option="d_murders_a.0">
+                <givens>
+                  <given option="b_murders_a.0">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_murders_a.1">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_murders_a.1">
+                <givens>
+                  <given option="b_murders_a.0">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_murders_a.1">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_dead.1">
+            <givens>
+              <given option="d_murders_a.0">
+                <givens>
+                  <given option="b_murders_a.0">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_murders_a.1">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_murders_a.1">
+                <givens>
+                  <given option="b_murders_a.0">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_murders_a.1">
+                    <givens>
+                      <given option="c_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="c_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_a.0" value="0.5"/>
+                          <prob option="c_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="d_murders_a" x="412.0" y="452.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="d_dead"/>
+        <dependency decision="b_murders_a"/>
+        <dependency decision="c_murders_a"/>
+        <dependency decision="d_motivation_for_a"/>
+      </dependencies>
+      <options>
+        <option name="0" path="d_murders_a.0"/>
+        <option name="1" path="d_murders_a.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="d_dead.0">
+            <givens>
+              <given option="b_murders_a.0">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_murders_a.1">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="d_dead.1">
+            <givens>
+              <given option="b_murders_a.0">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_murders_a.1">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens>
+                      <given option="d_motivation_for_a.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_a.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_a.0" value="0.5"/>
+                          <prob option="d_murders_a.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_motivation_for_d" x="797.3941040039062" y="-348.6144104003906" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="a_motivation_for_d.0"/>
+        <option name="1" path="a_motivation_for_d.1"/>
+        <option name="2" path="a_motivation_for_d.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_motivation_for_d.0" value="0.33333334"/>
+          <prob option="a_motivation_for_d.1" value="0.33333334"/>
+          <prob option="a_motivation_for_d.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="c_motivation_for_a" x="147.0523681640625" y="350.93231201171875" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="c_motivation_for_a.0"/>
+        <option name="1" path="c_motivation_for_a.1"/>
+        <option name="2" path="c_motivation_for_a.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="c_motivation_for_a.0" value="0.33333334"/>
+          <prob option="c_motivation_for_a.1" value="0.33333334"/>
+          <prob option="c_motivation_for_a.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_motivation_for_b" x="815.3342895507812" y="1031.890380859375" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="a_motivation_for_b.0"/>
+        <option name="1" path="a_motivation_for_b.1"/>
+        <option name="2" path="a_motivation_for_b.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_motivation_for_b.0" value="0.33333334"/>
+          <prob option="a_motivation_for_b.1" value="0.33333334"/>
+          <prob option="a_motivation_for_b.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="d_motivation_for_b" x="1132.808349609375" y="943.0013427734375" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="d_motivation_for_b.0"/>
+        <option name="1" path="d_motivation_for_b.1"/>
+        <option name="2" path="d_motivation_for_b.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="d_motivation_for_b.0" value="0.33333334"/>
+          <prob option="d_motivation_for_b.1" value="0.33333334"/>
+          <prob option="d_motivation_for_b.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="d_motivation_for_a" x="154.638916015625" y="613.737548828125" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="d_motivation_for_a.0"/>
+        <option name="1" path="d_motivation_for_a.1"/>
+        <option name="2" path="d_motivation_for_a.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="d_motivation_for_a.0" value="0.33333334"/>
+          <prob option="d_motivation_for_a.1" value="0.33333334"/>
+          <prob option="d_motivation_for_a.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="c_dead" x="987.0" y="352.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="b_murders_c"/>
+        <dependency decision="d_murders_c"/>
+        <dependency decision="a_murders_c"/>
+      </dependencies>
+      <options>
+        <option name="0" path="c_dead.0"/>
+        <option name="1" path="c_dead.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="b_murders_c.0">
+            <givens>
+              <given option="d_murders_c.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="1.0"/>
+                      <prob option="c_dead.1" value="0.0"/>
+                    </probs>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_murders_c.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_murders_c.1">
+            <givens>
+              <given option="d_murders_c.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="d_murders_c.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens/>
+                    <probs>
+                      <prob option="c_dead.0" value="0.0"/>
+                      <prob option="c_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="d_dead" x="825.0" y="209.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="a_murders_d"/>
+        <dependency decision="c_murders_d"/>
+        <dependency decision="b_murders_d"/>
+      </dependencies>
+      <options>
+        <option name="0" path="d_dead.0"/>
+        <option name="1" path="d_dead.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_murders_d.0">
+            <givens>
+              <given option="c_murders_d.0">
+                <givens>
+                  <given option="b_murders_d.0">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="1.0"/>
+                      <prob option="d_dead.1" value="0.0"/>
+                    </probs>
+                  </given>
+                  <given option="b_murders_d.1">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="c_murders_d.1">
+                <givens>
+                  <given option="b_murders_d.0">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="b_murders_d.1">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="a_murders_d.1">
+            <givens>
+              <given option="c_murders_d.0">
+                <givens>
+                  <given option="b_murders_d.0">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="b_murders_d.1">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="c_murders_d.1">
+                <givens>
+                  <given option="b_murders_d.0">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="b_murders_d.1">
+                    <givens/>
+                    <probs>
+                      <prob option="d_dead.0" value="0.0"/>
+                      <prob option="d_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="c_murders_d" x="926.9476318359375" y="-28.541210174560547" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="c_dead"/>
+        <dependency decision="a_murders_d"/>
+        <dependency decision="c_movation_for_d"/>
+        <dependency decision="b_murders_d"/>
+      </dependencies>
+      <options>
+        <option name="0" path="c_murders_d.0"/>
+        <option name="1" path="c_murders_d.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="c_dead.0">
+            <givens>
+              <given option="a_murders_d.0">
+                <givens>
+                  <given option="c_movation_for_d.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.2">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_d.1">
+                <givens>
+                  <given option="c_movation_for_d.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.2">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="c_dead.1">
+            <givens>
+              <given option="a_murders_d.0">
+                <givens>
+                  <given option="c_movation_for_d.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.2">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_murders_d.1">
+                <givens>
+                  <given option="c_movation_for_d.0">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.1">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="c_movation_for_d.2">
+                    <givens>
+                      <given option="b_murders_d.0">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="b_murders_d.1">
+                        <givens/>
+                        <probs>
+                          <prob option="c_murders_d.0" value="0.5"/>
+                          <prob option="c_murders_d.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_motivation_for_c" x="1567.0938720703125" y="349.4499816894531" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="a_motivation_for_c.0"/>
+        <option name="1" path="a_motivation_for_c.1"/>
+        <option name="2" path="a_motivation_for_c.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_motivation_for_c.0" value="0.33333334"/>
+          <prob option="a_motivation_for_c.1" value="0.33333334"/>
+          <prob option="a_motivation_for_c.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_dead" x="694.0" y="354.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="d_murders_a"/>
+        <dependency decision="b_murders_a"/>
+        <dependency decision="c_murders_a"/>
+      </dependencies>
+      <options>
+        <option name="0" path="a_dead.0"/>
+        <option name="1" path="a_dead.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="d_murders_a.0">
+            <givens>
+              <given option="b_murders_a.0">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="1.0"/>
+                      <prob option="a_dead.1" value="0.0"/>
+                    </probs>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_murders_a.1">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="d_murders_a.1">
+            <givens>
+              <given option="b_murders_a.0">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_murders_a.1">
+                <givens>
+                  <given option="c_murders_a.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                  <given option="c_murders_a.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_dead.0" value="0.0"/>
+                      <prob option="a_dead.1" value="1.0"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="b_motivation_for_a" x="151.3331298828125" y="131.09294891357422" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="b_motivation_for_a.0"/>
+        <option name="1" path="b_motivation_for_a.1"/>
+        <option name="2" path="b_motivation_for_a.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_motivation_for_a.0" value="0.33333334"/>
+          <prob option="b_motivation_for_a.1" value="0.33333334"/>
+          <prob option="b_motivation_for_a.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="d_murders_c" x="1272.9315185546875" y="492.7207946777344" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="d_dead"/>
+        <dependency decision="b_murders_c"/>
+        <dependency decision="a_murders_c"/>
+        <dependency decision="d_motivation_for_c"/>
+      </dependencies>
+      <options>
+        <option name="0" path="d_murders_c.0"/>
+        <option name="1" path="d_murders_c.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="d_dead.0">
+            <givens>
+              <given option="b_murders_c.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_murders_c.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="d_dead.1">
+            <givens>
+              <given option="b_murders_c.0">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="b_murders_c.1">
+                <givens>
+                  <given option="a_murders_c.0">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="a_murders_c.1">
+                    <givens>
+                      <given option="d_motivation_for_c.0">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.1">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                      <given option="d_motivation_for_c.2">
+                        <givens/>
+                        <probs>
+                          <prob option="d_murders_c.0" value="0.5"/>
+                          <prob option="d_murders_c.1" value="0.5"/>
+                        </probs>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="d_motivation_for_c" x="1518.3209228515625" y="768.593505859375" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="d_motivation_for_c.0"/>
+        <option name="1" path="d_motivation_for_c.1"/>
+        <option name="2" path="d_motivation_for_c.2">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="d_motivation_for_c.0" value="0.33333334"/>
+          <prob option="d_motivation_for_c.1" value="0.33333334"/>
+          <prob option="d_motivation_for_c.2" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+  </decisions>
+</plot>

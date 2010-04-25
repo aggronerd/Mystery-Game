@@ -20,7 +20,6 @@
 class IsometricGrid;
 class PlayerCharacter;
 class Overlay;
-class Scene;
 class BBN_Plot;
 
 /**

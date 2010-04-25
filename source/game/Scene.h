@@ -27,13 +27,14 @@ public:
   void draw(void);
   void update(unsigned int);
   void add_viewport(Viewport*);
+  void add_accessible_area(AccessibleArea*);
 
 private:
   std::list<Viewport*> viewports;
   std::list<GameObject*> game_objects;
+  std::list<AccessibleArea*> accessible_areas;
   World* world;
   Viewport* active_viewport;
-  AccessibleArea* test;
 
 };
 

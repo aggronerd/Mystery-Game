@@ -9,18 +9,17 @@
 #ifndef ROOM_H_
 #define ROOM_H_
 
-#include "Overlay.h"
-#include <ClanLib/core.h>
-#include <vector>
+#include "AccessibleArea.h"
 
-class Room : public Overlay
+class Room : public AccessibleArea
 {
 public:
-  Room(World*);
+  Room(Scene*,const CL_String&, double, double, double, double);
   virtual ~Room();
-  void draw(void);
-private:
-  std::vector<CL_Pointd> corners;
+  virtual void draw(void);
+  CL_String getName(void);
+protected:
+  CL_String _name;
 };
 
 #endif /* ROOM_H_ */

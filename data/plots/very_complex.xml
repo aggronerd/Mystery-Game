@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plot name="Diner Murder">
+  <decisions>
+    <decision name="waitress_business_man_enter" x="566.0" y="248.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="waitress_business_man_enter.0"/>
+        <option name="1" path="waitress_business_man_enter.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="waitress_business_man_enter.0" value="0.5"/>
+          <prob option="waitress_business_man_enter.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="waitress_witnessed_murder" x="255.0" y="197.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="waitress_in_kitchen_while_victim_was_murdered"/>
+      </dependencies>
+      <options>
+        <option name="0" path="waitress_witnessed_murder.0"/>
+        <option name="1" path="waitress_witnessed_murder.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="waitress_in_kitchen_while_victim_was_murdered.0">
+            <givens/>
+            <probs>
+              <prob option="waitress_witnessed_murder.0" value="1.0"/>
+              <prob option="waitress_witnessed_murder.1" value="0.0"/>
+            </probs>
+          </given>
+          <given option="waitress_in_kitchen_while_victim_was_murdered.1">
+            <givens/>
+            <probs>
+              <prob option="waitress_witnessed_murder.0" value="0.0"/>
+              <prob option="waitress_witnessed_murder.1" value="1.0"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="customer_witnessed_murder" x="862.0" y="222.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="customer_witnessed_murder.0"/>
+        <option name="1" path="customer_witnessed_murder.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="customer_witnessed_murder.0" value="0.5"/>
+          <prob option="customer_witnessed_murder.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="attacked_in_the_toilets" x="483.0" y="519.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="murderer"/>
+      </dependencies>
+      <options>
+        <option name="0" path="attacked_in_the_toilets.0"/>
+        <option name="1" path="attacked_in_the_toilets.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="murderer.waitress">
+            <givens/>
+            <probs>
+              <prob option="attacked_in_the_toilets.0" value="1.0"/>
+              <prob option="attacked_in_the_toilets.1" value="0.0"/>
+            </probs>
+          </given>
+          <given option="murderer.other_salesman">
+            <givens/>
+            <probs>
+              <prob option="attacked_in_the_toilets.0" value="0.33882"/>
+              <prob option="attacked_in_the_toilets.1" value="0.73684"/>
+            </probs>
+          </given>
+          <given option="murderer.customer">
+            <givens/>
+            <probs>
+              <prob option="attacked_in_the_toilets.0" value="0.23026"/>
+              <prob option="attacked_in_the_toilets.1" value="0.84868"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="plotbg_waitress" x="437.0" y="987.0" type="String">
+      <english>The waitress is a secret lover of the victim's sole heir.</english>
+      <dependencies/>
+      <options>
+        <option name="0" path="plotbg_waitress.0"/>
+        <option name="1" path="plotbg_waitress.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="plotbg_waitress.0" value="0.96028"/>
+          <prob option="plotbg_waitress.1" value="0.03972"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="other_customer_was_around_during_murder" x="590.0" y="928.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="other_customer_was_around_during_murder.0"/>
+        <option name="1" path="other_customer_was_around_during_murder.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="other_customer_was_around_during_murder.0" value="0.5"/>
+          <prob option="other_customer_was_around_during_murder.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="poison_in_coffee" x="624.0" y="625.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="murderer"/>
+      </dependencies>
+      <options>
+        <option name="0" path="poison_in_coffee.0"/>
+        <option name="1" path="poison_in_coffee.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="murderer.waitress">
+            <givens/>
+            <probs>
+              <prob option="poison_in_coffee.0" value="0.26286"/>
+              <prob option="poison_in_coffee.1" value="0.83714"/>
+            </probs>
+          </given>
+          <given option="murderer.other_salesman">
+            <givens/>
+            <probs>
+              <prob option="poison_in_coffee.0" value="0.31714"/>
+              <prob option="poison_in_coffee.1" value="0.63714"/>
+            </probs>
+          </given>
+          <given option="murderer.customer">
+            <givens/>
+            <probs>
+              <prob option="poison_in_coffee.0" value="1.0"/>
+              <prob option="poison_in_coffee.1" value="0.0"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="blotbg_other_salesman" x="225.0" y="917.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="blotbg_other_salesman.0"/>
+        <option name="1" path="blotbg_other_salesman.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="blotbg_other_salesman.0" value="0.5"/>
+          <prob option="blotbg_other_salesman.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="murderer" x="443.0" y="729.0" type="String">
+      <english/>
+      <dependencies>
+        <dependency decision="plotbg_waitress"/>
+        <dependency decision="other_customer_was_around_during_murder"/>
+        <dependency decision="blotbg_other_salesman"/>
+      </dependencies>
+      <options>
+        <option name="waitress" path="murderer.waitress"/>
+        <option name="other_salesman" path="murderer.other_salesman"/>
+        <option name="customer" path="murderer.customer">
+          <english/>
+        </option>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="plotbg_waitress.0">
+            <givens>
+              <given option="other_customer_was_around_during_murder.0">
+                <givens>
+                  <given option="blotbg_other_salesman.0">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                  <given option="blotbg_other_salesman.1">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="other_customer_was_around_during_murder.1">
+                <givens>
+                  <given option="blotbg_other_salesman.0">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                  <given option="blotbg_other_salesman.1">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="plotbg_waitress.1">
+            <givens>
+              <given option="other_customer_was_around_during_murder.0">
+                <givens>
+                  <given option="blotbg_other_salesman.0">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                  <given option="blotbg_other_salesman.1">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="other_customer_was_around_during_murder.1">
+                <givens>
+                  <given option="blotbg_other_salesman.0">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                  <given option="blotbg_other_salesman.1">
+                    <givens/>
+                    <probs>
+                      <prob option="murderer.waitress" value="0.33333"/>
+                      <prob option="murderer.other_salesman" value="0.33333"/>
+                      <prob option="murderer.customer" value="0.33333"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="waitress_in_kitchen_while_victim_was_murdered" x="128.0" y="273.0" type="String">
+      <english/>
+      <dependencies/>
+      <options>
+        <option name="0" path="waitress_in_kitchen_while_victim_was_murdered.0"/>
+        <option name="1" path="waitress_in_kitchen_while_victim_was_murdered.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="waitress_in_kitchen_while_victim_was_murdered.0" value="0.5"/>
+          <prob option="waitress_in_kitchen_while_victim_was_murdered.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+  </decisions>
+</plot>

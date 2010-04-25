@@ -11,15 +11,17 @@
 #include "GameObject.h"
 #include "../misc/logging.h"
 #include "AccessibleArea.h"
-
+#include "Room.h"
+//#include "game_objects/GrandfatherClock.h"
 
 Scene::Scene(World* owner) : world(owner)
 {
   active_viewport = new Viewport(this);
   add_viewport(active_viewport);
 
-  //Test code
-  test = new AccessibleArea(this);
+  //add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Ballroom", 30, 20, 0, 0)));
+  add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Study", 1, 0, -15, 20)));
+  //add_game_object(new GrandfatherClock(this, CL_Pointd(20,-4), CL_Angle(270, cl_degrees)));
 
   DEBUG_MSG("Scene::Scene(World*) - Called.")
 }
@@ -40,8 +42,11 @@ Scene::~Scene()
     delete (*it_vp);
   viewports.clear();
 
-  delete test;
-  test = 0x0;
+  // Delete all accessible areas
+  std::list<AccessibleArea*>::iterator it_aa;
+  for(it_aa = accessible_areas.begin(); it_aa != accessible_areas.end(); ++it_aa)
+    delete (*it_aa);
+  accessible_areas.clear();
 
   world = 0x0;
 }
@@ -60,7 +65,11 @@ void Scene::add_game_object(GameObject* game_object)
 void Scene::draw()
 {
   //TODO: determine something about depth.
-  test->draw();
+
+  // Draw all accessible areas
+  std::list<AccessibleArea*>::iterator it_aa;
+  for(it_aa = accessible_areas.begin(); it_aa != accessible_areas.end(); ++it_aa)
+    (*it_aa)->draw();
 
 	// Draw all game objects
 	std::list<GameObject*>::iterator it_go;
@@ -104,4 +113,9 @@ World* Scene::get_world()
 void Scene::add_viewport(Viewport* new_viewport)
 {
   viewports.push_back(new_viewport);
+}
+
+void Scene::add_accessible_area(AccessibleArea* new_accessible_area)
+{
+  accessible_areas.push_back(new_accessible_area);
 }

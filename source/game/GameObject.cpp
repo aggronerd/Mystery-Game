@@ -59,7 +59,7 @@ void GameObject::draw()
   CL_Rectf dest(static_cast<float>(screen_position.x - (static_current->get_width()/2)),
                 static_cast<float>(screen_position.y - (static_current->get_height())), static_cast<CL_Sizef>(static_current->get_size()));
 
-  CL_Draw::box(gc,dest,CL_Colorf(1.0f,0.0f,0.0f));
+  //CL_Draw::box(gc,dest,CL_Colorf(1.0f,0.0f,0.0f));
 
   if(static_current != 0x0)
     static_current->draw(gc, dest);

@@ -49,6 +49,15 @@
 			<translation origin="bottom" />
 		</sprite>
 	</section>
+	<section name="flooring">
+		<texture name="wood" file="artwork/textures/wood-floor.png" />
+	</section>
+	<section name="props">
+		<sprite name="grandfather-clock-sw">
+			<image file="artwork/props/grandfather-clock-sw.png" />
+			<translation origin="bottom" />
+		</sprite>
+	</section>
 	<section name="misc">
 		<sprite name="missing" base_angle="0" id="1000">
 			<image file="artwork/misc/missing.png" />

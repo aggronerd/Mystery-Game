@@ -11,43 +11,23 @@
 #include "World.h"
 #include "../misc/logging.h"
 
-AccessibleArea::AccessibleArea(Scene* owner) : scene(owner)
+AccessibleArea::AccessibleArea(Scene* owner, double north, double east, double south, double west) : scene(owner)
 {
   DEBUG_MSG("AccessibleArea::AccessibleArea(Scene*) - Called.")
 
-  points.push_back(CL_Pointd(-7,-7));
-  points.push_back(CL_Pointd( 7,-7));
-  points.push_back(CL_Pointd( 7, 7));
-  points.push_back(CL_Pointd(-7, 7));
+  points.push_back(CL_Pointd(north,east));
+  points.push_back(CL_Pointd(south,east));
+  points.push_back(CL_Pointd(south,west));
+  points.push_back(CL_Pointd(north,west));
 }
 
 AccessibleArea::~AccessibleArea()
 {
   DEBUG_MSG("AccessibleArea::~AccessibleArea() - Called.")
+  scene = 0x0;
 }
 
 void AccessibleArea::draw()
 {
-  CL_GraphicContext gc = *(scene->get_world()->get_gc());
-  CL_Vec4f green_color(0.0f, 1.0f, 0.0f, 1.0f);
-  CL_Vec2i points_array[4];
-
-  std::list<CL_Pointd>::iterator it_point;
-  int n = 0;
-  for(it_point = points.begin(); it_point != points.end(); ++it_point)
-  {
-    points_array[n] = static_cast<CL_Vec2i>(scene->get_active_viewport()->get_screen_position(*(it_point)));
-    n++;
-  }
-
-  CL_PrimitivesArray poly(gc);
-  poly.set_attributes(0, points_array);
-  poly.set_attribute(1, green_color);
-
-  //scene->get_world()->get_gc()->get_polygon_rasterizer().set_face_fill_mode_front(cl_fill_polygon);
-
-  gc.set_program_object(cl_program_color_only);
-  gc.draw_primitives(cl_line_loop,n,poly);
-  gc.reset_program_object();
 
 }

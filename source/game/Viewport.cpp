@@ -136,7 +136,7 @@ void Viewport::update(unsigned int time_elapsed_ms)
           * VIEWPOINT_SCROLL_DISTANCE_PER_SEC;
       scroll_translation.x -= distance;
       scroll_translation.y += distance;
-      DEBUG_MSG("Scroll west called.")
+      //DEBUG_MSG("Scroll west called.")
     }
     if(scroll_n)
     {
@@ -144,7 +144,7 @@ void Viewport::update(unsigned int time_elapsed_ms)
           * VIEWPOINT_SCROLL_DISTANCE_PER_SEC;
       scroll_translation.x += distance;
       scroll_translation.y += distance;
-      DEBUG_MSG("Scroll north called.")
+      //DEBUG_MSG("Scroll north called.")
     }
     if(scroll_e)
     {
@@ -152,7 +152,7 @@ void Viewport::update(unsigned int time_elapsed_ms)
           * VIEWPOINT_SCROLL_DISTANCE_PER_SEC;
       scroll_translation.x += distance;
       scroll_translation.y -= distance;
-      DEBUG_MSG("Scroll east called.")
+      //DEBUG_MSG("Scroll east called.")
     }
     if(scroll_s)
     {
@@ -160,7 +160,7 @@ void Viewport::update(unsigned int time_elapsed_ms)
           * VIEWPOINT_SCROLL_DISTANCE_PER_SEC;
       scroll_translation.x -= distance;
       scroll_translation.y -= distance;
-      DEBUG_MSG("Scroll south called.")
+      //DEBUG_MSG("Scroll south called.")
     }
     origin += scroll_translation;
   }

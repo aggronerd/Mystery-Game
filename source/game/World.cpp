@@ -30,6 +30,8 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
   active_scene = 0x0;
   plot = 0x0;
 
+
+
   mouse_dragging = false;
   left_mouse_button_down = false;
 
@@ -54,7 +56,7 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/basic.xml");
+    plot = new BBN_Plot("data/plots/circular.xml");
     plot->prepare_bn();
   }
   catch (BBN_Exception e) {
@@ -65,21 +67,20 @@ void World::init_level()
     return;
   }
 
-  plot->set_result("earthquake","1");
+  plot->set_result("characters_dead","1");
 
   std::vector<BBN_Decision*>::iterator it_decision;
   for(it_decision = plot->get_decisions()->begin(); it_decision != plot->get_decisions()->end(); ++it_decision)
     Application::log(LOG_LEVEL_INFO,"Result for '" + (*it_decision)->get_name() + "' is '" + (*it_decision)->get_result()->get_name() + "'.");
 
   //Where the player's character starts
-  CL_Pointd pc_start(15,15);
+  CL_Pointd pc_start(0,0);
   CL_Angle pc_direction(0,cl_degrees);
 
   DEBUG_MSG("World::initLevel() - Creating test scene and adding level contents.")
 
   // Isometric grid overlay
-  add_overlay(new IsometricGrid(this));
-  //add_overlay(new Room(this));
+  //add_overlay(new IsometricGrid(this));
 
   // Add player character
   add_scene(new Scene(this));
