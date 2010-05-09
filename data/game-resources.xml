@@ -58,6 +58,13 @@
 			<translation origin="bottom" />
 		</sprite>
 	</section>
+	<section name="areas">
+		<section name="hotel">
+			<sprite name="ground-floor">
+				<image file="artwork/levels/1/1st_floor.png" />
+			</sprite>
+		</section>
+	</section>
 	<section name="misc">
 		<sprite name="missing" base_angle="0" id="1000">
 			<image file="artwork/misc/missing.png" />

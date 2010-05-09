@@ -49,20 +49,28 @@ GameObject::~GameObject()
  */
 void GameObject::draw()
 {
-  CL_GraphicContext gc = *(scene->get_world()->get_gc());
-  CL_Point screen_position;
-
-  //Calculate where the sprite will be drawn on the screen.
-  screen_position = scene->get_active_viewport()->get_screen_position(world_position);
-
-  //Setup a rectangle so the origin of the spite centres on the bottom.
-  CL_Rectf dest(static_cast<float>(screen_position.x - (static_current->get_width()/2)),
-                static_cast<float>(screen_position.y - (static_current->get_height())), static_cast<CL_Sizef>(static_current->get_size()));
-
-  //CL_Draw::box(gc,dest,CL_Colorf(1.0f,0.0f,0.0f));
 
   if(static_current != 0x0)
-    static_current->draw(gc, dest);
+  {
+
+	  CL_GraphicContext gc = *(scene->get_world()->get_gc());
+	  CL_Point screen_position;
+
+	  //Calculate where the sprite will be drawn on the screen.
+	  screen_position = scene->get_active_viewport()->get_screen_position(world_position);
+
+	  //Setup a rectangle so the origin of the spite centres on the bottom.
+	  CL_Rectf dest(static_cast<float>(screen_position.x - (static_current->get_width()/2)),
+	                static_cast<float>(screen_position.y - (static_current->get_height())),
+	                static_cast<float>(screen_position.x + (static_current->get_width()/2)),
+	                static_cast<float>(screen_position.y));
+
+	  //CL_Draw::box(gc,dest,CL_Colorf(1.0f,0.0f,0.0f));
+
+	  static_current->draw(gc, dest);
+
+  }
+
 }
 
 /**

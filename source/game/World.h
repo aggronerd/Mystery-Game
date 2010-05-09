@@ -54,4 +54,5 @@ class World : public ApplicationModule
           virtual void on_mouse_move(const CL_InputEvent &, const CL_InputState &);
           BBN_Plot* plot;
 };
+
 #endif /* WORLD_H_ */

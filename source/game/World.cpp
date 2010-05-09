@@ -8,6 +8,7 @@
 #include "World.h"
 #include "IsometricGrid.h"
 #include "game_objects/PlayerCharacter.h"
+#include "game_objects/HotelGroundFloor.h"
 #include "GameObject.h"
 #include "Viewport.h"
 #include "../Application.h"
@@ -132,7 +133,9 @@ void World::init_level()
 
   //Where the player's character starts
   CL_Pointd pc_start(0,0);
-  CL_Angle pc_direction(0,cl_degrees);
+  CL_Angle pc_direction(-90,cl_degrees);
+  CL_Angle north(45,cl_degrees);
+  CL_Pointd bg_start(-13,1);
 
   DEBUG_MSG("World::initLevel() - Creating test scene and adding level contents.")
 
@@ -143,6 +146,7 @@ void World::init_level()
   add_scene(new Scene(this));
 
   player_character = new PlayerCharacter(this->get_active_scene(),pc_start,pc_direction);
+  this->get_active_scene()->add_game_object(new HotelGroundFloor(this->get_active_scene(),bg_start, north));
   this->get_active_scene()->add_game_object(player_character);
 
   DEBUG_MSG("World::initLevel() - Creating and playing music.")

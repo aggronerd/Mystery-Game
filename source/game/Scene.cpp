@@ -12,7 +12,6 @@
 #include "../misc/logging.h"
 #include "AccessibleArea.h"
 #include "Room.h"
-//#include "game_objects/GrandfatherClock.h"
 
 Scene::Scene(World* owner) : world(owner)
 {
@@ -20,7 +19,7 @@ Scene::Scene(World* owner) : world(owner)
   add_viewport(active_viewport);
 
   //add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Ballroom", 30, 20, 0, 0)));
-  add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Study", 1, 0, -15, 20)));
+  //add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Study", 1, 0, -15, 20)));
   //add_game_object(new GrandfatherClock(this, CL_Pointd(20,-4), CL_Angle(270, cl_degrees)));
 
   DEBUG_MSG("Scene::Scene(World*) - Called.")
@@ -30,13 +29,13 @@ Scene::~Scene()
 {
   DEBUG_MSG("Scene::~Scene() - Called.")
 
-	// Delete all game objects
+  // Delete all game objects
   std::list<GameObject *>::iterator it_go;
-	for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
-	  delete (*it_go);
-	game_objects.clear();
+  for(it_go = game_objects.begin(); it_go != game_objects.end(); ++it_go)
+    delete (*it_go);
+  game_objects.clear();
 
-	// Delete all viewports
+  // Delete all viewports
   std::list<Viewport *>::iterator it_vp;
   for(it_vp = viewports.begin(); it_vp != viewports.end(); ++it_vp)
     delete (*it_vp);
