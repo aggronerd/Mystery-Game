@@ -34,6 +34,11 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
   mouse_dragging = false;
   left_mouse_button_down = false;
 
+  //Display loading text
+  gc.clear(CL_Colorf(0.0f,0.0f,0.0f));
+  draw_loading();
+  window.flip(1);
+
   //Get the resource manager
   rm = CL_ResourceManager("data/game-resources.xml");
 
@@ -42,6 +47,19 @@ World::World(const CL_DisplayWindow &display_window) : ApplicationModule(display
 
   //Load objects into the world.
   init_level();
+}
+
+/**
+ * Draws the loading screen on the graphics context.
+ */
+void World::draw_loading()
+{
+	CL_FontDescription desc;
+	desc.set_typeface_name("Tahoma");
+	desc.set_anti_alias(true);
+	desc.set_height(30);
+	CL_Font_System system_font = CL_Font_System(gc, desc);
+	system_font.draw_text(gc, CL_Pointf(480.0f,280.0f), "Loading...", CL_Colorf(1.0f,1.0f,1.0f));
 }
 
 /**
