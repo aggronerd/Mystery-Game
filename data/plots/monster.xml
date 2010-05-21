@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plot name="Monster Generator">
   <decisions>
-    <decision name="carnivore" x="58.21434020996094" y="328.7957763671875" english="" type="String">
+    <decision name="carnivore" x="85.99211883544922" y="349.9068908691406" english="" type="String">
       <dependencies/>
       <options>
         <option name="0" path="carnivore.0"/>
@@ -10,8 +10,8 @@
       <probabilities>
         <givens/>
         <probs>
-          <prob option="carnivore.0" value="0.5"/>
-          <prob option="carnivore.1" value="0.5"/>
+          <prob option="carnivore.0" value="0.50437"/>
+          <prob option="carnivore.1" value="0.49563"/>
         </probs>
       </probabilities>
     </decision>
@@ -72,19 +72,19 @@
               <given option="can_see_in_the_dark.0">
                 <givens/>
                 <probs>
-                  <prob option="eyes.eyes_normal_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_glow_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_normal_angry" value="0.25"/>
-                  <prob option="eyes.eyes_glow_angry" value="0.25"/>
+                  <prob option="eyes.eyes_normal_peaceful" value="1.0"/>
+                  <prob option="eyes.eyes_glow_peaceful" value="0.0"/>
+                  <prob option="eyes.eyes_normal_angry" value="0.0"/>
+                  <prob option="eyes.eyes_glow_angry" value="0.0"/>
                 </probs>
               </given>
               <given option="can_see_in_the_dark.1">
                 <givens/>
                 <probs>
-                  <prob option="eyes.eyes_normal_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_glow_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_normal_angry" value="0.25"/>
-                  <prob option="eyes.eyes_glow_angry" value="0.25"/>
+                  <prob option="eyes.eyes_normal_peaceful" value="0.0"/>
+                  <prob option="eyes.eyes_glow_peaceful" value="1.0"/>
+                  <prob option="eyes.eyes_normal_angry" value="0.0"/>
+                  <prob option="eyes.eyes_glow_angry" value="0.0"/>
                 </probs>
               </given>
             </givens>
@@ -95,19 +95,19 @@
               <given option="can_see_in_the_dark.0">
                 <givens/>
                 <probs>
-                  <prob option="eyes.eyes_normal_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_glow_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_normal_angry" value="0.25"/>
-                  <prob option="eyes.eyes_glow_angry" value="0.25"/>
+                  <prob option="eyes.eyes_normal_peaceful" value="0.0"/>
+                  <prob option="eyes.eyes_glow_peaceful" value="0.0"/>
+                  <prob option="eyes.eyes_normal_angry" value="1.0"/>
+                  <prob option="eyes.eyes_glow_angry" value="0.0"/>
                 </probs>
               </given>
               <given option="can_see_in_the_dark.1">
                 <givens/>
                 <probs>
-                  <prob option="eyes.eyes_normal_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_glow_peaceful" value="0.25"/>
-                  <prob option="eyes.eyes_normal_angry" value="0.25"/>
-                  <prob option="eyes.eyes_glow_angry" value="0.25"/>
+                  <prob option="eyes.eyes_normal_peaceful" value="0.0"/>
+                  <prob option="eyes.eyes_glow_peaceful" value="0.0"/>
+                  <prob option="eyes.eyes_normal_angry" value="0.0"/>
+                  <prob option="eyes.eyes_glow_angry" value="1.0"/>
                 </probs>
               </given>
             </givens>
@@ -204,15 +204,15 @@
           <given option="carnivore.0">
             <givens/>
             <probs>
-              <prob option="teeth.sharp" value="0.5"/>
-              <prob option="teeth.smooth" value="0.5"/>
+              <prob option="teeth.sharp" value="0.08633"/>
+              <prob option="teeth.smooth" value="0.91367"/>
             </probs>
           </given>
           <given option="carnivore.1">
             <givens/>
             <probs>
-              <prob option="teeth.sharp" value="0.5"/>
-              <prob option="teeth.smooth" value="0.5"/>
+              <prob option="teeth.sharp" value="0.8"/>
+              <prob option="teeth.smooth" value="0.2"/>
             </probs>
           </given>
         </givens>
@@ -232,22 +232,22 @@
           <given option="dwellings.swamp">
             <givens/>
             <probs>
-              <prob option="slimy.0" value="0.5"/>
-              <prob option="slimy.1" value="0.5"/>
+              <prob option="slimy.0" value="0.06007"/>
+              <prob option="slimy.1" value="0.93993"/>
             </probs>
           </given>
           <given option="dwellings.desert">
             <givens/>
             <probs>
-              <prob option="slimy.0" value="0.5"/>
-              <prob option="slimy.1" value="0.5"/>
+              <prob option="slimy.0" value="0.07865"/>
+              <prob option="slimy.1" value="0.92135"/>
             </probs>
           </given>
           <given option="dwellings.forest">
             <givens/>
             <probs>
-              <prob option="slimy.0" value="0.5"/>
-              <prob option="slimy.1" value="0.5"/>
+              <prob option="slimy.0" value="0.76358"/>
+              <prob option="slimy.1" value="0.23642"/>
             </probs>
           </given>
         </givens>
@@ -283,22 +283,22 @@
           <given option="dwellings.swamp">
             <givens/>
             <probs>
-              <prob option="can_climb.0" value="0.5"/>
-              <prob option="can_climb.1" value="0.5"/>
+              <prob option="can_climb.0" value="0.9699"/>
+              <prob option="can_climb.1" value="0.0301"/>
             </probs>
           </given>
           <given option="dwellings.desert">
             <givens/>
             <probs>
-              <prob option="can_climb.0" value="0.5"/>
-              <prob option="can_climb.1" value="0.5"/>
+              <prob option="can_climb.0" value="1.0"/>
+              <prob option="can_climb.1" value="0.0"/>
             </probs>
           </given>
           <given option="dwellings.forest">
             <givens/>
             <probs>
-              <prob option="can_climb.0" value="0.5"/>
-              <prob option="can_climb.1" value="0.5"/>
+              <prob option="can_climb.0" value="0.34228"/>
+              <prob option="can_climb.1" value="0.65772"/>
             </probs>
           </given>
         </givens>
@@ -314,8 +314,8 @@
       <probabilities>
         <givens/>
         <probs>
-          <prob option="size.large" value="0.5"/>
-          <prob option="size.normal" value="0.5"/>
+          <prob option="size.large" value="0.50147"/>
+          <prob option="size.normal" value="0.49853"/>
         </probs>
       </probabilities>
     </decision>
@@ -332,22 +332,22 @@
           <given option="smelly.0">
             <givens/>
             <probs>
-              <prob option="extra.extra_none" value="0.5"/>
-              <prob option="extra.extra_stink_lines" value="0.5"/>
+              <prob option="extra.extra_none" value="1.0"/>
+              <prob option="extra.extra_stink_lines" value="0.0"/>
             </probs>
           </given>
           <given option="smelly.1">
             <givens/>
             <probs>
-              <prob option="extra.extra_none" value="0.5"/>
-              <prob option="extra.extra_stink_lines" value="0.5"/>
+              <prob option="extra.extra_none" value="0.0"/>
+              <prob option="extra.extra_stink_lines" value="1.0"/>
             </probs>
           </given>
         </givens>
         <probs/>
       </probabilities>
     </decision>
-    <decision name="nocturnal" x="79.11111068725586" y="66.22222137451172" english="" type="String">
+    <decision name="nocturnal" x="41.33333969116211" y="68.44444274902344" english="" type="String">
       <dependencies/>
       <options>
         <option name="0" path="nocturnal.0"/>
@@ -356,8 +356,8 @@
       <probabilities>
         <givens/>
         <probs>
-          <prob option="nocturnal.0" value="0.5"/>
-          <prob option="nocturnal.1" value="0.5"/>
+          <prob option="nocturnal.0" value="0.9030315"/>
+          <prob option="nocturnal.1" value="0.096968465"/>
         </probs>
       </probabilities>
     </decision>
@@ -379,19 +379,19 @@
               <given option="teeth.sharp">
                 <givens/>
                 <probs>
-                  <prob option="mouth.mouth_angry_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_angry_normal" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_normal" value="0.25"/>
+                  <prob option="mouth.mouth_angry_sharp" value="0.0"/>
+                  <prob option="mouth.mouth_angry_normal" value="0.0"/>
+                  <prob option="mouth.mouth_neutral_sharp" value="0.91262"/>
+                  <prob option="mouth.mouth_neutral_normal" value="0.08738"/>
                 </probs>
               </given>
               <given option="teeth.smooth">
                 <givens/>
                 <probs>
-                  <prob option="mouth.mouth_angry_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_angry_normal" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_normal" value="0.25"/>
+                  <prob option="mouth.mouth_angry_sharp" value="0.0"/>
+                  <prob option="mouth.mouth_angry_normal" value="0.0"/>
+                  <prob option="mouth.mouth_neutral_sharp" value="0.09474"/>
+                  <prob option="mouth.mouth_neutral_normal" value="0.90526"/>
                 </probs>
               </given>
             </givens>
@@ -402,19 +402,19 @@
               <given option="teeth.sharp">
                 <givens/>
                 <probs>
-                  <prob option="mouth.mouth_angry_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_angry_normal" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_normal" value="0.25"/>
+                  <prob option="mouth.mouth_angry_sharp" value="0.93991"/>
+                  <prob option="mouth.mouth_angry_normal" value="0.06009"/>
+                  <prob option="mouth.mouth_neutral_sharp" value="0.0"/>
+                  <prob option="mouth.mouth_neutral_normal" value="0.0"/>
                 </probs>
               </given>
               <given option="teeth.smooth">
                 <givens/>
                 <probs>
-                  <prob option="mouth.mouth_angry_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_angry_normal" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_sharp" value="0.25"/>
-                  <prob option="mouth.mouth_neutral_normal" value="0.25"/>
+                  <prob option="mouth.mouth_angry_sharp" value="0.04445"/>
+                  <prob option="mouth.mouth_angry_normal" value="0.95555"/>
+                  <prob option="mouth.mouth_neutral_sharp" value="0.0"/>
+                  <prob option="mouth.mouth_neutral_normal" value="0.0"/>
                 </probs>
               </given>
             </givens>
@@ -424,7 +424,7 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="body" x="412.554443359375" y="213.40475463867188" english="" type="String">
+    <decision name="body" x="370.33221435546875" y="216.73809814453125" english="" type="String">
       <dependencies>
         <dependency decision="size"/>
         <dependency decision="slimy"/>
@@ -503,15 +503,15 @@
               <given option="can_climb.0">
                 <givens/>
                 <probs>
-                  <prob option="arms.arms_agile" value="0.5"/>
-                  <prob option="arms.arms_muscular" value="0.5"/>
+                  <prob option="arms.arms_agile" value="0.92976"/>
+                  <prob option="arms.arms_muscular" value="0.07024"/>
                 </probs>
               </given>
               <given option="can_climb.1">
                 <givens/>
                 <probs>
-                  <prob option="arms.arms_agile" value="0.5"/>
-                  <prob option="arms.arms_muscular" value="0.5"/>
+                  <prob option="arms.arms_agile" value="0.6537"/>
+                  <prob option="arms.arms_muscular" value="0.3463"/>
                 </probs>
               </given>
             </givens>
@@ -522,15 +522,15 @@
               <given option="can_climb.0">
                 <givens/>
                 <probs>
-                  <prob option="arms.arms_agile" value="0.5"/>
-                  <prob option="arms.arms_muscular" value="0.5"/>
+                  <prob option="arms.arms_agile" value="0.74359"/>
+                  <prob option="arms.arms_muscular" value="0.25641"/>
                 </probs>
               </given>
               <given option="can_climb.1">
                 <givens/>
                 <probs>
-                  <prob option="arms.arms_agile" value="0.5"/>
-                  <prob option="arms.arms_muscular" value="0.5"/>
+                  <prob option="arms.arms_agile" value="0.16296"/>
+                  <prob option="arms.arms_muscular" value="0.83704"/>
                 </probs>
               </given>
             </givens>
@@ -540,7 +540,7 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="smelly" x="229.11566162109375" y="431.7586364746094" english="" type="String">
+    <decision name="smelly" x="198.00454711914062" y="451.7586364746094" english="" type="String">
       <dependencies>
         <dependency decision="dwellings"/>
       </dependencies>
@@ -553,15 +553,15 @@
           <given option="dwellings.swamp">
             <givens/>
             <probs>
-              <prob option="smelly.0" value="0.5"/>
-              <prob option="smelly.1" value="0.5"/>
+              <prob option="smelly.0" value="0.07692"/>
+              <prob option="smelly.1" value="0.92308"/>
             </probs>
           </given>
           <given option="dwellings.desert">
             <givens/>
             <probs>
-              <prob option="smelly.0" value="0.5"/>
-              <prob option="smelly.1" value="0.5"/>
+              <prob option="smelly.0" value="0.86411"/>
+              <prob option="smelly.1" value="0.13589"/>
             </probs>
           </given>
           <given option="dwellings.forest">
@@ -588,15 +588,15 @@
           <given option="carnivore.0">
             <givens/>
             <probs>
-              <prob option="agressive.0" value="0.5"/>
-              <prob option="agressive.1" value="0.5"/>
+              <prob option="agressive.0" value="0.76552"/>
+              <prob option="agressive.1" value="0.23448"/>
             </probs>
           </given>
           <given option="carnivore.1">
             <givens/>
             <probs>
-              <prob option="agressive.0" value="0.5"/>
-              <prob option="agressive.1" value="0.5"/>
+              <prob option="agressive.0" value="0.11191"/>
+              <prob option="agressive.1" value="0.88809"/>
             </probs>
           </given>
         </givens>
@@ -616,15 +616,15 @@
           <given option="size.large">
             <givens/>
             <probs>
-              <prob option="speed.quick" value="0.5"/>
-              <prob option="speed.slow" value="0.5"/>
+              <prob option="speed.quick" value="0.19728"/>
+              <prob option="speed.slow" value="0.80272"/>
             </probs>
           </given>
           <given option="size.normal">
             <givens/>
             <probs>
-              <prob option="speed.quick" value="0.5"/>
-              <prob option="speed.slow" value="0.5"/>
+              <prob option="speed.quick" value="0.81847"/>
+              <prob option="speed.slow" value="0.18153"/>
             </probs>
           </given>
         </givens>
@@ -644,15 +644,15 @@
           <given option="nocturnal.0">
             <givens/>
             <probs>
-              <prob option="can_see_in_the_dark.0" value="0.5"/>
-              <prob option="can_see_in_the_dark.1" value="0.5"/>
+              <prob option="can_see_in_the_dark.0" value="0.76334"/>
+              <prob option="can_see_in_the_dark.1" value="0.23666"/>
             </probs>
           </given>
           <given option="nocturnal.1">
             <givens/>
             <probs>
-              <prob option="can_see_in_the_dark.0" value="0.5"/>
-              <prob option="can_see_in_the_dark.1" value="0.5"/>
+              <prob option="can_see_in_the_dark.0" value="0.08741"/>
+              <prob option="can_see_in_the_dark.1" value="0.91259"/>
             </probs>
           </given>
         </givens>
