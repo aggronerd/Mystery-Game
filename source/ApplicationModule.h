@@ -51,6 +51,7 @@ protected:
   CL_Slot slot_mouse_down;
   CL_Slot slot_mouse_up;
   CL_Slot slot_mouse_move;
+  void draw_loading(void);
   virtual void on_window_close(void);
   virtual void on_key_down(const CL_InputEvent &key, const CL_InputState &state);
   virtual void on_key_up(const CL_InputEvent &key, const CL_InputState &state);

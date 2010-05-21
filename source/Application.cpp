@@ -8,6 +8,7 @@
 #include "Application.h"
 #include "main_menu/MainMenu.h"
 #include "game/World.h"
+#include "monster_generator_demo/MonsterGeneratorDemo.h"
 #include "misc/logging.h"
 #include "ApplicationModuleExitCode.h"
 #include <ClanLib/core.h>
@@ -54,8 +55,11 @@ int Application::main(const std::vector<CL_String> &args)
     do {
       switch(response)
       {
-        case EXIT_MODULE_AND_LOAD_GAME:
+        case EXIT_MODULE_AND_LOAD_MYSTERY_GENERATOR:
           mod = (ApplicationModule*)new World(window);
+          break;
+        case EXIT_MODULE_AND_LOAD_MONSTER_GENERATOR:
+          mod = (ApplicationModule*)new MonsterGeneratorDemo(window);
           break;
         case EXIT_MODULE_AND_LOAD_MAIN_MENU:
           mod = (ApplicationModule*)new MainMenu(window);

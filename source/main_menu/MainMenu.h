@@ -23,12 +23,13 @@ class MainMenu : public ApplicationModule
     //virtual void update(void);
     //virtual void wm_repaint(void);
     bool on_quit(void);
-    void on_clicked_button_new_game(void);
+    void on_clicked_button_mystery_generator(void);
+    void on_clicked_button_monster_generator(void);
     void on_clicked_button_editor(void);
     CL_Image background_image;
     CL_ResourceManager menu_rm;
-    CL_PushButton* button_new_game;
-    CL_PushButton* button_options;
+    CL_PushButton* button_mystery;
+    CL_PushButton* button_monster;
     CL_Window* menu_window;
 };
 

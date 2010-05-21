@@ -33,13 +33,14 @@ MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(d
   menu_window = new CL_Window(&gui,desc);
 
   //Create buttons
-  button_new_game = new CL_PushButton(menu_window);
-  button_new_game->set_geometry(CL_Rect(10, 30, CL_Size(180, 40)));
-  button_new_game->set_text("New Game");
-  button_new_game->func_clicked().set(this,&MainMenu::on_clicked_button_new_game);
-  button_options = new CL_PushButton(menu_window);
-  button_options->set_geometry(CL_Rect(10, 80, CL_Size(180, 40)));
-  button_options->set_text("Options");
+  button_mystery = new CL_PushButton(menu_window);
+  button_mystery->set_geometry(CL_Rect(10, 30, CL_Size(180, 40)));
+  button_mystery->set_text("Murder Mystery");
+  button_mystery->func_clicked().set(this,&MainMenu::on_clicked_button_mystery_generator);
+  button_monster = new CL_PushButton(menu_window);
+  button_monster->set_geometry(CL_Rect(10, 80, CL_Size(180, 40)));
+  button_monster->set_text("Monster Generator");
+  button_monster->func_clicked().set(this,&MainMenu::on_clicked_button_monster_generator);
 
   menu_window->func_close().set(this, &MainMenu::on_quit);
   menu_window->set_draggable(true);
@@ -50,8 +51,8 @@ MainMenu::~MainMenu()
 {
   DEBUG_MSG("MainMenu::~MainMenu() - Called.")
 
-  delete button_new_game;
-  delete button_options;
+  delete button_mystery;
+  delete button_monster;
   delete menu_window;
 }
 
@@ -75,7 +76,12 @@ bool MainMenu::on_quit()
   return(true);
 }
 
-void MainMenu::on_clicked_button_new_game()
+void MainMenu::on_clicked_button_mystery_generator()
 {
-  exit_code = EXIT_MODULE_AND_LOAD_GAME;
+  exit_code = EXIT_MODULE_AND_LOAD_MYSTERY_GENERATOR;
+}
+
+void MainMenu::on_clicked_button_monster_generator()
+{
+  exit_code = EXIT_MODULE_AND_LOAD_MONSTER_GENERATOR;
 }
