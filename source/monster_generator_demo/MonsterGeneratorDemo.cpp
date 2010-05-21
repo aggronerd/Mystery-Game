@@ -17,7 +17,9 @@ MonsterGeneratorDemo::MonsterGeneratorDemo(const CL_DisplayWindow &display_windo
   //Get the resource manager
   rm = CL_ResourceManager("data/monster-resources.xml");
 
-  monsters.push_back(new Monster(CL_Pointf(300,300),this));
+  for(int x=0; x < 16; x++)
+    for(int y=0; y < 4; y++)
+      monsters.push_back(new Monster(CL_Pointf(64.0f*x,128.0f*y),this));
 }
 
 MonsterGeneratorDemo::~MonsterGeneratorDemo()

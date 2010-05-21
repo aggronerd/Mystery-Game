@@ -13,18 +13,16 @@
 #include "../Application.h"
 #include "BBN_Exception.h"
 
-unsigned long BBN_Decision::_next_id = 0;
-
 BBN_Decision::BBN_Decision(BBN_Plot* plot)
 {
   DEBUG_MSG("BBN_Decision::BBN_Decision(BBN_Plot*) - Called.")
 
   _plot = plot;
-	_result = 0x0;
-	_next_option_id = 0;
+  _result = 0x0;
+  _next_option_id = 0;
 
-	//Set the decision's ID
-	_id = BBN_Decision::get_next_id();
+  //Set the decision's ID
+  _id = plot->get_next_decision_id();
 }
 
 BBN_Decision::~BBN_Decision()
@@ -51,13 +49,6 @@ BBN_Decision::~BBN_Decision()
 
   _plot = 0x0;
   _result = 0x0;
-}
-
-unsigned long BBN_Decision::get_next_id()
-{
-  unsigned long id = _next_id;
-  _next_id += 1;
-  return(id);
 }
 
 void BBN_Decision::load_from_xml(const CL_DomElement& element)

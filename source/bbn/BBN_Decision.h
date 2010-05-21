@@ -19,7 +19,6 @@ class BBN_Decision
 {
 private:
 
-  static unsigned long _next_id;
   unsigned long _id;
   CL_String _name;
   CL_String _english;
@@ -33,10 +32,6 @@ private:
 	std::vector<BBN_Prob*> _probs;
 
 	int _next_option_id;
-
-protected:
-
-	static unsigned long get_next_id(void);
 
 public:
 

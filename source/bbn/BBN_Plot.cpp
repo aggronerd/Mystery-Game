@@ -12,6 +12,7 @@ BBN_Plot::BBN_Plot(const char* file_name)
   _bn_current_solution = 0x0;
   _bn_join_tree = 0x0;
   _bn = 0x0;
+  _next_decision_id = 0;
 
   //Create a file object.
   CL_String cl_filename = file_name;
@@ -89,14 +90,7 @@ BBN_Plot::~BBN_Plot()
       delete (*it_de);
   _decisions.clear();
 
-  if(_bn_join_tree != 0x0)
-    delete(_bn_join_tree);
-
-  if(_bn_current_solution != 0x0)
-    delete(_bn_current_solution);
-
-  if(_bn != 0x0)
-    delete(_bn);
+  clear_bn();
 
   BBN_Random::reset();
 }
@@ -127,15 +121,13 @@ void BBN_Plot::prepare_bn()
 {
 
   //Destroy existing bayes net.
-  if(_bn != 0x0)
-  {
-    delete(_bn);
-  }
+  clear_bn();
 
   //Create the bayes net.
-	_bn = new dlib::directed_graph<dlib::bayes_node>::kernel_1a_c();
+  _bn = new dlib::directed_graph<dlib::bayes_node>::kernel_1a_c();
 
-	get_bn()->set_number_of_nodes(decisions_count());
+  long number_of_decisions = decisions_count();
+  get_bn()->set_number_of_nodes(number_of_decisions);
 
   std::vector<BBN_Decision*>::iterator it_de;
 
@@ -145,8 +137,6 @@ void BBN_Plot::prepare_bn()
   for(it_de = _decisions.begin(); it_de != _decisions.end(); ++it_de)
       (*it_de) -> load_bn_probabilities(get_bn());
 
-  if(_bn_join_tree != 0x0)
-    delete _bn_join_tree;
   _bn_join_tree = new join_tree_type();
 
   // Populate the join_tree with data from the bayesian network.
@@ -204,6 +194,32 @@ void BBN_Plot::update_bn_solution()
   else
   {
     throw(BBN_Exception("BBN_Plot::update_bn_solution() called when _bn or _bn_join_tree is not defined."));
+  }
+}
+
+/**
+ * Destroys all bayes net objects.
+ */
+void BBN_Plot::clear_bn()
+{
+  if(_bn_join_tree != 0x0)
+  {
+	_bn_join_tree->clear();
+	delete(_bn_join_tree);
+	_bn_join_tree = 0x0;
+  }
+
+  if(_bn_current_solution != 0x0)
+  {
+	delete(_bn_current_solution);
+	_bn_current_solution = 0x0;
+  }
+
+  if(_bn != 0x0)
+  {
+	_bn->clear();
+	delete(_bn);
+	_bn = 0x0;
   }
 }
 
@@ -281,4 +297,11 @@ bool BBN_Plot::set_result(const CL_String& decision_path, const CL_String& value
   }
 
   return(result);
+}
+
+unsigned long BBN_Plot::get_next_decision_id()
+{
+  unsigned long id = _next_decision_id;
+  _next_decision_id += 1;
+  return(id);
 }

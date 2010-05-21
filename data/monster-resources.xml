@@ -1,76 +1,66 @@
 <resources>
-	<section name="characters">
-		<sprite name="detective_static_n" base_angle="0" id="1500">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,0" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_ne" base_angle="0" id="1501">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,65" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_e" base_angle="0" id="1502">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,130" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_se" base_angle="0" id="1503">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,195" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_s" base_angle="0" id="1504">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,260" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_sw" base_angle="0" id="1505">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,325" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_w" base_angle="0" id="1506">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,390" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-		<sprite name="detective_static_nw" base_angle="0" id="1507">
-			<image file="artwork/people/detective.png">
-				<grid pos="0,455" size="32, 64" spacing="1, 1" array="1, 1" />
-			</image>
-			<translation origin="bottom" />
-		</sprite>
-	</section>
-	<section name="flooring">
-		<texture name="wood" file="artwork/textures/wood-floor.png" />
-	</section>
-	<section name="props">
-		<sprite name="grandfather-clock-sw">
-			<image file="artwork/props/grandfather-clock-sw.png" />
-			<translation origin="bottom" />
-		</sprite>
-	</section>
-	<section name="areas">
-		<section name="hotel">
-			<sprite name="ground-floor">
-				<image file="artwork/levels/1/1st_floor.png" />
-			</sprite>
-		</section>
-	</section>
-	<section name="misc">
-		<sprite name="missing" base_angle="0" id="1000">
-			<image file="artwork/misc/missing.png" />
-			<translation origin="center" />
-			<rotation origin="center" />
-		</sprite>
-	</section>
+	<sprite name="arms_agile" id="3000">
+		<image file="artwork/monster-parts/arms_agile.png" />
+	</sprite>
+	<sprite name="arms_muscular" id="3001">
+		<image file="artwork/monster-parts/arms_muscular.png" />
+	</sprite>
+	<sprite name="background_desert" id="3002">
+		<image file="artwork/monster-parts/background_desert.png" />
+	</sprite>
+	<sprite name="background_forest" id="3003">
+		<image file="artwork/monster-parts/background_forest.png" />
+	</sprite>
+	<sprite name="background_swamp" id="3004">
+		<image file="artwork/monster-parts/background_swamp.png" />
+	</sprite>
+	<sprite name="body_large_hairy" id="3005">
+		<image file="artwork/monster-parts/body_large_hairy.png" />
+	</sprite>
+	<sprite name="body_large_slimy" id="3006">
+		<image file="artwork/monster-parts/body_large_slimy.png" />
+	</sprite>
+	<sprite name="body_reg_hairy" id="3007">
+		<image file="artwork/monster-parts/body_reg_hairy.png" />
+	</sprite>
+	<sprite name="body_reg_slimy" id="3008">
+		<image file="artwork/monster-parts/body_reg_slimy.png" />
+	</sprite>
+	<sprite name="eyes_glow_angry" id="3009">
+		<image file="artwork/monster-parts/eyes_glow_angry.png" />
+	</sprite>
+	<sprite name="eyes_glow_peaceful" id="3010">
+		<image file="artwork/monster-parts/eyes_glow_peaceful.png" />
+	</sprite>
+	<sprite name="eyes_normal_angry" id="3011">
+		<image file="artwork/monster-parts/eyes_normal_angry.png" />
+	</sprite>
+	<sprite name="eyes_normal_peaceful" id="3012">
+		<image file="artwork/monster-parts/eyes_normal_peaceful.png" />
+	</sprite>
+	<sprite name="legs_muscular" id="3013">
+		<image file="artwork/monster-parts/legs_muscular.png" />
+	</sprite>
+	<sprite name="legs_thin" id="3014">
+		<image file="artwork/monster-parts/legs_thin.png" />
+	</sprite>
+	<sprite name="mouth_angry_normal" id="3015">
+		<image file="artwork/monster-parts/mouth_angry_normal.png" />
+	</sprite>
+	<sprite name="mouth_angry_sharp" id="3016">
+		<image file="artwork/monster-parts/mouth_angry_sharp.png" />
+	</sprite>
+	<sprite name="mouth_neutral_normal" id="3017">
+		<image file="artwork/monster-parts/mouth_neutral_normal.png" />
+	</sprite>
+	<sprite name="mouth_neutral_sharp" id="3018">
+		<image file="artwork/monster-parts/mouth_neutral_sharp.png" />
+	</sprite>
+	<sprite name="extra_none" id="3019">
+		<image file="artwork/monster-parts/extra_none.png" />
+	</sprite>
+	<sprite name="extra_stink_lines" id="3020">
+		<image file="artwork/monster-parts/extra_stink_lines.png" />
+	</sprite>
 </resources>
 
