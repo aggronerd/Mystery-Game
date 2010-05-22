@@ -35,7 +35,7 @@ MonsterGeneratorDemo::~MonsterGeneratorDemo()
 
 void MonsterGeneratorDemo::draw()
 {
-  gc.clear(CL_Colorf(0.0f,0.0f,0.0f));
+  gc.clear(CL_Colorf(1.0f,1.0f,1.0f));
 
   // Draw all monsters
   std::list<Monster*>::iterator it_go;
