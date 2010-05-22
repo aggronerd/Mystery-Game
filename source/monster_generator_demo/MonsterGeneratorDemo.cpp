@@ -9,6 +9,7 @@
 #include "../misc/logging.h"
 #include "../game/GameObject.h"
 #include "Monster.h"
+#include <map>
 
 MonsterGeneratorDemo::MonsterGeneratorDemo(const CL_DisplayWindow &display_window) : ApplicationModule(display_window)
 {
@@ -17,9 +18,20 @@ MonsterGeneratorDemo::MonsterGeneratorDemo(const CL_DisplayWindow &display_windo
   //Get the resource manager
   rm = CL_ResourceManager("data/monster-resources.xml");
 
-  for(int x=0; x < 16; x++)
-    for(int y=0; y < 4; y++)
-      monsters.push_back(new Monster(CL_Pointf(64.0f*x,128.0f*y),this));
+  std::map<CL_String, CL_String> preset_properties;
+
+  for(int y=0; y < 4; y++)
+    for(int x=0; x < 16; x++)
+    {
+      if(y==1)
+    	  preset_properties["dwellings"] = "swamp";
+      if(y==2)
+    	  preset_properties["dwellings"] = "forest";
+      if(y==3)
+    	  preset_properties["dwellings"] = "desert";
+
+      monsters.push_back(new Monster(CL_Pointf(64.0f*x,128.0f*y),this, preset_properties));
+    }
 }
 
 MonsterGeneratorDemo::~MonsterGeneratorDemo()
@@ -35,7 +47,7 @@ MonsterGeneratorDemo::~MonsterGeneratorDemo()
 
 void MonsterGeneratorDemo::draw()
 {
-  gc.clear(CL_Colorf(1.0f,1.0f,1.0f));
+  gc.clear(CL_Colorf(0.0f,0.0f,0.0f));
 
   // Draw all monsters
   std::list<Monster*>::iterator it_go;
@@ -51,4 +63,13 @@ void MonsterGeneratorDemo::update()
 CL_ResourceManager* MonsterGeneratorDemo::get_rm()
 {
 	return(&rm);
+}
+
+/**
+ *
+ */
+void MonsterGeneratorDemo::on_key_down(const CL_InputEvent &key, const CL_InputState &state)
+{
+	if(key.id == CL_KEY_ESCAPE)
+		exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
 }

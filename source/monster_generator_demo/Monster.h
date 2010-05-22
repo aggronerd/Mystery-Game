@@ -10,6 +10,8 @@
 
 #include <ClanLib/core.h>
 #include <ClanLib/display.h>
+#include "../bbn/BBN_Plot.h"
+#include <map>
 
 class MonsterGeneratorDemo;
 
@@ -17,6 +19,7 @@ class Monster
 {
 	public:
 		Monster(CL_Pointf, MonsterGeneratorDemo*);
+		Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>);
 		virtual ~Monster();
 		void draw(CL_GraphicContext* gc);
 

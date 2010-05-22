@@ -7,9 +7,9 @@
 
 #include "Monster.h"
 #include "../misc/logging.h"
-#include "../bbn/BBN_Plot.h"
 #include "../bbn/BBN_Option.h"
 #include "MonsterGeneratorDemo.h"
+#include "../Application.h"
 
 /**
  * Loads the Bayes net for the object and sets the
@@ -17,15 +17,34 @@
  */
 Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent)
 {
-	DEBUG_MSG("Monster::Monster() - Called.")
+	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>) - Called.")
+
+	std::map<CL_String,CL_String> bayes_values;
+
+	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>) - Calling other constructor with empty list...")
+	Monster::Monster(location, parent, bayes_values);
+
+}
+
+Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, std::map<CL_String,CL_String> bayes_values)
+{
+	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>) - Called.")
 
 	//Fetch the resource manager which should contain all the sprites.
 	CL_ResourceManager* rm = parent->get_rm();
-
 	CL_GraphicContext gc = *(parent->get_gc());
 
 	BBN_Plot properties("data/plots/monster.xml");
 	properties.prepare_bn();
+
+	//Set preset properties
+	if(bayes_values.size() > 0)
+	{
+		std::map<CL_String,CL_String>::iterator it;
+		for(it = bayes_values.begin(); it != bayes_values.end(); ++it)
+			if(!properties.set_result((*it).first,(*it).second))
+				Application::log(LOG_LEVEL_WARN, "Failed to set the value of a bayes network node: " + (*it).first + " = " + (*it).second);
+	}
 
 	//Determine sprites:
 	legs = CL_Sprite(gc, properties.query_result("legs")->get_name(), rm);
@@ -41,7 +60,6 @@ Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent)
 	destination.set_size(static_cast<CL_Sizef>(background.get_size()));
 
 	rm = 0x0;
-
 }
 
 Monster::~Monster()

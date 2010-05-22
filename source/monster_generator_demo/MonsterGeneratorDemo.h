@@ -29,6 +29,7 @@ class MonsterGeneratorDemo : public ApplicationModule
 	protected:
 		void draw(void);
 		void update(void);
+		virtual void on_key_down(const CL_InputEvent &key, const CL_InputState &state);
 		CL_ResourceManager rm;
 		std::list<Monster*> monsters;
 };
