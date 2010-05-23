@@ -51,6 +51,7 @@ public:
 	BBN_Option* get_result(void);
 	bool has_generated_result(void);
 	BBN_Option* get_option(const CL_String&);
+	std::vector<BBN_Option*>* get_options(void);
 	bool set_result(const CL_String&);
 
 	void add_option(BBN_Option*);

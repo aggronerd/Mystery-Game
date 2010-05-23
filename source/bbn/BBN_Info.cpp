@@ -16,9 +16,13 @@
 BBN_Info::BBN_Info(CL_GUIManager* manager, const CL_GUITopLevelDescription& desc, BBN_Plot* bbn_network) : CL_Window(manager, desc)
 {
 	DEBUG_MSG("BBN_Info::BBN_Info(CL_GUIManager*, const char*) - Called.")
+
 	_bbn_network = bbn_network;
 	_list = 0x0;
 	_button_generate = 0x0;
+	_button_set_value = 0x0;
+	_combo_options = 0x0;
+
 	draw_controls();
 }
 
@@ -78,13 +82,28 @@ void BBN_Info::draw_controls()
 		i++;
 	}
 
-	//Create the action buttons.
+	//Create the "Generate Selected" button
 	_button_generate = new CL_PushButton(this);
-	_button_generate->set_geometry(CL_Rect(client_area.right - 80,  client_area.bottom - 40,
+	_button_generate->set_geometry(CL_Rect(client_area.right - 120,  client_area.bottom - 40,
                                          client_area.right - 10, client_area.bottom - 10));
-	_button_generate->set_text("Generate");
+	_button_generate->set_text("Generate Selected");
 	_button_generate->func_clicked().set(this, &BBN_Info::generate_selected, _button_generate);
   _button_generate->set_enabled(false);
+
+  //Create the "Set" button
+  _button_set_value = new CL_PushButton(this);
+  _button_set_value->set_geometry(CL_Rect(client_area.right - 205,  client_area.bottom - 40,
+																					client_area.right - 125, client_area.bottom - 10));
+  _button_set_value->set_text("Set");
+  _button_set_value->func_clicked().set(this, &BBN_Info::set_selected, _button_set_value);
+  _button_set_value->set_enabled(false);
+
+  //Create the options combo box
+  _combo_options = new CL_ComboBox(this);
+  _combo_options->set_geometry(CL_Rect(client_area.right - 350,  client_area.bottom - 35,
+																	     client_area.right - 210, client_area.bottom - 15));
+  _combo_options->set_enabled(false);
+  _combo_options->set_popup_menu(_selected_options);
 
 	decisions = 0x0;
 	lv_header = 0x0;
@@ -97,17 +116,50 @@ void BBN_Info::draw_controls()
  * @param selection
  * @param listview
  */
-void BBN_Info::on_selection_changed(CL_ListViewSelection selection, CL_ListView *listview)
+void BBN_Info::on_selection_changed(CL_ListViewSelection selection, CL_ListView* listview)
 {
-	if(!selection.get_first().is_null())
+	CL_ListViewSelectedItem item = selection.get_first();
+	if(!item.is_null())
 	{
-		if(selection.get_first().get_item().get_column("value_id").get_text() == BBN_INFO_LIST_UNDEF)
+		if(item.get_item().get_column("value_id").get_text() == BBN_INFO_LIST_UNDEF)
 		{
+			//Item is selected and it is undefined.
 			_button_generate->set_enabled(true);
+			_button_set_value->set_enabled(true);
+
+			BBN_Decision* decision = _bbn_network->get_decision(
+					item.get_item().get_column("name_id").get_text());
+
+			if(decision != 0x0)
+			{
+				_selected_options = CL_PopupMenu();
+
+				//Iterate through options and load them into the new menu.
+				std::vector<BBN_Option*>::iterator it;
+				std::vector<BBN_Option*>* options = decision->get_options();
+				for(it = options->begin(); it != options->end(); ++it)
+				{
+					CL_String option_name = (*it)->get_name();
+					_selected_options.insert_item(option_name);
+				}
+
+				_combo_options->set_popup_menu(_selected_options);
+
+			}
+			else
+			{
+				throw(BBN_Exception("BBN_Info::on_selection_changed((CL_ListViewSelection, CL_ListView*) - Unrecognised decision selected."));
+			}
+
 		}
 		else
 		{
+			_selected_options = CL_PopupMenu();
+			_combo_options->set_text("");
+			_combo_options->set_popup_menu(_selected_options);
+			_combo_options->set_enabled(false);
 			_button_generate->set_enabled(false);
+			_button_set_value->set_enabled(false);
 		}
 	}
 }
@@ -118,9 +170,25 @@ void BBN_Info::on_selection_changed(CL_ListViewSelection selection, CL_ListView 
 void BBN_Info::clear_controls()
 {
 	if(_list != 0x0)
+	{
 		delete(_list);
+		_list = 0x0;
+	}
 	if(_button_generate != 0x0)
+	{
 		delete(_button_generate);
+		_button_set_value = 0x0;
+	}
+	if(_button_set_value != 0x0)
+	{
+		delete(_button_set_value);
+		_button_set_value = 0x0;
+	}
+	if(_combo_options != 0x0)
+	{
+		delete(_combo_options);
+		_combo_options = 0x0;
+	}
 }
 
 /**
@@ -135,10 +203,12 @@ void BBN_Info::clear_controls()
  */
 void BBN_Info::generate_selected(CL_PushButton* button)
 {
-	_button_generate->set_enabled(false);
-
 	if(_bbn_network != 0x0 && _list != 0x0)
 	{
+
+		//Disable controls.
+		disable_selection_controls();
+
 		CL_ListViewItem selected = _list->get_selected_item();
 		if(!selected.is_null())
 		{
@@ -156,4 +226,75 @@ void BBN_Info::generate_selected(CL_PushButton* button)
 	{
 		throw(BBN_Exception("BBN_Info::generate_selected(CL_InputEvent, CL_PushButton*) - Failed pre-conditions."));
 	}
+}
+
+/**
+ * Sets the value of the selected item on the list it the
+ * value of the combo box.
+ *
+ * Preconditions:
+ * - _list is not null
+ * - _bbn_network is not null
+ * - _combo_options is not null
+ * - An item is selected
+ *
+ * @param button
+ */
+void BBN_Info::set_selected(CL_PushButton* button)
+{
+	if(_combo_options != 0x0 && _bbn_network != 0x0 &&
+		 _list != 0x0 && !(_list->get_selected_item().is_null()))
+	{
+
+		if(_combo_options->get_text() != "")
+		{
+
+			//Retrieve the values
+			CL_ListViewItem selected = _list->get_selected_item();
+			CL_String value = _combo_options->get_text();
+			CL_String name = selected.get_column("name_id").get_text();
+
+			//Reset the controls.
+			disable_selection_controls();
+
+			//Attempt to set the value
+			DEBUG_MSG(CL_String("BBN_Info::set_selected(CL_PushButton*) - Attempting to set the value of '") +
+					name + "' to '" + value + "'...")
+
+			if(_bbn_network->set_result(name,value))
+			{
+				DEBUG_MSG("BBN_Info::set_selected(CL_PushButton*) - Success.")
+				//Update the list item.
+				selected.set_column_text("value_id",
+					_bbn_network->query_result(selected.get_column("name_id").get_text())->get_name());
+			}
+			else
+			{
+				DEBUG_MSG("BBN_Info::set_selected(CL_PushButton*) - Failed.")
+			}
+
+		}
+	}
+	else
+	{
+		throw(BBN_Exception("BBN_Info::set_selected(CL_PushButton*) - Failed pre-conditions."));
+	}
+}
+
+/**
+ * Disables all the controls for changine selected items.
+ */
+void BBN_Info::disable_selection_controls()
+{
+	//Set button
+	_button_set_value->set_enabled(false);
+
+	//Generate selected button
+  _button_generate->set_enabled(false);
+
+	//Options combo box
+	_combo_options->set_enabled(false);
+	_selected_options = CL_PopupMenu();
+	_combo_options->set_popup_menu(_selected_options);
+	_combo_options->set_text("");
 }

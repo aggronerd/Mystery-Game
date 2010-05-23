@@ -26,12 +26,20 @@ class BBN_Info : public CL_Window
 	protected:
 		BBN_Plot* _bbn_network;
 
+		/*
+		 * GUI components
+		 */
 		CL_ListView* _list;
 		CL_PushButton* _button_generate;
+		CL_PushButton* _button_set_value;
+		CL_ComboBox* _combo_options;
+		CL_PopupMenu _selected_options;
 
+		void disable_selection_controls(void);
 		void draw_controls(void);
 		void clear_controls(void);
 		void generate_selected(CL_PushButton*);
+		void set_selected(CL_PushButton*);
 		void on_selection_changed(CL_ListViewSelection, CL_ListView*);
 };
 

@@ -52,6 +52,15 @@ BBN_Decision::~BBN_Decision()
 }
 
 /**
+ *
+ * @return A pointer to the list of options for the decision.
+ */
+std::vector<BBN_Option*>* BBN_Decision::get_options()
+{
+	return(&_options);
+}
+
+/**
  * Determines if there has been a result generated for this
  * decision and returns true if there has and false if not.
  */
