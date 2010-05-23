@@ -84,6 +84,7 @@ void BBN_Info::draw_controls()
                                          client_area.right - 10, client_area.bottom - 10));
 	_button_generate->set_text("Generate");
 	_button_generate->func_clicked().set(this, &BBN_Info::generate_selected, _button_generate);
+  _button_generate->set_enabled(false);
 
 	decisions = 0x0;
 	lv_header = 0x0;
@@ -134,6 +135,8 @@ void BBN_Info::clear_controls()
  */
 void BBN_Info::generate_selected(CL_PushButton* button)
 {
+	_button_generate->set_enabled(false);
+
 	if(_bbn_network != 0x0 && _list != 0x0)
 	{
 		CL_ListViewItem selected = _list->get_selected_item();
