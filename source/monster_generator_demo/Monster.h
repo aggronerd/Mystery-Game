@@ -10,8 +10,10 @@
 
 #include <ClanLib/core.h>
 #include <ClanLib/display.h>
-#include "../bbn/BBN_Plot.h"
 #include <map>
+
+class BBN_Info;
+class BBN_Plot;
 
 class MonsterGeneratorDemo;
 
@@ -32,6 +34,8 @@ class Monster
 		CL_Sprite background;
 		CL_Sprite extra;
 		CL_Rectf destination;
+		BBN_Info* properties_window;
+		BBN_Plot* properties;
 };
 
 #endif /* MONSTER_H_ */

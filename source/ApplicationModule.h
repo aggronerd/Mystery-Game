@@ -33,6 +33,7 @@ public:
   virtual ~ApplicationModule();
   ApplicationModuleExitCode run(void); //Returns exit code
   CL_GraphicContext* get_gc(void);
+  CL_GUIManager* get_gui_manager(void);
 protected:
   virtual void draw(void) {};
   virtual void update(void) {};

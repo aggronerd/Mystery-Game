@@ -46,6 +46,14 @@ ApplicationModule::ApplicationModule(const CL_DisplayWindow &display_window) : w
 }
 
 /**
+ *
+ */
+CL_GUIManager* ApplicationModule::get_gui_manager()
+{
+	return(&gui);
+}
+
+/**
  * Draws the loading screen on the graphics context.
  */
 void ApplicationModule::draw_loading()

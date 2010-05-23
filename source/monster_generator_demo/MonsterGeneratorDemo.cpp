@@ -21,7 +21,7 @@ MonsterGeneratorDemo::MonsterGeneratorDemo(const CL_DisplayWindow &display_windo
   std::map<CL_String, CL_String> preset_properties;
 
   for(int y=0; y < 4; y++)
-    for(int x=0; x < 16; x++)
+    for(int x=0; x < 1; x++)
     {
       if(y==1)
     	  preset_properties["dwellings"] = "swamp";
@@ -53,6 +53,9 @@ void MonsterGeneratorDemo::draw()
   std::list<Monster*>::iterator it_go;
   for(it_go = monsters.begin(); it_go != monsters.end(); ++it_go)
     (*it_go)->draw(&gc);
+
+  gui.exec(false);
+  wm.draw_windows(gc);
 
   window.flip(1);
 }

@@ -31,7 +31,7 @@ private:
 	dlib::bayesian_network_join_tree* _bn_current_solution;
 
 public:
-	BBN_Plot(const char* file_name);
+	BBN_Plot(const char*);
 	virtual ~BBN_Plot();
 	BBN_Decision* get_decision(const CL_String &);
 	BBN_Option* get_option(const CL_String &);

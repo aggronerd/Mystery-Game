@@ -51,6 +51,18 @@ BBN_Decision::~BBN_Decision()
   _result = 0x0;
 }
 
+/**
+ * Determines if there has been a result generated for this
+ * decision and returns true if there has and false if not.
+ */
+bool BBN_Decision::has_generated_result()
+{
+	if(_result == 0x0)
+		return(false);
+	else
+		return(true);
+}
+
 void BBN_Decision::load_from_xml(const CL_DomElement& element)
 {
   DEBUG_MSG("BBN_Decision::load_from_xml(CL_DomElement) - Called.")

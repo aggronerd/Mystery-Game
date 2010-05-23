@@ -49,6 +49,7 @@ public:
 	unsigned long get_id(void);
 	void load_bn_probabilities(dlib::directed_graph<dlib::bayes_node>::kernel_1a_c* bn);
 	BBN_Option* get_result(void);
+	bool has_generated_result(void);
 	BBN_Option* get_option(const CL_String&);
 	bool set_result(const CL_String&);
 
