@@ -11,6 +11,8 @@
 #include <ClanLib/gui.h>
 #include <ClanLib/core.h>
 
+#define BBN_INFO_LIST_UNDEF "[undefined]"
+
 class BBN_Plot;
 
 /**
@@ -23,9 +25,14 @@ class BBN_Info : public CL_Window
 		virtual ~BBN_Info();
 	protected:
 		BBN_Plot* _bbn_network;
+
 		CL_ListView* _list;
+		CL_PushButton* _button_generate;
+
 		void draw_controls(void);
 		void clear_controls(void);
+		void generate_selected(CL_PushButton*);
+		void on_selection_changed(CL_ListViewSelection, CL_ListView*);
 };
 
 #endif /* BBN_INFO_H_ */

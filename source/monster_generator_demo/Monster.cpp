@@ -61,7 +61,7 @@ Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, std::map<CL_S
 	CL_GUITopLevelDescription desc;
 	desc.set_allow_resize(false);
 	desc.set_title("Monster");
-	desc.set_position(CL_Rect(0,0,300,300),false);
+	desc.set_position(CL_Rect(0,0,600,300),false);
 	desc.set_decorations(true);
 	properties_window = new BBN_Info(parent->get_gui_manager(), desc, properties);
 	properties_window->set_draggable(true);
