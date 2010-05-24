@@ -49,6 +49,7 @@ class World : public ApplicationModule
           void init_level(void);
           void draw(void);
           void update(void);
+          virtual void on_key_down(const CL_InputEvent &key, const CL_InputState &state);
           virtual void on_mouse_down(const CL_InputEvent &, const CL_InputState &);
           virtual void on_mouse_up(const CL_InputEvent &, const CL_InputState &);
           virtual void on_mouse_move(const CL_InputEvent &, const CL_InputState &);

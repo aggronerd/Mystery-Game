@@ -312,3 +312,12 @@ Scene* World::get_active_scene()
     return(active_scene);
     }
 }
+
+/**
+ *
+ */
+void World::on_key_down(const CL_InputEvent &key, const CL_InputState &state)
+{
+	if(key.id == CL_KEY_ESCAPE)
+		exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
+}
