@@ -31,14 +31,16 @@ Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent)
 /**
  * Generates monster from the provided bayes net. Makes a copy.
  */
-Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, const BBN_Plot& bbn)
+Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, BBN_Plot* bbn)
 {
 	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, BBN_Plot*) - Called.")
 
 	_parent = parent;
 
 	//Create a new instance of the bayes net.
-	_properties = new BBN_Plot(bbn);
+	_properties = new BBN_Plot(bbn->get_file_name());
+	_properties->prepare_bn();
+	_properties->clone_results(bbn);
 
 	load_sprites();
 

@@ -20,7 +20,7 @@ class Monster
 	public:
 		Monster(CL_Pointf, MonsterGeneratorDemo*);
 		Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>);
-		Monster(CL_Pointf, MonsterGeneratorDemo*, const BBN_Plot&);
+		Monster(CL_Pointf, MonsterGeneratorDemo*, BBN_Plot*);
 		virtual ~Monster();
 		void draw(CL_GraphicContext* gc);
 

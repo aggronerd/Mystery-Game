@@ -24,7 +24,7 @@ private:
 	std::map<long, BBN_Decision*> _decisions_by_id;
 	std::vector<BBN_Decision*> _decisions;
 	unsigned long _next_decision_id;
-	const char* _file_name;
+	CL_String _file_name;
 
 	//dlib stuff:
 	join_tree_type* _bn_join_tree;
@@ -32,9 +32,9 @@ private:
 	dlib::bayesian_network_join_tree* _bn_current_solution;
 
 public:
-	BBN_Plot(const char*);
-	BBN_Plot(const BBN_Plot&);
+	BBN_Plot(const CL_String&);
 
+	void clone_results(BBN_Plot*);
 	virtual ~BBN_Plot();
 	BBN_Decision* get_decision(const CL_String &);
 	BBN_Option* get_option(const CL_String &);
@@ -50,7 +50,7 @@ public:
 	void update_bn_solution();
 	bool set_result(const CL_String&, const CL_String&);
 	void clear_bn(void);
-	const char* get_file_name(void);
+	CL_String get_file_name(void);
 	unsigned long get_next_decision_id(void); //TODO: Make friend method.
 
 };

@@ -169,7 +169,7 @@ bool MonsterGeneratorDemo::close_editor()
  */
 void MonsterGeneratorDemo::generate_monster(void)
 {
-	_monsters.push_back(new Monster(get_next_monster_position(), this, *(_control_bbn->get_bayes_net())));
+	_monsters.push_back(new Monster(get_next_monster_position(), this, _control_bbn->get_bayes_net()));
 }
 
 /**

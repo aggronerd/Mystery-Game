@@ -1,28 +1,33 @@
 
 #include "../misc/logging.h"
 #include "BBN_Plot.h"
+#include "BBN_Option.h"
 #include "BBN_Decision.h"
 #include "BBN_Exception.h"
 #include "BBN_Random.h"
 
 /**
- * Clones a pre existing object by using the same filename to
- * construct the object and setting the values of the descisions
- * iteratively.
+ * Copies defined results from another bayes net.
  *
  * @param existing
- * @return
  */
-BBN_Plot::BBN_Plot(const BBN_Plot& existing)
+void BBN_Plot::clone_results(BBN_Plot* existing)
 {
-	DEBUG_MSG("BBN_Plot::BBN_Plot(const BBN_Plot&) - Called.")
-
-	//TODO: create me.
+	//Duplicate results
+	std::vector<BBN_Decision*>::iterator it_source;
+	for(it_source = existing->get_decisions()->begin(); it_source != existing->get_decisions()->end(); ++it_source)
+	{
+		if((*it_source)->has_generated_result())
+		{
+			//TODO: Change so it doesn't resolve bayesian net with each set command.
+			this->set_result((*it_source)->get_name(),(*it_source)->get_result()->get_name());
+		}
+	}
 }
 
-BBN_Plot::BBN_Plot(const char* file_name)
+BBN_Plot::BBN_Plot(const CL_String& file_name)
 {
-  DEBUG_MSG("BBN_Plot::BBN_Plot(const char*) - Called.")
+  DEBUG_MSG("BBN_Plot::BBN_Plot(const CL_String&) - Called.")
 
   _bn_current_solution = 0x0;
   _bn_join_tree = 0x0;
@@ -30,10 +35,7 @@ BBN_Plot::BBN_Plot(const char* file_name)
   _next_decision_id = 0;
   _file_name = file_name;
 
-  //Create a file object.
-  CL_String cl_filename = file_name;
-
-  CL_File xmlFile(cl_filename); //TODO: Catch if cannot open
+  CL_File xmlFile(file_name); //TODO: Catch if cannot open
 
   DEBUG_MSG("BBN_Plot::BBN_Plot(const char*) - Creating CL_DomDocument.")
   CL_DomDocument document(xmlFile);
@@ -322,7 +324,7 @@ unsigned long BBN_Plot::get_next_decision_id()
   return(id);
 }
 
-const char* BBN_Plot::get_file_name()
+CL_String BBN_Plot::get_file_name()
 {
 	return(_file_name);
 }
