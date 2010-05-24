@@ -5,6 +5,21 @@
 #include "BBN_Exception.h"
 #include "BBN_Random.h"
 
+/**
+ * Clones a pre existing object by using the same filename to
+ * construct the object and setting the values of the descisions
+ * iteratively.
+ *
+ * @param existing
+ * @return
+ */
+BBN_Plot::BBN_Plot(const BBN_Plot& existing)
+{
+	DEBUG_MSG("BBN_Plot::BBN_Plot(const BBN_Plot&) - Called.")
+
+	//TODO: create me.
+}
+
 BBN_Plot::BBN_Plot(const char* file_name)
 {
   DEBUG_MSG("BBN_Plot::BBN_Plot(const char*) - Called.")
@@ -13,6 +28,7 @@ BBN_Plot::BBN_Plot(const char* file_name)
   _bn_join_tree = 0x0;
   _bn = 0x0;
   _next_decision_id = 0;
+  _file_name = file_name;
 
   //Create a file object.
   CL_String cl_filename = file_name;
@@ -304,4 +320,9 @@ unsigned long BBN_Plot::get_next_decision_id()
   unsigned long id = _next_decision_id;
   _next_decision_id += 1;
   return(id);
+}
+
+const char* BBN_Plot::get_file_name()
+{
+	return(_file_name);
 }

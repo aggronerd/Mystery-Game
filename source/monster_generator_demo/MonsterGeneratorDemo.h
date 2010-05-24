@@ -30,14 +30,20 @@ class MonsterGeneratorDemo : public ApplicationModule
 		CL_ResourceManager* get_rm(void);
 	protected:
 		void draw(void);
+		void generate_monster(void);
 		void update(void);
 		void show_editor(void);
+		bool close_editor(void);
 		virtual void on_key_down(const CL_InputEvent &key, const CL_InputState &state);
+		CL_Pointf get_next_monster_position(void);
 		CL_ResourceManager _rm;
 		std::list<Monster*> _monsters;
 		CL_Window* _window_editor;
 		BBN_Info* _control_bbn;
 		BBN_Plot* _active_net; //We hold on to this because we must destroy it.
+		CL_PushButton* _button_generate;
+		int _next_monster_x;
+		int _next_monster_y;
 };
 
 #endif /* MONSTERGENERATORDEMO_H_ */

@@ -16,13 +16,15 @@
 class BBN_Plot;
 
 /**
- * Displays info on a Bayes Belief network object.
+ * Displays info on a Bayesian Belief network object.
  */
-class BBN_Info : public CL_Frame
+class BBN_Info : public CL_GroupBox
 {
 	public:
 		BBN_Info(CL_GUIComponent*, BBN_Plot*);
 		virtual ~BBN_Info();
+		BBN_Plot* get_bayes_net(void);
+
 	protected:
 		BBN_Plot* _bbn_network;
 
@@ -41,6 +43,7 @@ class BBN_Info : public CL_Frame
 		void generate_selected(CL_PushButton*);
 		void set_selected(CL_PushButton*);
 		void on_selection_changed(CL_ListViewSelection, CL_ListView*);
+		void on_resized(void);
 };
 
 #endif /* BBN_INFO_H_ */

@@ -13,7 +13,7 @@
 #include "BBN_Option.h"
 #include "BBN_Exception.h"
 
-BBN_Info::BBN_Info(CL_GUIComponent* owner, BBN_Plot* bbn_network) : CL_Frame(owner)
+BBN_Info::BBN_Info(CL_GUIComponent* owner, BBN_Plot* bbn_network) : CL_GroupBox(owner)
 {
 	DEBUG_MSG("BBN_Info::BBN_Info(CL_GUIManager*, const char*) - Called.")
 
@@ -22,6 +22,8 @@ BBN_Info::BBN_Info(CL_GUIComponent* owner, BBN_Plot* bbn_network) : CL_Frame(own
 	_button_generate = 0x0;
 	_button_set_value = 0x0;
 	_combo_options = 0x0;
+
+	func_resized().set(this,&BBN_Info::on_resized);
 
 	draw_controls();
 }
@@ -41,12 +43,8 @@ void BBN_Info::draw_controls()
 {
 	clear_controls();
 
-	CL_Rect client_area = CL_Rect(0,get_width(),0,get_height());
-
 	//Create the list of decisions.
 	_list = new CL_ListView(this);
-	_list->set_geometry(CL_Rect(client_area.left + 10, client_area.top + 10,
-														  client_area.right - 10, client_area.bottom - 50));
 	_list->set_display_mode(listview_mode_details);
 	_list->func_selection_changed().set(this,&BBN_Info::on_selection_changed,_list);
 
@@ -54,8 +52,8 @@ void BBN_Info::draw_controls()
 
 	//Setup headers.
 	CL_ListViewHeader* lv_header = _list->get_header();
-	lv_header->append(lv_header->create_column("name_id", "Decision Name")).set_width(_list->get_width()/2);
-	lv_header->append(lv_header->create_column("value_id", "Value")).set_width(_list->get_width()/2);
+	lv_header->append(lv_header->create_column("name_id", "Decision Name"));
+	lv_header->append(lv_header->create_column("value_id", "Value"));
 
 	//Itterate through decisions and list values
 	std::vector<BBN_Decision*>* decisions = _bbn_network->get_decisions();
@@ -84,26 +82,23 @@ void BBN_Info::draw_controls()
 
 	//Create the "Generate Selected" button
 	_button_generate = new CL_PushButton(this);
-	_button_generate->set_geometry(CL_Rect(client_area.right - 120,  client_area.bottom - 40,
-                                         client_area.right - 10, client_area.bottom - 10));
 	_button_generate->set_text("Generate Selected");
 	_button_generate->func_clicked().set(this, &BBN_Info::generate_selected, _button_generate);
   _button_generate->set_enabled(false);
 
   //Create the "Set" button
   _button_set_value = new CL_PushButton(this);
-  _button_set_value->set_geometry(CL_Rect(client_area.right - 205,  client_area.bottom - 40,
-																					client_area.right - 125, client_area.bottom - 10));
   _button_set_value->set_text("Set");
   _button_set_value->func_clicked().set(this, &BBN_Info::set_selected, _button_set_value);
   _button_set_value->set_enabled(false);
 
   //Create the options combo box
   _combo_options = new CL_ComboBox(this);
-  _combo_options->set_geometry(CL_Rect(client_area.right - 350,  client_area.bottom - 35,
-																	     client_area.right - 210, client_area.bottom - 15));
   _combo_options->set_enabled(false);
   _combo_options->set_popup_menu(_selected_options);
+
+  //Call to resize components
+  func_resized().invoke();
 
 	decisions = 0x0;
 	lv_header = 0x0;
@@ -297,4 +292,46 @@ void BBN_Info::disable_selection_controls()
 	_selected_options = CL_PopupMenu();
 	_combo_options->set_popup_menu(_selected_options);
 	_combo_options->set_text("");
+}
+
+/**
+ * Resizes components to fit the area.
+ */
+void BBN_Info::on_resized()
+{
+	CL_Rect client_area = CL_Rect(0,0,this->get_width(),this->get_height());
+
+	if(_list != 0x0)
+	{
+		_list->set_geometry(CL_Rect(client_area.left + 10, client_area.top + 10,
+														    client_area.right - 10, client_area.bottom - 50));
+
+		//Resize columns
+		CL_ListViewHeader* lv_header = _list->get_header();
+		lv_header->get_column("name_id").set_width(_list->get_width()/2);
+		lv_header->get_column("value_id").set_width(_list->get_width()/2);
+	}
+
+	if(_button_generate != 0x0)
+		_button_generate->set_geometry(CL_Rect(client_area.right - 120,
+				client_area.bottom - 40, client_area.right - 10, client_area.bottom - 10));
+
+	if(_button_set_value != 0x0)
+		_button_set_value->set_geometry(CL_Rect(client_area.right - 205,
+			  client_area.bottom - 40, client_area.right - 125, client_area.bottom - 10));
+
+	if(_combo_options != 0x0)
+		_combo_options->set_geometry(CL_Rect(client_area.right - 350,
+				client_area.bottom - 35, client_area.right - 210, client_area.bottom - 15));
+}
+
+/**
+ * Returns a pointer to the bayes net currently represented by
+ * the control.
+ *
+ * @return
+ */
+BBN_Plot* BBN_Info::get_bayes_net()
+{
+	return(_bbn_network);
 }
