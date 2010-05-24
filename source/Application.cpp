@@ -33,8 +33,8 @@ int Application::main(const std::vector<CL_String> &args)
     Application::log(LOG_LEVEL_INFO, "Starting game...");
 
     // Open the log file
-    CL_FileLogger file_logger("game.log");
-    file_logger.enable();
+    //CL_FileLogger file_logger("game.log");
+    //file_logger.enable();
 
     // Create the window
     CL_DisplayWindowDescription desc;

@@ -55,6 +55,13 @@ void MonsterGeneratorDemo::draw()
   for(it_go = _monsters.begin(); it_go != _monsters.end(); ++it_go)
     (*it_go)->draw(&gc);
 
+  CL_FontDescription desc;
+	desc.set_typeface_name("Tahoma");
+	desc.set_anti_alias(true);
+	desc.set_height(20);
+	CL_Font_System system_font = CL_Font_System(gc, desc);
+	system_font.draw_text(gc, CL_Pointf(20.0f,30.0f), "To open the generator editor press F12. Using this it is possible to adjust the values of the bayes net used to generate a monster with the parameters\nyou define. The results will be cohesive based on the probabilities defined in the bayes net ('data/plots/monster.xml'). Press ESC to return to the main\nmenu.", CL_Colorf(1.0f,1.0f,1.0f));
+
   gui.exec(false);
   wm.draw_windows(gc);
 
@@ -181,7 +188,7 @@ void MonsterGeneratorDemo::generate_monster(void)
 CL_Pointf MonsterGeneratorDemo::get_next_monster_position(void)
 {
 	//Determine which box in the grid to used for the next monster
-	if(_next_monster_x > 8)
+	if(_next_monster_x > 15)
 	{
 		_next_monster_x = 0;
 		_next_monster_y++;
@@ -190,7 +197,7 @@ CL_Pointf MonsterGeneratorDemo::get_next_monster_position(void)
 		_next_monster_y = 0;
 
 	//Create a rect
-	CL_Pointf pos(64.0f*_next_monster_x, 128.0f*_next_monster_y);
+	CL_Pointf pos(64.0f*_next_monster_x, (128.0f*_next_monster_y) + 88);
 
 	_next_monster_x ++;
 
