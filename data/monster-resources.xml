@@ -14,52 +14,81 @@
 	<sprite name="background_swamp" id="3004">
 		<image file="artwork/monster-parts/background_swamp.png" />
 	</sprite>
-	<sprite name="body_large_hairy" id="3005">
-		<image file="artwork/monster-parts/body_large_hairy.png" />
+	
+	<sprite name="body_large_hairy_green" id="3005">
+		<image file="artwork/monster-parts/body_large_hairy_green.png" />
 	</sprite>
-	<sprite name="body_large_slimy" id="3006">
-		<image file="artwork/monster-parts/body_large_slimy.png" />
+	<sprite name="body_large_hairy_blue" id="3006">
+		<image file="artwork/monster-parts/body_large_hairy_blue.png" />
 	</sprite>
-	<sprite name="body_reg_hairy" id="3007">
-		<image file="artwork/monster-parts/body_reg_hairy.png" />
+	<sprite name="body_large_hairy_yellow" id="3007">
+		<image file="artwork/monster-parts/body_large_hairy_yellow.png" />
 	</sprite>
-	<sprite name="body_reg_slimy" id="3008">
-		<image file="artwork/monster-parts/body_reg_slimy.png" />
+	
+	<sprite name="body_large_slimy_green" id="3008">
+		<image file="artwork/monster-parts/body_large_slimy_green.png" />
 	</sprite>
-	<sprite name="eyes_glow_angry" id="3009">
+	<sprite name="body_large_slimy_blue" id="3009">
+		<image file="artwork/monster-parts/body_large_slimy_blue.png" />
+	</sprite>
+	<sprite name="body_large_slimy_yellow" id="3010">
+		<image file="artwork/monster-parts/body_large_slimy_yellow.png" />
+	</sprite>
+	
+	<sprite name="body_reg_hairy_green" id="3011">
+		<image file="artwork/monster-parts/body_reg_hairy_green.png" />
+	</sprite>
+	<sprite name="body_reg_hairy_blue" id="3012">
+		<image file="artwork/monster-parts/body_reg_hairy_blue.png" />
+	</sprite>
+	<sprite name="body_reg_hairy_yellow" id="3013">
+		<image file="artwork/monster-parts/body_reg_hairy_yellow.png" />
+	</sprite>
+	
+	<sprite name="body_reg_slimy_green" id="3014">
+		<image file="artwork/monster-parts/body_reg_slimy_green.png" />
+	</sprite>
+	<sprite name="body_reg_slimy_blue" id="3015">
+		<image file="artwork/monster-parts/body_reg_slimy_green.png" />
+	</sprite>
+	<sprite name="body_reg_slimy_yellow" id="3016">
+		<image file="artwork/monster-parts/body_reg_slimy_yellow.png" />
+	</sprite>
+	
+	<sprite name="eyes_glow_angry" id="3017">
 		<image file="artwork/monster-parts/eyes_glow_angry.png" />
 	</sprite>
-	<sprite name="eyes_glow_peaceful" id="3010">
+	<sprite name="eyes_glow_peaceful" id="3018">
 		<image file="artwork/monster-parts/eyes_glow_peaceful.png" />
 	</sprite>
-	<sprite name="eyes_normal_angry" id="3011">
+	<sprite name="eyes_normal_angry" id="3019">
 		<image file="artwork/monster-parts/eyes_normal_angry.png" />
 	</sprite>
-	<sprite name="eyes_normal_peaceful" id="3012">
+	<sprite name="eyes_normal_peaceful" id="3020">
 		<image file="artwork/monster-parts/eyes_normal_peaceful.png" />
 	</sprite>
-	<sprite name="legs_muscular" id="3013">
+	<sprite name="legs_muscular" id="3021">
 		<image file="artwork/monster-parts/legs_muscular.png" />
 	</sprite>
-	<sprite name="legs_thin" id="3014">
+	<sprite name="legs_thin" id="3022">
 		<image file="artwork/monster-parts/legs_thin.png" />
 	</sprite>
-	<sprite name="mouth_angry_normal" id="3015">
+	<sprite name="mouth_angry_normal" id="3023">
 		<image file="artwork/monster-parts/mouth_angry_normal.png" />
 	</sprite>
-	<sprite name="mouth_angry_sharp" id="3016">
+	<sprite name="mouth_angry_sharp" id="3024">
 		<image file="artwork/monster-parts/mouth_angry_sharp.png" />
 	</sprite>
-	<sprite name="mouth_neutral_normal" id="3017">
+	<sprite name="mouth_neutral_normal" id="3025">
 		<image file="artwork/monster-parts/mouth_neutral_normal.png" />
 	</sprite>
-	<sprite name="mouth_neutral_sharp" id="3018">
+	<sprite name="mouth_neutral_sharp" id="3026">
 		<image file="artwork/monster-parts/mouth_neutral_sharp.png" />
 	</sprite>
-	<sprite name="extra_none" id="3019">
+	<sprite name="extra_none" id="3027">
 		<image file="artwork/monster-parts/extra_none.png" />
 	</sprite>
-	<sprite name="extra_stink_lines" id="3020">
+	<sprite name="extra_stink_lines" id="3028">
 		<image file="artwork/monster-parts/extra_stink_lines.png" />
 	</sprite>
 </resources>
