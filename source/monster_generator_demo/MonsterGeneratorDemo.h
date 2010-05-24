@@ -12,6 +12,8 @@
 #include <list>
 
 class Monster;
+class BBN_Info;
+class BBN_Plot;
 
 /**
  * The monster generator demo aims to test how Bayes nets
@@ -29,9 +31,13 @@ class MonsterGeneratorDemo : public ApplicationModule
 	protected:
 		void draw(void);
 		void update(void);
+		void show_editor(void);
 		virtual void on_key_down(const CL_InputEvent &key, const CL_InputState &state);
-		CL_ResourceManager rm;
-		std::list<Monster*> monsters;
+		CL_ResourceManager _rm;
+		std::list<Monster*> _monsters;
+		CL_Window* _window_editor;
+		BBN_Info* _control_bbn;
+		BBN_Plot* _active_net; //We hold on to this because we must destroy it.
 };
 
 #endif /* MONSTERGENERATORDEMO_H_ */

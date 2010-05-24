@@ -12,9 +12,7 @@
 #include <ClanLib/display.h>
 #include <map>
 
-class BBN_Info;
 class BBN_Plot;
-
 class MonsterGeneratorDemo;
 
 class Monster
@@ -22,20 +20,22 @@ class Monster
 	public:
 		Monster(CL_Pointf, MonsterGeneratorDemo*);
 		Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>);
+		Monster(CL_Pointf, MonsterGeneratorDemo*, const BBN_Plot&);
 		virtual ~Monster();
 		void draw(CL_GraphicContext* gc);
 
 	protected:
-		CL_Sprite legs;
-		CL_Sprite body;
-		CL_Sprite mouth;
-		CL_Sprite eyes;
-		CL_Sprite arms;
-		CL_Sprite background;
-		CL_Sprite extra;
-		CL_Rectf destination;
-		BBN_Info* properties_window;
-		BBN_Plot* properties;
+		CL_Sprite _legs;
+		CL_Sprite _body;
+		CL_Sprite _mouth;
+		CL_Sprite _eyes;
+		CL_Sprite _arms;
+		CL_Sprite _background;
+		CL_Sprite _extra;
+		CL_Rectf _destination;
+		BBN_Plot* _properties;
+		MonsterGeneratorDemo* _parent;
+		void load_sprites(void);
 };
 
 #endif /* MONSTER_H_ */

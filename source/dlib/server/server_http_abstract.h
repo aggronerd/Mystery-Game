@@ -95,7 +95,7 @@ namespace dlib
             std::string path;
             std::string request_type;
             std::string content_type;
-            std::string body;
+            std::string _body;
 
             key_value_map queries;
             key_value_map cookies;

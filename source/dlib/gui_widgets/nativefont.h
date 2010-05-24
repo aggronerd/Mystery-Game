@@ -172,7 +172,7 @@ namespace nativefont
                 int height_prev;
                 char attribute_prev;
 
-                template <typename T> void create(T *str, int height_want, bool italic, bool bold, bool fixed, rgb_type &background, rgb_type &foreground){
+                template <typename T> void create(T *str, int height_want, bool italic, bool bold, bool fixed, rgb_type &_background, rgb_type &foreground){
                     struct inner{
                         inline static BOOL GetTextExtentPoint32(HDC hDC, LPCSTR str, int len, LPSIZE lpsize){
                             return ::GetTextExtentPoint32A(hDC, str, len, lpsize);
@@ -197,7 +197,7 @@ namespace nativefont
                         ReleaseDC(hWnd, hDC);
                     }
                     SetTextColor(hDCBmp, rgb2RGB(foreground));
-                    SetBkColor(hDCBmp, rgb2RGB(background));
+                    SetBkColor(hDCBmp, rgb2RGB(_background));
 
                     char attribute = (italic ? 1 : 0) | (bold ? 2 : 0) | (fixed ? 4 : 0);
                     if (!hFont || height_prev != height || attribute != attribute_prev){
@@ -239,7 +239,7 @@ namespace nativefont
                     }
 
                     {
-                        HBRUSH hBrush = CreateSolidBrush(rgb2RGB(background));
+                        HBRUSH hBrush = CreateSolidBrush(rgb2RGB(_background));
                         RECT rc;
                         rc.left = rc.top = 0;
                         rc.right = pix_width_prev;
@@ -255,7 +255,7 @@ namespace nativefont
                 }
 
                 template <typename T> vals_internal(T *str, int height_want, bool italic = false,
-                    bool bold = false, bool fixed = false, rgb_type background = rgb_type(), rgb_type foreground = rgb_type()){
+                    bool bold = false, bool fixed = false, rgb_type _background = rgb_type(), rgb_type foreground = rgb_type()){
                     first = true;
                     hFont = NULL;
                     hDCBmp = 0;
@@ -266,7 +266,7 @@ namespace nativefont
                     pix_width_prev = pix_height_prev = 0;
                     height_prev = -1;
                     attribute_prev = 0;
-                    create(str, height_want, italic, bold, fixed, background, foreground);
+                    create(str, height_want, italic, bold, fixed, _background, foreground);
                     first = false;
                 }
 

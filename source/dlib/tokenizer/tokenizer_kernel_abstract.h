@@ -184,7 +184,7 @@ namespace dlib
 
         void set_identifier_token (
             const std::string& head,
-            const std::string& body
+            const std::string& _body
         );
         /*!
             requires

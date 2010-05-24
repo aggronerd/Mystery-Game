@@ -18,10 +18,10 @@ class BBN_Plot;
 /**
  * Displays info on a Bayes Belief network object.
  */
-class BBN_Info : public CL_Window
+class BBN_Info : public CL_Frame
 {
 	public:
-		BBN_Info(CL_GUIManager*, const CL_GUITopLevelDescription&, BBN_Plot*);
+		BBN_Info(CL_GUIComponent*, BBN_Plot*);
 		virtual ~BBN_Info();
 	protected:
 		BBN_Plot* _bbn_network;

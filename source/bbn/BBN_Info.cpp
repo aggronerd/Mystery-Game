@@ -13,7 +13,7 @@
 #include "BBN_Option.h"
 #include "BBN_Exception.h"
 
-BBN_Info::BBN_Info(CL_GUIManager* manager, const CL_GUITopLevelDescription& desc, BBN_Plot* bbn_network) : CL_Window(manager, desc)
+BBN_Info::BBN_Info(CL_GUIComponent* owner, BBN_Plot* bbn_network) : CL_Frame(owner)
 {
 	DEBUG_MSG("BBN_Info::BBN_Info(CL_GUIManager*, const char*) - Called.")
 
@@ -41,7 +41,7 @@ void BBN_Info::draw_controls()
 {
 	clear_controls();
 
-	CL_Rect client_area = get_client_area();
+	CL_Rect client_area = CL_Rect(0,get_width(),0,get_height());
 
 	//Create the list of decisions.
 	_list = new CL_ListView(this);
