@@ -5,14 +5,27 @@
 	<sprite name="arms_muscular" id="3001">
 		<image file="artwork/monster-parts/arms_muscular.png" />
 	</sprite>
-	<sprite name="background_desert" id="3002">
-		<image file="artwork/monster-parts/background_desert.png" />
+	
+	<sprite name="background_desert_day" id="3002">
+		<image file="artwork/monster-parts/background_desert_day.png" />
 	</sprite>
-	<sprite name="background_forest" id="3003">
-		<image file="artwork/monster-parts/background_forest.png" />
+	<sprite name="background_desert_night" id="3031">
+		<image file="artwork/monster-parts/background_desert_night.png" />
 	</sprite>
-	<sprite name="background_swamp" id="3004">
-		<image file="artwork/monster-parts/background_swamp.png" />
+	
+	
+	<sprite name="background_forest_day" id="3003">
+		<image file="artwork/monster-parts/background_forest_day.png" />
+	</sprite>
+	<sprite name="background_forest_night" id="3030">
+		<image file="artwork/monster-parts/background_forest_night.png" />
+	</sprite>
+	
+	<sprite name="background_swamp_day" id="3004">
+		<image file="artwork/monster-parts/background_swamp_day.png" />
+	</sprite>
+	<sprite name="background_swamp_night" id="3029">
+		<image file="artwork/monster-parts/background_swamp_night.png" />
 	</sprite>
 	
 	<sprite name="body_large_hairy_green" id="3005">

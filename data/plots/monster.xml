@@ -831,9 +831,12 @@
         <dependency decision="dwellings"/>
       </dependencies>
       <options>
-        <option name="background_desert" path="background.background_desert"/>
-        <option name="background_forest" path="background.background_forest"/>
-        <option english="" name="background_swamp" path="background.background_swamp"/>
+        <option name="background_desert_day" path="background.background_desert_day"/>
+        <option name="background_forest_day" path="background.background_forest_day"/>
+        <option english="" name="background_swamp_day" path="background.background_swamp_day"/>
+        <option english="" name="background_desert_night" path="background.background_desert_night"/>
+        <option english="" name="background_forest_night" path="background.background_forest_night"/>
+        <option english="" name="background_swamp_night" path="background.background_swamp_night"/>
       </options>
       <probabilities>
         <givens>
@@ -842,25 +845,34 @@
               <given option="dwellings.swamp">
                 <givens/>
                 <probs>
-                  <prob option="background.background_desert" value="0.0"/>
-                  <prob option="background.background_forest" value="0.0"/>
-                  <prob option="background.background_swamp" value="1.0"/>
+                  <prob option="background.background_desert_day" value="0.0"/>
+                  <prob option="background.background_forest_day" value="0.0"/>
+                  <prob option="background.background_swamp_day" value="1.0"/>
+                  <prob option="background.background_desert_night" value="0.0"/>
+                  <prob option="background.background_forest_night" value="0.0"/>
+                  <prob option="background.background_swamp_night" value="0.0"/>
                 </probs>
               </given>
               <given option="dwellings.desert">
                 <givens/>
                 <probs>
-                  <prob option="background.background_desert" value="1.0"/>
-                  <prob option="background.background_forest" value="0.0"/>
-                  <prob option="background.background_swamp" value="0.0"/>
+                  <prob option="background.background_desert_day" value="1.0"/>
+                  <prob option="background.background_forest_day" value="0.0"/>
+                  <prob option="background.background_swamp_day" value="0.0"/>
+                  <prob option="background.background_desert_night" value="0.0"/>
+                  <prob option="background.background_forest_night" value="0.0"/>
+                  <prob option="background.background_swamp_night" value="0.0"/>
                 </probs>
               </given>
               <given option="dwellings.forest">
                 <givens/>
                 <probs>
-                  <prob option="background.background_desert" value="0.0"/>
-                  <prob option="background.background_forest" value="1.0"/>
-                  <prob option="background.background_swamp" value="0.0"/>
+                  <prob option="background.background_desert_day" value="0.0"/>
+                  <prob option="background.background_forest_day" value="1.0"/>
+                  <prob option="background.background_swamp_day" value="0.0"/>
+                  <prob option="background.background_desert_night" value="0.0"/>
+                  <prob option="background.background_forest_night" value="0.0"/>
+                  <prob option="background.background_swamp_night" value="0.0"/>
                 </probs>
               </given>
             </givens>
@@ -871,25 +883,34 @@
               <given option="dwellings.swamp">
                 <givens/>
                 <probs>
-                  <prob option="background.background_desert" value="0.0"/>
-                  <prob option="background.background_forest" value="0.0"/>
-                  <prob option="background.background_swamp" value="1.0"/>
+                  <prob option="background.background_desert_day" value="0.0"/>
+                  <prob option="background.background_forest_day" value="0.0"/>
+                  <prob option="background.background_swamp_day" value="0.00336"/>
+                  <prob option="background.background_desert_night" value="0.0"/>
+                  <prob option="background.background_forest_night" value="0.0"/>
+                  <prob option="background.background_swamp_night" value="0.99664"/>
                 </probs>
               </given>
               <given option="dwellings.desert">
                 <givens/>
                 <probs>
-                  <prob option="background.background_desert" value="1.0"/>
-                  <prob option="background.background_forest" value="0.0"/>
-                  <prob option="background.background_swamp" value="0.0"/>
+                  <prob option="background.background_desert_day" value="0.00665"/>
+                  <prob option="background.background_forest_day" value="0.0"/>
+                  <prob option="background.background_swamp_day" value="0.0"/>
+                  <prob option="background.background_desert_night" value="0.99335"/>
+                  <prob option="background.background_forest_night" value="0.0"/>
+                  <prob option="background.background_swamp_night" value="0.0"/>
                 </probs>
               </given>
               <given option="dwellings.forest">
                 <givens/>
                 <probs>
-                  <prob option="background.background_desert" value="0.0"/>
-                  <prob option="background.background_forest" value="1.0"/>
-                  <prob option="background.background_swamp" value="0.0"/>
+                  <prob option="background.background_desert_day" value="0.0"/>
+                  <prob option="background.background_forest_day" value="0.00336"/>
+                  <prob option="background.background_swamp_day" value="0.0"/>
+                  <prob option="background.background_desert_night" value="0.0"/>
+                  <prob option="background.background_forest_night" value="0.99664"/>
+                  <prob option="background.background_swamp_night" value="0.0"/>
                 </probs>
               </given>
             </givens>
