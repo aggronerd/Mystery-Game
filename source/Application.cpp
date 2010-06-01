@@ -40,7 +40,7 @@ int Application::main(const std::vector<CL_String> &args)
     CL_DisplayWindowDescription desc;
     desc.set_title("Bayes Network Random Generator");
     desc.set_size(CL_Size(1024, 600), false);
-    desc.set_fullscreen(false);
+    desc.set_fullscreen(true);
 
     CL_DisplayWindow window(desc);
 
