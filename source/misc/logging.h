@@ -16,7 +16,7 @@
   #define LOG_LEVEL_INFO 0
 
   //Comment out to disable debug messages being called.
-  #define LOG_DEBUG_MESSAGES
+  //#define LOG_DEBUG_MESSAGES
 
   #ifdef LOG_DEBUG_MESSAGES
     #include <ClanLib/core.h>

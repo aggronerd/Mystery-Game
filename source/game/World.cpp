@@ -90,6 +90,25 @@ void World::init_level()
     victim = "d";
     Application::log(LOG_LEVEL_INFO,CL_String("The chef is dead!!!"));
   }
+  Application::log(LOG_LEVEL_INFO,CL_String("----------------------"));
+  Application::log(LOG_LEVEL_INFO,CL_String("Evidence node values:"));
+
+  /*
+   * Lists all evidence nodes.
+   */
+  std::vector<BBN_Decision*>* decisions = plot->get_decisions();
+  std::vector<BBN_Decision*>::iterator it_dec;
+  for(it_dec =  decisions->begin(); it_dec != decisions->end(); ++it_dec)
+  {
+		//Check prefix
+  	if((*it_dec)->get_name().substr(0,3) == CL_String("ev_"))
+  	{
+  		//Is evidence - prints to console
+			Application::log(LOG_LEVEL_INFO, (*it_dec)->get_name() + " = " + (*it_dec)->get_result()->get_name());
+  	}
+  }
+
+  Application::log(LOG_LEVEL_INFO,CL_String("----------------------"));
   Application::log(LOG_LEVEL_INFO,CL_String("Who killed the victim?"));
 
   CL_String query_string;
