@@ -2,7 +2,7 @@
 <plot name="Diner Murder">
   <decisions>
     <decision name="waitress_business_man_enter" x="566.0" y="248.0" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="waitress_business_man_enter.0"/>
@@ -17,7 +17,7 @@
       </probabilities>
     </decision>
     <decision name="waitress_witnessed_murder" x="255.0" y="197.0" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="waitress_in_kitchen_while_victim_was_murdered"/>
       </dependencies>
@@ -46,7 +46,7 @@
       </probabilities>
     </decision>
     <decision name="customer_witnessed_murder" x="862.0" y="222.0" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="customer_witnessed_murder.0"/>
@@ -61,7 +61,7 @@
       </probabilities>
     </decision>
     <decision name="attacked_in_the_toilets" x="483.0" y="519.0" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="murderer"/>
       </dependencies>
@@ -96,8 +96,7 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="plotbg_waitress" x="437.0" y="987.0" type="String">
-      <english>The waitress is a secret lover of the victim's sole heir.</english>
+    <decision name="plotbg_waitress" x="437.0" y="987.0" type="String" english="The waitress is a secret lover of the victim's sole heir.">
       <dependencies/>
       <options>
         <option name="0" path="plotbg_waitress.0"/>
@@ -112,7 +111,7 @@
       </probabilities>
     </decision>
     <decision name="other_customer_was_around_during_murder" x="590.0" y="928.0" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="other_customer_was_around_during_murder.0"/>
@@ -127,7 +126,7 @@
       </probabilities>
     </decision>
     <decision name="poison_in_coffee" x="624.0" y="625.0" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="murderer"/>
       </dependencies>
@@ -163,7 +162,7 @@
       </probabilities>
     </decision>
     <decision name="blotbg_other_salesman" x="225.0" y="917.0" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="blotbg_other_salesman.0"/>
@@ -178,7 +177,7 @@
       </probabilities>
     </decision>
     <decision name="murderer" x="443.0" y="729.0" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="plotbg_waitress"/>
         <dependency decision="other_customer_was_around_during_murder"/>
@@ -188,7 +187,7 @@
         <option name="waitress" path="murderer.waitress"/>
         <option name="other_salesman" path="murderer.other_salesman"/>
         <option name="customer" path="murderer.customer">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -292,7 +291,7 @@
       </probabilities>
     </decision>
     <decision name="waitress_in_kitchen_while_victim_was_murdered" x="128.0" y="273.0" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="waitress_in_kitchen_while_victim_was_murdered.0"/>

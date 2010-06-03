@@ -2,7 +2,6 @@
 <plot name="Murder on Walstreet">
   <decisions>
     <decision name="suspect1_motivation" x="258.54905700683594" y="349.0537109375" type="String">
-      <english/>
       <dependencies>
         <dependency decision="suspect1_envy_for_victim"/>
         <dependency decision="suspect1_anger_towards_victim"/>
@@ -11,7 +10,7 @@
         <option name="0" path="suspect1_motivation.0"/>
         <option name="1" path="suspect1_motivation.1"/>
         <option name="2" path="suspect1_motivation.2">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -169,14 +168,12 @@
       </probabilities>
     </decision>
     <decision name="suspect1_worked_with_victim" x="303.86358642578125" y="917.4602661132812" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
-        <option name="true" path="suspect1_worked_with_victim.true">
-          <english>Yes</english>
+        <option name="true" path="suspect1_worked_with_victim.true" english="Yes">
         </option>
-        <option name="false" path="suspect1_worked_with_victim.false">
-          <english>No</english>
+        <option name="false" path="suspect1_worked_with_victim.false" english="No">
         </option>
       </options>
       <probabilities>
@@ -188,13 +185,13 @@
       </probabilities>
     </decision>
     <decision name="suspect4_motivation" x="509.14532470703125" y="-188.92092895507812" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="suspect4_motivation.0"/>
         <option name="1" path="suspect4_motivation.1"/>
         <option name="2" path="suspect4_motivation.2">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -207,16 +204,16 @@
       </probabilities>
     </decision>
     <decision name="suspect1_anger_towards_victim" x="446.1816711425781" y="375.91748046875" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="suspect1_anger_towards_victim.0"/>
         <option name="1" path="suspect1_anger_towards_victim.1"/>
         <option name="2" path="suspect1_anger_towards_victim.2">
-          <english/>
+          
         </option>
         <option name="3" path="suspect1_anger_towards_victim.3">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -230,7 +227,7 @@
       </probabilities>
     </decision>
     <decision name="victim_had_promotion" x="132.0" y="778.0" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="victim_work_performance"/>
       </dependencies>
@@ -272,8 +269,7 @@
         <probs/>
       </probabilities>
     </decision>
-    <decision name="suspect1_jealously_of_victims_promotion" x="299.0" y="680.0" type="String">
-      <english>What was the amount of jealousy that the first suspect felt towards the victim?</english>
+    <decision name="suspect1_jealously_of_victims_promotion" x="299.0" y="680.0" type="String" english="What was the amount of jealousy that the first suspect felt towards the victim?">
       <dependencies>
         <dependency decision="suspect1_work_performance"/>
         <dependency decision="suspect1_worked_with_victim"/>
@@ -283,7 +279,7 @@
         <option name="None" path="suspect1_jealously_of_victims_promotion.None"/>
         <option name="Some" path="suspect1_jealously_of_victims_promotion.Some"/>
         <option name="Very" path="suspect1_jealously_of_victims_promotion.Very">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -481,7 +477,7 @@
       </probabilities>
     </decision>
     <decision name="murderers_general_hatred" x="232.2044219970703" y="-253.8220977783203" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="suspect4_motivation"/>
         <dependency decision="murderer"/>
@@ -493,7 +489,7 @@
         <option name="0" path="murderers_general_hatred.0"/>
         <option name="1" path="murderers_general_hatred.1"/>
         <option name="2" path="murderers_general_hatred.2">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -3890,16 +3886,16 @@
       </probabilities>
     </decision>
     <decision name="victim_work_performance" x="128.0" y="934.0" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="victim_work_performance.0"/>
         <option name="1" path="victim_work_performance.1"/>
         <option name="2" path="victim_work_performance.2">
-          <english/>
+          
         </option>
         <option name="3" path="victim_work_performance.3">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -3912,8 +3908,7 @@
         </probs>
       </probabilities>
     </decision>
-    <decision name="murderer" x="78.44576644897461" y="63.42382049560547" type="String">
-      <english>Who is the murderer?</english>
+    <decision name="murderer" x="78.44576644897461" y="63.42382049560547" type="String" english="Who is the murderer?">
       <dependencies>
         <dependency decision="suspect4_motivation"/>
         <dependency decision="suspect1_motivation"/>
@@ -3924,10 +3919,10 @@
         <option name="suspect1" path="murderer.suspect1"/>
         <option name="suspect2" path="murderer.suspect2"/>
         <option name="suspect3" path="murderer.suspect3">
-          <english/>
+          
         </option>
         <option name="suspect4" path="murderer.suspect4">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -4861,13 +4856,13 @@
       </probabilities>
     </decision>
     <decision name="suspect3_motivation" x="444.5460205078125" y="42.5914511680603" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="suspect3_motivation.0"/>
         <option name="1" path="suspect3_motivation.1"/>
         <option name="2" path="suspect3_motivation.2">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -4880,7 +4875,7 @@
       </probabilities>
     </decision>
     <decision name="suspect1_poorer_than_victim" x="96.5528564453125" y="599.72802734375" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="victim_income"/>
       </dependencies>
@@ -4916,7 +4911,7 @@
       </probabilities>
     </decision>
     <decision name="suspect1_envy_for_victim" x="292.1113586425781" y="526.1904907226562" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="suspect1_poorer_than_victim"/>
         <dependency decision="suspect1_jealously_of_victims_promotion"/>
@@ -4925,10 +4920,10 @@
         <option name="0" path="suspect1_envy_for_victim.0"/>
         <option name="1" path="suspect1_envy_for_victim.1"/>
         <option name="2" path="suspect1_envy_for_victim.2">
-          <english/>
+          
         </option>
         <option name="3" path="suspect1_envy_for_victim.3">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -5002,13 +4997,13 @@
       </probabilities>
     </decision>
     <decision name="bosses_recognition_of_suspect1" x="521.111572265625" y="904.2057495117188" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="unaware" path="bosses_recognition_of_suspect1.unaware"/>
         <option name="prejudice_against" path="bosses_recognition_of_suspect1.prejudice_against"/>
         <option name="favourable" path="bosses_recognition_of_suspect1.favourable">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -5021,13 +5016,13 @@
       </probabilities>
     </decision>
     <decision name="victim_income" x="-392.83847522735596" y="400.84803771972656" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="under_20k" path="victim_income.under_20k"/>
         <option name="between_20_and_40k" path="victim_income.between_20_and_40k"/>
         <option name="mega_rich" path="victim_income.mega_rich">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -5040,13 +5035,13 @@
       </probabilities>
     </decision>
     <decision name="suspect2_motivation" x="369.970458984375" y="220.36431884765625" type="String">
-      <english/>
+      
       <dependencies/>
       <options>
         <option name="0" path="suspect2_motivation.0"/>
         <option name="1" path="suspect2_motivation.1"/>
         <option name="2" path="suspect2_motivation.2">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
@@ -5059,7 +5054,7 @@
       </probabilities>
     </decision>
     <decision name="suspect1_work_performance" x="483.0771484375" y="755.1500854492188" type="String">
-      <english/>
+      
       <dependencies>
         <dependency decision="bosses_recognition_of_suspect1"/>
       </dependencies>
@@ -5067,10 +5062,10 @@
         <option name="0" path="suspect1_work_performance.0"/>
         <option name="1" path="suspect1_work_performance.1"/>
         <option name="2" path="suspect1_work_performance.2">
-          <english/>
+          
         </option>
         <option name="3" path="suspect1_work_performance.3">
-          <english/>
+          
         </option>
       </options>
       <probabilities>
