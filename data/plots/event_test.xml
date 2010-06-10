@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plot name="Event every 10s">
+  <decisions>
+    <decision name="difficulty" x="146.0" y="268.0" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="easy" path="difficulty.easy"/>
+        <option name="medium" path="difficulty.medium"/>
+        <option english="" name="hard" path="difficulty.hard"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="difficulty.easy" value="0.33333334"/>
+          <prob option="difficulty.medium" value="0.33333334"/>
+          <prob option="difficulty.hard" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="night_time" x="130.0" y="186.0" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="night_time.0"/>
+        <option name="1" path="night_time.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="night_time.0" value="0.5"/>
+          <prob option="night_time.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="monster_size" x="343.0" y="268.0" english="" type="String">
+      <dependencies>
+        <dependency decision="difficulty"/>
+      </dependencies>
+      <options>
+        <option name="small" path="monster_size.small"/>
+        <option name="large" path="monster_size.large"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="difficulty.easy">
+            <givens/>
+            <probs>
+              <prob option="monster_size.small" value="0.5"/>
+              <prob option="monster_size.large" value="0.5"/>
+            </probs>
+          </given>
+          <given option="difficulty.medium">
+            <givens/>
+            <probs>
+              <prob option="monster_size.small" value="0.5"/>
+              <prob option="monster_size.large" value="0.5"/>
+            </probs>
+          </given>
+          <given option="difficulty.hard">
+            <givens/>
+            <probs>
+              <prob option="monster_size.small" value="0.5"/>
+              <prob option="monster_size.large" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="ambush_occurs" x="334.0" y="184.0" english="" type="String">
+      <dependencies>
+        <dependency decision="difficulty"/>
+        <dependency decision="night_time"/>
+        <dependency decision="environment"/>
+      </dependencies>
+      <options>
+        <option name="0" path="ambush_occurs.0"/>
+        <option name="1" path="ambush_occurs.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="difficulty.easy">
+            <givens>
+              <given option="night_time.0">
+                <givens>
+                  <given option="environment.forest">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.desert">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.swamp">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="night_time.1">
+                <givens>
+                  <given option="environment.forest">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.desert">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.swamp">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="difficulty.medium">
+            <givens>
+              <given option="night_time.0">
+                <givens>
+                  <given option="environment.forest">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.desert">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.swamp">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="night_time.1">
+                <givens>
+                  <given option="environment.forest">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.desert">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.swamp">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="difficulty.hard">
+            <givens>
+              <given option="night_time.0">
+                <givens>
+                  <given option="environment.forest">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.desert">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.swamp">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="night_time.1">
+                <givens>
+                  <given option="environment.forest">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.desert">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="environment.swamp">
+                    <givens/>
+                    <probs>
+                      <prob option="ambush_occurs.0" value="0.5"/>
+                      <prob option="ambush_occurs.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="environment" x="158.0" y="101.0" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="forest" path="environment.forest"/>
+        <option name="desert" path="environment.desert"/>
+        <option english="" name="swamp" path="environment.swamp"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="environment.forest" value="0.33333334"/>
+          <prob option="environment.desert" value="0.33333334"/>
+          <prob option="environment.swamp" value="0.33333334"/>
+        </probs>
+      </probabilities>
+    </decision>
+  </decisions>
+</plot>

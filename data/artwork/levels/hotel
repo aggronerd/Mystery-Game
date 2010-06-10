@@ -1620,15 +1620,12 @@
   </data>
  </layer>
  <objectgroup color="#ffaa00" name="Objects" width="40" height="40">
-  <object name="" x="660" y="485" width="99" height="92"/>
   <object name="" type="npc" x="498" y="35" width="156" height="42"/>
-  <object name="" x="640" y="226" width="448" height="128"/>
   <object name="" x="2183" y="747" width="228" height="96"/>
-  <object name="fddsadsa" type="warp" x="656" y="374" width="192" height="96"/>
   <object name="" x="1100" y="556" width="138" height="23"/>
-  <object name="" x="640" y="179" width="53" height="36"/>
-  <object name="" x="396" y="336" width="134" height="159"/>
-  <object name="" x="573" y="355" width="41" height="86"/>
+  <object name="" x="864" y="635" width="31" height="25"/>
+  <object name="" x="569" y="642" width="72" height="29"/>
+  <object name="" x="513" y="801" width="29" height="29"/>
  </objectgroup>
  <layer name="Props" width="40" height="40">
   <data>

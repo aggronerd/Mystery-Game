@@ -1,0 +1,3119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plot name="Relationship - 7 Deadly Sins">
+  <decisions>
+    <decision name="act_of_pride" x="607.0" y="341.0" english="" type="String">
+      <dependencies>
+        <dependency decision="b_robbed_a"/>
+        <dependency decision="a_pride"/>
+        <dependency decision="b_threatened_a"/>
+        <dependency decision="b_blackmail_a"/>
+        <dependency decision="b_stole_a_partner"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_pride.0"/>
+        <option name="1" path="act_of_pride.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="b_robbed_a.0">
+            <givens>
+              <given option="a_pride.0">
+                <givens>
+                  <given option="b_threatened_a.0">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_threatened_a.1">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_pride.1">
+                <givens>
+                  <given option="b_threatened_a.0">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_threatened_a.1">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="b_robbed_a.1">
+            <givens>
+              <given option="a_pride.0">
+                <givens>
+                  <given option="b_threatened_a.0">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_threatened_a.1">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_pride.1">
+                <givens>
+                  <given option="b_threatened_a.0">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="b_threatened_a.1">
+                    <givens>
+                      <given option="b_blackmail_a.0">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="b_blackmail_a.1">
+                        <givens>
+                          <given option="b_stole_a_partner.0">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                          <given option="b_stole_a_partner.1">
+                            <givens/>
+                            <probs>
+                              <prob option="act_of_pride.0" value="0.5"/>
+                              <prob option="act_of_pride.1" value="0.5"/>
+                            </probs>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="b_robbed_a" x="884.2225952148438" y="287.27528381347656" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="b_robbed_a.0"/>
+        <option name="1" path="b_robbed_a.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_robbed_a.0" value="0.5"/>
+          <prob option="b_robbed_a.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_gluttony" x="181.22221755981445" y="291.9999942779541" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_gluttony.0"/>
+        <option name="1" path="a_gluttony.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_gluttony.0" value="0.5"/>
+          <prob option="a_gluttony.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="motivation_a_to_b_murder" x="348.4758605957031" y="625.497314453125" english="" type="String">
+      <dependencies>
+        <dependency decision="ab_motive"/>
+      </dependencies>
+      <options>
+        <option name="0" path="motivation_a_to_b_murder.0"/>
+        <option name="1" path="motivation_a_to_b_murder.1"/>
+        <option english="" name="2" path="motivation_a_to_b_murder.2"/>
+        <option english="" name="3" path="motivation_a_to_b_murder.3"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="ab_motive.envy">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+          <given option="ab_motive.gluttony">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+          <given option="ab_motive.lust">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+          <given option="ab_motive.extravagance">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+          <given option="ab_motive.wrath">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+          <given option="ab_motive.greed">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+          <given option="ab_motive.pride">
+            <givens/>
+            <probs>
+              <prob option="motivation_a_to_b_murder.0" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.1" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.2" value="0.25"/>
+              <prob option="motivation_a_to_b_murder.3" value="0.25"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_wrath" x="429.6666564941406" y="201.6666717529297" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_wrath.0"/>
+        <option name="1" path="a_wrath.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_wrath.0" value="0.5"/>
+          <prob option="a_wrath.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_bullied_as_a_child" x="665.1723022460938" y="446.43023681640625" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_bullied_as_a_child.0"/>
+        <option name="1" path="a_bullied_as_a_child.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_bullied_as_a_child.0" value="0.5"/>
+          <prob option="a_bullied_as_a_child.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="act_of_greed" x="63.14615249633789" y="141.6417999267578" english="" type="String">
+      <dependencies>
+        <dependency decision="a_greed"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_greed.0"/>
+        <option name="1" path="act_of_greed.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_greed.0">
+            <givens/>
+            <probs>
+              <prob option="act_of_greed.0" value="0.5"/>
+              <prob option="act_of_greed.1" value="0.5"/>
+            </probs>
+          </given>
+          <given option="a_greed.1">
+            <givens/>
+            <probs>
+              <prob option="act_of_greed.0" value="0.5"/>
+              <prob option="act_of_greed.1" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_greed" x="230.77774047851562" y="204.8888874053955" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_greed.0"/>
+        <option name="1" path="a_greed.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_greed.0" value="0.5"/>
+          <prob option="a_greed.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="act_of_lazyness" x="246.4794921875" y="61.64178466796875" english="" type="String">
+      <dependencies>
+        <dependency decision="a_laziness"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_lazyness.0"/>
+        <option name="1" path="act_of_lazyness.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_laziness.0">
+            <givens/>
+            <probs>
+              <prob option="act_of_lazyness.0" value="0.5"/>
+              <prob option="act_of_lazyness.1" value="0.5"/>
+            </probs>
+          </given>
+          <given option="a_laziness.1">
+            <givens/>
+            <probs>
+              <prob option="act_of_lazyness.0" value="0.5"/>
+              <prob option="act_of_lazyness.1" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="b_stole_a_partner" x="870.7057495117188" y="210.1303253173828" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="b_stole_a_partner.0"/>
+        <option name="1" path="b_stole_a_partner.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_stole_a_partner.0" value="0.5"/>
+          <prob option="b_stole_a_partner.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_former_child_actor" x="519.0073852539062" y="524.2937622070312" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_former_child_actor.0"/>
+        <option name="1" path="a_former_child_actor.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_former_child_actor.0" value="0.5"/>
+          <prob option="a_former_child_actor.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="act_of_wrath" x="440.9239196777344" y="68.30844116210938" english="" type="String">
+      <dependencies>
+        <dependency decision="a_wrath"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_wrath.0"/>
+        <option name="1" path="act_of_wrath.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_wrath.0">
+            <givens/>
+            <probs>
+              <prob option="act_of_wrath.0" value="0.5"/>
+              <prob option="act_of_wrath.1" value="0.5"/>
+            </probs>
+          </given>
+          <given option="a_wrath.1">
+            <givens/>
+            <probs>
+              <prob option="act_of_wrath.0" value="0.5"/>
+              <prob option="act_of_wrath.1" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="act_of_envy" x="573.1461181640625" y="171.6417694091797" english="" type="String">
+      <dependencies>
+        <dependency decision="a_envy"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_envy.0"/>
+        <option name="1" path="act_of_envy.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_envy.0">
+            <givens/>
+            <probs>
+              <prob option="act_of_envy.0" value="0.5"/>
+              <prob option="act_of_envy.1" value="0.5"/>
+            </probs>
+          </given>
+          <given option="a_envy.1">
+            <givens/>
+            <probs>
+              <prob option="act_of_envy.0" value="0.5"/>
+              <prob option="act_of_envy.1" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_laziness" x="320.3332824707031" y="178.3333432674408" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_laziness.0"/>
+        <option name="1" path="a_laziness.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_laziness.0" value="0.5"/>
+          <prob option="a_laziness.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_envy" x="493.7777099609375" y="280.00001525878906" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_envy.0"/>
+        <option name="1" path="a_envy.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_envy.0" value="0.5"/>
+          <prob option="a_envy.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="a_pride" x="525.2938537597656" y="404.35101318359375" english="" type="String">
+      <dependencies>
+        <dependency decision="a_prestige"/>
+        <dependency decision="a_bullied_as_a_child"/>
+        <dependency decision="a_former_child_actor"/>
+      </dependencies>
+      <options>
+        <option name="0" path="a_pride.0"/>
+        <option name="1" path="a_pride.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_prestige.0">
+            <givens>
+              <given option="a_bullied_as_a_child.0">
+                <givens>
+                  <given option="a_former_child_actor.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="a_former_child_actor.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_bullied_as_a_child.1">
+                <givens>
+                  <given option="a_former_child_actor.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="a_former_child_actor.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="a_prestige.1">
+            <givens>
+              <given option="a_bullied_as_a_child.0">
+                <givens>
+                  <given option="a_former_child_actor.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="a_former_child_actor.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="a_bullied_as_a_child.1">
+                <givens>
+                  <given option="a_former_child_actor.0">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                  <given option="a_former_child_actor.1">
+                    <givens/>
+                    <probs>
+                      <prob option="a_pride.0" value="0.5"/>
+                      <prob option="a_pride.1" value="0.5"/>
+                    </probs>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_prestige" x="613.2633056640625" y="502.4373474121094" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_prestige.0"/>
+        <option name="1" path="a_prestige.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_prestige.0" value="0.5"/>
+          <prob option="a_prestige.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="act_of_gluttony" x="20.92373275756836" y="319.41961669921875" english="" type="String">
+      <dependencies>
+        <dependency decision="a_gluttony"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_gluttony.0"/>
+        <option name="1" path="act_of_gluttony.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_gluttony.0">
+            <givens/>
+            <probs>
+              <prob option="act_of_gluttony.0" value="0.5"/>
+              <prob option="act_of_gluttony.1" value="0.5"/>
+            </probs>
+          </given>
+          <given option="a_gluttony.1">
+            <givens/>
+            <probs>
+              <prob option="act_of_gluttony.0" value="0.5"/>
+              <prob option="act_of_gluttony.1" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="act_of_lust" x="82.03485107421875" y="511.64178466796875" english="" type="String">
+      <dependencies>
+        <dependency decision="a_lust"/>
+      </dependencies>
+      <options>
+        <option name="0" path="act_of_lust.0"/>
+        <option name="1" path="act_of_lust.1"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="a_lust.0">
+            <givens/>
+            <probs>
+              <prob option="act_of_lust.0" value="0.5"/>
+              <prob option="act_of_lust.1" value="0.5"/>
+            </probs>
+          </given>
+          <given option="a_lust.1">
+            <givens/>
+            <probs>
+              <prob option="act_of_lust.0" value="0.5"/>
+              <prob option="act_of_lust.1" value="0.5"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="b_threatened_a" x="884.6574096679688" y="368.46852111816406" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="b_threatened_a.0"/>
+        <option name="1" path="b_threatened_a.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_threatened_a.0" value="0.5"/>
+          <prob option="b_threatened_a.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="ab_motive" x="350.0" y="330.0" english="" type="String">
+      <dependencies>
+        <dependency decision="act_of_wrath"/>
+        <dependency decision="act_of_envy"/>
+        <dependency decision="act_of_pride"/>
+        <dependency decision="act_of_gluttony"/>
+        <dependency decision="act_of_lust"/>
+        <dependency decision="act_of_greed"/>
+        <dependency decision="act_of_lazyness"/>
+      </dependencies>
+      <options>
+        <option name="envy" path="ab_motive.envy"/>
+        <option name="gluttony" path="ab_motive.gluttony"/>
+        <option english="" name="lust" path="ab_motive.lust"/>
+        <option english="" name="extravagance" path="ab_motive.extravagance"/>
+        <option english="" name="wrath" path="ab_motive.wrath"/>
+        <option english="" name="greed" path="ab_motive.greed"/>
+        <option english="" name="pride" path="ab_motive.pride"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="act_of_wrath.0">
+            <givens>
+              <given option="act_of_envy.0">
+                <givens>
+                  <given option="act_of_pride.0">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="act_of_pride.1">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="act_of_envy.1">
+                <givens>
+                  <given option="act_of_pride.0">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="act_of_pride.1">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+          <given option="act_of_wrath.1">
+            <givens>
+              <given option="act_of_envy.0">
+                <givens>
+                  <given option="act_of_pride.0">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="act_of_pride.1">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+              <given option="act_of_envy.1">
+                <givens>
+                  <given option="act_of_pride.0">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                  <given option="act_of_pride.1">
+                    <givens>
+                      <given option="act_of_gluttony.0">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                      <given option="act_of_gluttony.1">
+                        <givens>
+                          <given option="act_of_lust.0">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                          <given option="act_of_lust.1">
+                            <givens>
+                              <given option="act_of_greed.0">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                              <given option="act_of_greed.1">
+                                <givens>
+                                  <given option="act_of_lazyness.0">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                  <given option="act_of_lazyness.1">
+                                    <givens/>
+                                    <probs>
+                                      <prob option="ab_motive.envy" value="0.14285715"/>
+                                      <prob option="ab_motive.gluttony" value="0.14285715"/>
+                                      <prob option="ab_motive.lust" value="0.14285715"/>
+                                      <prob option="ab_motive.extravagance" value="0.14285715"/>
+                                      <prob option="ab_motive.wrath" value="0.14285715"/>
+                                      <prob option="ab_motive.greed" value="0.14285715"/>
+                                      <prob option="ab_motive.pride" value="0.14285715"/>
+                                    </probs>
+                                  </given>
+                                </givens>
+                                <probs/>
+                              </given>
+                            </givens>
+                            <probs/>
+                          </given>
+                        </givens>
+                        <probs/>
+                      </given>
+                    </givens>
+                    <probs/>
+                  </given>
+                </givens>
+                <probs/>
+              </given>
+            </givens>
+            <probs/>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
+    <decision name="a_lust" x="180.11109924316406" y="377.2222080230713" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="a_lust.0"/>
+        <option name="1" path="a_lust.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="a_lust.0" value="0.5"/>
+          <prob option="a_lust.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="b_blackmail_a" x="858.7686767578125" y="443.0483093261719" english="" type="String">
+      <dependencies/>
+      <options>
+        <option name="0" path="b_blackmail_a.0"/>
+        <option name="1" path="b_blackmail_a.1"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="b_blackmail_a.0" value="0.5"/>
+          <prob option="b_blackmail_a.1" value="0.5"/>
+        </probs>
+      </probabilities>
+    </decision>
+  </decisions>
+</plot>
