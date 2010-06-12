@@ -7,22 +7,42 @@
  */
 
 #include "Scene.h"
-#include "World.h"
-#include "GameObject.h"
 #include "../misc/logging.h"
-#include "AccessibleArea.h"
-#include "Room.h"
 
+/**
+ * Simple version of the constructor.
+ *
+ * @param owner
+ * @return
+ */
 Scene::Scene(World* owner) : world(owner)
 {
+	DEBUG_MSG("Scene::Scene(World*) - Called.")
+
+	//Set viewport to new one for configuring camera.
   active_viewport = new Viewport(this);
   add_viewport(active_viewport);
+}
 
-  //add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Ballroom", 30, 20, 0, 0)));
-  //add_accessible_area(static_cast<AccessibleArea*>(new Room(this, "Study", 1, 0, -15, 20)));
-  //add_game_object(new GrandfatherClock(this, CL_Pointd(20,-4), CL_Angle(270, cl_degrees)));
+/**
+ * Contructs scene from tiled level editor XML file.
+ *
+ * @param owner
+ * @param file_name
+ * @return
+ */
+Scene::Scene(World* owner, const CL_String& file_name) : world(owner)
+{
+	DEBUG_MSG("Scene::Scene(World*, const CL_String&) - Called.")
 
-  DEBUG_MSG("Scene::Scene(World*) - Called.")
+	//Set viewport to new one for configuring camera.
+	active_viewport = new Viewport(this);
+	add_viewport(active_viewport);
+
+	//Parse the tilesets.
+
+	//
+
 }
 
 Scene::~Scene()

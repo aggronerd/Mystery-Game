@@ -10,16 +10,16 @@
 #define SCENE_H_
 
 #include <list>
+#include "World.h"
+#include "GameObject.h"
 #include "Viewport.h"
-
-class GameObject;
-class World;
-class AccessibleArea;
+#include <ClanLib/core.h>
 
 class Scene
 {
 public:
   Scene(World*);
+  Scene(World*, const CL_String&);
   virtual ~Scene();
   Viewport* get_active_viewport(void);
   World* get_world(void);
@@ -30,11 +30,11 @@ public:
   void add_accessible_area(AccessibleArea*);
 
 private:
-  std::list<Viewport*> viewports;
-  std::list<GameObject*> game_objects;
-  std::list<AccessibleArea*> accessible_areas;
+  std::list<CL_SharedPtr<Viewport> > viewports;
+  std::list<CL_SharedPtr<GameObject> > game_objects;
+  std::list<std::list<CL_Sprite> > tiles;
   World* world;
-  Viewport* active_viewport;
+  CL_SharedPtr<Viewport> active_viewport;
 
 };
 
