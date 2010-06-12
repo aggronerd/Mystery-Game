@@ -9,12 +9,6 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="17" name="water" tilewidth="64" tileheight="32">
-  <image source="../../../../../Downloads/tiled-qt-0.4.1/examples/sewer_tileset.png"/>
- </tileset>
- <tileset firstgid="35" name="isometric_tileset" tilewidth="64" tileheight="32">
-  <image source="../../../../../Downloads/tiled-qt-0.4.1/examples/isometric_tileset.png"/>
- </tileset>
  <layer name="Background" width="40" height="40">
   <data>
    <tile gid="2"/>
@@ -1070,7 +1064,7 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="5"/>
+   <tile gid="13"/>
    <tile gid="13"/>
    <tile gid="13"/>
    <tile gid="13"/>
@@ -1114,7 +1108,7 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="10"/>
+   <tile gid="7"/>
    <tile gid="10"/>
    <tile gid="10"/>
    <tile gid="10"/>
@@ -1148,12 +1142,13 @@
    <tile gid="1"/>
    <tile gid="0"/>
    <tile gid="2"/>
-   <tile gid="46"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="6"/>
    <tile gid="10"/>
    <tile gid="10"/>
    <tile gid="10"/>
@@ -1164,7 +1159,6 @@
    <tile gid="10"/>
    <tile gid="10"/>
    <tile gid="10"/>
-   <tile gid="10"/>
    <tile gid="13"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -1188,10 +1182,10 @@
    <tile gid="2"/>
    <tile gid="1"/>
    <tile gid="2"/>
-   <tile gid="46"/>
-   <tile gid="46"/>
-   <tile gid="46"/>
-   <tile gid="46"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="13"/>
@@ -1230,10 +1224,6 @@
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="2"/>
-   <tile gid="46"/>
-   <tile gid="46"/>
-   <tile gid="2"/>
-   <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -1257,9 +1247,8 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
@@ -1267,14 +1256,19 @@
    <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="46"/>
-   <tile gid="46"/>
-   <tile gid="46"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -1314,7 +1308,7 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="1"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -1354,7 +1348,7 @@
    <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="1"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -2291,7 +2285,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="11"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
