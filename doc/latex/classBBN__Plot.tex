@@ -1,0 +1,131 @@
+\hypertarget{classBBN__Plot}{
+\section{BBN\_\-Plot Class Reference}
+\label{classBBN__Plot}\index{BBN\_\-Plot@{BBN\_\-Plot}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBBN__Plot_af8bb0990fced989f7b3a28408e4d2d65}{
+{\bfseries BBN\_\-Plot} (const CL\_\-String \&)}
+\label{classBBN__Plot_af8bb0990fced989f7b3a28408e4d2d65}
+
+\item 
+void \hyperlink{classBBN__Plot_afbaf527d64694381a4e334b312cec999}{clone\_\-results} (\hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$)
+\item 
+\hyperlink{classBBN__Decision}{BBN\_\-Decision} $\ast$ \hyperlink{classBBN__Plot_a2c1f680d40188bad93cec4474f171329}{get\_\-decision} (const CL\_\-String \&)
+\item 
+\hyperlink{classBBN__Option}{BBN\_\-Option} $\ast$ \hyperlink{classBBN__Plot_a9c9ac208b1d4558604e6ea46e90ceb6a}{get\_\-option} (const CL\_\-String \&)
+\item 
+\hypertarget{classBBN__Plot_a5733b2ec425b5e581553e7475de17867}{
+dlib::directed\_\-graph$<$ dlib::bayes\_\-node $>$::kernel\_\-1a\_\-c $\ast$ {\bfseries get\_\-bn} ()}
+\label{classBBN__Plot_a5733b2ec425b5e581553e7475de17867}
+
+\item 
+\hyperlink{classBBN__Option}{BBN\_\-Option} $\ast$ \hyperlink{classBBN__Plot_a85baec5f5adfc1e3b1e869c68a909538}{query\_\-result} (CL\_\-String option\_\-name)
+\item 
+\hypertarget{classBBN__Plot_ae2bb301d2284498bfd0485625b368c35}{
+dlib::bayesian\_\-network\_\-join\_\-tree $\ast$ {\bfseries get\_\-bn\_\-current\_\-solution} ()}
+\label{classBBN__Plot_ae2bb301d2284498bfd0485625b368c35}
+
+\item 
+\hypertarget{classBBN__Plot_ac34606d981a5c642bfdf353033588a0d}{
+CL\_\-String {\bfseries get\_\-name} ()}
+\label{classBBN__Plot_ac34606d981a5c642bfdf353033588a0d}
+
+\item 
+\hypertarget{classBBN__Plot_ad161d3dcd566b1bcc14dd67de6dc9892}{
+std::vector$<$ \hyperlink{classBBN__Decision}{BBN\_\-Decision} $\ast$ $>$ $\ast$ {\bfseries get\_\-decisions} (void)}
+\label{classBBN__Plot_ad161d3dcd566b1bcc14dd67de6dc9892}
+
+\item 
+\hypertarget{classBBN__Plot_a9731aa7dde3de5dbb85fde57ead01dcf}{
+void {\bfseries set\_\-name} (CL\_\-String new\_\-name)}
+\label{classBBN__Plot_a9731aa7dde3de5dbb85fde57ead01dcf}
+
+\item 
+void \hyperlink{classBBN__Plot_a7d7efcce2bd7fa7599f2bf6db57b8bdc}{add\_\-decision} (\hyperlink{classBBN__Decision}{BBN\_\-Decision} $\ast$decision)
+\item 
+void \hyperlink{classBBN__Plot_acc89676366edd3b07bfb9ec6d4bb61b5}{prepare\_\-bn} ()
+\item 
+\hypertarget{classBBN__Plot_a10c12f29c80dc8c61cf2cdd19cf15fdf}{
+long {\bfseries decisions\_\-count} ()}
+\label{classBBN__Plot_a10c12f29c80dc8c61cf2cdd19cf15fdf}
+
+\item 
+void \hyperlink{classBBN__Plot_a452d2d4a9b15217481ef83b781903627}{update\_\-bn\_\-solution} ()
+\item 
+bool \hyperlink{classBBN__Plot_ab3f21c1b59ad41eb450f16170e13934c}{set\_\-result} (const CL\_\-String \&, const CL\_\-String \&)
+\item 
+void \hyperlink{classBBN__Plot_a04269d854d91d36d29f4297915f16e84}{clear\_\-bn} (void)
+\item 
+\hypertarget{classBBN__Plot_a7c900133c622202df7845cd9c3faa77e}{
+CL\_\-String {\bfseries get\_\-file\_\-name} (void)}
+\label{classBBN__Plot_a7c900133c622202df7845cd9c3faa77e}
+
+\item 
+\hypertarget{classBBN__Plot_aa711d9880c1f8cf8417210686a0e14d9}{
+unsigned long {\bfseries get\_\-next\_\-decision\_\-id} (void)}
+\label{classBBN__Plot_aa711d9880c1f8cf8417210686a0e14d9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBBN__Plot_a7d7efcce2bd7fa7599f2bf6db57b8bdc}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!add\_\-decision@{add\_\-decision}}
+\index{add\_\-decision@{add\_\-decision}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{add\_\-decision}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Plot::add\_\-decision ({\bf BBN\_\-Decision} $\ast$ {\em decision})}}
+\label{classBBN__Plot_a7d7efcce2bd7fa7599f2bf6db57b8bdc}
+Adds the pointer to an instance of \hyperlink{classBBN__Decision}{BBN\_\-Decision} to \_\-decisions. \hypertarget{classBBN__Plot_a04269d854d91d36d29f4297915f16e84}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!clear\_\-bn@{clear\_\-bn}}
+\index{clear\_\-bn@{clear\_\-bn}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{clear\_\-bn}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Plot::clear\_\-bn (void)}}
+\label{classBBN__Plot_a04269d854d91d36d29f4297915f16e84}
+Destroys all bayes net objects. \hypertarget{classBBN__Plot_afbaf527d64694381a4e334b312cec999}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!clone\_\-results@{clone\_\-results}}
+\index{clone\_\-results@{clone\_\-results}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{clone\_\-results}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Plot::clone\_\-results ({\bf BBN\_\-Plot} $\ast$ {\em existing})}}
+\label{classBBN__Plot_afbaf527d64694381a4e334b312cec999}
+Copies defined results from another bayes net.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em existing}]\end{DoxyParams}
+\hypertarget{classBBN__Plot_a2c1f680d40188bad93cec4474f171329}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!get\_\-decision@{get\_\-decision}}
+\index{get\_\-decision@{get\_\-decision}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{get\_\-decision}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BBN\_\-Decision} $\ast$ BBN\_\-Plot::get\_\-decision (const CL\_\-String \& {\em name})}}
+\label{classBBN__Plot_a2c1f680d40188bad93cec4474f171329}
+Returns a pointer to the decision object with the name specified in the parameter. If it cannot be found the function returns a null pointer (0x0).
+
+Currently only iterates through all decisions. Therefore is slow for instances when there are many decisions. However allows names to be changed. TODO: What is the value of this given that linkages between objects are still defined by string paths given in the XML file and not by pointers? \hypertarget{classBBN__Plot_a9c9ac208b1d4558604e6ea46e90ceb6a}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!get\_\-option@{get\_\-option}}
+\index{get\_\-option@{get\_\-option}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{get\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BBN\_\-Option} $\ast$ BBN\_\-Plot::get\_\-option (const CL\_\-String \& {\em path})}}
+\label{classBBN__Plot_a9c9ac208b1d4558604e6ea46e90ceb6a}
+Returns a pointer to an option defined by path. If it cannot be found then the function returns null (0x0). \hypertarget{classBBN__Plot_acc89676366edd3b07bfb9ec6d4bb61b5}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!prepare\_\-bn@{prepare\_\-bn}}
+\index{prepare\_\-bn@{prepare\_\-bn}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{prepare\_\-bn}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Plot::prepare\_\-bn ()}}
+\label{classBBN__Plot_acc89676366edd3b07bfb9ec6d4bb61b5}
+Prepares dlib's bayes net by defining nodes and probabilities. \hypertarget{classBBN__Plot_a85baec5f5adfc1e3b1e869c68a909538}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!query\_\-result@{query\_\-result}}
+\index{query\_\-result@{query\_\-result}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{query\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BBN\_\-Option} $\ast$ BBN\_\-Plot::query\_\-result (CL\_\-String {\em decision\_\-name})}}
+\label{classBBN__Plot_a85baec5f5adfc1e3b1e869c68a909538}
+Returns the result for the decision. Returns null (0x0) if the decision isn't found. \hypertarget{classBBN__Plot_ab3f21c1b59ad41eb450f16170e13934c}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!set\_\-result@{set\_\-result}}
+\index{set\_\-result@{set\_\-result}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{set\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}bool BBN\_\-Plot::set\_\-result (const CL\_\-String \& {\em decision\_\-path}, \/  const CL\_\-String \& {\em value})}}
+\label{classBBN__Plot_ab3f21c1b59ad41eb450f16170e13934c}
+Sets the value of a decision. Returns true if successful. \hypertarget{classBBN__Plot_a452d2d4a9b15217481ef83b781903627}{
+\index{BBN\_\-Plot@{BBN\_\-Plot}!update\_\-bn\_\-solution@{update\_\-bn\_\-solution}}
+\index{update\_\-bn\_\-solution@{update\_\-bn\_\-solution}!BBN_Plot@{BBN\_\-Plot}}
+\subsubsection[{update\_\-bn\_\-solution}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Plot::update\_\-bn\_\-solution ()}}
+\label{classBBN__Plot_a452d2d4a9b15217481ef83b781903627}
+Updates the Bayes Net solution to reflect changes in bn. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/bbn/BBN\_\-Plot.h\item 
+source/bbn/BBN\_\-Plot.cpp\end{DoxyCompactItemize}

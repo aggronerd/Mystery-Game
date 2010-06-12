@@ -1,4 +1,17 @@
-Murder Mystery generator prototype.
+Murder mystery generator prototype.
 
 By Gregory Doran
 <www.gregorydoran.co.uk>
+
+----------------------------
+
+Dependencies:
+
+- ClanLib 2.1.
+
+To build (under linux/unix):
+
+- Navigate to the 'Debug' sub-folder.
+- Build the using the makefile: `make all`
+- Copy the executable ('bayes_generator') to the applications's root folder: `cd bayes_generator ../`.
+- The game should then execute from it's new location.

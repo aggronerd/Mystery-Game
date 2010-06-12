@@ -4,7 +4,9 @@
 }
 
 
-{\ttfamily \#include $<$ApplicationModule.h$>$}Inheritance diagram for ApplicationModule::\begin{figure}[H]
+{\ttfamily \#include $<$ApplicationModule.h$>$}
+
+Inheritance diagram for ApplicationModule:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2cm]{classApplicationModule}
@@ -13,16 +15,18 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classApplicationModule_a64c223f48f98d9ac304ab0c3d1e69a91}{
-{\bfseries ApplicationModule} (CL\_\-DisplayWindow \&)}
-\label{classApplicationModule_a64c223f48f98d9ac304ab0c3d1e69a91}
-
+\hyperlink{classApplicationModule_adee14a760314582348ee3205097fea4c}{ApplicationModule} (const CL\_\-DisplayWindow \&)
 \item 
 ApplicationModuleExitCode \hyperlink{classApplicationModule_a72494b92d2b093e0827893f527535a1f}{run} (void)
 \item 
-\hypertarget{classApplicationModule_a685f7d1d6d235b3ac7ee1d34fe80b801}{
-CL\_\-GraphicContext $\ast$ {\bfseries getGC} (void)}
-\label{classApplicationModule_a685f7d1d6d235b3ac7ee1d34fe80b801}
+\hypertarget{classApplicationModule_a2c4555686e9bd25708a112ac852c3a17}{
+CL\_\-GraphicContext $\ast$ {\bfseries get\_\-gc} (void)}
+\label{classApplicationModule_a2c4555686e9bd25708a112ac852c3a17}
+
+\item 
+\hypertarget{classApplicationModule_a6c9168a94ebee4eacc23b7ce58878ce7}{
+CL\_\-GUIManager $\ast$ {\bfseries get\_\-gui\_\-manager} (void)}
+\label{classApplicationModule_a6c9168a94ebee4eacc23b7ce58878ce7}
 
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
@@ -38,37 +42,44 @@ virtual void {\bfseries update} (void)}
 \label{classApplicationModule_a1bfe895c2c5f3d14e32973db2ec51723}
 
 \item 
-\hypertarget{classApplicationModule_a5c74fc3bc3a5352f98a960a1fd25a596}{
-virtual void {\bfseries onWindowClose} (void)}
-\label{classApplicationModule_a5c74fc3bc3a5352f98a960a1fd25a596}
+\hypertarget{classApplicationModule_ac182827a21ffdafb13327e24c3aff773}{
+virtual void {\bfseries wm\_\-repaint} (void)}
+\label{classApplicationModule_ac182827a21ffdafb13327e24c3aff773}
 
 \item 
-\hypertarget{classApplicationModule_ad43a15efcd7403dd241758f972c4286b}{
-virtual void {\bfseries onKeyDown} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
-\label{classApplicationModule_ad43a15efcd7403dd241758f972c4286b}
+void \hyperlink{classApplicationModule_a2fb74c01602d0a030eb7335543580be3}{draw\_\-loading} (void)
+\item 
+\hypertarget{classApplicationModule_ad21cf0501238dd52bbe4c84606f6cb91}{
+virtual void {\bfseries on\_\-window\_\-close} (void)}
+\label{classApplicationModule_ad21cf0501238dd52bbe4c84606f6cb91}
 
 \item 
-\hypertarget{classApplicationModule_ae7ecbae3c52055ab1074847c6bee8272}{
-virtual void {\bfseries onKeyUp} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
-\label{classApplicationModule_ae7ecbae3c52055ab1074847c6bee8272}
+\hypertarget{classApplicationModule_aec7e75cf19261da574bc0f238b430738}{
+virtual void {\bfseries on\_\-key\_\-down} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
+\label{classApplicationModule_aec7e75cf19261da574bc0f238b430738}
 
 \item 
-\hypertarget{classApplicationModule_a3871c0b4d523750217d263af40a85d59}{
-virtual void {\bfseries onMouseDown} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
-\label{classApplicationModule_a3871c0b4d523750217d263af40a85d59}
+\hypertarget{classApplicationModule_acbff2a3dc36d72449a47ac0bb139719b}{
+virtual void {\bfseries on\_\-key\_\-up} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
+\label{classApplicationModule_acbff2a3dc36d72449a47ac0bb139719b}
 
 \item 
-\hypertarget{classApplicationModule_af5012a46b5553145584aaba62a914385}{
-virtual void {\bfseries onMouseUp} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
-\label{classApplicationModule_af5012a46b5553145584aaba62a914385}
+\hypertarget{classApplicationModule_a59c95ac03dc85010f132d5bbb628a481}{
+virtual void {\bfseries on\_\-mouse\_\-down} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
+\label{classApplicationModule_a59c95ac03dc85010f132d5bbb628a481}
 
 \item 
-\hypertarget{classApplicationModule_a64d800d2bdc6e31fc70a678215066916}{
-virtual void {\bfseries onMouseMove} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
-\label{classApplicationModule_a64d800d2bdc6e31fc70a678215066916}
+\hypertarget{classApplicationModule_a1017f6c73e46f9e2167ad71960bece8d}{
+virtual void {\bfseries on\_\-mouse\_\-up} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
+\label{classApplicationModule_a1017f6c73e46f9e2167ad71960bece8d}
 
 \item 
-unsigned int \hyperlink{classApplicationModule_a5e13bdfbe083a500c653f92c8863c862}{calculateTimeElapsed} (void)
+\hypertarget{classApplicationModule_a8da8b878817e13200ec732306ae412d9}{
+virtual void {\bfseries on\_\-mouse\_\-move} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
+\label{classApplicationModule_a8da8b878817e13200ec732306ae412d9}
+
+\item 
+unsigned int \hyperlink{classApplicationModule_ab6e817b3b78e6563a446fae8e8abefb6}{get\_\-time\_\-elapsed} (void)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -81,6 +92,26 @@ ApplicationModuleExitCode {\bfseries exit\_\-code}}
 \hypertarget{classApplicationModule_acf67b00ada6051624eab16d1594447e4}{
 CL\_\-DisplayWindow {\bfseries window}}
 \label{classApplicationModule_acf67b00ada6051624eab16d1594447e4}
+
+\item 
+\hypertarget{classApplicationModule_a507dc5dce4df518924b9a88f1816f6e5}{
+CL\_\-GUIThemeDefault {\bfseries gui\_\-theme}}
+\label{classApplicationModule_a507dc5dce4df518924b9a88f1816f6e5}
+
+\item 
+\hypertarget{classApplicationModule_a0169726ad6be80b99e933cdb629e73cf}{
+CL\_\-ResourceManager {\bfseries gui\_\-rm}}
+\label{classApplicationModule_a0169726ad6be80b99e933cdb629e73cf}
+
+\item 
+\hypertarget{classApplicationModule_a24ca28ca6ca0b1fc9ff54115c4d7f1aa}{
+CL\_\-GUIWindowManagerTexture {\bfseries wm}}
+\label{classApplicationModule_a24ca28ca6ca0b1fc9ff54115c4d7f1aa}
+
+\item 
+\hypertarget{classApplicationModule_a615058f2f96167dcfdefb98e711a7197}{
+CL\_\-GUIManager {\bfseries gui}}
+\label{classApplicationModule_a615058f2f96167dcfdefb98e711a7197}
 
 \item 
 \hypertarget{classApplicationModule_a847a964b766c02650275136054fbf2cf}{
@@ -117,16 +148,6 @@ CL\_\-Slot {\bfseries slot\_\-mouse\_\-up}}
 CL\_\-Slot {\bfseries slot\_\-mouse\_\-move}}
 \label{classApplicationModule_abea0d9e41cec16a012776ceb78dd9348}
 
-\item 
-\hypertarget{classApplicationModule_a8a63aa8bea2c7ddb7e24f5ed6c1afb7e}{
-bool {\bfseries mouse\_\-dragging}}
-\label{classApplicationModule_a8a63aa8bea2c7ddb7e24f5ed6c1afb7e}
-
-\item 
-\hypertarget{classApplicationModule_ad12eb054372d029b6fa82218438df1c8}{
-bool {\bfseries mouse\_\-down}}
-\label{classApplicationModule_ad12eb054372d029b6fa82218438df1c8}
-
 \end{DoxyCompactItemize}
 
 
@@ -135,18 +156,31 @@ An \hyperlink{classApplicationModule}{ApplicationModule} represents part of the 
 
 This ensures that the editor and the game do not have to repeat this common code and instead inherit this object. 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classApplicationModule_adee14a760314582348ee3205097fea4c}{
+\index{ApplicationModule@{ApplicationModule}!ApplicationModule@{ApplicationModule}}
+\index{ApplicationModule@{ApplicationModule}!ApplicationModule@{ApplicationModule}}
+\subsubsection[{ApplicationModule}]{\setlength{\rightskip}{0pt plus 5cm}ApplicationModule::ApplicationModule (const CL\_\-DisplayWindow \& {\em display\_\-window})}}
+\label{classApplicationModule_adee14a760314582348ee3205097fea4c}
+Prepares object and displays loading message. 
+
 \subsection{Member Function Documentation}
-\hypertarget{classApplicationModule_a5e13bdfbe083a500c653f92c8863c862}{
-\index{ApplicationModule@{ApplicationModule}!calculateTimeElapsed@{calculateTimeElapsed}}
-\index{calculateTimeElapsed@{calculateTimeElapsed}!ApplicationModule@{ApplicationModule}}
-\subsubsection[{calculateTimeElapsed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ApplicationModule::calculateTimeElapsed (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{classApplicationModule_a5e13bdfbe083a500c653f92c8863c862}
+\hypertarget{classApplicationModule_a2fb74c01602d0a030eb7335543580be3}{
+\index{ApplicationModule@{ApplicationModule}!draw\_\-loading@{draw\_\-loading}}
+\index{draw\_\-loading@{draw\_\-loading}!ApplicationModule@{ApplicationModule}}
+\subsubsection[{draw\_\-loading}]{\setlength{\rightskip}{0pt plus 5cm}void ApplicationModule::draw\_\-loading (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classApplicationModule_a2fb74c01602d0a030eb7335543580be3}
+Draws the loading screen on the graphics context. \hypertarget{classApplicationModule_ab6e817b3b78e6563a446fae8e8abefb6}{
+\index{ApplicationModule@{ApplicationModule}!get\_\-time\_\-elapsed@{get\_\-time\_\-elapsed}}
+\index{get\_\-time\_\-elapsed@{get\_\-time\_\-elapsed}!ApplicationModule@{ApplicationModule}}
+\subsubsection[{get\_\-time\_\-elapsed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ApplicationModule::get\_\-time\_\-elapsed (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classApplicationModule_ab6e817b3b78e6563a446fae8e8abefb6}
 Calculate amount of time since the last call. \hypertarget{classApplicationModule_a72494b92d2b093e0827893f527535a1f}{
 \index{ApplicationModule@{ApplicationModule}!run@{run}}
 \index{run@{run}!ApplicationModule@{ApplicationModule}}
 \subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}ApplicationModuleExitCode ApplicationModule::run (void)}}
 \label{classApplicationModule_a72494b92d2b093e0827893f527535a1f}
-Initiates the main loop. 
+Initiates the main loop. Does not render the GUI it is down the the inherent classes to do so. 
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
