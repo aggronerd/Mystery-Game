@@ -1,0 +1,149 @@
+\hypertarget{classBBN__Info}{
+\section{BBN\_\-Info Class Reference}
+\label{classBBN__Info}\index{BBN\_\-Info@{BBN\_\-Info}}
+}
+
+
+{\ttfamily \#include $<$BBN\_\-Info.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBBN__Info_aacc7b6ff08c32b6cc0fcebca49392e90}{
+{\bfseries BBN\_\-Info} (CL\_\-GUIComponent $\ast$, \hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$)}
+\label{classBBN__Info_aacc7b6ff08c32b6cc0fcebca49392e90}
+
+\item 
+\hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$ \hyperlink{classBBN__Info_aa3b9ae5ed212e5122cf392fd57d37c9e}{get\_\-bayes\_\-net} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBBN__Info_ae83184867ba4dbe1a3338f89ffcdce69}{disable\_\-selection\_\-controls} (void)
+\item 
+void \hyperlink{classBBN__Info_aecd443df0db694f38e8a4b735d06861a}{draw\_\-controls} (void)
+\item 
+void \hyperlink{classBBN__Info_a7845da935b0819e246cce5255f3bfb33}{clear\_\-controls} (void)
+\item 
+void \hyperlink{classBBN__Info_a636efdafc842f88c0646a1365da1413a}{generate\_\-selected} (CL\_\-PushButton $\ast$)
+\item 
+void \hyperlink{classBBN__Info_a046ddaf4d4c9a257a1c8af08e6c0e953}{set\_\-selected} (CL\_\-PushButton $\ast$)
+\item 
+void \hyperlink{classBBN__Info_a9c157837dfd23537abace10cad5ebac8}{on\_\-selection\_\-changed} (CL\_\-ListViewSelection, CL\_\-ListView $\ast$)
+\item 
+void \hyperlink{classBBN__Info_a9d5399c4ed1f2de0adb20cbaf49f1340}{on\_\-resized} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBBN__Info_a56941d8987e0943d71dda1bfe84f372b}{
+\hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$ {\bfseries \_\-bbn\_\-network}}
+\label{classBBN__Info_a56941d8987e0943d71dda1bfe84f372b}
+
+\item 
+\hypertarget{classBBN__Info_a8e385cd5dc8eabc548dc3c5e88fb3516}{
+CL\_\-ListView $\ast$ {\bfseries \_\-list}}
+\label{classBBN__Info_a8e385cd5dc8eabc548dc3c5e88fb3516}
+
+\item 
+\hypertarget{classBBN__Info_aff3b5b3309424146d7614335fe3377ac}{
+CL\_\-PushButton $\ast$ {\bfseries \_\-button\_\-generate}}
+\label{classBBN__Info_aff3b5b3309424146d7614335fe3377ac}
+
+\item 
+\hypertarget{classBBN__Info_abfc41072a1064daee369df064c324e0f}{
+CL\_\-PushButton $\ast$ {\bfseries \_\-button\_\-set\_\-value}}
+\label{classBBN__Info_abfc41072a1064daee369df064c324e0f}
+
+\item 
+\hypertarget{classBBN__Info_af327a85a05986d9777965f2e69fc6392}{
+CL\_\-ComboBox $\ast$ {\bfseries \_\-combo\_\-options}}
+\label{classBBN__Info_af327a85a05986d9777965f2e69fc6392}
+
+\item 
+\hypertarget{classBBN__Info_a72165f5a31da5ec0db7fa6ffc6d2a858}{
+CL\_\-PopupMenu {\bfseries \_\-selected\_\-options}}
+\label{classBBN__Info_a72165f5a31da5ec0db7fa6ffc6d2a858}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Displays info on a Bayesian Belief network object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBBN__Info_a7845da935b0819e246cce5255f3bfb33}{
+\index{BBN\_\-Info@{BBN\_\-Info}!clear\_\-controls@{clear\_\-controls}}
+\index{clear\_\-controls@{clear\_\-controls}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{clear\_\-controls}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::clear\_\-controls (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_a7845da935b0819e246cce5255f3bfb33}
+Clears controls loaded by this component. \hypertarget{classBBN__Info_ae83184867ba4dbe1a3338f89ffcdce69}{
+\index{BBN\_\-Info@{BBN\_\-Info}!disable\_\-selection\_\-controls@{disable\_\-selection\_\-controls}}
+\index{disable\_\-selection\_\-controls@{disable\_\-selection\_\-controls}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{disable\_\-selection\_\-controls}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::disable\_\-selection\_\-controls (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_ae83184867ba4dbe1a3338f89ffcdce69}
+Disables all the controls for changine selected items. \hypertarget{classBBN__Info_aecd443df0db694f38e8a4b735d06861a}{
+\index{BBN\_\-Info@{BBN\_\-Info}!draw\_\-controls@{draw\_\-controls}}
+\index{draw\_\-controls@{draw\_\-controls}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{draw\_\-controls}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::draw\_\-controls (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_aecd443df0db694f38e8a4b735d06861a}
+Clears all existing controls and draws new ones for the active \_\-bnn\_\-network object. \hypertarget{classBBN__Info_a636efdafc842f88c0646a1365da1413a}{
+\index{BBN\_\-Info@{BBN\_\-Info}!generate\_\-selected@{generate\_\-selected}}
+\index{generate\_\-selected@{generate\_\-selected}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{generate\_\-selected}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::generate\_\-selected (CL\_\-PushButton $\ast$ {\em button})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_a636efdafc842f88c0646a1365da1413a}
+Determines if there is an item selected in the list and if it refers to a decision in the bayes net which hasn't been generated yet it then proceeds to generate it. Otherwise does nothing.
+
+Preconditions:
+\begin{DoxyItemize}
+\item \_\-list is not null
+\item \_\-bbn\_\-network is not null 
+\end{DoxyItemize}\hypertarget{classBBN__Info_aa3b9ae5ed212e5122cf392fd57d37c9e}{
+\index{BBN\_\-Info@{BBN\_\-Info}!get\_\-bayes\_\-net@{get\_\-bayes\_\-net}}
+\index{get\_\-bayes\_\-net@{get\_\-bayes\_\-net}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{get\_\-bayes\_\-net}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BBN\_\-Plot} $\ast$ BBN\_\-Info::get\_\-bayes\_\-net (void)}}
+\label{classBBN__Info_aa3b9ae5ed212e5122cf392fd57d37c9e}
+Returns a pointer to the bayes net currently represented by the control.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classBBN__Info_a9d5399c4ed1f2de0adb20cbaf49f1340}{
+\index{BBN\_\-Info@{BBN\_\-Info}!on\_\-resized@{on\_\-resized}}
+\index{on\_\-resized@{on\_\-resized}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{on\_\-resized}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::on\_\-resized (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_a9d5399c4ed1f2de0adb20cbaf49f1340}
+Resizes components to fit the area. \hypertarget{classBBN__Info_a9c157837dfd23537abace10cad5ebac8}{
+\index{BBN\_\-Info@{BBN\_\-Info}!on\_\-selection\_\-changed@{on\_\-selection\_\-changed}}
+\index{on\_\-selection\_\-changed@{on\_\-selection\_\-changed}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{on\_\-selection\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::on\_\-selection\_\-changed (CL\_\-ListViewSelection {\em selection}, \/  CL\_\-ListView $\ast$ {\em listview})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_a9c157837dfd23537abace10cad5ebac8}
+Enables or disables the buttons based on the currently selected item.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em selection}]\item[{\em listview}]\end{DoxyParams}
+\hypertarget{classBBN__Info_a046ddaf4d4c9a257a1c8af08e6c0e953}{
+\index{BBN\_\-Info@{BBN\_\-Info}!set\_\-selected@{set\_\-selected}}
+\index{set\_\-selected@{set\_\-selected}!BBN_Info@{BBN\_\-Info}}
+\subsubsection[{set\_\-selected}]{\setlength{\rightskip}{0pt plus 5cm}void BBN\_\-Info::set\_\-selected (CL\_\-PushButton $\ast$ {\em button})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classBBN__Info_a046ddaf4d4c9a257a1c8af08e6c0e953}
+Sets the value of the selected item on the list it the value of the combo box.
+
+Preconditions:
+\begin{DoxyItemize}
+\item \_\-list is not null
+\item \_\-bbn\_\-network is not null
+\item \_\-combo\_\-options is not null
+\item An item is selected
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em button}]\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/bbn/BBN\_\-Info.h\item 
+source/bbn/BBN\_\-Info.cpp\end{DoxyCompactItemize}

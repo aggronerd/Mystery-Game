@@ -1,0 +1,101 @@
+\hypertarget{classMonster}{
+\section{Monster Class Reference}
+\label{classMonster}\index{Monster@{Monster}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMonster_af4dbf8422477e5d7a8c8639ed8a6e7a7}{Monster} (CL\_\-Pointf, \hyperlink{classMonsterGeneratorDemo}{MonsterGeneratorDemo} $\ast$)
+\item 
+\hypertarget{classMonster_a8a20f88b9eef236ffc3f1d7ce6bd1562}{
+{\bfseries Monster} (CL\_\-Pointf, \hyperlink{classMonsterGeneratorDemo}{MonsterGeneratorDemo} $\ast$, std::map$<$ CL\_\-String, CL\_\-String $>$)}
+\label{classMonster_a8a20f88b9eef236ffc3f1d7ce6bd1562}
+
+\item 
+\hyperlink{classMonster_a1b3329ad00743bd5432d81ee487ca7ae}{Monster} (CL\_\-Pointf, \hyperlink{classMonsterGeneratorDemo}{MonsterGeneratorDemo} $\ast$, \hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$)
+\item 
+\hypertarget{classMonster_aaf16974cdf557c0e62e445c94ddcfc53}{
+void {\bfseries draw} (CL\_\-GraphicContext $\ast$gc)}
+\label{classMonster_aaf16974cdf557c0e62e445c94ddcfc53}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMonster_a3e1c502f98e13fef189adb45631f4ca2}{
+void {\bfseries load\_\-sprites} (void)}
+\label{classMonster_a3e1c502f98e13fef189adb45631f4ca2}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMonster_a74d6adb21c6a59f1444f52f8645d186b}{
+CL\_\-Sprite {\bfseries \_\-legs}}
+\label{classMonster_a74d6adb21c6a59f1444f52f8645d186b}
+
+\item 
+\hypertarget{classMonster_aedc760e23fe73e5f6e4936cf23639b8c}{
+CL\_\-Sprite {\bfseries \_\-body}}
+\label{classMonster_aedc760e23fe73e5f6e4936cf23639b8c}
+
+\item 
+\hypertarget{classMonster_aad50e8f3e9c8ec0f4b236796e474092f}{
+CL\_\-Sprite {\bfseries \_\-mouth}}
+\label{classMonster_aad50e8f3e9c8ec0f4b236796e474092f}
+
+\item 
+\hypertarget{classMonster_aa21f28b1d669df2750b0ac8cac4b1d3a}{
+CL\_\-Sprite {\bfseries \_\-eyes}}
+\label{classMonster_aa21f28b1d669df2750b0ac8cac4b1d3a}
+
+\item 
+\hypertarget{classMonster_ae74ed89492b52a6bc2b7eceb91f68b33}{
+CL\_\-Sprite {\bfseries \_\-arms}}
+\label{classMonster_ae74ed89492b52a6bc2b7eceb91f68b33}
+
+\item 
+\hypertarget{classMonster_af7d855b6b8b4967751381ebc36a78619}{
+CL\_\-Sprite {\bfseries \_\-background}}
+\label{classMonster_af7d855b6b8b4967751381ebc36a78619}
+
+\item 
+\hypertarget{classMonster_af888771b6f7e506b206cdf7c0684d6e3}{
+CL\_\-Sprite {\bfseries \_\-extra}}
+\label{classMonster_af888771b6f7e506b206cdf7c0684d6e3}
+
+\item 
+\hypertarget{classMonster_a9081e7e2f5dcc47012c4a03d14c1d921}{
+CL\_\-Rectf {\bfseries \_\-destination}}
+\label{classMonster_a9081e7e2f5dcc47012c4a03d14c1d921}
+
+\item 
+\hypertarget{classMonster_a31e59d9fe5c537980856149cce2d47da}{
+\hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$ {\bfseries \_\-properties}}
+\label{classMonster_a31e59d9fe5c537980856149cce2d47da}
+
+\item 
+\hypertarget{classMonster_a3213f8da9db9f30ac68a73fa89e82569}{
+\hyperlink{classMonsterGeneratorDemo}{MonsterGeneratorDemo} $\ast$ {\bfseries \_\-parent}}
+\label{classMonster_a3213f8da9db9f30ac68a73fa89e82569}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMonster_af4dbf8422477e5d7a8c8639ed8a6e7a7}{
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\subsubsection[{Monster}]{\setlength{\rightskip}{0pt plus 5cm}Monster::Monster (CL\_\-Pointf {\em location}, \/  {\bf MonsterGeneratorDemo} $\ast$ {\em parent})}}
+\label{classMonster_af4dbf8422477e5d7a8c8639ed8a6e7a7}
+Loads the Bayes net for the object and sets the sprites to use for each of the body components. \hypertarget{classMonster_a1b3329ad00743bd5432d81ee487ca7ae}{
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\subsubsection[{Monster}]{\setlength{\rightskip}{0pt plus 5cm}Monster::Monster (CL\_\-Pointf {\em location}, \/  {\bf MonsterGeneratorDemo} $\ast$ {\em parent}, \/  {\bf BBN\_\-Plot} $\ast$ {\em bbn})}}
+\label{classMonster_a1b3329ad00743bd5432d81ee487ca7ae}
+Generates monster from the provided bayes net. Makes a copy. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/monster\_\-generator\_\-demo/Monster.h\item 
+source/monster\_\-generator\_\-demo/Monster.cpp\end{DoxyCompactItemize}

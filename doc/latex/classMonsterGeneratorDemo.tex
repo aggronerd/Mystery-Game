@@ -1,0 +1,138 @@
+\hypertarget{classMonsterGeneratorDemo}{
+\section{MonsterGeneratorDemo Class Reference}
+\label{classMonsterGeneratorDemo}\index{MonsterGeneratorDemo@{MonsterGeneratorDemo}}
+}
+
+
+{\ttfamily \#include $<$MonsterGeneratorDemo.h$>$}
+
+Inheritance diagram for MonsterGeneratorDemo:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classMonsterGeneratorDemo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMonsterGeneratorDemo_a9b2e81516e469825a83fa54586641dbb}{
+{\bfseries MonsterGeneratorDemo} (const CL\_\-DisplayWindow \&)}
+\label{classMonsterGeneratorDemo_a9b2e81516e469825a83fa54586641dbb}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_a375c1a42ba5cbae38ce983e238d0ce03}{
+CL\_\-ResourceManager $\ast$ {\bfseries get\_\-rm} (void)}
+\label{classMonsterGeneratorDemo_a375c1a42ba5cbae38ce983e238d0ce03}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMonsterGeneratorDemo_a6f66d4ed6f4d0a4ba96f96edac2fedb1}{
+void {\bfseries draw} (void)}
+\label{classMonsterGeneratorDemo_a6f66d4ed6f4d0a4ba96f96edac2fedb1}
+
+\item 
+void \hyperlink{classMonsterGeneratorDemo_a9f7a998bfd08409c3db44c755d50721f}{generate\_\-monster} (void)
+\item 
+\hypertarget{classMonsterGeneratorDemo_ae1ad1c6c81b5e1c18ebccaa5b661e360}{
+void {\bfseries update} (void)}
+\label{classMonsterGeneratorDemo_ae1ad1c6c81b5e1c18ebccaa5b661e360}
+
+\item 
+void \hyperlink{classMonsterGeneratorDemo_a79a6136789c43d0a1502b7ad0381079a}{show\_\-editor} (void)
+\item 
+bool \hyperlink{classMonsterGeneratorDemo_a81a9869082eb20376f4a53723d805bfa}{close\_\-editor} (void)
+\item 
+\hypertarget{classMonsterGeneratorDemo_a2cf5ccbf2f89c759875428998fa1bf5b}{
+virtual void {\bfseries on\_\-key\_\-down} (const CL\_\-InputEvent \&key, const CL\_\-InputState \&state)}
+\label{classMonsterGeneratorDemo_a2cf5ccbf2f89c759875428998fa1bf5b}
+
+\item 
+CL\_\-Pointf \hyperlink{classMonsterGeneratorDemo_a82938578e271b99cb300c6a668dff550}{get\_\-next\_\-monster\_\-position} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMonsterGeneratorDemo_aed1250d417ea668cae0719d8b1f5dd13}{
+CL\_\-ResourceManager {\bfseries \_\-rm}}
+\label{classMonsterGeneratorDemo_aed1250d417ea668cae0719d8b1f5dd13}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_ab06ee3e4a2b74beb7de00bc7af7a2cd2}{
+std::list$<$ \hyperlink{classMonster}{Monster} $\ast$ $>$ {\bfseries \_\-monsters}}
+\label{classMonsterGeneratorDemo_ab06ee3e4a2b74beb7de00bc7af7a2cd2}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_ac1f9b1e72a1e36d98f1dfe3af44c675f}{
+CL\_\-Window $\ast$ {\bfseries \_\-window\_\-editor}}
+\label{classMonsterGeneratorDemo_ac1f9b1e72a1e36d98f1dfe3af44c675f}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_a250a4cddf3123722f19de1dc7478b838}{
+\hyperlink{classBBN__Info}{BBN\_\-Info} $\ast$ {\bfseries \_\-control\_\-bbn}}
+\label{classMonsterGeneratorDemo_a250a4cddf3123722f19de1dc7478b838}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_a7ce77640c29d0a414061db6f0ab47310}{
+\hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$ {\bfseries \_\-active\_\-net}}
+\label{classMonsterGeneratorDemo_a7ce77640c29d0a414061db6f0ab47310}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_aa9658c30603874a9eb5de77e40f83ac6}{
+CL\_\-PushButton $\ast$ {\bfseries \_\-button\_\-generate}}
+\label{classMonsterGeneratorDemo_aa9658c30603874a9eb5de77e40f83ac6}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_a6c01d36ed849f6e74429cb086a7c783b}{
+int {\bfseries \_\-next\_\-monster\_\-x}}
+\label{classMonsterGeneratorDemo_a6c01d36ed849f6e74429cb086a7c783b}
+
+\item 
+\hypertarget{classMonsterGeneratorDemo_acc504c13da359f9c4a8efc80288efab5}{
+int {\bfseries \_\-next\_\-monster\_\-y}}
+\label{classMonsterGeneratorDemo_acc504c13da359f9c4a8efc80288efab5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The monster generator demo aims to test how Bayes nets can be use to determine cohesive properties of randomly generated objects. In this case monsters. Each time the object is instantiated so is a Bayes network and from this a new kind of monster is generated. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMonsterGeneratorDemo_a81a9869082eb20376f4a53723d805bfa}{
+\index{MonsterGeneratorDemo@{MonsterGeneratorDemo}!close\_\-editor@{close\_\-editor}}
+\index{close\_\-editor@{close\_\-editor}!MonsterGeneratorDemo@{MonsterGeneratorDemo}}
+\subsubsection[{close\_\-editor}]{\setlength{\rightskip}{0pt plus 5cm}bool MonsterGeneratorDemo::close\_\-editor (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMonsterGeneratorDemo_a81a9869082eb20376f4a53723d805bfa}
+Closes the active editor window and components.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classMonsterGeneratorDemo_a9f7a998bfd08409c3db44c755d50721f}{
+\index{MonsterGeneratorDemo@{MonsterGeneratorDemo}!generate\_\-monster@{generate\_\-monster}}
+\index{generate\_\-monster@{generate\_\-monster}!MonsterGeneratorDemo@{MonsterGeneratorDemo}}
+\subsubsection[{generate\_\-monster}]{\setlength{\rightskip}{0pt plus 5cm}void MonsterGeneratorDemo::generate\_\-monster (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMonsterGeneratorDemo_a9f7a998bfd08409c3db44c755d50721f}
+Uses the bayes net represented in \_\-control\_\-bbn to generate a monster and display it on the screen. \hypertarget{classMonsterGeneratorDemo_a82938578e271b99cb300c6a668dff550}{
+\index{MonsterGeneratorDemo@{MonsterGeneratorDemo}!get\_\-next\_\-monster\_\-position@{get\_\-next\_\-monster\_\-position}}
+\index{get\_\-next\_\-monster\_\-position@{get\_\-next\_\-monster\_\-position}!MonsterGeneratorDemo@{MonsterGeneratorDemo}}
+\subsubsection[{get\_\-next\_\-monster\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Pointf MonsterGeneratorDemo::get\_\-next\_\-monster\_\-position (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMonsterGeneratorDemo_a82938578e271b99cb300c6a668dff550}
+Returns the next grid location spare to place a generated monster.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classMonsterGeneratorDemo_a79a6136789c43d0a1502b7ad0381079a}{
+\index{MonsterGeneratorDemo@{MonsterGeneratorDemo}!show\_\-editor@{show\_\-editor}}
+\index{show\_\-editor@{show\_\-editor}!MonsterGeneratorDemo@{MonsterGeneratorDemo}}
+\subsubsection[{show\_\-editor}]{\setlength{\rightskip}{0pt plus 5cm}void MonsterGeneratorDemo::show\_\-editor (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classMonsterGeneratorDemo_a79a6136789c43d0a1502b7ad0381079a}
+Creates the monster bayes net editor window if one doesn't already exit and ensures it is visible if one does. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/monster\_\-generator\_\-demo/MonsterGeneratorDemo.h\item 
+source/monster\_\-generator\_\-demo/MonsterGeneratorDemo.cpp\end{DoxyCompactItemize}

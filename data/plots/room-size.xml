@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plot name="room-size">
   <decisions>
+    <decision name="room_type" x="289.0" y="239.0" type="String">
+      <dependencies/>
+      <options>
+        <option name="dining_room" path="room_type.dining_room"/>
+        <option name="living_room" path="room_type.living_room"/>
+        <option name="ball_room" path="room_type.ball_room"/>
+        <option name="study_room" path="room_type.study_room"/>
+        <option name="corridor" path="room_type.corridor"/>
+      </options>
+      <probabilities>
+        <givens/>
+        <probs>
+          <prob option="room_type.dining_room" value="0.32100323"/>
+          <prob option="room_type.living_room" value="0.3204632"/>
+          <prob option="room_type.ball_room" value="0.021600217"/>
+          <prob option="room_type.study_room" value="0.11838119"/>
+          <prob option="room_type.corridor" value="0.21855219"/>
+        </probs>
+      </probabilities>
+    </decision>
+    <decision name="room_length" x="400.0" y="415.0" type="String">
+      <dependencies>
+        <dependency decision="room_type"/>
+      </dependencies>
+      <options>
+        <option name="4" path="room_length.4"/>
+        <option name="5" path="room_length.5"/>
+        <option name="6" path="room_length.6"/>
+        <option name="7" path="room_length.7"/>
+        <option name="8" path="room_length.8"/>
+      </options>
+      <probabilities>
+        <givens>
+          <given option="room_type.dining_room">
+            <givens/>
+            <probs>
+              <prob option="room_length.4" value="0.03087"/>
+              <prob option="room_length.5" value="0.19263"/>
+              <prob option="room_length.6" value="0.48407"/>
+              <prob option="room_length.7" value="0.21524"/>
+              <prob option="room_length.8" value="0.07719"/>
+            </probs>
+          </given>
+          <given option="room_type.living_room">
+            <givens/>
+            <probs>
+              <prob option="room_length.4" value="0.32533675"/>
+              <prob option="room_length.5" value="0.40266597"/>
+              <prob option="room_length.6" value="0.23199767"/>
+              <prob option="room_length.7" value="0.039999597"/>
+              <prob option="room_length.8" value="0.0"/>
+            </probs>
+          </given>
+          <given option="room_type.ball_room">
+            <givens/>
+            <probs>
+              <prob option="room_length.4" value="0.0"/>
+              <prob option="room_length.5" value="0.0"/>
+              <prob option="room_length.6" value="0.0"/>
+              <prob option="room_length.7" value="0.24584"/>
+              <prob option="room_length.8" value="0.75416"/>
+            </probs>
+          </given>
+          <given option="room_type.study_room">
+            <givens/>
+            <probs>
+              <prob option="room_length.4" value="0.36418"/>
+              <prob option="room_length.5" value="0.43880996"/>
+              <prob option="room_length.6" value="0.19700998"/>
+              <prob option="room_length.7" value="0.0"/>
+              <prob option="room_length.8" value="0.0"/>
+            </probs>
+          </given>
+          <given option="room_type.corridor">
+            <givens/>
+            <probs>
+              <prob option="room_length.4" value="0.0"/>
+              <prob option="room_length.5" value="0.0"/>
+              <prob option="room_length.6" value="0.07538"/>
+              <prob option="room_length.7" value="0.29714"/>
+              <prob option="room_length.8" value="0.62748"/>
+            </probs>
+          </given>
+        </givens>
+        <probs/>
+      </probabilities>
+    </decision>
     <decision name="room_width" x="177.0" y="413.0" type="String">
       <dependencies>
         <dependency decision="room_type"/>
@@ -66,93 +153,6 @@
           </given>
         </givens>
         <probs/>
-      </probabilities>
-    </decision>
-    <decision name="room_length" x="400.0" y="415.0" type="String">
-      <dependencies>
-        <dependency decision="room_type"/>
-      </dependencies>
-      <options>
-        <option name="4" path="room_length.4"/>
-        <option name="5" path="room_length.5"/>
-        <option name="6" path="room_length.6"/>
-        <option name="7" path="room_length.7"/>
-        <option name="8" path="room_length.8"/>
-      </options>
-      <probabilities>
-        <givens>
-          <given option="room_type.dining_room">
-            <givens/>
-            <probs>
-              <prob option="room_length.4" value="0.03087"/>
-              <prob option="room_length.5" value="0.19263"/>
-              <prob option="room_length.6" value="0.48407"/>
-              <prob option="room_length.7" value="0.21524"/>
-              <prob option="room_length.8" value="0.07719"/>
-            </probs>
-          </given>
-          <given option="room_type.living_room">
-            <givens/>
-            <probs>
-              <prob option="room_length.4" value="0.32533675"/>
-              <prob option="room_length.5" value="0.40266597"/>
-              <prob option="room_length.6" value="0.23199767"/>
-              <prob option="room_length.7" value="0.039999597"/>
-              <prob option="room_length.8" value="0.0"/>
-            </probs>
-          </given>
-          <given option="room_type.ball_room">
-            <givens/>
-            <probs>
-              <prob option="room_length.4" value="0.0"/>
-              <prob option="room_length.5" value="0.0"/>
-              <prob option="room_length.6" value="0.0"/>
-              <prob option="room_length.7" value="0.24584"/>
-              <prob option="room_length.8" value="0.75416"/>
-            </probs>
-          </given>
-          <given option="room_type.study_room">
-            <givens/>
-            <probs>
-              <prob option="room_length.4" value="0.36418003"/>
-              <prob option="room_length.5" value="0.43881002"/>
-              <prob option="room_length.6" value="0.19701001"/>
-              <prob option="room_length.7" value="0.0"/>
-              <prob option="room_length.8" value="0.0"/>
-            </probs>
-          </given>
-          <given option="room_type.corridor">
-            <givens/>
-            <probs>
-              <prob option="room_length.4" value="0.0"/>
-              <prob option="room_length.5" value="0.0"/>
-              <prob option="room_length.6" value="0.07538"/>
-              <prob option="room_length.7" value="0.29714"/>
-              <prob option="room_length.8" value="0.62748"/>
-            </probs>
-          </given>
-        </givens>
-        <probs/>
-      </probabilities>
-    </decision>
-    <decision name="room_type" x="289.0" y="239.0" type="String">
-      <dependencies/>
-      <options>
-        <option name="dining_room" path="room_type.dining_room"/>
-        <option name="living_room" path="room_type.living_room"/>
-        <option name="ball_room" path="room_type.ball_room"/>
-        <option name="study_room" path="room_type.study_room"/>
-        <option name="corridor" path="room_type.corridor"/>
-      </options>
-      <probabilities>
-        <givens/>
-        <probs>
-          <prob option="room_type.dining_room" value="0.32100323"/>
-          <prob option="room_type.living_room" value="0.3204632"/>
-          <prob option="room_type.ball_room" value="0.021600217"/>
-          <prob option="room_type.study_room" value="0.11838119"/>
-          <prob option="room_type.corridor" value="0.21855219"/>
-        </probs>
       </probabilities>
     </decision>
   </decisions>

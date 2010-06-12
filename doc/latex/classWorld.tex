@@ -4,7 +4,9 @@
 }
 
 
-{\ttfamily \#include $<$World.h$>$}Inheritance diagram for World::\begin{figure}[H]
+{\ttfamily \#include $<$World.h$>$}
+
+Inheritance diagram for World:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2cm]{classWorld}
@@ -13,17 +15,30 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classWorld_a6ce0c6ba5ce813c0ec0b910a88e09d64}{World} (CL\_\-DisplayWindow \&)
+\hyperlink{classWorld_aab6a1bf824c9e827eafcc1e54a5f798a}{World} (const CL\_\-DisplayWindow \&)
 \item 
 virtual \hyperlink{classWorld_a8c73fba541a5817fff65147ba47cd827}{$\sim$World} ()
 \item 
-void \hyperlink{classWorld_a6703e4f889e72198e0ede0cd23864792}{addOverlay} (\hyperlink{classOverlay}{Overlay} $\ast$)
+void \hyperlink{classWorld_a6f50eb99577e175c5019567418141dad}{add\_\-overlay} (\hyperlink{classOverlay}{Overlay} $\ast$)
 \item 
-void \hyperlink{classWorld_ad74a2b078f0173249b04e3da2982d081}{addGameObject} (\hyperlink{classGameObject}{GameObject} $\ast$)
+\hypertarget{classWorld_ae7c0d7013c83bebe79c292a9df93dbac}{
+\hyperlink{classScene}{Scene} $\ast$ {\bfseries get\_\-active\_\-scene} (void)}
+\label{classWorld_ae7c0d7013c83bebe79c292a9df93dbac}
+
 \item 
-\hypertarget{classWorld_ae62ed957ab6a1c8ffd58b5eeda690ce9}{
-CL\_\-ResourceManager $\ast$ {\bfseries getRM} (void)}
-\label{classWorld_ae62ed957ab6a1c8ffd58b5eeda690ce9}
+\hypertarget{classWorld_a5436387064a84be30661204f0c27fb1b}{
+void {\bfseries add\_\-scene} (\hyperlink{classScene}{Scene} $\ast$)}
+\label{classWorld_a5436387064a84be30661204f0c27fb1b}
+
+\item 
+\hypertarget{classWorld_ac0eb26fc1a66dcec1c82ffc3e076cd01}{
+CL\_\-ResourceManager $\ast$ {\bfseries get\_\-rm} (void)}
+\label{classWorld_ac0eb26fc1a66dcec1c82ffc3e076cd01}
+
+\item 
+\hypertarget{classWorld_afd13f88c50f620ac8ec7f92d6e21d798}{
+\hyperlink{classBBN__Plot}{BBN\_\-Plot} $\ast$ {\bfseries get\_\-plot} ()}
+\label{classWorld_afd13f88c50f620ac8ec7f92d6e21d798}
 
 \end{DoxyCompactItemize}
 
@@ -32,11 +47,11 @@ CL\_\-ResourceManager $\ast$ {\bfseries getRM} (void)}
 The world class constructs and runs the game. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classWorld_a6ce0c6ba5ce813c0ec0b910a88e09d64}{
+\hypertarget{classWorld_aab6a1bf824c9e827eafcc1e54a5f798a}{
 \index{World@{World}!World@{World}}
 \index{World@{World}!World@{World}}
-\subsubsection[{World}]{\setlength{\rightskip}{0pt plus 5cm}World::World (CL\_\-DisplayWindow \& {\em display\_\-window})}}
-\label{classWorld_a6ce0c6ba5ce813c0ec0b910a88e09d64}
+\subsubsection[{World}]{\setlength{\rightskip}{0pt plus 5cm}World::World (const CL\_\-DisplayWindow \& {\em display\_\-window})}}
+\label{classWorld_aab6a1bf824c9e827eafcc1e54a5f798a}
 Creates the game world and sets up initial contents. \hypertarget{classWorld_a8c73fba541a5817fff65147ba47cd827}{
 \index{World@{World}!$\sim$World@{$\sim$World}}
 \index{$\sim$World@{$\sim$World}!World@{World}}
@@ -45,16 +60,11 @@ Creates the game world and sets up initial contents. \hypertarget{classWorld_a8c
 Destructor. 
 
 \subsection{Member Function Documentation}
-\hypertarget{classWorld_ad74a2b078f0173249b04e3da2982d081}{
-\index{World@{World}!addGameObject@{addGameObject}}
-\index{addGameObject@{addGameObject}!World@{World}}
-\subsubsection[{addGameObject}]{\setlength{\rightskip}{0pt plus 5cm}void World::addGameObject ({\bf GameObject} $\ast$ {\em game\_\-object})}}
-\label{classWorld_ad74a2b078f0173249b04e3da2982d081}
-Adds a game object to the world. \hypertarget{classWorld_a6703e4f889e72198e0ede0cd23864792}{
-\index{World@{World}!addOverlay@{addOverlay}}
-\index{addOverlay@{addOverlay}!World@{World}}
-\subsubsection[{addOverlay}]{\setlength{\rightskip}{0pt plus 5cm}void World::addOverlay ({\bf Overlay} $\ast$ {\em overlay})}}
-\label{classWorld_a6703e4f889e72198e0ede0cd23864792}
+\hypertarget{classWorld_a6f50eb99577e175c5019567418141dad}{
+\index{World@{World}!add\_\-overlay@{add\_\-overlay}}
+\index{add\_\-overlay@{add\_\-overlay}!World@{World}}
+\subsubsection[{add\_\-overlay}]{\setlength{\rightskip}{0pt plus 5cm}void World::add\_\-overlay ({\bf Overlay} $\ast$ {\em overlay})}}
+\label{classWorld_a6f50eb99577e175c5019567418141dad}
 Adds an overlay object to the world. 
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}

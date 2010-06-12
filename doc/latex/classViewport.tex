@@ -1,0 +1,138 @@
+\hypertarget{classViewport}{
+\section{Viewport Class Reference}
+\label{classViewport}\index{Viewport@{Viewport}}
+}
+
+
+{\ttfamily \#include $<$Viewport.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classViewport_aaca5213263cd1d9396133e2e50a8912e}{
+{\bfseries Viewport} (\hyperlink{classScene}{Scene} $\ast$)}
+\label{classViewport_aaca5213263cd1d9396133e2e50a8912e}
+
+\item 
+CL\_\-Point \hyperlink{classViewport_a6fa5e4483a38e8775252bfa1467cdc77}{get\_\-screen\_\-position} (const CL\_\-Pointd \&)
+\item 
+CL\_\-Pointd \hyperlink{classViewport_a73064b60005187e3762f16618298e651}{get\_\-world\_\-position} (const CL\_\-Point \&)
+\item 
+bool \hyperlink{classViewport_a4a80ef891f5678d6debdaa8a988a5bd0}{get\_\-is\_\-visible} (const CL\_\-Pointd \&)
+\item 
+void \hyperlink{classViewport_acacc14d6b2ca0f48734b0ae392938886}{center\_\-on\_\-world} (const CL\_\-Pointd \&)
+\item 
+void \hyperlink{classViewport_ad6b4c3ce84e139598414bb61c4802e17}{update} (unsigned int)
+\item 
+\hypertarget{classViewport_a3ecf4cc556e2f263f6096735ba49deef}{
+void {\bfseries set\_\-scroll\_\-w} (bool)}
+\label{classViewport_a3ecf4cc556e2f263f6096735ba49deef}
+
+\item 
+\hypertarget{classViewport_a2ed43f02a30e2e27e671c7c80a60330b}{
+void {\bfseries set\_\-scroll\_\-e} (bool)}
+\label{classViewport_a2ed43f02a30e2e27e671c7c80a60330b}
+
+\item 
+\hypertarget{classViewport_a7dce4c5f2fa304c0faa661bfc8437cce}{
+void {\bfseries set\_\-scroll\_\-s} (bool)}
+\label{classViewport_a7dce4c5f2fa304c0faa661bfc8437cce}
+
+\item 
+\hypertarget{classViewport_a7fd5cd6fc729ac2c42106d073775d089}{
+void {\bfseries set\_\-scroll\_\-n} (bool)}
+\label{classViewport_a7fd5cd6fc729ac2c42106d073775d089}
+
+\item 
+\hypertarget{classViewport_a635a0926d12b7ea83c9f46731c401ba8}{
+void {\bfseries set\_\-enable\_\-scrolling} (bool)}
+\label{classViewport_a635a0926d12b7ea83c9f46731c401ba8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classViewport_aae7f2e237993219df23f773ea8999e06}{
+\hyperlink{classScene}{Scene} $\ast$ {\bfseries scene}}
+\label{classViewport_aae7f2e237993219df23f773ea8999e06}
+
+\item 
+CL\_\-Pointd \hyperlink{classViewport_ac1415e2e5f8ccad7e50dc834126439fa}{origin}
+\item 
+CL\_\-Point \hyperlink{classViewport_ada6d3facef528063b5204a530f8b30bf}{screen\_\-center}
+\item 
+\hypertarget{classViewport_a42ba88c36a7316d6db37928c85e9808b}{
+bool {\bfseries enable\_\-scrolling}}
+\label{classViewport_a42ba88c36a7316d6db37928c85e9808b}
+
+\item 
+\hypertarget{classViewport_a8a2876659e5d991dd6c932da04bca824}{
+bool {\bfseries scroll\_\-w}}
+\label{classViewport_a8a2876659e5d991dd6c932da04bca824}
+
+\item 
+\hypertarget{classViewport_a2b873a4def8f03ea0848f5ab7be7a504}{
+bool {\bfseries scroll\_\-e}}
+\label{classViewport_a2b873a4def8f03ea0848f5ab7be7a504}
+
+\item 
+\hypertarget{classViewport_ac6d9ba653f13df11c98482356ac50fb5}{
+bool {\bfseries scroll\_\-s}}
+\label{classViewport_ac6d9ba653f13df11c98482356ac50fb5}
+
+\item 
+\hypertarget{classViewport_a36b4488652be753759b3aea0bfd47c52}{
+bool {\bfseries scroll\_\-n}}
+\label{classViewport_a36b4488652be753759b3aea0bfd47c52}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classViewport}{Viewport} is used to translate what is in the world and determine what and what not to render on the player's screen. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classViewport_acacc14d6b2ca0f48734b0ae392938886}{
+\index{Viewport@{Viewport}!center\_\-on\_\-world@{center\_\-on\_\-world}}
+\index{center\_\-on\_\-world@{center\_\-on\_\-world}!Viewport@{Viewport}}
+\subsubsection[{center\_\-on\_\-world}]{\setlength{\rightskip}{0pt plus 5cm}void Viewport::center\_\-on\_\-world (const CL\_\-Pointd \& {\em point})}}
+\label{classViewport_acacc14d6b2ca0f48734b0ae392938886}
+Changes the origin so that the viewpoint is centered on point. \hypertarget{classViewport_a4a80ef891f5678d6debdaa8a988a5bd0}{
+\index{Viewport@{Viewport}!get\_\-is\_\-visible@{get\_\-is\_\-visible}}
+\index{get\_\-is\_\-visible@{get\_\-is\_\-visible}!Viewport@{Viewport}}
+\subsubsection[{get\_\-is\_\-visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Viewport::get\_\-is\_\-visible (const CL\_\-Pointd \& {\em point})}}
+\label{classViewport_a4a80ef891f5678d6debdaa8a988a5bd0}
+Calculates and determines whether a world point is visible on the screen. \hypertarget{classViewport_a6fa5e4483a38e8775252bfa1467cdc77}{
+\index{Viewport@{Viewport}!get\_\-screen\_\-position@{get\_\-screen\_\-position}}
+\index{get\_\-screen\_\-position@{get\_\-screen\_\-position}!Viewport@{Viewport}}
+\subsubsection[{get\_\-screen\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Point Viewport::get\_\-screen\_\-position (const CL\_\-Pointd \& {\em world\_\-position})}}
+\label{classViewport_a6fa5e4483a38e8775252bfa1467cdc77}
+Calculates and returns the position of the world CL\_\-Pointd on the screen. \hypertarget{classViewport_a73064b60005187e3762f16618298e651}{
+\index{Viewport@{Viewport}!get\_\-world\_\-position@{get\_\-world\_\-position}}
+\index{get\_\-world\_\-position@{get\_\-world\_\-position}!Viewport@{Viewport}}
+\subsubsection[{get\_\-world\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Pointd Viewport::get\_\-world\_\-position (const CL\_\-Point \& {\em screen\_\-position})}}
+\label{classViewport_a73064b60005187e3762f16618298e651}
+Calculates and returns the position of the screen CL\_\-Point in the world system. \hypertarget{classViewport_ad6b4c3ce84e139598414bb61c4802e17}{
+\index{Viewport@{Viewport}!update@{update}}
+\index{update@{update}!Viewport@{Viewport}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Viewport::update (unsigned int {\em time\_\-elapsed\_\-ms})}}
+\label{classViewport_ad6b4c3ce84e139598414bb61c4802e17}
+Updates the origin to enable steady scrolling. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classViewport_ac1415e2e5f8ccad7e50dc834126439fa}{
+\index{Viewport@{Viewport}!origin@{origin}}
+\index{origin@{origin}!Viewport@{Viewport}}
+\subsubsection[{origin}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Pointd {\bf Viewport::origin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classViewport_ac1415e2e5f8ccad7e50dc834126439fa}
+The origin of the viewport in the world system. \hypertarget{classViewport_ada6d3facef528063b5204a530f8b30bf}{
+\index{Viewport@{Viewport}!screen\_\-center@{screen\_\-center}}
+\index{screen\_\-center@{screen\_\-center}!Viewport@{Viewport}}
+\subsubsection[{screen\_\-center}]{\setlength{\rightskip}{0pt plus 5cm}CL\_\-Point {\bf Viewport::screen\_\-center}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classViewport_ada6d3facef528063b5204a530f8b30bf}
+The center of the screen in screen co-\/ordinates system. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/game/\hyperlink{Viewport_8h}{Viewport.h}\item 
+source/game/\hyperlink{Viewport_8cpp}{Viewport.cpp}\end{DoxyCompactItemize}
