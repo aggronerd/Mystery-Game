@@ -76,7 +76,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 	 */
 	while (!cur.is_null())
 	{
-		if (cur.get_node_name() == "tileset")
+		if (cur.get_node_name() == CL_String("tileset"))
 		{
 
 			DEBUG_MSG("Found tileset.")
@@ -99,7 +99,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 			while (!tileset_node.is_null())
 			{
 
-				if(tileset_node.get_node_name() == "image")
+				if(tileset_node.get_node_name() == CL_String("image"))
 				{
 					//Proceed to load tileset from image.
 					tileset_filename = tileset_node.to_element().get_attribute("source");
@@ -110,7 +110,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 					load_tileset(tile_width,tile_height,tileset_filename,first_gid);
 					image_element_count ++;
 				}
-				else if (tileset_node.get_node_name() == "tile")
+				else if (tileset_node.get_node_name() == CL_String("tile"))
 				{
 					//Cannot set properties if no image was used to load tiles from.
 					if(image_element_count==0)
@@ -127,7 +127,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 			}
 
 		}
-		else if (cur.get_node_name() == "layer")
+		else if (cur.get_node_name() == CL_String("layer"))
 		{
 
 			DEBUG_MSG("Found layer.")
@@ -149,7 +149,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 			CL_DomNode cur2 = cur.get_first_child();
 			while(!cur2.is_null())
 			{
-				if(cur2.get_node_name()=="data")
+				if(cur2.get_node_name()==CL_String("data"))
 				{
 
 					//Counter for current tile.
@@ -159,7 +159,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 					CL_DomNode cur3 = cur2.get_first_child();
 					while(!cur3.is_null())
 					{
-						if(cur3.get_node_name()=="tile")
+						if(cur3.get_node_name()==CL_String("tile"))
 						{
 
 							CL_DomElement tile_element = cur3.to_element();
@@ -227,12 +227,12 @@ void Scene::load_tile_properties(const CL_DomElement& element, int first_gid)
 	CL_DomNode cur = element.get_first_child();
 	while(!cur.is_null())
 	{
-		if(cur.get_node_name() == "properties")
+		if(cur.get_node_name() == CL_String("properties"))
 		{
 			CL_DomNode cur2 = cur.get_first_child();
 			while(!cur2.is_null())
 			{
-				if(cur2.get_node_name() == "property")
+				if(cur2.get_node_name() == CL_String("property"))
 				{
 
 					//Load property values.
@@ -240,7 +240,7 @@ void Scene::load_tile_properties(const CL_DomElement& element, int first_gid)
 					CL_String property_name = property_element.get_attribute("name");
 
 					//Parse
-					if(property_name == "collision")
+					if(property_name == CL_String("collision"))
 					{
 						_tileset[first_gid+tile_id]->set_is_obstacle(
 								CL_StringHelp::text_to_bool(property_element.get_attribute("value")));
