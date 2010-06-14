@@ -366,10 +366,10 @@ void Scene::draw()
 				//Tile rectangle size and position.
 				CL_Rectf rec;
 
-				rec.left = screen_point_left.x;
-				rec.top = screen_point_bottom.y - 128;
-				rec.right = screen_point_right.x;
-				rec.bottom = screen_point_bottom.y;
+				rec.left = static_cast<float>(screen_point_left.x);
+				rec.top = static_cast<float>(screen_point_bottom.y) - _tile_height;
+				rec.right = static_cast<float>(screen_point_right.x);
+				rec.bottom = static_cast<float>(screen_point_bottom.y);
 
 				pos.x = x;
 				pos.y = y;

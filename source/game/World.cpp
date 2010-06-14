@@ -163,7 +163,7 @@ void World::init_level()
   DEBUG_MSG("World::initLevel() - Creating test scene and adding level contents.")
 
   // Isometric grid overlay
-  //add_overlay(new IsometricGrid(this));
+  add_overlay(new IsometricGrid(this));
 
   // Add player character
   add_scene(new Scene(this,"data/scenes/hotel/hotel.tmx"));

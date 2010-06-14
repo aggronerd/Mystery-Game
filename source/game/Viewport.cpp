@@ -60,8 +60,9 @@ CL_Point Viewport::get_screen_position(const CL_Pointd& world_position)
   p.y = p.y * VIEWPOINT_Y_SCALE;
 
   //Round off to the nearest integer
-  result.x = p.round().x;
-  result.y = p.round().y;
+  CL_Vec2<double> rounded = p.round();
+  result.x = static_cast<int>(rounded.x);
+  result.y = static_cast<int>(rounded.y);
 
   //Translate to match screen origin lying in the middle of the graphic's context
   result = result + screen_center;

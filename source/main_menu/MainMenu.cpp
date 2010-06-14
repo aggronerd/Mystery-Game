@@ -25,10 +25,10 @@ MainMenu::MainMenu(const CL_DisplayWindow &display_window) : ApplicationModule(d
   CL_DisplayWindowDescription desc;
   desc.set_allow_resize(false);
   desc.set_title("Main Menu");
-  desc.set_position(CL_Rect(window.get_geometry().get_width()-210,
-                            window.get_geometry().get_height()-140,
-                            window.get_geometry().get_width()-10,
-                            window.get_geometry().get_height()-10),false);
+  desc.set_position(CL_Rect(window.get_viewport().get_width()-210,
+                            window.get_viewport().get_height()-140,
+                            window.get_viewport().get_width()-10,
+                            window.get_viewport().get_height()-10),true);
   desc.set_decorations(true);
   menu_window = new CL_Window(&gui,desc);
 
