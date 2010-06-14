@@ -282,9 +282,9 @@ void Scene::load_tileset(int tile_width, int tile_height, const CL_String& filen
 		{
 			CL_Rect tile_geom;
 			tile_geom.left = x*tile_width;
-			tile_geom.right = tile_geom.left+(tile_width-1);
+			tile_geom.right = tile_geom.left+(tile_width);
 			tile_geom.top = y*tile_height;
-			tile_geom.bottom = tile_geom.top+(tile_height-1);
+			tile_geom.bottom = tile_geom.top+(tile_height);
 
 			DEBUG_MSG("Scene::load_tileset(int, int, const CL_String&, int) - Cutting out left=" +
 					      CL_StringHelp::int_to_text(tile_geom.left) + ", right = " +

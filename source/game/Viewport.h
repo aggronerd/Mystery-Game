@@ -12,7 +12,7 @@
 #include <ClanLib/core.h>
 
 #define VIEWPOINT_Y_SCALE 0.5
-#define VIEWPOINT_ZOOM 43.5
+#define VIEWPOINT_ZOOM 45.254834 // 64 pixel width of tile. sqrt((64*64)/2)
 #define VIEWPOINT_SCROLL_DISTANCE_PER_SEC 10
 #define VIEWPOINT_SCROLL_BORDER_WIDTH 40
 
