@@ -55,28 +55,29 @@ void BBN_Info::draw_controls()
 	lv_header->append(lv_header->create_column("name_id", "Decision Name"));
 	lv_header->append(lv_header->create_column("value_id", "Value"));
 
-	//Itterate through decisions and list values
+	//Iterate through decisions and list values
 	std::vector<BBN_Decision*>* decisions = _bbn_network->get_decisions();
 	std::vector<BBN_Decision*>::iterator it;
-	CL_ListViewItem items[decisions->size()];
+
 	int i = 0;
 	for(it = decisions->begin(); it != decisions->end(); ++it)
 	{
-		items[i] = _list->create_item();
-		items[i].set_column_text("name_id", (*it)->get_name());
+		//Gosh, I hope clanlib destroys this object :-S
+		CL_ListViewItem new_item = _list->create_item();
+		new_item.set_column_text("name_id", (*it)->get_name());
 		if((*it)->has_generated_result())
 		{
 			//Result has been chosen.
-			items[i].set_column_text("value_id", (*it)->get_result()->get_name());
+			new_item.set_column_text("value_id", (*it)->get_result()->get_name());
 		}
 		else
 		{
 			//Result is undefined.
-			items[i].set_column_text("value_id", BBN_INFO_LIST_UNDEF);
+			new_item.set_column_text("value_id", BBN_INFO_LIST_UNDEF);
 		}
-		items[i].set_editable(false);
+		new_item.set_editable(false);
 
-		doc_item.append_child(items[i]);
+		doc_item.append_child(new_item);
 		i++;
 	}
 
