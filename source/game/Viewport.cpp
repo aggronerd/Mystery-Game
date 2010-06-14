@@ -9,7 +9,6 @@
 #include "Viewport.h"
 #include "Scene.h"
 #include "World.h"
-#include <math.h>
 #include "../misc/logging.h"
 
 Viewport::Viewport(Scene* owner) : scene(owner), origin(0,0)
@@ -61,8 +60,8 @@ CL_Point Viewport::get_screen_position(const CL_Pointd& world_position)
   p.y = p.y * VIEWPOINT_Y_SCALE;
 
   //Round off to the nearest integer
-  result.x = static_cast<int>(round(p.x));
-  result.y = static_cast<int>(round(p.y));
+  result.x = p.round().x;
+  result.y = p.round().y;
 
   //Translate to match screen origin lying in the middle of the graphic's context
   result = result + screen_center;
@@ -73,13 +72,14 @@ CL_Point Viewport::get_screen_position(const CL_Pointd& world_position)
 /**
  * Calculates and returns the position of the screen CL_Point in the world system.
  */
-CL_Pointd Viewport::get_world_position(const CL_Point& screen_position)
+CL_Pointd Viewport::get_world_position(CL_Point screen_position)
 {
   CL_Pointd result;
 
   //Convert to double
-  result.x = static_cast<double>(round(screen_position.x));
-  result.y = static_cast<double>(round(screen_position.y));
+  CL_Vec2i rounded = screen_position.round();
+  result.x = static_cast<double>(rounded.x);
+  result.y = static_cast<double>(rounded.y);
 
   result = result - screen_center;
 

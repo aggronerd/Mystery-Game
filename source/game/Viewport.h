@@ -28,7 +28,7 @@ public:
   Viewport(Scene*);
   virtual ~Viewport();
   CL_Point get_screen_position(const CL_Pointd&);
-  CL_Pointd get_world_position(const CL_Point&);
+  CL_Pointd get_world_position(CL_Point);
   bool get_is_visible(const CL_Pointd&);
   void center_on_world(const CL_Pointd&);
   void update(unsigned int);
