@@ -92,7 +92,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
   while (!cur.is_null())
   {
 
-    if (cur.get_node_name() == "options")
+    if (cur.get_node_name() == CL_String("options"))
     {
       /*
        * <options></options>
@@ -101,7 +101,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
       //Look for 'option' elements.
       while (!cur2.is_null())
       {
-        if (cur2.get_node_name() == "option")
+        if (cur2.get_node_name() == CL_String("option"))
         {
           BBN_Option* option = new BBN_Option(this);
           CL_DomElement element = cur2.to_element();
@@ -111,7 +111,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
        cur2 = cur2.get_next_sibling();
      }
     }
-    else if (cur.get_node_name() == "probabilities")
+    else if (cur.get_node_name() == CL_String("probabilities"))
     {
       /*
        * <probabilities></probabilities>
@@ -120,7 +120,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
 
       while(!cur2.is_null())
       {
-        if (cur2.get_node_name() == "givens")
+        if (cur2.get_node_name() == CL_String("givens"))
         {
           /*
            * <givens></givens>
@@ -130,7 +130,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
           //Look for 'given' elements.
           while (!cur3.is_null())
           {
-            if (cur3.get_node_name() == "given")
+            if (cur3.get_node_name() == CL_String("given"))
             {
               /*
                * <given></given>
@@ -143,7 +143,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
             cur3 = cur3.get_next_sibling();
           }
         }
-        else if (cur2.get_node_name() == "probs")
+        else if (cur2.get_node_name() == CL_String("probs"))
         {
           /*
            * <probs></probs>
@@ -153,7 +153,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
           //Look for 'prob' elements.
           while (!cur3.is_null())
           {
-            if (cur3.get_node_name() == "prob")
+            if (cur3.get_node_name() == CL_String("prob"))
             {
               /*
                * <prob></prob>
@@ -171,7 +171,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
 
       }
     }
-    else if  (cur.get_node_name() == "dependencies")
+    else if  (cur.get_node_name() == CL_String("dependencies"))
     {
        /*
         * <dependencies></dependencies>
@@ -180,7 +180,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
       //Look for 'dependency' elements.
       while (!cur2.is_null())
       {
-        if (cur2.get_node_name() == "dependency")
+        if (cur2.get_node_name() == CL_String("dependency"))
         {
           CL_DomElement element = cur2.to_element();
           CL_String decision_path = static_cast<CL_String>(element.get_attribute("decision"));

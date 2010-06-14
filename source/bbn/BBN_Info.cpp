@@ -117,7 +117,7 @@ void BBN_Info::on_selection_changed(CL_ListViewSelection selection, CL_ListView*
 	CL_ListViewSelectedItem item = selection.get_first();
 	if(!item.is_null())
 	{
-		if(item.get_item().get_column("value_id").get_text() == BBN_INFO_LIST_UNDEF)
+		if(item.get_item().get_column("value_id").get_text() == CL_String(BBN_INFO_LIST_UNDEF))
 		{
 			//Item is selected and it is undefined.
 			_button_generate->set_enabled(true);
@@ -242,7 +242,7 @@ void BBN_Info::set_selected(CL_PushButton* button)
 		 _list != 0x0 && !(_list->get_selected_item().is_null()))
 	{
 
-		if(_combo_options->get_text() != "")
+		if(_combo_options->get_text() != CL_String(""))
 		{
 
 			//Retrieve the values

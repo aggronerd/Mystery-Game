@@ -61,7 +61,7 @@ BBN_Plot::BBN_Plot(const CL_String& file_name)
    */
   while (!cur.is_null())
   {
-    if (cur.get_node_name() == "decisions")
+    if (cur.get_node_name() == CL_String("decisions"))
     {
       //'decisions' element encountered
       decisions_element_count ++;
@@ -71,7 +71,7 @@ BBN_Plot::BBN_Plot(const CL_String& file_name)
        */
       while (!cur2.is_null())
       {
-        if (cur2.get_node_name() == "decision")
+        if (cur2.get_node_name() == CL_String("decision"))
         {
           BBN_Decision* decision = new BBN_Decision(this);
           CL_DomElement element = cur2.to_element();

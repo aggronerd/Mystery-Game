@@ -50,7 +50,7 @@ void BBN_Given::load_from_xml(CL_DomElement element)
    */
   while (!cur.is_null())
   {
-    if (cur.get_node_name() == "givens")
+    if (cur.get_node_name() == CL_String("givens"))
     {
       /*
        * <givens></givens>
@@ -58,7 +58,7 @@ void BBN_Given::load_from_xml(CL_DomElement element)
       curChild = cur.get_first_child();
       while(!curChild.is_null())
       {
-        if(curChild.get_node_name() == "given")
+        if(curChild.get_node_name() == CL_String("given"))
         {
           /*
            * <given></given>
@@ -71,7 +71,7 @@ void BBN_Given::load_from_xml(CL_DomElement element)
         curChild = curChild.get_next_sibling();
       }
     }
-    if (cur.get_node_name() == "probs")
+    if (cur.get_node_name() == CL_String("probs"))
     {
       /**
         * <probs></probs>
@@ -79,7 +79,7 @@ void BBN_Given::load_from_xml(CL_DomElement element)
       curChild = cur.get_first_child();
       while(!curChild.is_null())
       {
-        if(curChild.get_node_name() == "prob")
+        if(curChild.get_node_name() == CL_String("prob"))
         {
           /*
            * <prob></prob>
