@@ -55,8 +55,8 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/hotel.xml");
-    plot->prepare_bn();
+    //plot = new BBN_Plot("data/plots/hotel.xml");
+    //plot->prepare_bn();
   }
   catch (BBN_Exception e) {
     Application::log(LOG_LEVEL_INFO,"Error occurred while parsing bayesian net: '" + e.message + "'.");
@@ -66,6 +66,7 @@ void World::init_level()
     return;
   }
 
+  /*
   plot->set_result("characters_dead","1");
 
   CL_String victim;
@@ -92,10 +93,12 @@ void World::init_level()
   }
   Application::log(LOG_LEVEL_INFO,CL_String("----------------------"));
   Application::log(LOG_LEVEL_INFO,CL_String("Evidence node values:"));
+  */
 
   /*
    * Lists all evidence nodes.
    */
+  /*
   std::vector<BBN_Decision*>* decisions = plot->get_decisions();
   std::vector<BBN_Decision*>::iterator it_dec;
   for(it_dec =  decisions->begin(); it_dec != decisions->end(); ++it_dec)
@@ -149,6 +152,7 @@ void World::init_level()
     Application::log(LOG_LEVEL_INFO,CL_String("It was the chef!!! Why though?"));
     Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
   }
+	*/
 
   //Where the player's character starts
   CL_Pointd pc_start(0,0);
@@ -162,10 +166,9 @@ void World::init_level()
   //add_overlay(new IsometricGrid(this));
 
   // Add player character
-  add_scene(new Scene(this));
+  add_scene(new Scene(this,"data/scenes/hotel/hotel.tmx"));
 
   player_character = new PlayerCharacter(this->get_active_scene(),pc_start,pc_direction);
-  this->get_active_scene()->add_game_object(new HotelGroundFloor(this->get_active_scene(),bg_start, north));
   this->get_active_scene()->add_game_object(player_character);
 
   DEBUG_MSG("World::initLevel() - Creating and playing music.")

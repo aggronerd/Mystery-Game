@@ -10,10 +10,28 @@
 #define SCENE_H_
 
 #include <list>
-#include "World.h"
 #include "GameObject.h"
 #include "Viewport.h"
+#include "Tile.h"
 #include <ClanLib/core.h>
+
+class World;
+
+/**
+ * Structure used to compare vectors in the map used to store
+ * tiles.
+ */
+struct vec2icomp
+{
+  bool operator() (const CL_Vec2i& lhs, const CL_Vec2i& rhs) const
+  {
+  	if(lhs.y < rhs.y)
+			return(true);
+  	if(lhs.x < rhs.x && lhs.y == rhs.y)
+ 			return(true);
+  	return(false);
+  }
+};
 
 class Scene
 {
@@ -27,14 +45,26 @@ public:
   void draw(void);
   void update(unsigned int);
   void add_viewport(Viewport*);
-  void add_accessible_area(AccessibleArea*);
 
 private:
-  std::list<CL_SharedPtr<Viewport> > viewports;
-  std::list<CL_SharedPtr<GameObject> > game_objects;
-  std::list<std::list<CL_Sprite> > tiles;
-  World* world;
-  CL_SharedPtr<Viewport> active_viewport;
+  std::list<Viewport*> _viewports;
+  std::list<GameObject*> _game_objects;
+
+  std::list<std::map<CL_Vec2i, int, vec2icomp >* > _layers_ordered;
+  std::map<CL_String,std::map<CL_Vec2i, int, vec2icomp > > _layers; //list of layer of GIDs for tiles.
+  std::map<int, CL_SharedPtr<Tile> > _tileset; //The tiles accessible by GIDs.
+
+  World* _world;
+  Viewport* _active_viewport;
+
+  int _tile_width; //Pixels width of tile image
+  int _tile_height; //Pixels height of tile image
+  int _scene_width; //Width in tiles of the scene
+  int _scene_height; //Height in tiles of the scene
+
+  void load_tileset(int, int, const CL_String&, int);
+  void load_tile_properties(const CL_DomElement&, int);
+  void clear_tile_layer(const CL_String&);
 
 };
 

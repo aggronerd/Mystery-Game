@@ -8,18 +8,23 @@
 #ifndef TILE_H_
 #define TILE_H_
 
+#include <ClanLib/display.h>
+
 /**
  * Scene tile.
  */
 class Tile
 {
 	public:
-		Tile();
+		Tile(const CL_Image&);
 		virtual	~Tile();
+		bool get_is_obstacle(void);
+		void set_is_obstacle(bool);
+		CL_Image* get_image(void);
 
 	private:
-		bool is_obstacle;
-		CL_Sprite sprite;
+		bool _is_obstacle;
+		CL_Image _image;
 
 };
 
