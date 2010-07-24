@@ -14,24 +14,9 @@
 #include "Viewport.h"
 #include "Tile.h"
 #include <ClanLib/core.h>
+#include "vec2icomp.h"
 
 class World;
-
-/**
- * Structure used to compare vectors in the map used to store
- * tiles.
- */
-struct vec2icomp
-{
-  bool operator() (const CL_Vec2i& lhs, const CL_Vec2i& rhs) const
-  {
-  	if(lhs.y < rhs.y)
-			return(true);
-  	if(lhs.x < rhs.x && lhs.y == rhs.y)
- 			return(true);
-  	return(false);
-  }
-};
 
 class Scene
 {

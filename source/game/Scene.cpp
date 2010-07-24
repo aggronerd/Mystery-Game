@@ -351,6 +351,7 @@ void Scene::draw()
 
 		for(int y=(_scene_height/2)-1; y>=(0-(_scene_height/2)); y--)
 		{
+
 			for(int x=(_scene_width/2)-1; x>=(0-(_scene_width/2)); x--)
 			{
 				CL_Pointd world_point_bottom = CL_Pointd(x,y);
