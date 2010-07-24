@@ -25,9 +25,9 @@ void BBN_Plot::clone_results(BBN_Plot* existing)
 	}
 }
 
-BBN_Plot::BBN_Plot(const CL_String& file_name)
+BBN_Plot::BBN_Plot(const CL_String8& file_name)
 {
-  DEBUG_MSG("BBN_Plot::BBN_Plot(const CL_String&) - Called.")
+  DEBUG_MSG("BBN_Plot::BBN_Plot(const CL_String8&) - Called.")
 
   _bn_current_solution = 0x0;
   _bn_join_tree = 0x0;
@@ -47,7 +47,7 @@ BBN_Plot::BBN_Plot(const CL_String& file_name)
   _name = root.get_attribute("name");
 
   //Parse children:
-  DEBUG_MSG(CL_String("BBN_Plot::BBN_Plot(const char*) - Processing children for '") + _name + "'.")
+  DEBUG_MSG(CL_String8("BBN_Plot::BBN_Plot(const char*) - Processing children for '") + _name + "'.")
 
   int decisions_element_count = 0;
   int decision_element_count = 0;
@@ -61,7 +61,7 @@ BBN_Plot::BBN_Plot(const CL_String& file_name)
    */
   while (!cur.is_null())
   {
-    if (cur.get_node_name() == CL_String("decisions"))
+    if (cur.get_node_name() == CL_String8("decisions"))
     {
       //'decisions' element encountered
       decisions_element_count ++;
@@ -71,7 +71,7 @@ BBN_Plot::BBN_Plot(const CL_String& file_name)
        */
       while (!cur2.is_null())
       {
-        if (cur2.get_node_name() == CL_String("decision"))
+        if (cur2.get_node_name() == CL_String8("decision"))
         {
           BBN_Decision* decision = new BBN_Decision(this);
           CL_DomElement element = cur2.to_element();
@@ -113,12 +113,12 @@ BBN_Plot::~BBN_Plot()
   BBN_Random::reset();
 }
 
-void BBN_Plot::set_name(CL_String new_name)
+void BBN_Plot::set_name(CL_String8 new_name)
 {
 	_name = new_name;
 }
 
-CL_String BBN_Plot::get_name()
+CL_String8 BBN_Plot::get_name()
 {
   return(_name);
 }
@@ -183,7 +183,7 @@ long BBN_Plot::decisions_count()
  * by string paths given in the XML file and not by
  * pointers?
  */
-BBN_Decision* BBN_Plot::get_decision(const CL_String& name)
+BBN_Decision* BBN_Plot::get_decision(const CL_String8& name)
 {
   std::vector<BBN_Decision*>::iterator it_decision;
   for(it_decision = _decisions.begin(); it_decision != _decisions.end(); ++it_decision)
@@ -244,7 +244,7 @@ void BBN_Plot::clear_bn()
 /**
  * Returns the result for the decision. Returns null (0x0) if the decision isn't found.
  */
-BBN_Option* BBN_Plot::query_result(CL_String decision_name)
+BBN_Option* BBN_Plot::query_result(CL_String8 decision_name)
 {
 	BBN_Decision* decision = get_decision(decision_name);
 	if(decision != 0x0)
@@ -272,17 +272,17 @@ std::vector<BBN_Decision*>* BBN_Plot::get_decisions()
  * Returns a pointer to an option defined by path. If it
  * cannot be found then the function returns null (0x0).
  */
-BBN_Option* BBN_Plot::get_option(const CL_String& path)
+BBN_Option* BBN_Plot::get_option(const CL_String8& path)
 {
   int n = path.find_first_of('.',0);
 
-  CL_String decision_name = path.substr(0,n);
-  CL_String option_name = path.substr(n+1,path.size()-n-1);
+  CL_String8 decision_name = path.substr(0,n);
+  CL_String8 option_name = path.substr(n+1,path.size()-n-1);
 
   BBN_Decision* decision = get_decision(decision_name);
   if(decision == 0x0)
   {
-    DEBUG_MSG("BBN_Option* BBN_Plot::get_option(const CL_String&) - Attempt to get decision '" + decision_name + "' failed." )
+    DEBUG_MSG("BBN_Option* BBN_Plot::get_option(const CL_String8&) - Attempt to get decision '" + decision_name + "' failed." )
     return(0x0);
   }
   else
@@ -290,7 +290,7 @@ BBN_Option* BBN_Plot::get_option(const CL_String& path)
     BBN_Option* option = decision->get_option(option_name);
     if(option == 0x0)
     {
-      DEBUG_MSG("BBN_Option* BBN_Plot::get_option(const CL_String&) - Attempt to get option '" + option_name + "' failed." )
+      DEBUG_MSG("BBN_Option* BBN_Plot::get_option(const CL_String8&) - Attempt to get option '" + option_name + "' failed." )
       return(0x0);
     }
     else
@@ -304,7 +304,7 @@ BBN_Option* BBN_Plot::get_option(const CL_String& path)
 /**
  * Sets the value of a decision. Returns true if successful.
  */
-bool BBN_Plot::set_result(const CL_String& decision_path, const CL_String& value)
+bool BBN_Plot::set_result(const CL_String8& decision_path, const CL_String8& value)
 {
   bool result = false;
 
@@ -324,7 +324,7 @@ unsigned long BBN_Plot::get_next_decision_id()
   return(id);
 }
 
-CL_String BBN_Plot::get_file_name()
+CL_String8 BBN_Plot::get_file_name()
 {
 	return(_file_name);
 }

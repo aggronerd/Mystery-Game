@@ -19,11 +19,11 @@
  */
 Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent)
 {
-	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>) - Called.")
+	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String8,CL_String8>) - Called.")
 
-	std::map<CL_String,CL_String> bayes_values;
+	std::map<CL_String8,CL_String8> bayes_values;
 
-	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>) - Calling other constructor with empty list...")
+	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String8,CL_String8>) - Calling other constructor with empty list...")
 	Monster::Monster(location, parent, bayes_values);
 
 }
@@ -49,9 +49,9 @@ Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, BBN_Plot* bbn
 	_destination.set_size(static_cast<CL_Sizef>(_background.get_size()));
 }
 
-Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, std::map<CL_String,CL_String> bayes_values)
+Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, std::map<CL_String8,CL_String8> bayes_values)
 {
-	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String,CL_String>) - Called.")
+	DEBUG_MSG("Monster::Monster(CL_Pointf, MonsterGeneratorDemo*, std::map<CL_String8,CL_String8>) - Called.")
 
 	_parent = parent;
 
@@ -62,7 +62,7 @@ Monster::Monster(CL_Pointf location, MonsterGeneratorDemo* parent, std::map<CL_S
 	//Set preset properties
 	if(bayes_values.size() > 0)
 	{
-		std::map<CL_String,CL_String>::iterator it;
+		std::map<CL_String8,CL_String8>::iterator it;
 		for(it = bayes_values.begin(); it != bayes_values.end(); ++it)
 			if(!_properties->set_result((*it).first,(*it).second))
 				Application::log(LOG_LEVEL_WARN, "Failed to set the value of a bayes network node: " + (*it).first + " = " + (*it).second);

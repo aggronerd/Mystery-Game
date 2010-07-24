@@ -41,20 +41,21 @@
 </tool>
 <tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.335664886" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base">
 <option id="gnu.cpp.link.option.libs.1861136078" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-<listOptionValue builtIn="false" value="clan21GDI"/>
-<listOptionValue builtIn="false" value="clan21GUI"/>
-<listOptionValue builtIn="false" value="clan21Vorbis"/>
-<listOptionValue builtIn="false" value="clan21MikMod"/>
-<listOptionValue builtIn="false" value="clan21Sound"/>
-<listOptionValue builtIn="false" value="clan21Display"/>
+<listOptionValue builtIn="false" value="clan22SWRender"/>
+<listOptionValue builtIn="false" value="clan22CSSLayout"/>
+<listOptionValue builtIn="false" value="clan22GUI"/>
+<listOptionValue builtIn="false" value="clan22Vorbis"/>
+<listOptionValue builtIn="false" value="clan22MikMod"/>
+<listOptionValue builtIn="false" value="clan22Sound"/>
+<listOptionValue builtIn="false" value="clan22Display"/>
 <listOptionValue builtIn="false" value="png"/>
 <listOptionValue builtIn="false" value="jpeg"/>
 <listOptionValue builtIn="false" value="freetype"/>
 <listOptionValue builtIn="false" value="z"/>
 <listOptionValue builtIn="false" value="fontconfig"/>
 <listOptionValue builtIn="false" value="X11"/>
-<listOptionValue builtIn="false" value="clan21Core"/>
-<listOptionValue builtIn="false" value="clan21App"/>
+<listOptionValue builtIn="false" value="clan22Core"/>
+<listOptionValue builtIn="false" value="clan22App"/>
 </option>
 <option id="gnu.cpp.link.option.paths.83840967" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 <listOptionValue builtIn="false" value="/usr/local/lib"/>

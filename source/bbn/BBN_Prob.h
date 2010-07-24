@@ -18,7 +18,7 @@ private:
   /**
    * option is the path to the option.
    */
-  CL_String _option;
+  CL_String8 _option;
   BBN_Decision* _decision;
 
 public:

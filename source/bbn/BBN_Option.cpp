@@ -31,17 +31,17 @@ void BBN_Option::load_from_xml(const CL_DomElement& element)
   DEBUG_MSG("BBN_Option::load_from_xml(CL_DomElement) - Option name = '" + _name + "'.")
 }
 
-CL_String BBN_Option::get_name()
+CL_String8 BBN_Option::get_name()
 {
 	return(_name);
 }
 
-void BBN_Option::set_name(const CL_String& new_name)
+void BBN_Option::set_name(const CL_String8& new_name)
 {
 	_name = new_name;
 }
 
-CL_String BBN_Option::get_english()
+CL_String8 BBN_Option::get_english()
 {
   if(!_english.empty())
   {
@@ -53,7 +53,7 @@ CL_String BBN_Option::get_english()
   }
 }
 
-void BBN_Option::set_english(const CL_String& new_english)
+void BBN_Option::set_english(const CL_String8& new_english)
 {
 	_english = new_english;
 }

@@ -117,7 +117,7 @@ void BBN_Info::on_selection_changed(CL_ListViewSelection selection, CL_ListView*
 	CL_ListViewSelectedItem item = selection.get_first();
 	if(!item.is_null())
 	{
-		if(item.get_item().get_column("value_id").get_text() == CL_String(BBN_INFO_LIST_UNDEF))
+		if(item.get_item().get_column("value_id").get_text() == CL_String8(BBN_INFO_LIST_UNDEF))
 		{
 			//Item is selected and it is undefined.
 			_button_generate->set_enabled(true);
@@ -135,7 +135,7 @@ void BBN_Info::on_selection_changed(CL_ListViewSelection selection, CL_ListView*
 				std::vector<BBN_Option*>* options = decision->get_options();
 				for(it = options->begin(); it != options->end(); ++it)
 				{
-					CL_String option_name = (*it)->get_name();
+					CL_String8 option_name = (*it)->get_name();
 					_selected_options.insert_item(option_name);
 				}
 
@@ -242,19 +242,19 @@ void BBN_Info::set_selected(CL_PushButton* button)
 		 _list != 0x0 && !(_list->get_selected_item().is_null()))
 	{
 
-		if(_combo_options->get_text() != CL_String(""))
+		if(_combo_options->get_text() != CL_String8(""))
 		{
 
 			//Retrieve the values
 			CL_ListViewItem selected = _list->get_selected_item();
-			CL_String value = _combo_options->get_text();
-			CL_String name = selected.get_column("name_id").get_text();
+			CL_String8 value = _combo_options->get_text();
+			CL_String8 name = selected.get_column("name_id").get_text();
 
 			//Reset the controls.
 			disable_selection_controls();
 
 			//Attempt to set the value
-			DEBUG_MSG(CL_String("BBN_Info::set_selected(CL_PushButton*) - Attempting to set the value of '") +
+			DEBUG_MSG(CL_String8("BBN_Info::set_selected(CL_PushButton*) - Attempting to set the value of '") +
 					name + "' to '" + value + "'...")
 
 			if(_bbn_network->set_result(name,value))

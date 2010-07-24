@@ -26,7 +26,7 @@ Application::~Application()
   Application::log(LOG_LEVEL_DEBUG, "Application destructor called.");
 }
 
-int Application::main(const std::vector<CL_String> &args)
+int Application::main(const std::vector<CL_String8> &args)
 {
   try
   {
@@ -88,7 +88,7 @@ int Application::main(const std::vector<CL_String> &args)
 /**
  * Outputs the message to the console and the active log file.
  */
-void Application::log(const int level,const CL_String& message)
+void Application::log(const int level,const CL_String8& message)
 {
   if(level <= logging_level)
   {

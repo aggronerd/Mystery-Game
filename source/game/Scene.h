@@ -22,7 +22,7 @@ class Scene
 {
 public:
   Scene(World*);
-  Scene(World*, const CL_String&);
+  Scene(World*, const CL_String8&);
   virtual ~Scene();
   Viewport* get_active_viewport(void);
   World* get_world(void);
@@ -36,7 +36,7 @@ private:
   std::list<GameObject*> _game_objects;
 
   std::list<std::map<CL_Vec2i, int, vec2icomp >* > _layers_ordered;
-  std::map<CL_String,std::map<CL_Vec2i, int, vec2icomp > > _layers; //list of layer of GIDs for tiles.
+  std::map<CL_String8,std::map<CL_Vec2i, int, vec2icomp > > _layers; //list of layer of GIDs for tiles.
   std::map<int, CL_SharedPtr<Tile> > _tileset; //The tiles accessible by GIDs.
 
   World* _world;
@@ -47,9 +47,9 @@ private:
   int _scene_width; //Width in tiles of the scene
   int _scene_height; //Height in tiles of the scene
 
-  void load_tileset(int, int, const CL_String&, int);
+  void load_tileset(int, int, const CL_String8&, int);
   void load_tile_properties(const CL_DomElement&, int);
-  void clear_tile_layer(const CL_String&);
+  void clear_tile_layer(const CL_String8&);
 
 };
 

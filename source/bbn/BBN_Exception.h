@@ -14,7 +14,7 @@
 class BBN_Exception : public CL_Exception
 {
 public:
-  BBN_Exception(const CL_String & message) : CL_Exception(message) {};
+  BBN_Exception(const CL_String8 & message) : CL_Exception(message) {};
 };
 
 #endif /* BBN_EXCEPTION_H_ */

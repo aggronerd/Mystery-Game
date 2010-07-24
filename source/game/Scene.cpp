@@ -38,9 +38,9 @@ Scene::Scene(World* owner) : _world(owner)
  * @param file_name
  * @return
  */
-Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
+Scene::Scene(World* owner, const CL_String8& file_name) : _world(owner)
 {
-	DEBUG_MSG("Scene::Scene(World*, const CL_String&) - Called.")
+	DEBUG_MSG("Scene::Scene(World*, const CL_String8&) - Called.")
 
 	//Set viewport to new one for configuring camera.
 	_active_viewport = new Viewport(this);
@@ -53,7 +53,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 	DEBUG_MSG("Successfully opened file. Parsing XML...")
 
 	//Calculate root for relative paths.
-	CL_String working_dir = CL_PathHelp::get_basepath(file_name);
+	CL_String8 working_dir = CL_PathHelp::get_basepath(file_name);
 	DEBUG_MSG("Working dir = '" + working_dir + "'")
 
 	CL_DomElement root = document.get_document_element();
@@ -63,10 +63,10 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 	_scene_height = CL_StringHelp::text_to_int(root.get_attribute("height"));
 
 	DEBUG_MSG("Attributes found:")
-	DEBUG_MSG(CL_String("_tile_width = ") + CL_StringHelp::int_to_text(_tile_width))
-	DEBUG_MSG(CL_String("_tile_height = ") + CL_StringHelp::int_to_text(_tile_height))
-	DEBUG_MSG(CL_String("_scene_width = ") + CL_StringHelp::int_to_text(_scene_width))
-	DEBUG_MSG(CL_String("_scene_height = ") + CL_StringHelp::int_to_text(_scene_height))
+	DEBUG_MSG(CL_String8("_tile_width = ") + CL_StringHelp::int_to_text(_tile_width))
+	DEBUG_MSG(CL_String8("_tile_height = ") + CL_StringHelp::int_to_text(_tile_height))
+	DEBUG_MSG(CL_String8("_scene_width = ") + CL_StringHelp::int_to_text(_scene_width))
+	DEBUG_MSG(CL_String8("_scene_height = ") + CL_StringHelp::int_to_text(_scene_height))
 
 	CL_DomNode cur = root.get_first_child();
 	int tile_gid;
@@ -76,7 +76,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 	 */
 	while (!cur.is_null())
 	{
-		if (cur.get_node_name() == CL_String("tileset"))
+		if (cur.get_node_name() == CL_String8("tileset"))
 		{
 
 			DEBUG_MSG("Found tileset.")
@@ -92,14 +92,14 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 				tileset_element.get_attribute("tileheight"));
 
 			//Get the tileset
-			CL_String tileset_filename = "";
+			CL_String8 tileset_filename = "";
 			CL_DomNode tileset_node = tileset_element.get_first_child();
 			int image_element_count = 0;
 
 			while (!tileset_node.is_null())
 			{
 
-				if(tileset_node.get_node_name() == CL_String("image"))
+				if(tileset_node.get_node_name() == CL_String8("image"))
 				{
 					//Proceed to load tileset from image.
 					tileset_filename = tileset_node.to_element().get_attribute("source");
@@ -110,7 +110,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 					load_tileset(tile_width,tile_height,tileset_filename,first_gid);
 					image_element_count ++;
 				}
-				else if (tileset_node.get_node_name() == CL_String("tile"))
+				else if (tileset_node.get_node_name() == CL_String8("tile"))
 				{
 					//Cannot set properties if no image was used to load tiles from.
 					if(image_element_count==0)
@@ -127,7 +127,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 			}
 
 		}
-		else if (cur.get_node_name() == CL_String("layer"))
+		else if (cur.get_node_name() == CL_String8("layer"))
 		{
 
 			DEBUG_MSG("Found layer.")
@@ -138,7 +138,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 					layer_element.get_attribute("width"));
 			//int layer_height = CL_StringHelp::text_to_int(
 			//		layer_element.get_attribute("height"));
-			CL_String layer_name = layer_element.get_attribute("name");
+			CL_String8 layer_name = layer_element.get_attribute("name");
 
 			//Zero layer
 			clear_tile_layer(layer_name);
@@ -149,7 +149,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 			CL_DomNode cur2 = cur.get_first_child();
 			while(!cur2.is_null())
 			{
-				if(cur2.get_node_name()==CL_String("data"))
+				if(cur2.get_node_name()==CL_String8("data"))
 				{
 
 					//Counter for current tile.
@@ -159,7 +159,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
 					CL_DomNode cur3 = cur2.get_first_child();
 					while(!cur3.is_null())
 					{
-						if(cur3.get_node_name()==CL_String("tile"))
+						if(cur3.get_node_name()==CL_String8("tile"))
 						{
 
 							CL_DomElement tile_element = cur3.to_element();
@@ -197,7 +197,7 @@ Scene::Scene(World* owner, const CL_String& file_name) : _world(owner)
  *
  * @param index
  */
-void Scene::clear_tile_layer(const CL_String& name)
+void Scene::clear_tile_layer(const CL_String8& name)
 {
 	CL_Vec2i pos;
 	for(int x=0-(_scene_width/2); x<(_scene_width/2); x++)
@@ -226,20 +226,20 @@ void Scene::load_tile_properties(const CL_DomElement& element, int first_gid)
 	CL_DomNode cur = element.get_first_child();
 	while(!cur.is_null())
 	{
-		if(cur.get_node_name() == CL_String("properties"))
+		if(cur.get_node_name() == CL_String8("properties"))
 		{
 			CL_DomNode cur2 = cur.get_first_child();
 			while(!cur2.is_null())
 			{
-				if(cur2.get_node_name() == CL_String("property"))
+				if(cur2.get_node_name() == CL_String8("property"))
 				{
 
 					//Load property values.
 					CL_DomElement property_element = cur2.to_element();
-					CL_String property_name = property_element.get_attribute("name");
+					CL_String8 property_name = property_element.get_attribute("name");
 
 					//Parse
-					if(property_name == CL_String("collision"))
+					if(property_name == CL_String8("collision"))
 					{
 						_tileset[first_gid+tile_id]->set_is_obstacle(
 								CL_StringHelp::text_to_bool(property_element.get_attribute("value")));
@@ -261,12 +261,12 @@ void Scene::load_tile_properties(const CL_DomElement& element, int first_gid)
  * @param filename
  * @param first_gid
  */
-void Scene::load_tileset(int tile_width, int tile_height, const CL_String& filename, int first_gid)
+void Scene::load_tileset(int tile_width, int tile_height, const CL_String8& filename, int first_gid)
 {
 
-	DEBUG_MSG(CL_String("Scene::load_tileset(int tile_width = ") + CL_StringHelp::int_to_text( tile_width) +
+	DEBUG_MSG(CL_String8("Scene::load_tileset(int tile_width = ") + CL_StringHelp::int_to_text( tile_width) +
 			                ", int tile_height = " + CL_StringHelp::int_to_text(tile_height) +
-			                ", const CL_String& filename = '" + filename +
+			                ", const CL_String8& filename = '" + filename +
 			                "', int first_gid = " + CL_StringHelp::int_to_text(first_gid) + ") - Called.")
 
 	CL_Texture tileset(*(this->get_world()->get_gc()),filename);
@@ -285,7 +285,7 @@ void Scene::load_tileset(int tile_width, int tile_height, const CL_String& filen
 			tile_geom.top = y*tile_height;
 			tile_geom.bottom = tile_geom.top+(tile_height);
 
-			DEBUG_MSG("Scene::load_tileset(int, int, const CL_String&, int) - Cutting out left=" +
+			DEBUG_MSG("Scene::load_tileset(int, int, const CL_String8&, int) - Cutting out left=" +
 					      CL_StringHelp::int_to_text(tile_geom.left) + ", right = " +
 					      CL_StringHelp::int_to_text(tile_geom.right) + ", top = " +
 					      CL_StringHelp::int_to_text(tile_geom.top) + ", bottom = " +

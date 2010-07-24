@@ -16,7 +16,7 @@
 #endif
 
 #ifdef USE_SOFTWARE
-#include <ClanLib/gdi.h>
+#include <ClanLib/swrender.h>
 #endif
 
 #ifdef USE_OPENGL_1
@@ -31,7 +31,7 @@
 class Program
 {
 public:
-        static int main(const std::vector<CL_String> &args)
+        static int main(const std::vector<CL_String8> &args)
         {
                 // Initialize ClanLib base components
                 CL_SetupCore setup_core;
@@ -44,7 +44,7 @@ public:
 #endif
 
 #ifdef USE_SOFTWARE
-                CL_SetupGDI setup_gdi;
+                CL_SetupSWRender setup_sw;
 #endif
 
 #ifdef USE_OPENGL_1

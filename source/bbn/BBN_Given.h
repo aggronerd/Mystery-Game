@@ -19,7 +19,7 @@ private:
   /**
    * option is a path to the option.
    */
-  CL_String _option;
+  CL_String8 _option;
   std::vector<BBN_Given*> _givens;
   std::vector<BBN_Prob*> _probs;
   BBN_Decision* _decision;

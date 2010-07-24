@@ -55,7 +55,8 @@ void World::init_level()
   try
   {
     //Create the plot object to initiate generation.
-    plot = new BBN_Plot("data/plots/hotel.xml");
+    CL_String8 plot_filename = "data/plots/hotel.xml";
+  	plot = new BBN_Plot(plot_filename);
     plot->prepare_bn();
   }
   catch (BBN_Exception e) {
@@ -68,30 +69,30 @@ void World::init_level()
 
 //  plot->set_result("characters_dead","1");
 //
-//  CL_String victim;
+//  CL_String8 victim;
 //
-//  if(plot->query_result("a_dead")->get_name() == CL_String("1"))
+//  if(plot->query_result("a_dead")->get_name() == CL_String8("1"))
 //  {
 //    victim = "a";
-//    Application::log(LOG_LEVEL_INFO,CL_String("The general is dead!!!"));
+//    Application::log(LOG_LEVEL_INFO,CL_String8("The general is dead!!!"));
 //  }
-//  if(plot->query_result("b_dead")->get_name() == CL_String("1"))
+//  if(plot->query_result("b_dead")->get_name() == CL_String8("1"))
 //  {
 //    victim = "b";
-//    Application::log(LOG_LEVEL_INFO,CL_String("The hotel owner is dead!!!"));
+//    Application::log(LOG_LEVEL_INFO,CL_String8("The hotel owner is dead!!!"));
 //  }
-//  if(plot->query_result("c_dead")->get_name() == CL_String("1"))
+//  if(plot->query_result("c_dead")->get_name() == CL_String8("1"))
 //  {
 //    victim = "c";
-//    Application::log(LOG_LEVEL_INFO,CL_String("The princess is dead!!!"));
+//    Application::log(LOG_LEVEL_INFO,CL_String8("The princess is dead!!!"));
 //  }
-//  if(plot->query_result("d_dead")->get_name() == CL_String("1"))
+//  if(plot->query_result("d_dead")->get_name() == CL_String8("1"))
 //  {
 //    victim = "d";
-//    Application::log(LOG_LEVEL_INFO,CL_String("The chef is dead!!!"));
+//    Application::log(LOG_LEVEL_INFO,CL_String8("The chef is dead!!!"));
 //  }
-//  Application::log(LOG_LEVEL_INFO,CL_String("----------------------"));
-//  Application::log(LOG_LEVEL_INFO,CL_String("Evidence node values:"));
+//  Application::log(LOG_LEVEL_INFO,CL_String8("----------------------"));
+//  Application::log(LOG_LEVEL_INFO,CL_String8("Evidence node values:"));
 //
 //  /*
 //   * Lists all evidence nodes.
@@ -101,52 +102,52 @@ void World::init_level()
 //  for(it_dec =  decisions->begin(); it_dec != decisions->end(); ++it_dec)
 //  {
 //		//Check prefix
-//  	if((*it_dec)->get_name().substr(0,3) == CL_String("ev_"))
+//  	if((*it_dec)->get_name().substr(0,3) == CL_String8("ev_"))
 //  	{
 //  		//Is evidence - prints to console
 //			Application::log(LOG_LEVEL_INFO, (*it_dec)->get_name() + " = " + (*it_dec)->get_result()->get_name());
 //  	}
 //  }
 //
-//  Application::log(LOG_LEVEL_INFO,CL_String("----------------------"));
-//  Application::log(LOG_LEVEL_INFO,CL_String("Who killed the victim?"));
+//  Application::log(LOG_LEVEL_INFO,CL_String8("----------------------"));
+//  Application::log(LOG_LEVEL_INFO,CL_String8("Who killed the victim?"));
 //
-//  CL_String query_string;
+//  CL_String8 query_string;
 //  BBN_Option* result;
 //
 //  query_string = "a_murders_" + victim;
 //  result = plot->query_result(query_string);
-//  if(result != 0x0 && result->get_name() == CL_String("1"))
+//  if(result != 0x0 && result->get_name() == CL_String8("1"))
 //  {
-//    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
-//    Application::log(LOG_LEVEL_INFO,CL_String("It was the general!!! Why though?"));
+//    CL_String8 motive_query = query_string.substr(0,1) + victim + "_motive" ;
+//    Application::log(LOG_LEVEL_INFO,CL_String8("It was the general!!! Why though?"));
 //    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
 //  }
 //
 //  query_string = "b_murders_" + victim;
 //  result = plot->query_result(query_string);
-//  if(result != 0x0 && result->get_name() == CL_String("1"))
+//  if(result != 0x0 && result->get_name() == CL_String8("1"))
 //  {
-//    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
-//    Application::log(LOG_LEVEL_INFO,CL_String("It was the hotel owner!!! Why though?"));
+//    CL_String8 motive_query = query_string.substr(0,1) + victim + "_motive" ;
+//    Application::log(LOG_LEVEL_INFO,CL_String8("It was the hotel owner!!! Why though?"));
 //    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
 //  }
 //
 //  query_string = "c_murders_" + victim;
 //  result = plot->query_result(query_string);
-//  if(result != 0x0 && result->get_name() == CL_String("1"))
+//  if(result != 0x0 && result->get_name() == CL_String8("1"))
 //  {
-//    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
-//    Application::log(LOG_LEVEL_INFO,CL_String("It was the princess!!! Why though?"));
+//    CL_String8 motive_query = query_string.substr(0,1) + victim + "_motive" ;
+//    Application::log(LOG_LEVEL_INFO,CL_String8("It was the princess!!! Why though?"));
 //    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
 //  }
 //
 //  query_string = "d_murders_" + victim;
 //  result = plot->query_result(query_string);
-//  if(result != 0x0 && result->get_name() == CL_String("1"))
+//  if(result != 0x0 && result->get_name() == CL_String8("1"))
 //  {
-//    CL_String motive_query = query_string.substr(0,1) + victim + "_motive" ;
-//    Application::log(LOG_LEVEL_INFO,CL_String("It was the chef!!! Why though?"));
+//    CL_String8 motive_query = query_string.substr(0,1) + victim + "_motive" ;
+//    Application::log(LOG_LEVEL_INFO,CL_String8("It was the chef!!! Why though?"));
 //    Application::log(LOG_LEVEL_INFO,plot->query_result(motive_query)->get_english());
 //  }
 
@@ -162,7 +163,7 @@ void World::init_level()
   //add_overlay(new IsometricGrid(this));
 
   // Add player character
-  add_scene(new Scene(this,"data/scenes/hotel/hotel.tmx"));
+  add_scene(new Scene(this,CL_String8("data/scenes/hotel/hotel.tmx")));
 
   player_character = new PlayerCharacter(this->get_active_scene(),pc_start,pc_direction);
   this->get_active_scene()->add_game_object(player_character);
@@ -261,9 +262,9 @@ void World::on_mouse_down(const CL_InputEvent &key, const CL_InputState &state)
   }
 
 /*
-  DEBUG_MSG(CL_String("World::on_mouse_down() - Called - Screen position: ") + CL_StringHelp::int_to_text(key.mouse_pos.x) + CL_String(",")
-      + CL_StringHelp::int_to_text(key.mouse_pos.y) + CL_String(" - World position: ") + CL_StringHelp::int_to_text(mouse_position_world.x)
-      + CL_String(",") + CL_StringHelp::int_to_text(mouse_position_world.y) + CL_String("."))
+  DEBUG_MSG(CL_String8("World::on_mouse_down() - Called - Screen position: ") + CL_StringHelp::int_to_text(key.mouse_pos.x) + CL_String8(",")
+      + CL_StringHelp::int_to_text(key.mouse_pos.y) + CL_String8(" - World position: ") + CL_StringHelp::int_to_text(mouse_position_world.x)
+      + CL_String8(",") + CL_StringHelp::int_to_text(mouse_position_world.y) + CL_String8("."))
 */
 
 }

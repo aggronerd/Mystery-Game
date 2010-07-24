@@ -81,7 +81,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
   _english = element.get_attribute("english");
 
   //Parse children:
-  DEBUG_MSG(CL_String("BBN_Decision::load_from_xml(CL_DomElement) - Decision name = '") + _name + "'.")
+  DEBUG_MSG(CL_String8("BBN_Decision::load_from_xml(CL_DomElement) - Decision name = '") + _name + "'.")
 
   //Fetch the first child element
   CL_DomNode cur = element.get_first_child();
@@ -92,7 +92,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
   while (!cur.is_null())
   {
 
-    if (cur.get_node_name() == CL_String("options"))
+    if (cur.get_node_name() == CL_String8("options"))
     {
       /*
        * <options></options>
@@ -101,7 +101,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
       //Look for 'option' elements.
       while (!cur2.is_null())
       {
-        if (cur2.get_node_name() == CL_String("option"))
+        if (cur2.get_node_name() == CL_String8("option"))
         {
           BBN_Option* option = new BBN_Option(this);
           CL_DomElement element = cur2.to_element();
@@ -111,7 +111,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
        cur2 = cur2.get_next_sibling();
      }
     }
-    else if (cur.get_node_name() == CL_String("probabilities"))
+    else if (cur.get_node_name() == CL_String8("probabilities"))
     {
       /*
        * <probabilities></probabilities>
@@ -120,7 +120,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
 
       while(!cur2.is_null())
       {
-        if (cur2.get_node_name() == CL_String("givens"))
+        if (cur2.get_node_name() == CL_String8("givens"))
         {
           /*
            * <givens></givens>
@@ -130,7 +130,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
           //Look for 'given' elements.
           while (!cur3.is_null())
           {
-            if (cur3.get_node_name() == CL_String("given"))
+            if (cur3.get_node_name() == CL_String8("given"))
             {
               /*
                * <given></given>
@@ -143,7 +143,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
             cur3 = cur3.get_next_sibling();
           }
         }
-        else if (cur2.get_node_name() == CL_String("probs"))
+        else if (cur2.get_node_name() == CL_String8("probs"))
         {
           /*
            * <probs></probs>
@@ -153,7 +153,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
           //Look for 'prob' elements.
           while (!cur3.is_null())
           {
-            if (cur3.get_node_name() == CL_String("prob"))
+            if (cur3.get_node_name() == CL_String8("prob"))
             {
               /*
                * <prob></prob>
@@ -171,7 +171,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
 
       }
     }
-    else if  (cur.get_node_name() == CL_String("dependencies"))
+    else if  (cur.get_node_name() == CL_String8("dependencies"))
     {
        /*
         * <dependencies></dependencies>
@@ -180,10 +180,10 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
       //Look for 'dependency' elements.
       while (!cur2.is_null())
       {
-        if (cur2.get_node_name() == CL_String("dependency"))
+        if (cur2.get_node_name() == CL_String8("dependency"))
         {
           CL_DomElement element = cur2.to_element();
-          CL_String decision_path = static_cast<CL_String>(element.get_attribute("decision"));
+          CL_String8 decision_path = static_cast<CL_String8>(element.get_attribute("decision"));
           add_dependency(decision_path);
         }
         cur2 = cur2.get_next_sibling();
@@ -191,7 +191,7 @@ void BBN_Decision::load_from_xml(const CL_DomElement& element)
     }
     else
     {
-      Application::log(LOG_LEVEL_WARN,CL_String("BBN_Decision::load_from_xml(CL_DomElement) - Warning: unrecognised element '") + static_cast<CL_String>(cur.get_node_name()) + CL_String("' in decision."));
+      Application::log(LOG_LEVEL_WARN,CL_String8("BBN_Decision::load_from_xml(CL_DomElement) - Warning: unrecognised element '") + static_cast<CL_String8>(cur.get_node_name()) + CL_String8("' in decision."));
     }
 
      cur = cur.get_next_sibling();
@@ -204,12 +204,12 @@ BBN_Plot* BBN_Decision::get_plot()
 	return(_plot);
 }
 
-CL_String BBN_Decision::get_name()
+CL_String8 BBN_Decision::get_name()
 {
 	return(_name);
 }
 
-void BBN_Decision::set_name(CL_String new_name)
+void BBN_Decision::set_name(CL_String8 new_name)
 {
 	_name = new_name;
 }
@@ -224,7 +224,7 @@ void BBN_Decision::set_type(int new_type)
 	_type = new_type;
 }
 
-CL_String BBN_Decision::get_english()
+CL_String8 BBN_Decision::get_english()
 {
   if(!_english.empty())
   {
@@ -236,12 +236,12 @@ CL_String BBN_Decision::get_english()
   }
 }
 
-void BBN_Decision::set_english(CL_String new_english)
+void BBN_Decision::set_english(CL_String8 new_english)
 {
   _english = new_english;
 }
 
-void BBN_Decision::add_dependency(CL_String decision_path)
+void BBN_Decision::add_dependency(CL_String8 decision_path)
 {
 	_dependencies.push_back(decision_path);
 }
@@ -254,7 +254,7 @@ void BBN_Decision::prepare_bn_node(dlib::directed_graph<dlib::bayes_node>::kerne
   /*
    * Adds edges to bayes net.
    */
-  std::list<CL_String>::iterator it_de;
+  std::list<CL_String8>::iterator it_de;
   for(it_de = _dependencies.begin(); it_de != _dependencies.end(); ++it_de)
   {
     BBN_Decision* predecessor = get_plot()->get_decision((*it_de));
@@ -370,7 +370,7 @@ void BBN_Decision::add_prob(BBN_Prob* prob)
  * No fancy method is employed in searching it simply
  * iterates through the vector but allows changing of names.
  */
-BBN_Option* BBN_Decision::get_option(const CL_String& name)
+BBN_Option* BBN_Decision::get_option(const CL_String8& name)
 {
   std::vector<BBN_Option*>::iterator it_option;
   for(it_option = _options.begin(); it_option != _options.end(); ++it_option)
@@ -383,7 +383,7 @@ BBN_Option* BBN_Decision::get_option(const CL_String& name)
  * Sets the result of this decision to the option defined in option_name.
  * Returns true if successful and false if not.
  */
-bool BBN_Decision::set_result(const CL_String& option_name)
+bool BBN_Decision::set_result(const CL_String8& option_name)
 {
   bool result = false;
   std::vector<BBN_Option*>::iterator it_option;

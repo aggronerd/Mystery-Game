@@ -14,12 +14,12 @@
 class Room : public AccessibleArea
 {
 public:
-  Room(Scene*,const CL_String&, double, double, double, double);
+  Room(Scene*,const CL_String8&, double, double, double, double);
   virtual ~Room();
   virtual void draw(void);
-  CL_String getName(void);
+  CL_String8 getName(void);
 protected:
-  CL_String _name;
+  CL_String8 _name;
 };
 
 #endif /* ROOM_H_ */

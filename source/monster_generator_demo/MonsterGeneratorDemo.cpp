@@ -25,7 +25,7 @@ MonsterGeneratorDemo::MonsterGeneratorDemo(const CL_DisplayWindow &display_windo
   //Get the resource manager
   _rm = CL_ResourceManager("data/monster-resources.xml");
 
-  std::map<CL_String, CL_String> preset_properties;
+  std::map<CL_String8, CL_String8> preset_properties;
 
   for(int i=0; i < 4; i++)
   	_monsters.push_back(new Monster(get_next_monster_position(),this, preset_properties));

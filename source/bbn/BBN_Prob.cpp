@@ -14,7 +14,7 @@ void BBN_Prob::load_from_xml(CL_DomElement element)
 	_probability = CL_StringHelp::text_to_float(element.get_attribute("value"));
   DEBUG_MSG("BBN_Prob::load_from_xml(CL_DomElement) - Prob value = '" + CL_StringHelp::float_to_text(_probability) + "'.")
 
-	_option = static_cast<CL_String>(element.get_attribute("option"));
+	_option = static_cast<CL_String8>(element.get_attribute("option"));
 	DEBUG_MSG("BBN_Prob::load_from_xml(CL_DomElement) - Prob option = '" + _option + "'.")
 }
 

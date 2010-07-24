@@ -13,9 +13,9 @@
 #include <ClanLib/core.h>
 
 
-Room::Room(Scene* s, const CL_String& name, double north, double east, double south, double west) : AccessibleArea(s, north, east, south, west)
+Room::Room(Scene* s, const CL_String8& name, double north, double east, double south, double west) : AccessibleArea(s, north, east, south, west)
 {
-  DEBUG_MSG("Room::Room(Scene*, const CL_StringReference&) - Called.")
+  DEBUG_MSG("Room::Room(Scene*, const CL_String8Reference&) - Called.")
   _name =  name;
 }
 
@@ -50,7 +50,7 @@ Room::~Room()
   DEBUG_MSG("Room::~Room() - Called.")
 }
 
-CL_String Room::getName()
+CL_String8 Room::getName()
 {
   return(_name);
 }

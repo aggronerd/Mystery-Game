@@ -12,8 +12,8 @@ class BBN_Decision;
 class BBN_Option
 {
 private:
-  CL_String _name;
-  CL_String _english;
+  CL_String8 _name;
+  CL_String8 _english;
   BBN_Decision* _decision;
   /**
    * This is unique and sequential within the
@@ -25,11 +25,11 @@ private:
 public:
   BBN_Option(BBN_Decision* decision);
   virtual ~BBN_Option();
-  CL_String get_name();
-  CL_String get_english();
+  CL_String8 get_name();
+  CL_String8 get_english();
   void load_from_xml(const CL_DomElement&);
-  void set_name(const CL_String&);
-  void set_english(const CL_String&);
+  void set_name(const CL_String8&);
+  void set_english(const CL_String8&);
   BBN_Decision* get_decision(void);
   unsigned int get_id(void);
   void set_id(unsigned int);

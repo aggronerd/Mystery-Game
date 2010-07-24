@@ -21,8 +21,8 @@ class Application
 public:
   Application();
   virtual ~Application();
-  virtual int main(const std::vector<CL_String> &args);
-  static void log(const int, const CL_String&);
+  virtual int main(const std::vector<CL_String8> &args);
+  static void log(const int, const CL_String8&);
 private:
   const static int logging_level = 5; //Highest level.
 };
