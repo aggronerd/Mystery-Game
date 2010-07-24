@@ -48,8 +48,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><a href="classScene-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4eb3fdb166e0021e4e52fe19f9562183"></a><!-- doxytag: member="Scene::Scene" ref="a4eb3fdb166e0021e4e52fe19f9562183" args="(World *)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (<a class="el" href="classWorld.html">World</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a4eb3fdb166e0021e4e52fe19f9562183">Scene</a> (<a class="el" href="classWorld.html">World</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a2da1c2abcd1bde49c978e403c9748b04">Scene</a> (<a class="el" href="classWorld.html">World</a> *, const CL_String8 &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac880d620e9331ee220eab871769bc26c"></a><!-- doxytag: member="Scene::get_active_viewport" ref="ac880d620e9331ee220eab871769bc26c" args="(void)" -->
 <a class="el" href="classViewport.html">Viewport</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_active_viewport</b> (void)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca4855a051e9198608d26b6d9ae30cdb"></a><!-- doxytag: member="Scene::get_world" ref="aca4855a051e9198608d26b6d9ae30cdb" args="(void)" -->
@@ -59,9 +59,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a065d1b88078a09f2b77e80f663a40b2d">update</a> (unsigned int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e146347a0f1dbe2231788a8d07d2746"></a><!-- doxytag: member="Scene::add_viewport" ref="a8e146347a0f1dbe2231788a8d07d2746" args="(Viewport *)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>add_viewport</b> (<a class="el" href="classViewport.html">Viewport</a> *)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25a901ef9a95f907b95a0cc955de34d1"></a><!-- doxytag: member="Scene::add_accessible_area" ref="a25a901ef9a95f907b95a0cc955de34d1" args="(AccessibleArea *)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>add_accessible_area</b> (<a class="el" href="classAccessibleArea.html">AccessibleArea</a> *)</td></tr>
 </table>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4eb3fdb166e0021e4e52fe19f9562183"></a><!-- doxytag: member="Scene::Scene" ref="a4eb3fdb166e0021e4e52fe19f9562183" args="(World *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWorld.html">World</a> *&nbsp;</td>
+          <td class="paramname"> <em>owner</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Simple version of the constructor.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>owner</em>&nbsp;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2da1c2abcd1bde49c978e403c9748b04"></a><!-- doxytag: member="Scene::Scene" ref="a2da1c2abcd1bde49c978e403c9748b04" args="(World *, const CL_String8 &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWorld.html">World</a> *&nbsp;</td>
+          <td class="paramname"> <em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CL_String8 &amp;&nbsp;</td>
+          <td class="paramname"> <em>file_name</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Contructs scene from tiled level editor XML file.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>owner</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>file_name</em>&nbsp;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="af4940a9c9e62cb5ced3e7f5206d903a3"></a><!-- doxytag: member="Scene::add_game_object" ref="af4940a9c9e62cb5ced3e7f5206d903a3" args="(GameObject *)" -->
 <div class="memitem">
@@ -139,7 +200,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>add_accessible_area</
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 8 15:32:17 2010 for Procedural Game Plot Generation Prototype by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 24 16:03:36 2010 for Procedural Game Plot Generation Prototype by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

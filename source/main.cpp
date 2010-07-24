@@ -6,9 +6,9 @@
 #include "Application.h"
 
 // Choose the target renderer
-//#define USE_OPENGL_2
+#define USE_OPENGL_2
 //#define USE_OPENGL_1
-#define USE_SOFTWARE
+//#define USE_SOFTWARE
 //#define USE_SDL
 
 #ifdef USE_SDL

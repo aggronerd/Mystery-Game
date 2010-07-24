@@ -30,22 +30,26 @@ public:
   void draw(void);
   void update(unsigned int);
   void add_viewport(Viewport*);
+  void set_show_collision_map(bool value);
+  bool get_show_collision_map();
 
 private:
   std::list<Viewport*> _viewports;
   std::list<GameObject*> _game_objects;
 
   std::list<std::map<CL_Vec2i, int, vec2icomp >* > _layers_ordered;
-  std::map<CL_String8,std::map<CL_Vec2i, int, vec2icomp > > _layers; //list of layer of GIDs for tiles.
-  std::map<int, CL_SharedPtr<Tile> > _tileset; //The tiles accessible by GIDs.
+  std::map<CL_String8,std::map<CL_Vec2i, int, vec2icomp > > _layers; //< list of layer of GIDs for tiles.
+  std::map<int, CL_SharedPtr<Tile> > _tileset; //< The tiles accessible by GIDs.
 
   World* _world;
   Viewport* _active_viewport;
 
-  int _tile_width; //Pixels width of tile image
-  int _tile_height; //Pixels height of tile image
-  int _scene_width; //Width in tiles of the scene
-  int _scene_height; //Height in tiles of the scene
+  int _tile_width; //< Pixels width of tile image
+  int _tile_height; //< Pixels height of tile image
+  int _scene_width; //< Width in tiles of the scene
+  int _scene_height; //< Height in tiles of the scene
+
+  bool _show_collision_map; //< If is set to true will display collision tiles in red
 
   void load_tileset(int, int, const CL_String8&, int);
   void load_tile_properties(const CL_DomElement&, int);

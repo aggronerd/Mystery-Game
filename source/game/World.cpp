@@ -339,4 +339,20 @@ void World::on_key_down(const CL_InputEvent &key, const CL_InputState &state)
 {
 	if(key.id == CL_KEY_ESCAPE)
 		exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
+
+	//F12 Toggles the visibility of the collision map.
+	if(key.id == CL_KEY_F12)
+	{
+		if(active_scene != 0x0)
+		{
+			if(active_scene->get_show_collision_map())
+			{
+				active_scene->set_show_collision_map(false);
+			}
+			else
+			{
+				active_scene->set_show_collision_map(true);
+			}
+		}
+	}
 }

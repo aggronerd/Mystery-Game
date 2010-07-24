@@ -8,6 +8,7 @@
 
 #include "Scene.h"
 #include "World.h"
+#include "Polygon.h"
 #include <list>
 #include "../misc/logging.h"
 
@@ -25,6 +26,7 @@ Scene::Scene(World* owner) : _world(owner)
 	_tile_height = 128;
 	_scene_height = 0;
 	_scene_width = 0;
+	_show_collision_map = false;
 
 	//Set viewport to new one for configuring camera.
   _active_viewport = new Viewport(this);
@@ -44,6 +46,7 @@ Scene::Scene(World* owner, const CL_String8& file_name) : _world(owner)
 
 	//Set viewport to new one for configuring camera.
 	_active_viewport = new Viewport(this);
+	_show_collision_map = false;
 	add_viewport(_active_viewport);
 
 	//Parse the tilesets.
@@ -304,6 +307,9 @@ void Scene::load_tileset(int tile_width, int tile_height, const CL_String8& file
 	}
 }
 
+/**
+ * @return
+ */
 Scene::~Scene()
 {
   DEBUG_MSG("Scene::~Scene() - Called.")
@@ -339,6 +345,7 @@ void Scene::draw()
 	//TODO: draw only those tiles in view.
 
 	int tile_gid = 0;
+	CL_GraphicContext gc = *(this->get_world()->get_gc());
 
 	// Draw tiles
 	std::list<std::map<CL_Vec2i, int, vec2icomp>* >::iterator it_layer;
@@ -367,6 +374,7 @@ void Scene::draw()
 						_active_viewport->get_screen_position(world_point_left);
 				CL_Point screen_point_right =
 						_active_viewport->get_screen_position(world_point_right);
+				bool draw_collision_marker = false;
 
 				//Tile rectangle size and position.
 				CL_Rectf rec;
@@ -383,16 +391,59 @@ void Scene::draw()
 				{
 
 					tile_gid = (*(*it_layer))[pos];
+
 					if(tile_gid > 0)
 					{
 						CL_Image* tile = _tileset[tile_gid]->get_image();
 
-						tile->draw(*(this->get_world()->get_gc()), rec.left, rec.top);
+						//Draw the tile
+						tile->draw(gc, rec.left, rec.top);
+
+						//Draw red overlay if collision tile
+						if(_show_collision_map)
+						{
+
+							if(_tileset[tile_gid]->get_is_obstacle())
+							{
+
+								draw_collision_marker = true;
+
+							}
+
+						}
+
 					}
+
+				}
+
+				if(draw_collision_marker && _show_collision_map)
+				{
+
+					//If one of the tiles is a collision tile then draw.
+					CL_Pointf left   = rec.get_bottom_left() + CL_Pointf(1,-17);
+					CL_Pointf bottom = rec.get_bottom_left() + CL_Pointf(33, -1);
+					CL_Pointf right  = rec.get_bottom_left() + CL_Pointf(65,-17);
+					CL_Pointf top    = rec.get_bottom_left() + CL_Pointf(33,-33);
+
+					Polygon tile;
+					tile.add_point(left);
+					tile.add_point(top);
+					tile.add_point(bottom);
+					tile.add_point(right);
+					tile.add_point(left);
+					tile.add_point(bottom);
+					tile.add_point(top);
+					tile.add_point(right);
+
+					tile.set_line_color(CL_Colorf(1.0f,0.0f,0.0f,1.0f));
+					tile.draw(gc);
+
 				}
 
 			}
+
 		}
+
 	}
 
 	// Draw all game objects TODO: determine where to put them relative to the tiles.
@@ -424,18 +475,45 @@ void Scene::update(unsigned int time_elapsed_ms)
   }
 }
 
+/**
+ *
+ * @return
+ */
 Viewport* Scene::get_active_viewport()
 {
   return(_active_viewport);
 }
 
+/**
+ *
+ * @return
+ */
 World* Scene::get_world()
 {
   return(_world);
 }
 
+/**
+ *
+ * @param new_viewport
+ */
 void Scene::add_viewport(Viewport* new_viewport)
 {
   _viewports.push_back(new_viewport);
 }
 
+/**
+ * @param value Value defining whether to display the collision map on render.
+ */
+void Scene::set_show_collision_map(bool value)
+{
+	_show_collision_map = value;
+}
+
+/**
+ * @return Value defining whether to display the collision map on render.
+ */
+bool Scene::get_show_collision_map()
+{
+	return(_show_collision_map);
+}

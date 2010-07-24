@@ -62,13 +62,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="keyword">private</span>:
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022   <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _id;
-<a name="l00023"></a>00023   CL_String _name;
-<a name="l00024"></a>00024   CL_String _english;
+<a name="l00023"></a>00023   CL_String8 _name;
+<a name="l00024"></a>00024   CL_String8 _english;
 <a name="l00025"></a>00025   <span class="keywordtype">int</span> _type;
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027         <a class="code" href="classBBN__Plot.html">BBN_Plot</a>* _plot;
 <a name="l00028"></a>00028         <a class="code" href="classBBN__Option.html">BBN_Option</a>* _result;
-<a name="l00029"></a>00029         std::list&lt;CL_String&gt; _dependencies;
+<a name="l00029"></a>00029         std::list&lt;CL_String8&gt; _dependencies;
 <a name="l00030"></a>00030         std::vector&lt;BBN_Option*&gt; _options;
 <a name="l00031"></a>00031         std::vector&lt;BBN_Given*&gt; _givens;
 <a name="l00032"></a>00032         std::vector&lt;BBN_Prob*&gt; _probs;
@@ -81,23 +81,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00039"></a>00039         <span class="keyword">virtual</span> ~<a class="code" href="classBBN__Decision.html">BBN_Decision</a>();
 <a name="l00040"></a>00040         <span class="keywordtype">void</span> load_from_xml(<span class="keyword">const</span> CL_DomElement&amp; element);
 <a name="l00041"></a>00041         <a class="code" href="classBBN__Plot.html">BBN_Plot</a>* get_plot(<span class="keywordtype">void</span>);
-<a name="l00042"></a>00042         CL_String get_name(<span class="keywordtype">void</span>);
-<a name="l00043"></a>00043         <span class="keywordtype">void</span> set_name(CL_String new_name);
+<a name="l00042"></a>00042         CL_String8 get_name(<span class="keywordtype">void</span>);
+<a name="l00043"></a>00043         <span class="keywordtype">void</span> set_name(CL_String8 new_name);
 <a name="l00044"></a>00044         <span class="keywordtype">int</span> get_type(<span class="keywordtype">void</span>);
 <a name="l00045"></a>00045         <span class="keywordtype">void</span> set_type(<span class="keywordtype">int</span> new_type);
-<a name="l00046"></a>00046         CL_String get_english(<span class="keywordtype">void</span>);
-<a name="l00047"></a>00047         <span class="keywordtype">void</span> set_english(CL_String new_english);
+<a name="l00046"></a>00046         CL_String8 get_english(<span class="keywordtype">void</span>);
+<a name="l00047"></a>00047         <span class="keywordtype">void</span> set_english(CL_String8 new_english);
 <a name="l00048"></a>00048         <span class="keywordtype">void</span> prepare_bn_node(dlib::directed_graph&lt;dlib::bayes_node&gt;::kernel_1a_c* bn);
 <a name="l00049"></a>00049         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> get_id(<span class="keywordtype">void</span>);
 <a name="l00050"></a>00050         <span class="keywordtype">void</span> <a class="code" href="classBBN__Decision.html#a1a4ff92ffa1b4c3abba092b07d6f9b93">load_bn_probabilities</a>(dlib::directed_graph&lt;dlib::bayes_node&gt;::kernel_1a_c* bn);
 <a name="l00051"></a>00051         <a class="code" href="classBBN__Option.html">BBN_Option</a>* <a class="code" href="classBBN__Decision.html#aea433e9e244fdbd7c11135b738e0476b">get_result</a>(<span class="keywordtype">void</span>);
 <a name="l00052"></a>00052         <span class="keywordtype">bool</span> <a class="code" href="classBBN__Decision.html#a2e3f0320f1016c3e35c5730fa5c948e7">has_generated_result</a>(<span class="keywordtype">void</span>);
-<a name="l00053"></a>00053         <a class="code" href="classBBN__Option.html">BBN_Option</a>* <a class="code" href="classBBN__Decision.html#a1e6a97fe500472d9ac2cffbb760e6f64">get_option</a>(<span class="keyword">const</span> CL_String&amp;);
+<a name="l00053"></a>00053         <a class="code" href="classBBN__Option.html">BBN_Option</a>* <a class="code" href="classBBN__Decision.html#af9e18c8e8e86f2e8e989928c8066a92c">get_option</a>(<span class="keyword">const</span> CL_String8&amp;);
 <a name="l00054"></a>00054         std::vector&lt;BBN_Option*&gt;* <a class="code" href="classBBN__Decision.html#a66f57c1bf4d3efe58c30ea737835d67a">get_options</a>(<span class="keywordtype">void</span>);
-<a name="l00055"></a>00055         <span class="keywordtype">bool</span> <a class="code" href="classBBN__Decision.html#a6a2a027baea04cbac8ff81711aac9d76">set_result</a>(<span class="keyword">const</span> CL_String&amp;);
+<a name="l00055"></a>00055         <span class="keywordtype">bool</span> <a class="code" href="classBBN__Decision.html#a3684f85ac9f3047bbd3ef57b1eaf7e3d">set_result</a>(<span class="keyword">const</span> CL_String8&amp;);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057         <span class="keywordtype">void</span> add_option(<a class="code" href="classBBN__Option.html">BBN_Option</a>*);
-<a name="l00058"></a>00058         <span class="keywordtype">void</span> add_dependency(CL_String decision_path);
+<a name="l00058"></a>00058         <span class="keywordtype">void</span> add_dependency(CL_String8 decision_path);
 <a name="l00059"></a>00059         <span class="keywordtype">void</span> add_given(<a class="code" href="classBBN__Given.html">BBN_Given</a>*);
 <a name="l00060"></a>00060         <span class="keywordtype">void</span> add_prob(<a class="code" href="classBBN__Prob.html">BBN_Prob</a>*);
 <a name="l00061"></a>00061 };
@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 8 15:32:15 2010 for Procedural Game Plot Generation Prototype by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 24 16:03:36 2010 for Procedural Game Plot Generation Prototype by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

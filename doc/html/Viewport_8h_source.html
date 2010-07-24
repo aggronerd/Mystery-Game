@@ -47,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;ClanLib/core.h&gt;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="preprocessor">#define VIEWPOINT_Y_SCALE 0.5</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define VIEWPOINT_ZOOM 20</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define VIEWPOINT_ZOOM 45.254834 // 64 pixel width of tile. sqrt((64*64)/2)</span>
 <a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define VIEWPOINT_SCROLL_DISTANCE_PER_SEC 10</span>
 <a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define VIEWPOINT_SCROLL_BORDER_WIDTH 40</span>
 <a name="l00018"></a>00018 <span class="preprocessor"></span>
@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00028"></a>00028   <a class="code" href="classViewport.html">Viewport</a>(<a class="code" href="classScene.html">Scene</a>*);
 <a name="l00029"></a>00029   <span class="keyword">virtual</span> ~<a class="code" href="classViewport.html">Viewport</a>();
 <a name="l00030"></a>00030   CL_Point <a class="code" href="classViewport.html#a6fa5e4483a38e8775252bfa1467cdc77">get_screen_position</a>(<span class="keyword">const</span> CL_Pointd&amp;);
-<a name="l00031"></a>00031   CL_Pointd <a class="code" href="classViewport.html#a73064b60005187e3762f16618298e651">get_world_position</a>(<span class="keyword">const</span> CL_Point&amp;);
+<a name="l00031"></a>00031   CL_Pointd <a class="code" href="classViewport.html#ab6c214c3791a3314711e933e831d6ed0">get_world_position</a>(CL_Point);
 <a name="l00032"></a>00032   <span class="keywordtype">bool</span> <a class="code" href="classViewport.html#a4a80ef891f5678d6debdaa8a988a5bd0">get_is_visible</a>(<span class="keyword">const</span> CL_Pointd&amp;);
 <a name="l00033"></a>00033   <span class="keywordtype">void</span> <a class="code" href="classViewport.html#acacc14d6b2ca0f48734b0ae392938886">center_on_world</a>(<span class="keyword">const</span> CL_Pointd&amp;);
 <a name="l00034"></a>00034   <span class="keywordtype">void</span> <a class="code" href="classViewport.html#ad6b4c3ce84e139598414bb61c4802e17">update</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 8 15:32:15 2010 for Procedural Game Plot Generation Prototype by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 24 16:03:36 2010 for Procedural Game Plot Generation Prototype by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

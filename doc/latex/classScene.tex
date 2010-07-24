@@ -5,10 +5,9 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classScene_a4eb3fdb166e0021e4e52fe19f9562183}{
-{\bfseries Scene} (\hyperlink{classWorld}{World} $\ast$)}
-\label{classScene_a4eb3fdb166e0021e4e52fe19f9562183}
-
+\hyperlink{classScene_a4eb3fdb166e0021e4e52fe19f9562183}{Scene} (\hyperlink{classWorld}{World} $\ast$)
+\item 
+\hyperlink{classScene_a2da1c2abcd1bde49c978e403c9748b04}{Scene} (\hyperlink{classWorld}{World} $\ast$, const CL\_\-String8 \&)
 \item 
 \hypertarget{classScene_ac880d620e9331ee220eab871769bc26c}{
 \hyperlink{classViewport}{Viewport} $\ast$ {\bfseries get\_\-active\_\-viewport} (void)}
@@ -30,12 +29,36 @@ void \hyperlink{classScene_a065d1b88078a09f2b77e80f663a40b2d}{update} (unsigned 
 void {\bfseries add\_\-viewport} (\hyperlink{classViewport}{Viewport} $\ast$)}
 \label{classScene_a8e146347a0f1dbe2231788a8d07d2746}
 
-\item 
-\hypertarget{classScene_a25a901ef9a95f907b95a0cc955de34d1}{
-void {\bfseries add\_\-accessible\_\-area} (\hyperlink{classAccessibleArea}{AccessibleArea} $\ast$)}
-\label{classScene_a25a901ef9a95f907b95a0cc955de34d1}
-
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classScene_a4eb3fdb166e0021e4e52fe19f9562183}{
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection[{Scene}]{\setlength{\rightskip}{0pt plus 5cm}Scene::Scene ({\bf World} $\ast$ {\em owner})}}
+\label{classScene_a4eb3fdb166e0021e4e52fe19f9562183}
+Simple version of the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em owner}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classScene_a2da1c2abcd1bde49c978e403c9748b04}{
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection[{Scene}]{\setlength{\rightskip}{0pt plus 5cm}Scene::Scene ({\bf World} $\ast$ {\em owner}, \/  const CL\_\-String8 \& {\em file\_\-name})}}
+\label{classScene_a2da1c2abcd1bde49c978e403c9748b04}
+Contructs scene from tiled level editor XML file.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em owner}]\item[{\em file\_\-name}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 \subsection{Member Function Documentation}
