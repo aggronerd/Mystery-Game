@@ -367,7 +367,7 @@ void Scene::draw()
 				CL_Rectf rec;
 
 				rec.left = static_cast<float>(screen_point_left.x);
-				rec.top = static_cast<float>(screen_point_bottom.y) - _tile_height;
+				rec.top = static_cast<float>(screen_point_bottom.y) - 128;
 				rec.right = static_cast<float>(screen_point_right.x);
 				rec.bottom = static_cast<float>(screen_point_bottom.y);
 
