@@ -212,7 +212,6 @@ void Scene::clear_tile_layer(const CL_String& name)
 }
 
 /**
- *
  * Sets tile properties based on the XML of a tile tag.
  *
  * @param element
@@ -337,7 +336,6 @@ void Scene::add_game_object(GameObject* game_object)
  */
 void Scene::draw()
 {
-  //TODO: determine something about depth.
 	//TODO: draw only those tiles in view.
 
 	int tile_gid = 0;
@@ -346,14 +344,20 @@ void Scene::draw()
 	std::list<std::map<CL_Vec2i, int, vec2icomp>* >::iterator it_layer;
 	CL_Vec2i pos;
 
+	//Ensure that firstly the active viewport exists and there
+	// are layers to render.
 	if(_layers_ordered.size() > 0 && _active_viewport != 0x0)
 	{
 
+		//Draw from furthest x value to nearest
 		for(int y=(_scene_height/2)-1; y>=(0-(_scene_height/2)); y--)
 		{
 
+			//Draw from furthest y value to nearest
 			for(int x=(_scene_width/2)-1; x>=(0-(_scene_width/2)); x--)
 			{
+
+				//Determine where to draw this tile.
 				CL_Pointd world_point_bottom = CL_Pointd(x,y);
 				CL_Pointd world_point_left = CL_Pointd(x,y+1);
 				CL_Pointd world_point_right = CL_Pointd(x+1,y);
@@ -366,7 +370,6 @@ void Scene::draw()
 
 				//Tile rectangle size and position.
 				CL_Rectf rec;
-
 				rec.left = static_cast<float>(screen_point_left.x);
 				rec.top = static_cast<float>(screen_point_bottom.y) - 128;
 				rec.right = static_cast<float>(screen_point_right.x);
@@ -375,12 +378,7 @@ void Scene::draw()
 				pos.x = x;
 				pos.y = y;
 
-				//rec.top = 0;
-				//rec.bottom = 63;
-				//rec.left = 0;
-				//rec.right = 63;
-
-				//Iterate through layers.
+				//Iterate through layers of tiles for this square.
 				for(it_layer = _layers_ordered.begin(); it_layer != _layers_ordered.end(); ++it_layer)
 				{
 
@@ -397,7 +395,7 @@ void Scene::draw()
 		}
 	}
 
-	// Draw all game objects
+	// Draw all game objects TODO: determine where to put them relative to the tiles.
 	std::list<GameObject*>::iterator it_go;
 	for(it_go = _game_objects.begin(); it_go != _game_objects.end(); ++it_go)
 	  (*it_go)->draw();
