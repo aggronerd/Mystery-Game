@@ -30,8 +30,9 @@ public:
   void draw(void);
   void update(unsigned int);
   void add_viewport(Viewport*);
-  void set_show_collision_map(bool value);
-  bool get_show_collision_map();
+  void set_show_navigation_mesh(bool);
+  bool get_show_navigation_mesh(void);
+  void update_navigation_mesh(void);
 
 private:
   std::list<Viewport*> _viewports;

@@ -505,7 +505,7 @@ void Scene::add_viewport(Viewport* new_viewport)
 /**
  * @param value Value defining whether to display the collision map on render.
  */
-void Scene::set_show_collision_map(bool value)
+void Scene::set_show_navigation_mesh(bool value)
 {
 	_show_collision_map = value;
 }
@@ -513,7 +513,126 @@ void Scene::set_show_collision_map(bool value)
 /**
  * @return Value defining whether to display the collision map on render.
  */
-bool Scene::get_show_collision_map()
+bool Scene::get_show_navigation_mesh()
 {
 	return(_show_collision_map);
+}
+
+/**
+ * Replaces the navigation mesh used for path finding with
+ * a newer version based on the tiles and whether they are
+ * described as accessible.
+ */
+void Scene::update_navigation_mesh()
+{
+
+	CL_Vec2i pos;
+	std::list<std::map<CL_Vec2i, int, vec2icomp>* >::iterator it_layer;
+	std::map<CL_Vec2i, int, vec2icomp> navigation_grid;
+	bool collision_tile;
+	int i = 1;
+	int tile_gid;
+
+	/*
+	 * Iterate through tiles to construct a 2d grid describing
+	 * the accessibility of each tile. This is specified using
+	 * a map with values given as booleans (true for navigatable
+	 * and false for inaccessible tiles).
+	 */
+	for(int y=(_scene_height/2)-1; y>=(0-(_scene_height/2)); y--)
+	{
+
+		for(int x=(_scene_width/2)-1; x>=(0-(_scene_width/2)); x--)
+		{
+
+			pos.x = x;
+			pos.y = y;
+			collision_tile = false;
+
+			//Iterate through layers of tiles for this square.
+			for(it_layer = _layers_ordered.begin(); it_layer != _layers_ordered.end(); ++it_layer)
+			{
+
+				//Fetch the tile
+				tile_gid = (*(*it_layer))[pos];
+				Tile* tile = _tileset[tile_gid];
+
+				if(tile->get_is_obstacle()) {
+					collision_tile = true;
+				}
+			}
+
+			//If is collision tile append to new collision grid
+			if(collision_tile)
+			{
+				navigation_grid[pos] = 0;
+			}
+			else
+			{
+
+				/*
+				 * The tile is a collision tile. If collision tile neighbours
+				 * another then use the same number to indicate it should be
+				 * part of the same polygon later in the process.
+				 */
+				if(navigation_grid[(pos + CL_Vec2i(-1, 0))] > 0)
+				{
+					navigation_grid[pos] = navigation_grid[pos + CL_Vec2i(-1, 0)];
+				}
+				else if(navigation_grid[pos + CL_Vec2i( 1, 0)] > 0)
+				{
+					navigation_grid[pos] = navigation_grid[pos + CL_Vec2i( 1, 0)];
+				}
+				else if(navigation_grid[pos + CL_Vec2i( 0,-1)] > 0)
+				{
+					navigation_grid[pos] = navigation_grid[pos + CL_Vec2i( 0,-1)];
+				}
+				else if(navigation_grid[pos + CL_Vec2i( 0, 1)] > 0)
+				{
+					navigation_grid[pos] = navigation_grid[pos + CL_Vec2i( 0, 1)];
+				}
+				else
+				{
+					navigation_grid[pos] = i;
+					i++;
+				}
+
+			}
+
+		}
+
+	}
+
+	//Construct polygons
+	std::vector<Polygon> polygons;
+
+	for(int j = 1; j < i; j++)
+	{
+
+		//Find the first instance of a number
+		for(int y=(_scene_height/2)-1; y>=(0-(_scene_height/2)); y--)
+		{
+
+			for(int x=(_scene_width/2)-1; x>=(0-(_scene_width/2)); x--)
+			{
+
+				pos.x = x;
+				pos.y = y;
+
+				if(navigation_grid[pos] == j)
+				{
+
+					int current_direction = 0; //down
+
+
+				}
+
+			}
+
+		}
+
+	}
+
+	//Pass boolean map to to the navigation mesh to construct somethin.
+
 }

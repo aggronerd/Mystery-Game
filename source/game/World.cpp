@@ -320,16 +320,29 @@ void World::add_scene(Scene* new_scene)
   scenes.push_back(new_scene);
 }
 
+/**
+ * Returns a pointer to the active Scene object.
+ * If there is no Scene object returns 0x0.
+ *
+ * @return
+ */
 Scene* World::get_active_scene()
 {
   if(active_scene == 0x0)
-    {
-    return(scenes.front());
-    }
+  {
+  	if(scenes.size() > 0)
+  	{
+  		return(scenes.front());
+  	}
+  	else
+  	{
+  		return(0x0);
+  	}
+  }
   else
-    {
+  {
     return(active_scene);
-    }
+  }
 }
 
 /**
@@ -337,21 +350,22 @@ Scene* World::get_active_scene()
  */
 void World::on_key_down(const CL_InputEvent &key, const CL_InputState &state)
 {
+	//ESC Returns the player to the main menu.
 	if(key.id == CL_KEY_ESCAPE)
 		exit_code = EXIT_MODULE_AND_LOAD_MAIN_MENU;
 
 	//F12 Toggles the visibility of the collision map.
 	if(key.id == CL_KEY_F12)
 	{
-		if(active_scene != 0x0)
+		if(get_active_scene() != 0x0)
 		{
-			if(active_scene->get_show_collision_map())
+			if(get_active_scene()->get_show_navigation_mesh())
 			{
-				active_scene->set_show_collision_map(false);
+				get_active_scene()->set_show_navigation_mesh(false);
 			}
 			else
 			{
-				active_scene->set_show_collision_map(true);
+				get_active_scene()->set_show_navigation_mesh(true);
 			}
 		}
 	}
